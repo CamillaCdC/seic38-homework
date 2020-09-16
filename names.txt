@@ -10,7 +10,7 @@ Bastien Durand
 Henry Zhang
 Robert Stoelhorst
 Hugo Cullinan
-Ryan Bullough 
+Ryan Bullough
 Farid Masjedi
 Jasper Overall
 William Rudder
