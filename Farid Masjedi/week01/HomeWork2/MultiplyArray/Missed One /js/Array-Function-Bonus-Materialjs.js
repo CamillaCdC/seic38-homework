@@ -12,7 +12,7 @@ function multiplyArray(myArray){
   return m;
 }
 console.log(multiplyArray([1,2,3,4]));
-console.log(multiplyArray([-10,10]));
+console.log(multiplyArray([-10,12]));
 console.log(multiplyArray([10,-20]));
 console.log(multiplyArray([0.1,0.2]));
 console.log('Javascript can not give the right multiply of 0.1 and 0.2 too :))');
