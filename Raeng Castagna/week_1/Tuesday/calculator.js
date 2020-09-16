@@ -15,7 +15,7 @@ const halfNumber = function (num) {
   const divide = num / 2;
   console.log(`Half of ${num} is ${divide}.`);
 };
-halfNumber(5);
+halfNumber(5);   
 
 // Write a function called percentOf that will take two numbers, figure out what percent the first number
 // represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
