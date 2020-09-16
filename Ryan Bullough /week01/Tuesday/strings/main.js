@@ -5,7 +5,7 @@ const drEvil = (amount) => {
 }
 const mixUp = (stringA, stringB) => {
     let newWord = stringB.slice(0,2) + stringA.slice(2) + " " + stringA.slice(0,2) + stringB.slice(2)
-    return newWord;
+    return newWord
 }
 const fixStart = (string) => {
     const result = string.split('')
