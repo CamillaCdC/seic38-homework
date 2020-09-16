@@ -37,11 +37,13 @@ areaOfCircle(8);
 // - Calculate the area of a circle with the result of #2 as the radius.
 // - Calculate what percentage that area is of the squared result (#3).
 
-const partTwo = function(number) {
-  squareNumber(number);
-  halfNumber(number);
-  percentOf(number, 8);
-  areaOfCircle(number);
-}
 
-partTwo(4);
+const partTwo = function(number) {
+  let result = halfNumber(number);
+  number.result = squareNumber(number);
+  console.log(this.result)
+  let returnSquare = this.result
+  number.result = areaOfCircle(number);
+  number.result = percentOf(returnSquare, number);
+}
+partTwo(8);

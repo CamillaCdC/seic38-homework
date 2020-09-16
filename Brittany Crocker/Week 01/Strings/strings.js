@@ -29,6 +29,18 @@ DrEvil(1000000)
 //   mixUp('dog', 'dinner'): 'dig donner'
 // Look up the JavaScript string reference to find methods which may be useful!
 // ```
+const mixUp = function(stringOne, stringTwo) {
+  let a = (stringTwo.slice(0,2));
+  let b = (stringOne.slice(2));
+  let firstWord = a+b;
+  console.log(firstWord);
+
+  let c = (stringOne.slice(0,2));
+  let d = (stringTwo.slice(2));
+  let secondWord = c+d;
+  console.log(secondWord);
+}
+mixUp("super", "awesome");
 //
 // ## FixStart
 //
@@ -36,7 +48,14 @@ DrEvil(1000000)
 // ```
 // fixStart('babble'): 'ba**le'
 // ```
-//
+// Issue couldn't figure out how to store the character located at index[0] instead of the reference point to the index.
+const fixStart = function(string) {
+  let firstLetter = string.charAt(0);
+  console.log(firstLetter);
+  let newString = string[0] + string.slice(1).replace(firstLetter, "*");
+  console.log(newString);
+}
+fixStart("babble");
 // ## Verbing
 //
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
@@ -45,7 +64,18 @@ DrEvil(1000000)
 //   verbing('swimming'): 'swimmingly'
 //   verbing('go'): 'go'
 // ```
-//
+const verbing = function(string) {
+  if (string.length >= 3 && !string.includes("ing")) {
+    console.log(string + "ing")
+  } else if (string.includes("ing")){
+    console.log(string + "ly")
+  } else {
+    console.log(string)
+  }
+}
+verbing("Swimming")
+
+
 // ## Not Bad
 //
 // Create a function called notBad that takes a single argument, a string.
@@ -59,3 +89,16 @@ DrEvil(1000000)
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 // ```
+
+const notBad = function(string) {
+  firstIndex = string.indexOf("bad")
+  secondIndex = string.indexOf("not")
+
+  if (!string.includes("not")){
+    console.log(string)
+  } else if (secondIndex < firstIndex ) {
+    console.log(string.slice(0, secondIndex) + "good!")
+  }
+  }
+
+notBad("This movie is not so bad!")
