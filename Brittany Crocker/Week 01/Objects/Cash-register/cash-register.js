@@ -14,16 +14,18 @@ const cartForParty = {
   proteinShake: "22.36"
 };
 
-const cashRegister = function(itemName) {
-  for(i = 1; i < Object.keys(itemName).length; i++) {
-    console.log(i);
-  };
+
+console.log(cartForParty)
+const cashRegister = function(items) {
+
+Object.keys(items).forEach(function(arg){
+  items[arg] = parseFloat(items[arg]);
+})
+let sum = 0;
+for (let i in items){
+sum += items[i];
+console.log(sum);
+
 };
-cashRegister(cartForParty)
-
-
-
-//
-// // Output
-// cashRegister(cartForParty)); // 60.55
-// ```
+};
+cashRegister(cartForParty);
