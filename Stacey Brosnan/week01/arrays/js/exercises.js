@@ -105,8 +105,7 @@ console.log(`The length of the longest word is ${findLongestWord("This is a funn
 
 // 7. Write a function `filterLongWords` that takes an array of words and an number `i` and returns the array of words that are longer than i.
 
-
-let wordArray = ["Hello", "otherwise", "be"];
+const wordArray = ["Hello", "otherwise", "be"];
 
 let longer = "";
 
