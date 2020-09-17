@@ -187,29 +187,58 @@ console.log (cashRegister(cartForParty));
 // - `6666-6666-6666-6661` odd final number
 //
 
-// const validateCreditCard = function(creditNum){
-//   if ( creditNum.length !== 16 ) {
-//     return false
-//   } else if (isNaN(creditNum)){
-//     return false
-//   } else if (creditNum % 2 !== 0 ){
-//     return false
-//   } else {
-//     const creditNumArray = [''];
-//     for ( i = 15; i >= 0; i--){
-//       creditNumArray.push(creditNum[i])
-//     }
-//
-//
-//   }
-// }
 
-const creditNum = 1234567890123456;
-const creditNumArray = [];
-for ( i = 15; i >= 0; i--){
-  creditNumArray.push(creditNum[i])
+console.log(isNaN('1234567890123456'))
+
+const cardNumber0 = '1234-2345-3456-4568'; //true
+const cardNumber1 = '1234-2345-356-4568';  //false1
+const cardNumber2 = '1111-1111-1111-1111'; // false5
+const cardNumber3 = '1111-1111-1111-1110'; // false4
+const cardNumber4 = '1234-2345-3456-4567'; // false3
+const cardNumber5 = '1e34-23e5-3456-4560'; // false2
+
+
+
+
+const validateCreditCard = function(cardNum){
+  const cardNumPlain = cardNum.replace(/-/g, '');
+  let cardNumArray = [];
+  for ( i = 0; i < cardNumPlain.length; i++){
+    cardNumArray[cardNumArray.length] = cardNumPlain[i];
+  }
+  let sumNumCard =0;
+  for (i = 0; i < cardNumArray.length; i++){
+    let cardDigit = cardNumArray[i];
+    sumNumCard += +cardDigit ;
+  }
+  // const isTheSame = function(arr){
+  //   arr === arr[0]
+  // }
+  if ( cardNumPlain.length !== 16 ) {
+    return `false1`
+  } else if (isNaN(cardNumPlain)){
+    return `false2`
+  } else if (cardNumPlain % 2 !== 0 ){
+    return `false3`
+  } else if (sumNumCard <= 16){
+      return `false4`
+  // } else if (cardNumArray.every(isTheSame){
+  //     return `false5`
+  } else {
+    return true
+  }
 }
-console.log(creditNumArray)
+
+
+
+
+console.log(validateCreditCard(cardNumber0));
+console.log(validateCreditCard(cardNumber1));
+console.log(validateCreditCard(cardNumber2));
+console.log(validateCreditCard(cardNumber3));
+console.log(validateCreditCard(cardNumber4));
+console.log(validateCreditCard(cardNumber5));
+
 
 // ## Example
 // ```
