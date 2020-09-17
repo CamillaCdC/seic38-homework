@@ -30,7 +30,7 @@ function drEvil(amount) {
   return result;
 }
 console.log(drEvil(1000000));
-
+console.log(drEvil(1000));
 // ## MixUp
 //
 // Create a function called mixUp. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:
@@ -128,4 +128,4 @@ function notBad(sentence){
     result = `${sentence.slice(0, not)}good${sentence.slice(bad + 2)}`
   }
 }
-console.log(notBad("This dinner is that bad!"))
+console.log(notBad("This dinner is not that bad!"))
