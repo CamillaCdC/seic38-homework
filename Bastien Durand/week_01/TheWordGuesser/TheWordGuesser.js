@@ -49,8 +49,8 @@ const guessedLetter = function (arg) {
     console.log(`${arg} is Incorrect`);
   }
 
-
 console.log(currentGuesses)
+
 if (currentGuesses === currentWordLetters) {
   console.log('YOU WIN')
 }
