@@ -125,7 +125,8 @@ function notBad(sentence){
   } else if (not > bad){
     result = `${sentence}`;
   } else {
-    result = `${sentence.slice(0, not)}good${sentence.slice(bad + 2)}`
+    result = `${sentence.slice(0, not)}good${sentence.slice(bad + 3)}`
   }
+  return result
 }
 console.log(notBad("This dinner is not that bad!"))
