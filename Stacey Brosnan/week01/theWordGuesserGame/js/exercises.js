@@ -72,7 +72,7 @@ let wrongletters = 0;
 
 
 const guessLetter2 = function (guess) {
-  for (let i = 0; i < wordArray2.length; i++){
+  for (let i = 0; i < wordArray2.length; i++) {
     if (guess.length === 1){
       if (guess === wordArray[i]){
           reward2 = reward2 + 20;
@@ -81,7 +81,7 @@ const guessLetter2 = function (guess) {
           if (trueGuessing2.length === 2){
             reward2 = reward2 * 2
           }
-          if (trueGuessing2.length === 3){
+          if (trueGuessing2.length === 3) {
             reward2 = reward2 * 3
           }
       } else {
@@ -93,7 +93,7 @@ const guessLetter2 = function (guess) {
     }
 
     }
-    if (trueGuessing2.length === 3){
+    if (trueGuessing2.length === 3) {
     return `You have guessed ${trueGuessing2} correctly! YOU WIN!! You have won ${reward2} dollars `;
   }
 
