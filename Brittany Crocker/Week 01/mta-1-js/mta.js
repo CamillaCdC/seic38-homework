@@ -40,49 +40,64 @@
 
 // print journey and total number of stops for the trip to console
 const trainLines = {
-  line1: ["ts", "34th", "23rd", "28th", "Union Square", "8th"],
+  line1: ["Times Square", "34th", "23rd", "28th", "Union Square", "8th"],
   line2:  ['8th', '6th', 'Union Square', '3rd','1st'],
   line3: ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 }
+
 const planTrip = function(startLine, start, endLine, end) {
+
+  if (startLine !== endLine) {
+      planTrip(startLine, start, startLine, "Union Square")
+      console.log( "Changing at Union Square" )
+      planTrip(endLine, "Union Square", endLine, end)
+      if (end === end ) {
+        console.log('You have arrived')
+        return;
+      }
+    }
 
 const startPoint = startLine.indexOf(start);
 const endPoint = endLine.indexOf(end);
 
-
+let keys = Object.keys(trainLines) // creates the keys of trainLines as an array
 
 let counter = 0;
 
-console.log(`${start}, ${end}`)
-if (startLine !== endLine) {
   if (startPoint > endPoint) {
-    for (i = startPoint; i >= endPoint; i--) {
-      console.log(`${i} Index: ${i}, Passing: ${startLine[i]},
-                    Ending: ${endPoint}`)
-      counter ++
-  }
-} else if (startPoint < endPoint){
-      for (i = startPoint; i <= endPoint; i++) {
-        console.log(`${i} Passing ${startLine[i]}`)
-      counter ++ // stops passed used to calculate total number of stops
-  }} else if (start === end) {
-  console.log("you have arrived")
 
-}}
- else if (startLine === endLine) {
-   console.log("Don't Change Lines")
-   for (i = startPoint; i <= endPoint; i++) {
-     console.log(i)
-     console.log(`${i} Passing ${startLine[i]} `)
-   counter ++ // stops passed used to calculate total number of stops
+      for (i = startPoint; i >= endPoint; i--) {
+
+        if (i === endPoint){
+          console.log(`Leaving ${startLine[i]}`)
+
+        }
+          console.log(`arrived at ${startLine[i]} from ${start}`)
+          counter ++
+      }
+  }
+    else {
+
+        for (i = startPoint; i <= endPoint; i++) {
+
+            if (startPoint === i){
+              console.log( `Leaving ${startLine[i]}` )
+              counter ++ // stops passed used to calculate total number of stops
+
+      }
+        console.log(`Traveling through ${startLine[i]} from ${start}`)
+
+      if (i === endPoint) {
+        console.log(`arrived at ${startLine[i]} from ${start}`)
+      }
+  }
+  }
 }
 
-}
-  }
 
-// next part is to console log which stations are passing
-planTrip(trainLines.line1, "ts", trainLines.line2, "6th")
-// planTrip(trainLines, "33rd", 2, 5)
+
+planTrip(trainLines.line1, "Times Square", trainLines.line3, "33rd")
+
 
 
 
