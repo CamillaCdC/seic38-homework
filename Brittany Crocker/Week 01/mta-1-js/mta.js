@@ -41,62 +41,95 @@
 // print journey and total number of stops for the trip to console
 const trainLines = {
   line1: ["Times Square", "34th", "23rd", "28th", "Union Square", "8th"],
-  line2:  ['8th', '6th', 'Union Square', '3rd','1st'],
+  line2:  ['8th', '6th', "Union Square", '3rd','1st'],
   line3: ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
+
 }
 
+
+
+
+const tripsTotal1 = []
+let counter = 0
+const tripsTotal2 = []
+tripsLeft = []
 const planTrip = function(startLine, start, endLine, end) {
 
   if (startLine !== endLine) {
-      planTrip(startLine, start, startLine, "Union Square")
-      console.log( "Changing at Union Square" )
+    planTrip(startLine, start, startLine, "Union Square")
+      // console.log( "Changing at Union Square" )
       planTrip(endLine, "Union Square", endLine, end)
+
       if (end === end ) {
+        console.log(`You must travel through ${tripsTotal2.join(', ').toString()}`)
         console.log('You have arrived')
+        console.log(`${counter} stops in total.`)
+
+
+        // console.log(tripsTotal1.length - startLine.indexOf(start))
+        // console.log(tripsTotal2.length - endLine.indexOf(end))
+
+
         return;
       }
     }
 
+
+
 const startPoint = startLine.indexOf(start);
 const endPoint = endLine.indexOf(end);
 
-let keys = Object.keys(trainLines) // creates the keys of trainLines as an array
 
-let counter = 0;
+
+
 
   if (startPoint > endPoint) {
+console.log(`You must travel through ${tripsTotal1.join(', ').toString()}`)
 
       for (i = startPoint; i >= endPoint; i--) {
+        counter ++
 
-        if (i === endPoint){
-          console.log(`Leaving ${startLine[i]}`)
+        tripsTotal1.push(startLine[i] - endLine[i])
+        tripsTotal2.push(endLine[i])
 
-        }
-          console.log(`arrived at ${startLine[i]} from ${start}`)
-          counter ++
+        tripsTotal1.pop()
+
+
+        if (startLine[i].includes("Union Square")) {
+            console.log("Change at Union Square")
+          }
       }
+
   }
     else {
 
         for (i = startPoint; i <= endPoint; i++) {
+          counter++
 
             if (startPoint === i){
-              console.log( `Leaving ${startLine[i]}` )
-              counter ++ // stops passed used to calculate total number of stops
 
       }
-        console.log(`Traveling through ${startLine[i]} from ${start}`)
+
+      tripsTotal1.push(startLine[i])
+      tripsTotal2.push(endLine[i] - startLine[i])
+
+      tripsTotal2.shift()
+
 
       if (i === endPoint) {
-        console.log(`arrived at ${startLine[i]} from ${start}`)
+
       }
+    }
+
+
   }
+
   }
-}
 
 
 
-planTrip(trainLines.line1, "Times Square", trainLines.line3, "33rd")
+
+planTrip(trainLines.line1, "Times Square", trainLines.line2, "8th")
 
 
 
