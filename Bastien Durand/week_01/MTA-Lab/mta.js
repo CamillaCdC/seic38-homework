@@ -53,7 +53,6 @@ const trainLines = {
   line3 : ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 }
 
-
 const train = function (startLine, start, endLine, end) {
 
 console.log(start, end)
