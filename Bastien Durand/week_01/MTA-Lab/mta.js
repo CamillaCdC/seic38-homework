@@ -59,13 +59,17 @@ const lineTripTotal2 = [];
 const train = function (startLine, start, endLine, end) {
 
 
+
 //line1 'times square', line3, 33rd
 if (startLine !== endLine) {
   train(startLine, start, startLine, 'Union Square');
   train(endLine, 'Union Square', endLine, end)
   if( end === end) {
-    console.log(`First line array ${lineTripTotal1}`)
-    console.log(`Second line array ${lineTripTotal2}`)
+    console.log(`You must travel through the following stops on the ____ ${lineTripTotal1}`)
+    if (startLine !== endLine) {
+      console.log('Change at Union Square.')
+    }
+    console.log(`Your journey continues through the following stops: ${lineTripTotal2}`)
     return;
   }
   }
@@ -80,22 +84,6 @@ const startIndex = startLine.indexOf(start)
 const endIndex = endLine.indexOf(end)
 
 
-const totalStops = lineTripTotal1.length
-//
-// const passThrough = []
-// passThrough.push(totalStops)
-// console.log(passThrough)
-
-
-if (startIndex === endIndex) {
-  console.log(`${totalStops} stops in total.`)
-}
-
-
-
-//console.log(totalStops % trainLines )
-
-
 let initial = start
 
 let lineTotal = ''
@@ -104,45 +92,26 @@ let lineTotal = ''
 
     for (i = startIndex; i >= endIndex; i--) {
 
-      // if(startIndex === i) {
-      //   console.log(`Leaving ${startLine[i]} `) //index of ${i}
-      // }
 
       lineTripTotal1.push(startLine[i] - endLine[i])
       lineTripTotal2.push(endLine[i])
 
-      if (startLine[i].includes('Union Square')) {
-        lineTripTotal1.pop(startLine[i])
-      }
+      lineTripTotal2.shift()
+      lineTripTotal1.pop()
 
-      if(startLine[i] === 'Union Square') {
-        console.log('You must change at union square')
-      }
-        // console.log(`You must travel through ${startLine[i] += lineTotal} `) //index of ${i}
 
-      // if(i === endIndex) {
-      //   console.log(`Arrived at ${startLine[i]} from ${initial}`)
-      // }
+
     }
   } else {
 
   for (i = startIndex; i <= endIndex; i++) {
 
-    // if(startIndex === i) {
-    //   console.log(`Leaving ${startLine[i]} `) //index of ${i}
-    // }
     lineTripTotal1.push(startLine[i])
     lineTripTotal2.push(endLine[i] - startLine[i])
 
     if (startLine[i].includes('Union Square')) {
       lineTripTotal2.pop(startLine[i])
     }
-
-      // console.log(`You must travel through ${tripTotal}`) //index of ${i
-
-    // if(i === endIndex) {
-    //   console.log(`Arrived at ${startLine[i]} from ${initial}`)
-    // }
 
   }
 }
