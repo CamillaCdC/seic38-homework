@@ -48,36 +48,56 @@
 //Tell the user the number of stops and the stops in order that will pass through or change at
 
 const trainLines = {
-  line1 : ['ts', '34th', '28th', '23rd', 'union', '8th'],
+  line1 : ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'],
   line2 : ['8th', '6th', 'Union Square', '3rd', '1st'],
   line3 : ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 }
 
+
 const train = function (startLine, start, endLine, end) {
 
-console.log(start, end)
+let travelThrough = 'You must travel through the following stops on the'
+
+//line1 'times square', line3, 33rd
+if (startLine !== endLine) {
+  train(startLine, start, startLine, 'Union Square');
+  console.log(`Changing at lines at Union Square`)
+  train(endLine, 'Union Square', endLine, end)
+  if( end === end) {
+    console.log('You have arrived')
+    return;
+  }
+  }
+// train(trainLines.line1, 'Times Square', trainLines.line3, '33rd')
+// // console.log() shows output similar to this:
+// // "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
+// // "Change at Union Square."
+// // "Your journey continues through the following stops: 23rd, 28th, 33rd."
+// // "7 stops in total."
 
 const startIndex = startLine.indexOf(start)
 const endIndex = endLine.indexOf(end)
 
+if (startIndex !== endIndex) {
+  let totalStops = startIndex + endIndex;
+  console.log(`${totalStops} total stops`)
+}
+
 let initial = start
 
-console.log(`start station ${startIndex}`)
-console.log(`end station ${endIndex}`)
-
-    console.log (`StartLine: ${startLine} start: ${start} end: ${end}`)
+let lineTotal = ''
 
   if(endIndex < startIndex) {
 
     for (i = startIndex; i >= endIndex; i--) {
 
       if(startIndex === i) {
-        console.log(`Leaving ${startLine[i]} index of ${i}`)
+        console.log(`Leaving ${startLine[i]} `) //index of ${i}
       }
-        console.log(`Passing ${startLine[i]} index of ${i}`)
+        console.log(`Traveling through ${startLine[i] += lineTotal} `) //index of ${i}
 
       if(i === endIndex) {
-        console.log(`arrived at ${startLine[i]} from index ${initial}`)
+        console.log(`arrived at ${startLine[i]} from ${initial}`)
       }
     }
   } else {
@@ -85,9 +105,9 @@ console.log(`end station ${endIndex}`)
   for (i = startIndex; i <= endIndex; i++) {
 
     if(startIndex === i) {
-      console.log(`Leaving ${startLine[i]} index of ${i}`)
+      console.log(`Leaving ${startLine[i]} `) //index of ${i}
     }
-      console.log(`Passing ${startLine[i]} index of ${i}`)
+      console.log(`Traveling through ${startLine[i] += lineTotal}`) //index of ${i
 
     if(i === endIndex) {
       console.log(`arrived at ${startLine[i]} from ${initial}`)
@@ -97,7 +117,7 @@ console.log(`end station ${endIndex}`)
 }
   }
 
-train(trainLines.line1, 'ts', trainLines.line1, '8th')
+train(trainLines.line1, 'Times Square', trainLines.line1, '8th')
 
 
 
