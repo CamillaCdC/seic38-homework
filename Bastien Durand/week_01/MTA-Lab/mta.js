@@ -53,18 +53,19 @@ const trainLines = {
   line3 : ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
 }
 
+const lineTripTotal1 = [];
+const lineTripTotal2 = [];
 
 const train = function (startLine, start, endLine, end) {
 
-let travelThrough = 'You must travel through the following stops on the'
 
 //line1 'times square', line3, 33rd
 if (startLine !== endLine) {
   train(startLine, start, startLine, 'Union Square');
-  console.log(`Changing at lines at Union Square`)
   train(endLine, 'Union Square', endLine, end)
   if( end === end) {
-    console.log('You have arrived')
+    console.log(`First line array ${lineTripTotal1}`)
+    console.log(`Second line array ${lineTripTotal2}`)
     return;
   }
   }
@@ -79,18 +80,18 @@ const startIndex = startLine.indexOf(start)
 const endIndex = endLine.indexOf(end)
 
 
-const totalStops = startIndex + (endIndex - 1);
+const totalStops = lineTripTotal1.length
 //
 // const passThrough = []
 // passThrough.push(totalStops)
 // console.log(passThrough)
 
 
-if (startIndex !== endIndex) {
+if (startIndex === endIndex) {
   console.log(`${totalStops} stops in total.`)
 }
 
-console.log(Object.keys(trainLines).length)
+
 
 //console.log(totalStops % trainLines )
 
@@ -103,33 +104,54 @@ let lineTotal = ''
 
     for (i = startIndex; i >= endIndex; i--) {
 
-      if(startIndex === i) {
-        console.log(`Leaving ${startLine[i]} `) //index of ${i}
-      }
-        console.log(`Traveling through ${startLine[i] += lineTotal} `) //index of ${i}
+      // if(startIndex === i) {
+      //   console.log(`Leaving ${startLine[i]} `) //index of ${i}
+      // }
 
-      if(i === endIndex) {
-        console.log(`arrived at ${startLine[i]} from ${initial}`)
+      lineTripTotal1.push(startLine[i] - endLine[i])
+      lineTripTotal2.push(endLine[i])
+
+      if (startLine[i].includes('Union Square')) {
+        lineTripTotal1.pop(startLine[i])
       }
+
+      if(startLine[i] === 'Union Square') {
+        console.log('You must change at union square')
+      }
+        // console.log(`You must travel through ${startLine[i] += lineTotal} `) //index of ${i}
+
+      // if(i === endIndex) {
+      //   console.log(`Arrived at ${startLine[i]} from ${initial}`)
+      // }
     }
   } else {
 
   for (i = startIndex; i <= endIndex; i++) {
 
-    if(startIndex === i) {
-      console.log(`Leaving ${startLine[i]} `) //index of ${i}
-    }
-      console.log(`Traveling through ${startLine[i] += lineTotal}`) //index of ${i
+    // if(startIndex === i) {
+    //   console.log(`Leaving ${startLine[i]} `) //index of ${i}
+    // }
+    lineTripTotal1.push(startLine[i])
+    lineTripTotal2.push(endLine[i] - startLine[i])
 
-    if(i === endIndex) {
-      console.log(`arrived at ${startLine[i]} from ${initial}`)
+    if (startLine[i].includes('Union Square')) {
+      lineTripTotal2.pop(startLine[i])
     }
+
+      // console.log(`You must travel through ${tripTotal}`) //index of ${i
+
+    // if(i === endIndex) {
+    //   console.log(`Arrived at ${startLine[i]} from ${initial}`)
+    // }
+
   }
-
 }
   }
 
-train(trainLines.line1, 'Times Square', trainLines.line3, '33rd')
+train(trainLines.line1, 'Times Square', trainLines.line3, '33rd');
+
+
+
 
 
 
