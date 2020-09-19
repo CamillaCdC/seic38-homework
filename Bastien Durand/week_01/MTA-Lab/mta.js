@@ -78,10 +78,22 @@ if (startLine !== endLine) {
 const startIndex = startLine.indexOf(start)
 const endIndex = endLine.indexOf(end)
 
+
+const totalStops = startIndex + (endIndex - 1);
+//
+// const passThrough = []
+// passThrough.push(totalStops)
+// console.log(passThrough)
+
+
 if (startIndex !== endIndex) {
-  let totalStops = startIndex + endIndex;
-  console.log(`${totalStops} total stops`)
+  console.log(`${totalStops} stops in total.`)
 }
+
+console.log(Object.keys(trainLines).length)
+
+//console.log(totalStops % trainLines )
+
 
 let initial = start
 
@@ -117,7 +129,7 @@ let lineTotal = ''
 }
   }
 
-train(trainLines.line1, 'Times Square', trainLines.line1, '8th')
+train(trainLines.line1, 'Times Square', trainLines.line3, '33rd')
 
 
 
