@@ -61,7 +61,7 @@ const planTrip = function(startLine, start, endLine, end) {
       planTrip(endLine, "Union Square", endLine, end)
 
       if (end === end ) {
-        console.log(`You must travel through ${tripsTotal2.join(', ').toString()}`)
+        console.log(`You must travel through ${tripsTotal2}`)
         console.log('You have arrived')
         console.log(`${counter} stops in total.`)
 
@@ -85,14 +85,14 @@ const endPoint = endLine.indexOf(end);
 
   if (startPoint > endPoint) {
 console.log(`You must travel through ${tripsTotal1.join(', ').toString()}`)
-
+console.log("working") // not working
       for (i = startPoint; i >= endPoint; i--) {
         counter ++
 
         tripsTotal1.push(startLine[i] - endLine[i])
-        tripsTotal2.push(endLine[i])
+        tripsTotal1.push(endLine[i])
 
-        tripsTotal1.pop()
+        // tripsTotal1.pop()
 
 
         if (startLine[i].includes("Union Square")) {
@@ -102,18 +102,30 @@ console.log(`You must travel through ${tripsTotal1.join(', ').toString()}`)
 
   }
     else {
+console.log("working") // working
 
         for (i = startPoint; i <= endPoint; i++) {
           counter++
 
+          tripsTotal1.push(endLine[i] - startLine[i])
+          tripsTotal2.push(endLine[i])
+          tripsTotal2.shift()
+
+
+
             if (startPoint === i){
+              tripsTotal2.push(endLine[i] - startLine[i])
+              tripsTotal1.push(startLine[i])
+              tripsTotal2.shift()
+              console.log(`LINE 2: You must travel through ${tripsTotal2.join(', ').toString()}`)
+              console.log(`LINE 1: You must travel through ${tripsTotal1.join(', ').toString()}`)
+            tripsTotal2.push(endLine[i])
+            tripsTotal1.push(startLine[i] - endLine[i])
 
       }
 
-      tripsTotal1.push(startLine[i])
-      tripsTotal2.push(endLine[i] - startLine[i])
 
-      tripsTotal2.shift()
+// console.log(`You must travel through ${tripsTotal2.join(', ').toString()}`)
 
 
       if (i === endPoint) {
@@ -129,8 +141,8 @@ console.log(`You must travel through ${tripsTotal1.join(', ').toString()}`)
 
 
 
-planTrip(trainLines.line1, "Times Square", trainLines.line2, "8th")
-// planTrip(trainLines.line2, "8th", trainLines.line3, "Astor Place")
+// planTrip(trainLines.line1, "Times Square", trainLines.line2, "8th")
+planTrip(trainLines.line2, "8th", trainLines.line3, "Astor Place")
 
 
 
