@@ -1,0 +1,149 @@
+<html>
+<head>
+  <title>
+    </title>
+
+    <meta charset="utf-8">
+</head>
+
+
+
+<body>
+  <h1>MTA Trip Calculator</h1>
+
+<h2>Define your starting station and the station you want to go</h2>
+<p>Starting station:</p>
+<label for="lineStart">Choose the line</label>
+<select id="lineStart">
+  <option value="lineS" selected="selected">Line 6</option>
+  <option value="lineN">Line N</option>
+  <option value="lineL">Line L</option>
+</select>
+<label for="stopStart">Choose the station</label>
+<select id="stopStart">
+  <option value="Astor Place">Astor Place</option>
+  <option value="Union Square">Union Square</option>
+  <option value="23rd">23rd</option>
+  <option value="28th">28th</option>
+  <option value="33rd">33rd</option>
+  <option value="Grand Central">Grand Central</option>
+  <option value="8th">8th</option>
+  <option value="6th">6th</option>
+  <option value="3rd">3rd</option>
+  <option value="1st">1st</option>
+  <option value="34th">34th</option>
+  <option value="Times Square">Times Square</option>
+</select>
+<p>Arriving station:</p>
+<label for="lineFinish">Choose the line</label>
+<select id="lineFinish">
+  <option value="lineS">Line 6</option>
+  <option value="lineN" selected="selected">Line N</option>
+  <option value="lineL">Line L</option>
+</select>
+<label for="stopFinish">Choose the station</label>
+<select id="stopFinish">
+  <option value="Astor Place">Astor Place</option>
+  <option value="Union Square">Union Square</option>
+  <option value="23rd">23rd</option>
+  <option value="28th">28th</option>
+  <option value="33rd">33rd</option>
+  <option value="Grand Central">Grand Central</option>
+  <option value="8th">8th</option>
+  <option value="6th">6th</option>
+  <option value="3rd">3rd</option>
+  <option value="1st">1st</option>
+  <option value="34th" selected="selected">34th</option>
+  <option value="Times Square">Times Square</option>
+</select>
+</br>
+<button onclick="planTrip(lineStartValue, stopStartValue, lineFinishValue, stopFinishValue)">My trip</button>
+<button onclick="planTrip('lineN', '34th', 'lineN', '8th')">My trip</button>
+<p id="message"></p>
+</body>
+
+<script>
+
+
+const lineS = ['Astor Place','Union Square', '23rd', '28th', '33rd', 'Grand Central'];
+const lineL = ['8th', '6th', 'Union Square', '3rd', '1st'];
+const lineN = ['8th','Union Square', '23rd', '28th', '34th', 'Times Square'];
+
+let arrayOfStop = []; //The Array that will list the stop and count the number of stops
+
+
+let lineStartSelect = document.getElementById("lineStart");
+let lineStartValue = lineStartSelect.options[lineStartSelect.selectedIndex].value;
+let stopStartSelect = document.getElementById("stopStart");
+let stopStartValue = stopStartSelect.options[stopStartSelect.selectedIndex].value;
+let lineFinishSelect = document.getElementById("lineFinish");
+let lineFinishValue = lineFinishSelect.options[lineFinishSelect.selectedIndex].value;
+let stopFinishSelect = document.getElementById("stopFinish");
+let stopFinishValue = stopFinishSelect.options[stopFinishSelect.selectedIndex].value;
+
+const planTrip = function(line1, stop1, line2, stop2){
+  arrayOfStop = [];//this line is here to reset the array for multiple use of the function
+
+//Part 1 when you are using the same Line
+  if (line1 === line2 && stop1 ===stop2){
+    console.log('You do not need to take the subway')
+  } else if (line1 === line2) {
+    if (line1.indexOf(stop1) < line2.indexOf(stop2)){
+      for (i = line1.indexOf(stop1); i < line2.indexOf(stop2); i++){
+        arrayOfStop.push(line1[i]);
+      };
+    // console.log(arrayOfStop);
+    } else if (line1.indexOf(stop1) > line2.indexOf(stop2)){
+      for (i = line1.indexOf(stop1); i > line2.indexOf(stop2); i--){
+        arrayOfStop.push(line1[i]);
+      };
+      // console.log(arrayOfStop);
+    } else {
+      console.log('You do not need to take the subway')
+    }
+    const trip = `For your trip you will go through ${arrayOfStop.join(', ')} and finish at ${stop2} for a ${arrayOfStop.length +1 } stops journey`;
+    console.log(trip);
+    // return trip;
+    // console.log(arrayOfStop);
+    document.getElementById("message").innerHTML = trip
+
+  } else {//Part 2-1 two different lines - add to the arrayOfStop the first part of the journey
+
+    const stopConnection = 'Union Square'; //I create the variable if I plan to have more connection available on the map
+
+    if (line1.indexOf(stop1) < line1.indexOf(stopConnection)){
+      for (i = line1.indexOf(stop1); i < line1.indexOf(stopConnection); i++){
+        arrayOfStop.push(line1[i]);
+      };
+    // console.log(arrayOfStop);
+    } else if (line1.indexOf(stop1) > line1.indexOf(stopConnection)){
+        for (i = line1.indexOf(stop1); i > line1.indexOf(stopConnection); i--){
+          arrayOfStop.push(line1[i]);
+        };
+        // console.log(arrayOfStop);
+    }
+    //Part 2-2 second part of the journey to add to arrayOfStop
+    if (line2.indexOf(stopConnection) < line2.indexOf(stop2)){
+      for (i = line2.indexOf(stopConnection); i < line2.indexOf(stop2); i++){
+        arrayOfStop.push(line2[i]);
+      };
+    // console.log(arrayOfStop);
+  } else if (line2.indexOf(stopConnection) > line2.indexOf(stop2)){
+        for (i = line2.indexOf(stopConnection); i > line2.indexOf(stop2); i--){
+          arrayOfStop.push(line2[i]);
+        };
+        // console.log(arrayOfStop);
+    }
+    const trip = `For your trip you will go through ${arrayOfStop.join(', ')} and finish at ${stop2} for a ${arrayOfStop.length + 1 } stops journey`;
+    console.log(trip);
+    // return trip;
+    console.log(arrayOfStop);
+    document.getElementById("message").innerHTML = trip;
+  }
+}
+// planTrip('6', '23rd', 'N', '8th')
+
+
+</script>
+
+</html>
