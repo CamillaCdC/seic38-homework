@@ -9,28 +9,18 @@
 //   DrEvil(10): 10 dollars
 //   DrEvil(1000000): 1000000 dollars (pinky)
 // ```
-//
 
-// function drEvil(amount) {
-//   If (amount > 1000000) {
-//     console.log(`${amount} dollars (pinky)`);
-//     } else {
-//   console.log(`${amount} dollars`);
-//   }
-// }
-// drEvil(1000000)
-
-function drEvil(amount) {
-  let result;
-  if (amount >= 1000000) {
-    result = `${amount} dollars (pinky)`;
+const DrEvil = function(number) {
+  if (number === 1000000) {
+    console.log(`${number} dollars (pinky)`)
   } else {
-    result = `${amount} dollars`;
-  }
-  return result;
-}
-console.log(drEvil(1000000));
+    console.log(`${number} dollars `)
+  };
+};
 
+DrEvil(1000000)
+
+//
 // ## MixUp
 //
 // Create a function called mixUp. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:
@@ -39,28 +29,41 @@ console.log(drEvil(1000000));
 //   mixUp('dog', 'dinner'): 'dig donner'
 // Look up the JavaScript string reference to find methods which may be useful!
 // ```
-function mixUp(wordOne, wordTwo){
-  const wordMixOne = wordTwo.slice(0, 2) + wordOne.slice(2);
-  const wordMixTwo = wordOne.slice(0, 2) + wordTwo.slice(2);
-  console.log( wordMixOne + " " + wordMixTwo)
+const mixUp = function(stringOne, stringTwo) {
+  let a = (stringTwo.slice(0,2));
+  let b = (stringOne.slice(2));
+  let firstWord = a+b;
+  console.log(firstWord);
+
+  let c = (stringOne.slice(0,2));
+  let d = (stringTwo.slice(2));
+  let secondWord = c+d;
+  console.log(secondWord);
 }
-mixUp("cookie", "doggie")
-
-
+mixUp("super", "awesome");
+//
 // ## FixStart
 //
 // Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
 // ```
 // fixStart('babble'): 'ba**le'
 // ```
+// Issue couldn't figure out how to store the character located at index[0] instead of the reference point to the index.
 
-function fixStart(hiddenWord){
-  let first = hiddenWord.slice(0, 1);
-  const replacement = "*";
-  let result = first + replacement.repeat(hiddenWord.length - 1);
-  console.log(result)
+
+
+const fixStart = function(string) {
+  let firstLetter = string.charAt(0);
+  console.log(firstLetter);
+  let newString = string[0] + string.slice(1).replace(firstLetter, "*");
+  console.log(newString);
 }
-fixStart("Hello")
+fixStart("babble");
+
+
+
+
+
 // ## Verbing
 //
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
@@ -69,39 +72,17 @@ fixStart("Hello")
 //   verbing('swimming'): 'swimmingly'
 //   verbing('go'): 'go'
 // ```
-//
-
-function verbing(verb){
-  let result;
-  if (verb.length < 3){
-    result = verb;
-  } else if (verb.slice(verb.length - 3) === "ing"){
-    result = `${verb}ly`;
+const verbing = function(string) {
+  if (string.length >= 3 && !string.includes("ing")) {
+    console.log(string + "ing")
+  } else if (string.includes("ing")){
+    console.log(string + "ly")
   } else {
-    result = `${verb}ing`;
+    console.log(string)
   }
-  return result;
 }
-console.log(verbing("go"));
-console.log(verbing("going"));
-console.log(verbing("get"));
+verbing("Swimming")
 
-function verbing2(verb){
-  let result;
-  if (verb.length > 2){
-    if (verb.slice(verb.length - 3) === "ing"){
-      result = `${verb}ly`;
-  } else {
-    result = `${verb}ing`;
-  }
-  } else {
-    result = `${verb}`;
-  }
-  return result;
-}
-console.log(verbing2("swimming"));
-console.log(verbing2("take"));
-console.log(verbing2("go"));
 
 // ## Not Bad
 //
@@ -116,18 +97,16 @@ console.log(verbing2("go"));
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 // ```
-function notBad(sentence){
-  const not = sentence.search("not")
-  const bad = sentence.search("bad")
-  let result;
-  if (not === -1){
-    result = `${sentence}`;
-  } else if (not > bad){
-    result = `${sentence}`;
-  } else {
-    result = `${sentence.slice(0, not)}good${sentence.slice(bad + 2)}`
-  }
-}
 
-console.log(notBad("This dinner is that bad!"))
-console.log(notBad("This dinner is not that bad!"))
+const notBad = function(string) {
+  firstIndex = string.indexOf("bad")
+  secondIndex = string.indexOf("not")
+
+  if (!string.includes("not")){
+    console.log(string)
+  } else if (secondIndex < firstIndex ) {
+    console.log(string.slice(0, secondIndex) + "good!")
+  }
+  }
+
+notBad("This movie is not so bad!")

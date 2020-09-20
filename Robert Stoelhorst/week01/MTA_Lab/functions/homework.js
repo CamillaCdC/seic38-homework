@@ -1,27 +1,30 @@
-// console.log(`TRIP PLANNER`);
-//["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-// const tripPlanner = {
-//   north: ["times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-//   south: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
-//   east: ["1st", "3rd", "Union Square", "6th", "8th"]
-// };
-//   for (let i = 1; i < tripPlanner.north.length - 1; i++)
-//   console.log(tripPlanner.north[i]);
+console.log(`TRIP PLANNER`);
+console.log("")
+const tripPlanner = function (startStation, finishStation) {
 
-  const planTrip = function (s, f,) {
-return {
-  start: s,
-  finish: f
-  
-}
+const subway = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
 
 
-    for (let i = 0; i < [0].length; i++)
+const startIndex = subway.indexOf(startStation) // value is [4]
+const finishIndex = subway.indexOf(finishStation)// value is [1]
+
+if (startIndex > finishIndex) {
+ for (let i = startIndex; i > finishIndex - 1; i--) { // i gets set to value [4]
+      console.log(subway[i]) // it prints out Union Square and loops back
   }
-    console.log(i)
+} else {
+  for (let i = startIndex; i < finishIndex + 1; i++) { // i gets set to value [0]
+      console.log(subway[i]) // it prints out Times Square and loops forwards
+      console.log(i + subway.length - 6) // prints the stop numbers as you go
+  }
 }
-  planTrip(1, 5);
-// MTA Lab
+};
+// console.log(tripPlanner("Union Square"));
+tripPlanner("Union Square", "34th"); // here I pass in argument values for my backwards loop
+console.log(" ")
+tripPlanner("Times Square", "Union Square"); // here I pass in argument values for my forward loop
+
+
 // Objectives:
 // Apply your knowledge of Javascript to solve a real world problem.
 // Get really good at array manipulation.

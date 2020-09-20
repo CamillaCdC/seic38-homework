@@ -3,6 +3,10 @@
 // You'll create a simple word guessing game where the user gets infinite tries to guess the word (like Hangman without the hangman, or like Wheel of Fortune without the wheel and fortune).
 //
 // - Create two global arrays: one to hold the letters of the word (e.g. 'F', 'O', 'X'), and one to hold the current guessed letters (e.g. it would start with '\_', '\_', '\_' and end with 'F', 'O', 'X').
+let letters = ['f','o','x'];
+let reward =0;
+let final = [];
+
 // - Write a function called guessLetter that will:
 // - Take one argument, the guessed letter.
 // - Iterate through the word letters and see if the guessed letter is in there.
@@ -12,67 +16,26 @@
 // - It should also figure out if there are any more letters that need to be guessed,
 // and if not, it should congratulate the user for winning the game.
 // - Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
+let guessLetter = function (a){
+  for (var i = 0; i < letters.length; i++) {
+    if (a ===letters[i] ) {
+      console.log("congratulate");
+      final.push(a);
+    reward += Math.random();
+    }
+    else {
+      reward -= Math.random();
+    }
 
-console.log('To play this game, simply write within the console guessedLetter(" "), Enter your letter within the quotation marks to see a result')
-
-const currentWordLetters = ['M', 'O', 'N', 'K', 'E', 'Y'];
-const currentGuesses = ['_', '_', '_', '_', '_', '_'];
 
 
-const guessedLetter = function (arg) {
-
-
-  if (arg === 'M') {
-    currentGuesses.splice(0, 1, 'M')
-
-  } else if (arg === 'O') {
-    currentGuesses.splice(1, 1, 'O')
-    console.log(`${arg} is Correct`)
-
-  } else if (arg === 'N') {
-    currentGuesses.splice(2, 1, 'N')
-    console.log(`${arg} is Correct`)
-
-  } else if (arg === 'K') {
-    currentGuesses.splice(3, 1, 'K')
-    console.log(`${arg} is Correct`)
-
-  } else if (arg === 'E') {
-    currentGuesses.splice(4, 1, 'E')
-    console.log(`${arg} is Correct`)
-
-  } else if (arg === 'Y') {
-    currentGuesses.splice(5, 1, 'Y')
-    console.log(`${arg} is Correct`)
-
-  } else if (arg !== 'M' || arg !== 'O' || arg !== 'N' || arg !== 'K' || arg !== 'E' || arg !== 'Y' ) {
-    console.log(`${arg} is Incorrect`);
   }
+  if (final.length===3) {
+    console.log(final);
+  }
+    }
 
-console.log(currentGuesses)
-
-if (currentGuesses === currentWordLetters) {
-  console.log('YOU WIN')
-}
-
-};
-
-// This doesn't work for some reason :(
-
-if (currentGuesses === currentWordLetters) {
-  console.log('YOU WIN')
-}
-
-
-
-
-
-
-
-
-
-
-
+//
 // ## Bonus: Make it more like Wheel of Fortune:
 // - Start with a reward amount of $0
 // - Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
