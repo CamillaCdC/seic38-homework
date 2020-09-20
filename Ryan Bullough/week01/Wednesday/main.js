@@ -33,7 +33,7 @@ const filterLongWords = ([...array], largerThan) => {
   return result;
 };
 // Word Guesser
-const targetWord = ["r", "y", "a", "n"];
+const targetWord = ["r", "y", "y", "n"];
 const guessedWords = targetWord.map((letter) => (letter = "_"));
 let prizeMoney = 0;
 const guessLetter = (char) => {
