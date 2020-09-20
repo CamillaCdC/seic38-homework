@@ -61,7 +61,7 @@ const sumArray = array.reduce(function (a, b) {
 
 const multiplyArray = array.reduce(function (a, b) {
   return a * b;
-}, 1);
+  }, 1);
 console.log(multiplyArray)
 
 
@@ -79,8 +79,6 @@ return console.log(`After: ${string.split('').reverse().join('')}`);
 reverseString('jag testar')
 
 // 6. Write a function `findLongestWord` that takes an array of words and returns the length of the longest one.
-
-
 
 const findLongestWord = function (words) {
   var longestWord = words.split(' ').reduce(function(longest, currentWord) {
