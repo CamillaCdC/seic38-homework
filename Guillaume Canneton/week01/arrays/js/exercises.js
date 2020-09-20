@@ -92,14 +92,29 @@ console.log(reverseString('this is a test'));
 let wordArrayLength = '';
 function findLongestWord(wordArray){
   for (i = 0; i < wordArray.length; i++){
-    wordArrayLength[i] = wordArray[i].length;
+    if (wordArray[i] > wordArrayLength) {
+      wordArrayLength = wordArray[i].length;
+    }
   }
-  return wordArrayLength[0];
+  return wordArrayLength
 }
 const words = ['short', 'longest', 'test', 'go'];
-console.log(findLongestWord(words))
+console.log(findLongestWord(words));
+
+
 // 7. Write a function `filterLongWords` that takes an array of words and an number `i` and returns the array of words that are longer than i.
 //
+
+function filterLongWords(arrayToFilter, i){
+  for (n = 0; n < arrayToFilter.length; n++){
+    if (arrayToFilter[n].length > i){
+      delete arrayToFilter[n];
+    }
+  }
+  return arrayToFilter;
+}
+const arrayFiltering = ['short', 'longest', 'test', 'go'];
+console.log(filterLongWords(arrayFiltering, 5));
 
 
 
