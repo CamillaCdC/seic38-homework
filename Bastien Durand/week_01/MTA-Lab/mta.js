@@ -63,22 +63,20 @@ const train = function (startLine, start, endLine, end) {
 //line1 'times square', line3, 33rd
 if (startLine !== endLine) {
   train(startLine, start, startLine, 'Union Square');
+
   train(endLine, 'Union Square', endLine, end)
+
   if( end === end) {
     console.log(`You must travel through the following stops on the ____ ${lineTripTotal1}`)
+
     if (startLine !== endLine) {
       console.log('Change at Union Square.')
     }
+
     console.log(`Your journey continues through the following stops: ${lineTripTotal2}`)
     return;
   }
   }
-// train(trainLines.line1, 'Times Square', trainLines.line3, '33rd')
-// // console.log() shows output similar to this:
-// // "You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square."
-// // "Change at Union Square."
-// // "Your journey continues through the following stops: 23rd, 28th, 33rd."
-// // "7 stops in total."
 
 const startIndex = startLine.indexOf(start)
 const endIndex = endLine.indexOf(end)
@@ -98,8 +96,6 @@ let lineTotal = ''
 
       lineTripTotal2.shift()
       lineTripTotal1.pop()
-
-
 
     }
   } else {
