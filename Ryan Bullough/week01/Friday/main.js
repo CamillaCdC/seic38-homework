@@ -43,8 +43,8 @@ const subway = {
   planTrip: function (
     initialStation,
     initialStop,
-    destinationStation,
-    destinationStop
+    destinationStation = initialStation,
+    destinationStop = initialStop
   ) {
     this.details.length = 0;
     const startStation = this[initialStation];
@@ -117,8 +117,9 @@ const subway = {
         tripCounter += unionSquare - lastStop;
       }
     }
-    return `Your journey from ${initialStop} station on line ${initialStation} includes : ${this.details.join(
+    return `Your journey from ${initialStop} station on line ${initialStation} includes: ${this.details.join(
       ", "
     )}`;
   },
 };
+console.log(subway.planTrip("L", "8th"));
