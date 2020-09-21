@@ -15,7 +15,7 @@ const cartForParty = {
 };
 
 
-console.log(cartForParty)
+
 const cashRegister = function(items) {
 
 Object.keys(items).forEach(function(arg){
@@ -23,9 +23,8 @@ Object.keys(items).forEach(function(arg){
 })
 let sum = 0;
 for (let i in items){
-sum += items[i];
-console.log(sum);
-
+sum += +items[i]
 };
+return sum
 };
-cashRegister(cartForParty);
+console.log(cashRegister(cartForParty));

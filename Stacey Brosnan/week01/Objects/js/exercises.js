@@ -153,18 +153,16 @@
 
 
     const validateCreditCard = function (num) {
-            let onlyNum = num.replace(/\D/g, '');//remove all non digit characters
-            // num = num.replace(/\-/, ''); - not using the wildcard correctly?
+            // let onlyNum = num.replace(/\D/g, '');//remove all non digit characters
+            let onlyNum = num.replace(/\-/g, '') // - g means global
 
             if (onlyNum.length === 16) { //number must have 16 digits
                 let sum = 0;
                 for (let i =0; i < onlyNum.length; i++) {
-                    let digit = parseInt(onlyNum.charAt(i));
-                    sum = sum + digit;
-
-
-                    //
-                    // if (sum > 16){
+                    let digit = onlyNum[i];
+                    sum = sum + digit;//this works, need to make digit an actual digit
+                    console.log(sum);
+                    // if (onlyNum.length - 1 === onlyNum[i] && sum > 16){
                     //   return `valid: true, number: ${onlyNum}`;
                     // } else {
                     //   return `valid: false, number: ${onlyNum}, error: sum less then 16`;
