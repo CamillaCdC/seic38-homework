@@ -37,6 +37,12 @@ const rectanglePerimeter = function(rectangle) {
   return output;
 };
 
+console.log(isSquare(rectangleA));
+console.log(isSquare(rectangleB));
+console.log(rectangleArea(rectangleA));
+console.log(rectangleArea(rectangleB));
+console.log(rectanglePerimeter(rectangleA));
+console.log(rectanglePerimeter(rectangleB));
 //
 // ### Part 2, Triangle
 //
@@ -123,4 +129,17 @@ const isObtuse = function(triangle) {
     console.log("Not obtuse.");
     return false;
   }
-}
+
+};
+console.log(isEquilateral(triangleA));
+console.log(isEquilateral(triangleB));
+console.log(isEquilateral(triangleC));
+console.log(isIsosceles(triangleA));
+console.log(isIsosceles(triangleB));
+console.log(isIsosceles(triangleC));
+console.log(triangleArea(triangleA));
+console.log(triangleArea(triangleB));
+console.log(triangleArea(triangleC));
+console.log(isObtuse(triangleA));
+console.log(isObtuse(triangleB));
+console.log(isObtuse(triangleC));
