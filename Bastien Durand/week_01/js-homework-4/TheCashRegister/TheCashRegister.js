@@ -18,6 +18,8 @@ const cartForParty = {
 //Then changing cartForPartys existing array from strings to numbers via Number()
 //logged cartForParty to see if values are strings or numbers
 
+
+
 Object.keys(cartForParty).forEach(function(arg){
   cartForParty[arg] = Number(cartForParty[arg])
 })
