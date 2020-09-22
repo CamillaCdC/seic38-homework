@@ -1,0 +1,46 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+body{
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.press img{
+  margin:5px;
+  border:7px solid #ddd;
+  width:22%;
+}
+h1,p,footer,h2 {
+  text-align:left;
+
+}
+
+.content, .head-title, .footer, .press{
+  margin: 0 auto;
+  max-width:960px;
+}
+
+.colorBlue {
+  text-decoration:none;
+  color: #419ee9;
+}
+a:hover{
+  color:#202225;
+}
+
+/* How to make the images in .press to be aligned with the text on .footer or .content */
