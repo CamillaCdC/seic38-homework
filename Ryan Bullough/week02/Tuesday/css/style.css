@@ -16,7 +16,7 @@ img {
   display: block;
   width: 100%;
   border-radius: 25%/50%;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
 }
 body {
   background-color: #16161a;
@@ -48,6 +48,10 @@ nav a {
   font-weight: lighter;
   display: inline-block;
   padding: 0 1.5em 1.5em 1.5em;
+  transition: ease 1s;
+}
+nav a:hover {
+  color: #7f5af0;
 }
 article p:first-of-type {
   padding: 2em 9em;
@@ -63,4 +67,7 @@ ul li {
 }
 li:nth-child(2) {
   color: #2cb67d;
+}
+aside {
+  padding-bottom: 1em;
 }
