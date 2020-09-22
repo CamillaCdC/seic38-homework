@@ -1,6 +1,16 @@
 // # Credit Card Validation
 //
 // You're starting your own credit card business. You've come up with a new way to validate credit cards with a simple function called validateCreditCard that returns true or false.
+
+const validateCreditCard = function (creditCard) {
+  if( creditCard.isNAN()) {
+    console.log('This is not a number')
+  } else {
+    console.log('working')
+  }
+}
+
+validateCreditCard(12)
 //
 // Here are the rules for a valid number:
 //
