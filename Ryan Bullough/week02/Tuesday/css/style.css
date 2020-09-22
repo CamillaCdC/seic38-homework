@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #94a1b2;
+}
+img {
+  display: block;
+  width: 100%;
+  border-radius: 25%/50%;
+  padding-bottom: 5vh;
+}
+body {
+  background-color: #16161a;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+main {
+  height: 100vh;
+}
+article {
+  height: 100vh;
+}
+h1 {
+  font-family: "Caveat", cursive;
+  color: #fffffe;
+  font-size: 4rem;
+  letter-spacing: 9px;
+}
+nav {
+  transform: rotate(90deg) translateX(70px) translateY(-158px);
+  position: fixed;
+  right: 0;
+  top: 56%;
+}
+nav a {
+  color: #72757e;
+  font-family: "Caveat", cursive;
+  font-size: 0.8em;
+  font-weight: lighter;
+  display: inline-block;
+  padding: 0 1.5em 1.5em 1.5em;
+}
+article p:first-of-type {
+  padding: 2em 9em;
+}
+ul {
+  margin: 2em 0;
+  text-align: center;
+}
+ul li {
+  padding: 1em 10em;
+  font-size: 40px;
+  font-weight: bold;
+}
+li:nth-child(2) {
+  color: #2cb67d;
+}
