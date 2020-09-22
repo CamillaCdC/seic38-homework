@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+body {
+  background-color: white;
+  font-family: "news cycle";
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  text-shadow: 4px 4px grey;
+}
+
+.youth p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.harvard p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.afterwar p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.ww2 p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.awards p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.doctoral p {
+  color: White;
+  font-family: "news cycle";
+  font-size: 20px;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.youth {
+  background-color: #61505e;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  margin-right: -4px;
+  border-bottom-left-radius: 3em;
+  border-top-left-radius: 3em;
+}
+
+.harvard {
+  background-color: #e08068;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  margin-right: -4px;
+}
+
+.afterwar {
+  background-color: #154f8a;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  margin-right: -4px;
+}
+
+.ww2 {
+  background-color: #de4848;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  margin-right: -4px;
+}
+
+.awards {
+  background-color: #9ebfba;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  margin-right: -4px;
+}
+
+.doctoral {
+  background-color: #16787b;
+  display: inline-block;
+  width: 16%;
+  height: 700px;
+  text-align: center;
+  border-bottom-right-radius: 3em;
+  border-top-right-radius: 3em;
+}
