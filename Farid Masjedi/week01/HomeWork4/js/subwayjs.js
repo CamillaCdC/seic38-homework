@@ -376,7 +376,7 @@
 //   return tripPlansObj.trip(firstLine, firstStop,secondLine, secondStop);
 // };
 
-// --------------------------------Fifth Way - Best One -----------------------------------------
+// -------------------------------- Fifth Way  -----------------------------------------
 
 let tripPlansObj = {
 
