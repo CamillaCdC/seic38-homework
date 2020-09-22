@@ -14,9 +14,11 @@ const cartForParty = {
 };
 
 
-//Get Object.keys(returns an array whose elements are strings) for cartFortParty and iterate forEach(value) in the array.
+//Get Object.keys(returns an array whose elements are strings) in cartFortParty and iterate forEach(value) in the array.
 //Then changing cartForPartys existing array from strings to numbers via Number()
 //logged cartForParty to see if values are strings or numbers
+
+
 
 Object.keys(cartForParty).forEach(function(arg){
   cartForParty[arg] = Number(cartForParty[arg])
