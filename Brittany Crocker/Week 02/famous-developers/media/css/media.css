@@ -42,7 +42,8 @@ a {
 .hidden-content:hover span{
     visibility: visible;
     color: black;
-}black;
+}
+
 span {
   color: fuchsia;
 }
@@ -63,49 +64,11 @@ h1 {
   font-size: 0.8em;
 }
 
+
 main {
-  display: inline-block;
-  /* padding: 2em; */
-  width: 30%;
-  margin-left: 10em;
-  vertical-align: top;
-  line-height: 1.5em;
+  text-align: center;
 }
 
-.section-one {
-  display: inline-block;
-  width: 30%;
-  margin-left: 7em;
-
-  /* padding: 5em; */
-}
-
-aside {
-  display: inline-block;
-  width: 21%;
-  line-height: 1.5em;
-  padding: 5em;
-  /* margin-right: 20em; */
-  vertical-align: top;
-}
-
-.jenn{
-  color: yellow;
-    background-color: fuchsia;
-}
-
-.section-two {
-  display: inline-block;
-  padding: 2em;
-  width: 30%;
-  margin-left: 10em;
-}
-
-.section-three {
-text-align: center;
-
-}
-
-.section-three-1, .section-three-2, .section-three-3 {
-  padding: 2em;
+iframe {
+    padding: 1.5em;
 }
