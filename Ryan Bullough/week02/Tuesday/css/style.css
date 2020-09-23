@@ -14,7 +14,8 @@
 }
 img {
   display: block;
-  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
   border-radius: 25%/50%;
   padding-bottom: 2vh;
 }
@@ -27,7 +28,7 @@ main {
   height: 100vh;
 }
 article {
-  height: 100vh;
+  min-height: 100vh;
 }
 h1 {
   font-family: "Caveat", cursive;
