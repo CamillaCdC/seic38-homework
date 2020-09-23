@@ -42,7 +42,8 @@ a {
 .hidden-content:hover span{
     visibility: visible;
     color: black;
-}black;
+}
+
 span {
   color: fuchsia;
 }
