@@ -1,0 +1,73 @@
+
+
+ /* ## Requirements
+- At least 1 Google Font
+- Whatever HTML and CSS you desire
+
+## Your research should aim to reveal at least two things about each person:
+- Why Joel admires them
+- Something Joel doesn't already know about them
+
+## Optional extras
+- Experiment with http://fortawesome.github.io/Font-Awesome/
+- Record and embed a short podcast or vlog about your favourite scientist
+- Try embedding other media (YouTube or Vimeo video, Soundcloud)
+- Try embedding a Google map (for their hometown and/or alma mater)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Kufam&family=Teko:wght@300&display=swap');
+
+body {
+  background-color: #111;
+  padding:0;
+  margin:0;
+  font-family: 'Heebo', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  background-color: lightblue;
+  margin: auto;
+}
+
+nav {
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: solid;
+  border-color: #222;
+}
+a:hover {
+  color: white;
+
+}
+
+
+a {
+  color: #808000;
+  text-decoration: none;
+  padding: 40px;
+  font-weight: bold;
+}
+
+
+h1{
+   text-align: center;
+   background-color: #222;
+   color: #ccc;
+   font-size: 400%;
+   padding: 0.5em;
+   border-bottom-left-radius: .2em;
+   border-bottom-right-radius: .2em;
+   margin: auto;
+ }
+
+ img {
+   width: auto;
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 15px black;
+}
+
+main{
+  padding-bottom: 50px;
+}

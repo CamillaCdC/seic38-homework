@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+  background-color: #05baffa6;
+  font-family: 'Lora', serif;
+}
+
+.container{
+  max-width: 960px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+nav {
+  text-align: right;
+}
+
+
+
+li {
+  display: inline;
+}
+
+a {
+  color: #05baffa6;
+  font-weight: bold;
+}
+
+.hidden-content {
+  color: fuchsia;
+}
+.hidden-content span {
+  visibility: hidden;
+}
+
+.hidden-content:hover {
+  visibility: visible;
+  color: fuchsia;
+}
+
+.hidden-content:hover span{
+    visibility: visible;
+    color: black;
+}black;
+span {
+  color: fuchsia;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+  color: black;
+}
+
+.Jen-title {
+  color: black;
+  font-size: 1.2em;
+}
+
+.money-dollars h6{
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+main {
+  display: inline-block;
+  /* padding: 2em; */
+  width: 30%;
+  margin-left: 10em;
+  vertical-align: top;
+  line-height: 1.5em;
+}
+
+.section-one {
+  display: inline-block;
+  width: 30%;
+  margin-left: 7em;
+
+  /* padding: 5em; */
+}
+
+aside {
+  display: inline-block;
+  width: 21%;
+  line-height: 1.5em;
+  padding: 5em;
+  /* margin-right: 20em; */
+  vertical-align: top;
+}
+
+.jenn{
+  color: yellow;
+    background-color: fuchsia;
+}
+
+.section-two {
+  display: inline-block;
+  padding: 2em;
+  width: 30%;
+  margin-left: 10em;
+  vertical-align: bottom;
+}
+
+.section-three {
+text-align: center;
+
+}
+
+.section-three-1, .section-three-2, .section-three-3 {
+  padding: 2em;
+}
