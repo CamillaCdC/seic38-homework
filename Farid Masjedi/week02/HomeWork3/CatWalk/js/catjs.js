@@ -1,91 +1,91 @@
-//
-// document.getElementById('cat-can-walk').addEventListener('click',function(){
-//   const image = document.querySelector('img');
-//   image.style.left = '0px';
-//   const imageWidth = 300;
-//   const pageWidth = window.innerWidth;
-//   const stopWalkingWidth = pageWidth-imageWidth;
-//
-//   const catWalk = function () {
-//
-//     let walkingToRight = parseInt(image.style.left);
-//     walkingToRight += 10;
-//     image.style.left = `${walkingToRight}px`;
-//     if (walkingToRight > stopWalkingWidth){
-//       clearInterval(stop);
-//     }
-//   }
-//   let stop = setInterval(catWalk,50);
-// });
-//
-//
-//
-// document.getElementById('cat-dumb-walk').addEventListener('click', function(){
-//   const image = document.querySelector('img');
-//   image.style.left = '0px';
-//
-//   const imageWidth = 300;
-//   const pageWidth = window.innerWidth;
-//   const stopWalkingWidth = pageWidth-imageWidth;
-//   let toIterateIndex = 0;
-//
-//   const catWalk = function () {
-//
-//     let walkingToRight = parseInt(image.style.left);
-//
-//     if (walkingToRight<stopWalkingWidth && toIterateIndex === 0){
-//       walkingToRight += 10;
-//       image.style.left = `${walkingToRight}px`;
-//     }else{
-//       toIterateIndex =1;
-//     }
-//     if (walkingToRight>=0 && toIterateIndex === 1){
-//
-//       walkingToRight -=10;
-//       image.style.left = `${walkingToRight}px`;
-//     }else{
-//       toIterateIndex = 0;
-//     }
-//
-//   }
-//   setInterval(catWalk,50);
-//
-// })
-//
-// document.getElementById('cat-walk').addEventListener('click', function (){
-//   const image = document.querySelector('img');
-//   const dancingImg = document.querySelector('.dancing-cat');
-//
-//   image.style.left = '0px';
-//   const imageWidth = 300;
-//   const pageWidth = window.innerWidth;
-//   const stopWalkingWidth = pageWidth-imageWidth;
-//   let toIterateIndex = 0;
-//
-//   const catWalk = function () {
-//
-//     let walkingToRight = parseInt(image.style.left);
-//
-//     if (walkingToRight<stopWalkingWidth && toIterateIndex === 0){
-//       image.style['transform'] = 'rotateY(0deg)';
-//       walkingToRight += 10;
-//       image.style.left = `${walkingToRight}px`;
-//     }else{
-//       toIterateIndex =1;
-//
-//       }
-//     if (walkingToRight>=0 && toIterateIndex === 1){
-//       image.style['transform'] = 'rotateY(180deg)';
-//       walkingToRight -=10;
-//       image.style.left = `${walkingToRight}px`;
-//     }else{
-//       toIterateIndex = 0;
-//
-//     };
-//
-//   }
-//   setInterval(catWalk,50);
-// })
+
+document.getElementById('cat-can-walk').addEventListener('click',function(){
+  const image = document.querySelector('img');
+  image.style.left = '0px';
+  const imageWidth = 300;
+  const pageWidth = window.innerWidth;
+  const stopWalkingWidth = pageWidth-imageWidth;
+
+  const catWalk = function () {
+
+    let walkingToRight = parseInt(image.style.left);
+    walkingToRight += 10;
+    image.style.left = `${walkingToRight}px`;
+    if (walkingToRight > stopWalkingWidth){
+      clearInterval(stop);
+    }
+  }
+  let stop = setInterval(catWalk,50);
+});
+
+
+
+document.getElementById('cat-dumb-walk').addEventListener('click', function(){
+  const image = document.querySelector('img');
+  image.style.left = '0px';
+
+  const imageWidth = 300;
+  const pageWidth = window.innerWidth;
+  const stopWalkingWidth = pageWidth-imageWidth;
+  let toIterateIndex = 0;
+
+  const catWalk = function () {
+
+    let walkingToRight = parseInt(image.style.left);
+
+    if (walkingToRight<stopWalkingWidth && toIterateIndex === 0){
+      walkingToRight += 10;
+      image.style.left = `${walkingToRight}px`;
+    }else{
+      toIterateIndex =1;
+    }
+    if (walkingToRight>=0 && toIterateIndex === 1){
+
+      walkingToRight -=10;
+      image.style.left = `${walkingToRight}px`;
+    }else{
+      toIterateIndex = 0;
+    }
+
+  }
+  setInterval(catWalk,50);
+
+})
+
+document.getElementById('cat-walk').addEventListener('click', function (){
+  const image = document.querySelector('img');
+  const dancingImg = document.querySelector('.dancing-cat');
+
+  image.style.left = '0px';
+  const imageWidth = 300;
+  const pageWidth = window.innerWidth;
+  const stopWalkingWidth = pageWidth-imageWidth;
+  let toIterateIndex = 0;
+
+  const catWalk = function () {
+
+    let walkingToRight = parseInt(image.style.left);
+
+    if (walkingToRight<stopWalkingWidth && toIterateIndex === 0){
+      image.style['transform'] = 'rotateY(0deg)';
+      walkingToRight += 10;
+      image.style.left = `${walkingToRight}px`;
+    }else{
+      toIterateIndex =1;
+
+      }
+    if (walkingToRight>=0 && toIterateIndex === 1){
+      image.style['transform'] = 'rotateY(180deg)';
+      walkingToRight -=10;
+      image.style.left = `${walkingToRight}px`;
+    }else{
+      toIterateIndex = 0;
+
+    };
+
+  }
+  setInterval(catWalk,50);
+})
 
 document.getElementById('disco-time').addEventListener('click', function (){
   const image = document.querySelector('.walking');
