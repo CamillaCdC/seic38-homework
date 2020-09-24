@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+body {
+
+}
+img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+ul {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  color: white;
+  padding: 25px;
+  font-size: 50px;
+  font-family: "news cycle";
+}
+
+li {
+  color: black;
+  font-size: 20px;
+  line-height: 40px;
+  margin-left: 25px;
+  font-family: "news cycle";
+}
+
+#home {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 2em;
+  padding: 1px 10px 4px 10px;
+  font-family: "news cycle";
+
+}
+
+a:hover#home {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1480b3;
+  font-family: "news cycle";
+}
