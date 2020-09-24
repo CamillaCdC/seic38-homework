@@ -1,20 +1,30 @@
 
-const img = document.getElementsByTagName('img')[0]
+$('img').css('margin-top', '100px')
 
-img.style.marginLeft='0px'
+$('body').css('background-color', 'pink')
 
-const watchKittyFall = function () {
 
-  var currentTop = parseInt(img.style.marginLeft); //convert to a number
+$('button#buttonR').click(function() {
+  walkRight();
+});
 
-  var newTop = currentTop +1;
+$('button#buttonL').click(function() {
+  walkLeft();
+})
 
-  img.style.marginLeft = newTop + 'px' // add unites back again
+$('button#walkLR').click(function() {
+  walkLeft();
+  walkRight();
+})
 
-  if (newTop > 960) {
-    clearInterval(maxWidth);
-  }
+
+
+
+
+const walkRight = function () {
+  const $catRight = $('img').animate({left: "+=1500px"}, 1000)
 
 }
-
-const maxWidth = setInterval(watchKittyFall, 1)
+const walkLeft = function () {
+  const $catLeft = $('img').animate({left: "-=1500px"}, 1000)
+}
