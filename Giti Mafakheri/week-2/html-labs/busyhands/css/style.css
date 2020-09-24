@@ -1,0 +1,12 @@
+.nav-item{
+  display: inline-block;
+}
+#ul-list{
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+#socialNav.container1{
+  text-align: left;
+  cursor: pointer;
+}
