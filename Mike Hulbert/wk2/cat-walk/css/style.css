@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
 * { cursor: url('../assets/cat.png'), pointer;}
 
 body {
@@ -28,14 +30,14 @@ body {
   height: 60px;
   color: white;
   background-color: #0c6df3;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 5px;
   margin: 1px;
   font-size: 25px;
   font-weight: bold;
+  font-family: 'Secular One', sans-serif;
   text-align: center;
   text-transform: uppercase;
-  box-shadow: 0 0 4px;
   opacity: 0.7;
 }
 
@@ -43,5 +45,6 @@ body {
   width: 100%;
   height: 90px;
   background-color: #28d798;
+  box-shadow: 0 0  90px #fff;
   opacity: 1;
 }

@@ -1,7 +1,7 @@
 
 window.onload = function() {
   //checkJquery();
-    onReady();
+  //  onReady();
   }
 
 // Check Jquery has loaded
@@ -23,7 +23,7 @@ const walkRight = function () {
   const currentLeft = parseInt(cat.style.left); // convert to a number
   const newLeft = currentLeft + 10;
   cat.style.left = newLeft + 'px';
-  if (cat.style.left === '1200px') {
+  if (cat.style.left === '1300px') {
     cat.style.left = '0px';
   }
 }
@@ -77,12 +77,6 @@ $(".office-btn").on("click", function() {
 //--------------------------------- On Ready ---------------------------------//
 
 const onReady = function () {
-  $('.video-home').show();
-  $('.video-butter').hide();
-  $('.video-snow').hide();
-  $('.video-sea').hide();
-  $('.video-scary').hide();
-  $('.video-office').hide();
   //$('.btn-box').hide();
 }
 
