@@ -27,7 +27,7 @@ const dog = () => {
     if (currentX === end) {
       // dog has reached the end of the pool
       counter++;
-      if (counter === 3) {
+      if (counter === 5) {
         clearInterval(timerId);
         let angle = 0;
         const swimTimerID = setInterval(function () {
