@@ -128,4 +128,6 @@ function notBad(sentence){
     result = `${sentence.slice(0, not)}good${sentence.slice(bad + 2)}`
   }
 }
+
 console.log(notBad("This dinner is that bad!"))
+console.log(notBad("This dinner is not that bad!"))
