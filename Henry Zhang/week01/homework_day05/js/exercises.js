@@ -113,6 +113,8 @@ const planTrip = function ( r1, s, r2, e ){
 }
 
 planTrip (route6, '33rd', routeN, '8th');
+planTrip (routeL, '6th', routeN, '8th');
+planTrip (routeN, '34th', routeN, '8th');
 
 
 // const trips = planTrip (route, '34th', routeN, '8th');

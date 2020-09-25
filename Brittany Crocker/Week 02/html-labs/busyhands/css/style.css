@@ -1,0 +1,71 @@
+/* Suggestions for ID names and classes
+
+---------------------------------------------
+
+#wrapper
+#container
+
+<header>
+<nav>
+
+#main-content
+#social-media
+
+.photobanner
+.imageshadow
+
+#blurb
+
+#home-boxes
+    .home-box
+    .home-box
+    .home-box
+
+<footer>
+    .box-footer
+         .blogroll
+    .box-footer
+         .textwidget
+
+#copyright
+#companybottom */
+
+header {
+  background-color: black;
+  height: 100px;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;s
+}
+
+li {
+  display: inline;
+  padding: 15px;
+}
+
+/* Images */
+
+.social-media {
+  margin: 0 0 0 200px;
+}
+
+body {
+  margin: 10px 70px;
+}
+
+.middle-text img {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+section {
+  display: flex;
+}
+
+.home-box img {
+  border: 5px solid lightgray;
+}
