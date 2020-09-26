@@ -7,7 +7,7 @@ const colorCheckerChecking = function () {
   if(checkingBalance === 0) {
     $('#checking-balance').css('background-color', 'red')
   } else {
-    $('#checking-balance').css('background-color', 'green')
+    $('#checking-balance').css('background-color', 'grey')
   }
 };
 
@@ -15,7 +15,7 @@ const colorCheckerSavings = function () {
   if(savingsBalance === 0) {
     $('#savings-balance').css('background-color', 'red')
   } else {
-    $('#savings-balance').css('background-color', 'green')
+    $('#savings-balance').css('background-color', 'grey')
   }
 };
 
@@ -36,7 +36,7 @@ $('#checking-deposit').on('click', function () {
     checkingBalance =  parseInt($('#checking-balance').text()) + checkingBalance
     $('#checking-balance').text(checkingBalance)
 
-
+    //checking which color to set if value is 0 or > 0
     colorCheckerChecking();
 })
 
@@ -54,6 +54,7 @@ $('#checking-withdraw').on('click', function (){
     $('#checking-balance').text(checkingBalance)
   }
 
+  //checking which color to set if value is 0 or > 0
   colorCheckerChecking();
 
 
@@ -67,6 +68,7 @@ $('#savings-deposit').on('click', function () {
     savingsBalance =  parseInt($('#savings-balance').text()) + savingsBalance
     $('#savings-balance').text(savingsBalance)
 
+    //checking which color to set if value is 0 or > 0
     colorCheckerSavings();
 })
 
@@ -84,6 +86,7 @@ $('#savings-withdraw').on('click', function (){
     $('#savings-balance').text(savingsBalance)
   }
 
+  //checking which color to set if value is 0 or > 0
   colorCheckerSavings();
 
 })
