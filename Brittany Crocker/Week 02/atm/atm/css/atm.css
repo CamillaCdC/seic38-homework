@@ -32,11 +32,15 @@
 }
 
 .balance {
-  background-color: #E3E3E3;
+  background-color: lightgray;
   border: 1px solid #676767;
   font-family: 'Ruluko', sans-serif;
   font-size: 50px;
   padding: 25px 0;
+}
+
+.balanceUner0 {
+  background-color: red;
 }
 
 .clear {
