@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&family=Noto+Serif:ital,wght@1,700&family=Playfair+Display&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+
+body {
+  background-color: #f1f1f1;
+  padding: 0px 130px 70px 130px;
+}
+
+h2 {
+  text-align: left;
+  margin-top: 60px;
+  color: #253c82;
+  font-family: 'Playfair Display', serif;
+}
+p {
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+video {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 700px;
+  display: block;
+  margin: auto;
+}

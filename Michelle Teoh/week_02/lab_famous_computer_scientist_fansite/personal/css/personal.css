@@ -1,0 +1,17 @@
+
+body {
+  background-color: #f1f1f1;
+  padding: 0px 130px 100px 130px;
+  margin-bottom: 500px;
+}
+
+img {
+  float: right;
+  width: 400px;
+  margin-left: 40px;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+}
