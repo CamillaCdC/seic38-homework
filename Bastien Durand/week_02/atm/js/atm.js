@@ -45,7 +45,7 @@ $('#checking-deposit').on('click', function () {
 
     checkingBalance =  parseInt($('#checking-balance').text()) + checkingBalance
 
-    $('#checking-balance').text(checkingBalance)
+    $('#checking-balance').text('$' + checkingBalance)
 
     //checking which color to set if value is 0 or > 0
     colorCheckerChecking();
@@ -69,7 +69,7 @@ $('#checking-withdraw').on('click', function (){
 
     checkingBalance =  checkingBalance - parseInt($('#checking-balance').text())
 
-    $('#checking-balance').text(checkingBalance)
+    $('#checking-balance').text('$' + checkingBalance)
 
   }
 
@@ -87,7 +87,7 @@ $('#savings-deposit').on('click', function () {
 
     savingsBalance =  parseInt($('#savings-balance').text()) + savingsBalance
 
-    $('#savings-balance').text(savingsBalance)
+    $('#savings-balance').text('$' + savingsBalance)
 
     //checking which color to set if value is 0 or > 0
     colorCheckerSavings();
@@ -110,7 +110,7 @@ $('#savings-withdraw').on('click', function (){
 
     savingsBalance =  savingsBalance - parseInt($('#savings-balance').text())
 
-    $('#savings-balance').text(savingsBalance)
+    $('#savings-balance').text('$' + savingsBalance)
 
   }
 
