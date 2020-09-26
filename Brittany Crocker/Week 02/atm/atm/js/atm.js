@@ -6,8 +6,10 @@ let checkingsBalance = 0;
 // * When the balance of the bank account is $0 the background of that bank account
 // should be red. It should be gray when there is money in the account.
 const changeColourSavings = function() {
+
   if (savingsBalance === 0) {
-        $('#savings-balance').css("background-color", "red")
+      $('#savings-balance').css("background-color", "red")
+
   } else {
       $('#savings-balance').css("background-color", "lightgray")
 
@@ -15,11 +17,14 @@ const changeColourSavings = function() {
 }
 
 const changeColourCheckings = function() {
+
   if (checkingsBalance === 0) {
     $('#checking-balance').css("background-color", "red")
+
   } else {
-    $('#checking-balance').css("background-color", "lightgray")
+      $('#checking-balance').css("background-color", "lightgray")
   }
+  
 }
 
 
@@ -98,4 +103,5 @@ $('#savings-withdraw').on('click', withdrawFromSavings)
 // If the withdrawal amount is more than the combined account balance, ignore it.
 // * Make sure there is overdraft protection going both ways.
 // * Are there ways to refactor your code to make it DRYer?
+
 })
