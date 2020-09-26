@@ -26,12 +26,11 @@ $('#checking-deposit').on('click', depositToChecking)
 
 
 const depositToSavings = function(e) {
-  // let savingsBalance = 0
+
 
 const savingsAmountInput =  $('#savings-amount').val()
 $('#savings-balance').text(savingsAmountInput)
-  // savingsBalance = parseInt(savingsAmountInput)
-// savingsBalance = parseInt(savingsAmountInput)
+
 
     savingsBalance =  parseInt($('#savings-balance').text()) + savingsBalance
     console.log(savingsBalance)
@@ -50,15 +49,26 @@ $('#savings-deposit').on('click', depositToSavings)
 
  // up to here -------------
 const withdrawFromChecking = function(e) {
-const checkingAmountInput =  $('#checking-amount').val()
-let amount = parseInt(checkingAmountInput)
+  const checkingAmountInput =  parseInt($('#checking-amount').val())
 
-$('#checking-balance').text(checkingAmountInput)
+checkingsBalance = checkingsBalance - checkingAmountInput
+
+$('#checking-balance').text(checkingsBalance)
 
 }
 
 $('#checking-withdraw').on('click', withdrawFromChecking)
 
+
+const withdrawFromSavings = function(e) {
+  const savingsAmountInput = parseInt($('#savings-amount').val())
+  savingsBalance = savingsBalance - savingsAmountInput
+
+  $('#savings-balance').text(savingsBalance)
+
+}
+
+$('#savings-withdraw').on('click', withdrawFromSavings)
 
 // * Make sure you are updating the display and manipulating the HTML of the page
 // so a user can see the change.
