@@ -5,10 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 
+*{
+  box-sizing: border-box;
+}
 
 body {
   background-color: #f1f1f1;
-  padding: 0px 130px 70px 130px;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0px 400px 70px 400px;
+  margin-bottom: 500px;
 }
 
 h2 {
