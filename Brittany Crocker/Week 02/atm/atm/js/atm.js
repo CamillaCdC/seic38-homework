@@ -51,10 +51,14 @@ $('#savings-deposit').on('click', depositToSavings)
 const withdrawFromChecking = function(e) {
   const checkingAmountInput =  parseInt($('#checking-amount').val())
 
-checkingsBalance = checkingsBalance - checkingAmountInput
+  if (parseInt($('#checking-amount').val()) > checkingsBalance) {
+    checkingsBalance === checkingsBalance
 
-$('#checking-balance').text(checkingsBalance)
+  } else {
+    checkingsBalance = checkingsBalance - checkingAmountInput
 
+    $('#checking-balance').text(checkingsBalance)
+  }
 }
 
 $('#checking-withdraw').on('click', withdrawFromChecking)
@@ -62,10 +66,16 @@ $('#checking-withdraw').on('click', withdrawFromChecking)
 
 const withdrawFromSavings = function(e) {
   const savingsAmountInput = parseInt($('#savings-amount').val())
-  savingsBalance = savingsBalance - savingsAmountInput
 
-  $('#savings-balance').text(savingsBalance)
+    if (parseInt($('#savings-amount').val()) > savingsBalance) {
+      savingsBalance === savingsBalance
 
+  } else {
+    savingsBalance = savingsBalance - savingsAmountInput
+
+    $('#savings-balance').text(savingsBalance)
+
+  }
 }
 
 $('#savings-withdraw').on('click', withdrawFromSavings)
