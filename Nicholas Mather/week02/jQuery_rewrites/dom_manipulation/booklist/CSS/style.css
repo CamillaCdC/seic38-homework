@@ -1,0 +1,12 @@
+img {
+  width: 400px;
+  height: 620px;
+}
+
+.read {
+  color: green;
+}
+
+.not-read {
+  color: red;
+}

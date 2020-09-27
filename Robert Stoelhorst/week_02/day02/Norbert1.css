@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  /* z-index: -1; */
+}
+
+p {
+  font-family: "news cycle";
+}
+
+
+#home {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 2em;
+  padding: 1px 10px 4px 10px;
+  font-family: "news cycle";
+  z-index: 2;
+}
+
+a:hover#home {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1480b3;
+  font-family: "news cycle";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* background: #000;
+  overflow: hidden; */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#uppercase {
+  font-family: "news cycle";
+  text-transform: uppercase;
+  font-size: 300px;
+  line-height: 1.5em;
+}
+
+
+.fade {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 60vh;
+  top: -100px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 800px;
+  color: #4b6082;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 100%;
+  animation: crawl 80s linear;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}

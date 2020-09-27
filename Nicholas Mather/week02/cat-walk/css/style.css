@@ -1,0 +1,15 @@
+.cat-right {
+
+}
+
+.cat-left {
+  transform: scaleX(-1);
+}
+
+p {
+  text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin-top: 300px;
+  font-size: 4em;
+  font-weight: bold;
+}

@@ -1,0 +1,122 @@
+body {
+  margin:inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 950px;
+  position: relative;
+}
+.section {
+  justify-content: space-space-between;
+
+}
+
+.request-container {
+
+}
+
+nav {
+	width: 100%;
+	display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+nav ul li {
+	overflow: auto;
+	display: inline;
+	margin-right: 20px;
+}
+
+nav li {
+	display: block;
+	width: 100px;
+	padding: 10px 0px;
+}
+
+.logo {
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.photobanner {
+  margin: -4px
+  /* box-shadow: 6px 40px 51px -19px rgba(0,0,0,0.87); */
+}
+
+.request-box {
+  justify-content: space-between;
+  /* padding: 10px;
+  margin: 10px; */
+}
+
+.request-box-second {
+    width: 48%;
+    border-radius: .3rem;
+    height: auto;
+}
+  /*-----------------------------------------------------------------------------
+=05 SOCIAL MEDIA
+-----------------------------------------------------------------------------*/
+#socialMedia {
+	float: right;
+  /* wamt get rid of float, keep trying flex?? */
+}
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;
+	 text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px;
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px;
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px;
+}
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px;
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px;
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px;
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px;
+}
+
+/* Home boxes*/
+
+#home-boxes {
+
+}
+
+.home-box {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 1em;
+}
