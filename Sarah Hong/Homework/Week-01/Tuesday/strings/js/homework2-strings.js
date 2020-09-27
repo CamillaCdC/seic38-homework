@@ -32,7 +32,7 @@ drEvil(10);
 //
 
 const mixUp = function(string1, string2) {
-  
+
 }
 
 // ## FixStart
