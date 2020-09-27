@@ -1,8 +1,14 @@
 
 $(document).ready(function(){
+  loadData();
+});
+
+const loadData = function (){
   $queryAcc($checkingAcc, '#checking-balance'); // query checking acc
   $queryAcc($savingsAcc, '#savings-balance'); // query savings acc
-});
+  checkPattern('#checking-amount', '#checking-deposit', '#checking-withdraw');
+  checkPattern('#savings-amount', '#savings-deposit', '#savings-withdraw');
+}
 
 //************************* Deposit: Checking Account ************************//
 //See README.md before editing function
@@ -32,10 +38,10 @@ const $withdrawChecking = function (a, b) {
     } else if ($checkingAcc === 0 && $savingsAcc > 0) {
                $withdrawSavings(a, $('#savings-balance'));
     } else if ($checkingAcc === 0 && $savingsAcc === 0) {
-               alert('insuficient funds, get a job!')
+               alert('Insuficient funds, get a job!')
                $queryAcc($checkingAcc, b);
-            }
-}
+             }
+  }
 
 $("#checking-withdraw").on("click", function (){
 $withdrawChecking($('#checking-amount'), $('#checking-balance'));
@@ -69,10 +75,10 @@ const $withdrawSavings = function (a, b) {
     } else if ($savingsAcc === 0 && $checkingAcc > 0) {
                $withdrawChecking(a, $('#checking-balance'));
     } else if ($savingsAcc === 0 && $checkingAcc === 0) {
-               alert('insuficient funds, get a job!')
+               alert('Insuficient funds, get a job!');
                $queryAcc($savingsAcc, b);
             }
-}
+  }
 
 $("#savings-withdraw").on("click", function (){
 $withdrawSavings($('#savings-amount'), $('#savings-balance'));
@@ -89,3 +95,27 @@ const $queryAcc = function (account, input) {
       $(input).removeClass('zero');
       }
   }
+
+//*************************** Validiate Input ********************************//
+
+const checkPattern = function (input, d, w) {
+
+  const inputVal = $(input).val();
+
+  if ($.isNumeric(inputVal) && inputVal > 0) {
+      $(d).prop("disabled", false);
+      $(w).prop("disabled", false);
+    } else {
+      $(d).prop("disabled", true);
+      $(w).prop("disabled", true);
+      console.log('is not a number');
+    }
+  }
+
+$('#checking-amount').keyup(function() {
+  checkPattern('#checking-amount', '#checking-deposit', '#checking-withdraw');
+});
+
+$('#savings-amount').keyup(function() {
+  checkPattern('#savings-amount', '#savings-deposit', '#savings-withdraw');
+});
