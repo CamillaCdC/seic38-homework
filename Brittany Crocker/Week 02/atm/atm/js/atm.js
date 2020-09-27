@@ -24,7 +24,7 @@ const changeColourCheckings = function() {
   } else {
       $('#checking-balance').css("background-color", "lightgray")
   }
-  
+
 }
 
 
@@ -81,8 +81,24 @@ $('#checking-withdraw').on('click', withdrawFromChecking)
 const withdrawFromSavings = function(e) {
   const savingsAmountInput = parseInt($('#savings-amount').val())
 
-    if (parseInt($('#savings-amount').val()) > savingsBalance) {
-      savingsBalance === savingsBalance
+  if (parseInt($('#savings-amount').val()) > savingsBalance && parseInt($('#savings-amount').val()) > checkingsBalance) {
+              savingsBalance === savingsBalance
+              checkingsBalance === checkingsBalance
+              console.log("not enough money")
+
+
+            } else if (parseInt($('#savings-amount').val()) > savingsBalance) {
+
+      checkingsBalance = checkingsBalance - savingsBalance
+      $('#savings-balance').text("$" + 0)
+
+
+          if ($('#savings-balance').text() == '$0') {
+              
+              checkingsBalance = parseInt(checkingsBalance) - parseInt($('#savings-amount').val())
+              $('#checking-balance').text("$" + checkingsBalance)
+
+      }
 
   } else {
     savingsBalance = savingsBalance - savingsAmountInput
@@ -93,6 +109,11 @@ const withdrawFromSavings = function(e) {
   changeColourSavings()
 }
 $('#savings-withdraw').on('click', withdrawFromSavings)
+
+// If savingswithdrawamount.val() > balance {
+//savingsWithdrawAmount - checkings balance
+//}
+
 
 
 
