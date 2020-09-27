@@ -83,6 +83,7 @@ const withdrawFromChecking = function(e) {
   }
 
   changeColourCheckings()
+  changeColourSavings()
 }
 $('#checking-withdraw').on('click', withdrawFromChecking)
 
@@ -111,6 +112,7 @@ const withdrawFromSavings = function(e) {
         }
 
   changeColourSavings()
+  changeColourCheckings()
 }
 
 $('#savings-withdraw').on('click', withdrawFromSavings)
