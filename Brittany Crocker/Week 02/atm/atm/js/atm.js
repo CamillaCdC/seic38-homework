@@ -65,12 +65,21 @@ const withdrawFromChecking = function(e) {
 
   const checkingAmountInput =  parseInt($('#checking-amount').val())
 
-    if (parseInt($('#checking-amount').val()) > checkingsBalance) {
+    if (checkingAmountInput > (checkingsBalance + savingsBalance)) {
       checkingsBalance === checkingsBalance
+      savingsBalance === savingsBalance
+      console.log("not enough money")
 
-    } else {
-      checkingsBalance = checkingsBalance - checkingAmountInput
-      $('#checking-balance').text("$" + checkingsBalance)
+      } else if (checkingAmountInput > checkingsBalance) {
+
+        savingsBalance = savingsBalance + (checkingsBalance - checkingAmountInput)
+        checkingsBalance = 0
+        $('#checking-balance').text("$" + checkingsBalance)
+        $('#savings-balance').text("$" + savingsBalance)
+
+      } else {
+        checkingsBalance = checkingsBalance - checkingAmountInput
+        $('#checking-balance').text("$" + checkingsBalance)
   }
 
   changeColourCheckings()
@@ -81,40 +90,30 @@ $('#checking-withdraw').on('click', withdrawFromChecking)
 const withdrawFromSavings = function(e) {
   const savingsAmountInput = parseInt($('#savings-amount').val())
 
-  if (parseInt($('#savings-amount').val()) > savingsBalance && parseInt($('#savings-amount').val()) > checkingsBalance) {
+      if (savingsAmountInput > (checkingsBalance + savingsBalance)) {
               savingsBalance === savingsBalance
               checkingsBalance === checkingsBalance
               console.log("not enough money")
 
+            } else if (savingsAmountInput > savingsBalance) {
 
-            } else if (parseInt($('#savings-amount').val()) > savingsBalance) {
+              // checkings balance is equal to checkings balance minus the difference between savings balance and the input field / savings balance is equal to 0
+              checkingsBalance = checkingsBalance + (savingsBalance - savingsAmountInput)
+              savingsBalance = 0
 
-      checkingsBalance = checkingsBalance - savingsBalance
-      $('#savings-balance').text("$" + 0)
-
-
-          if ($('#savings-balance').text() == '$0') {
-              
-              checkingsBalance = parseInt(checkingsBalance) - parseInt($('#savings-amount').val())
               $('#checking-balance').text("$" + checkingsBalance)
+              $('#savings-balance').text("$" + savingsBalance)
 
-      }
+            } else {
+              savingsBalance = savingsBalance - savingsAmountInput
+              $('#savings-balance').text("$" + savingsBalance)
 
-  } else {
-    savingsBalance = savingsBalance - savingsAmountInput
-    $('#savings-balance').text("$" + savingsBalance)
-
-  }
+        }
 
   changeColourSavings()
 }
+
 $('#savings-withdraw').on('click', withdrawFromSavings)
-
-// If savingswithdrawamount.val() > balance {
-//savingsWithdrawAmount - checkings balance
-//}
-
-
 
 
 // * What happens when the user wants to withdraw more money from the checking
