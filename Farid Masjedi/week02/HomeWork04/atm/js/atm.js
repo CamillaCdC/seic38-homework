@@ -29,6 +29,7 @@ $(document).ready( function(){
     $('#page1 #submit').on('click', function (){
       let inputVal = $('#page1 #username').val(); //This gonna take the inputed name.
       $inputVal = inputVal.charAt(0).toUpperCase() + inputVal.slice(1); // First letter to be capital.(Like the names in jsBank)
+      $('#page1 #username').val(null);
 
       for (i=0; i<jsBank.bankArray.length; i++){ // Find the name in the jsBank.
         if ( $inputVal === jsBank.bankArray[i].name ) {
@@ -64,6 +65,8 @@ $(document).ready( function(){
     $('#page2 #checking-deposit').on('click', function(){
       let amount = Number($(`#checking-amount`).val()); // it is gonna take the amount that inputed
       let newCheckingsCurrent = jsBank.moneyDeposite(name,amount,'checkingsBalance'); // jsBank.moneyDeposite :function in jsBank.js
+      $(`#checking-amount`).val(null);
+      
       $(`#checking-balance`).text(Math.round(newCheckingsCurrent*100)/100);
       // make the background to be noram, if an account with zero take any deposite.
       if (newCheckingsCurrent > 0){
@@ -76,6 +79,8 @@ $(document).ready( function(){
     $('#page2 #savings-deposit').on('click', function(){
       let amount2 = Number($(`#savings-amount`).val());
       let newSavingsCurrent = jsBank.moneyDeposite(name,amount2);
+      $(`#savings-amount`).val(null);
+
       $(`#savings-balance`).text(Math.round(newSavingsCurrent*100)/100);
       if (newSavingsCurrent > 0){
         $(`#savings-balance`).css({'background-color':'#E3E3E3',
@@ -101,6 +106,8 @@ $(document).ready( function(){
       let amount = Number($(`#checking-amount`).val());
       let newAmount = jsBank.moneyWithdraw(name,amount,'checkingsBalance'); // jsBank.moneyWithdraw: function in jsBank
       // if the amount for withdrawing is more than total balance of two account, the message gonna show up for 2 secons.
+      $(`#checking-amount`).val(null);
+
       if (!newAmount){
         $(`.clear`).show();
         setTimeout(function(){
@@ -122,6 +129,7 @@ $(document).ready( function(){
     $('#page2 #savings-withdraw').on('click', function(){
       let amount2 = Number($(`#savings-amount`).val());
       let newAmount2 = jsBank.moneyWithdraw(name,amount2);
+      $(`#savings-amount`).val(null);
 
       if (!newAmount2){
         $(`.clear`).show();
@@ -174,6 +182,7 @@ $(document).ready( function(){
     $(`#checking-transfer-button`).on('click', function(){
       let amount = Number($(`#checking-transfer`).val());
       let amountTransferred = jsBank.moneyTransfer(name,amount,'checkingsBalance'); //jsBank.moneyTransfer : function in jsBank.
+      $(`#checking-transfer`).val(null);
 
       if (!amountTransferred) {
         $(`.clear`).show();
@@ -205,6 +214,7 @@ $(document).ready( function(){
     $(`#savings-transfer-button`).on('click', function(){
       let amount = Number($(`#savings-transfer`).val());
       let amountTransferred = jsBank.moneyTransfer(name,amount);
+      $(`#savings-transfer`).val(null);
 
       if (!amountTransferred) {
         $(`.clear`).show();
