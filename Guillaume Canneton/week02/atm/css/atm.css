@@ -42,7 +42,12 @@
 .clear {
   clear: both;
 }
-
+#alert {
+  margin: 25px;
+  font-size: 200%;
+  color: red;
+  visibility: hidden;
+}
 .zero {
   background-color: #F52F4F;
   color: #FFF;
