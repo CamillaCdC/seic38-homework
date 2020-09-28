@@ -25,6 +25,14 @@
   float: right;
 }
 
+#divLeft {
+  text-align: left;
+}
+
+li {
+  text-align: left;
+}
+
 .account {
   background-color: #6C9A74;
   border: 1px solid #295A33;
