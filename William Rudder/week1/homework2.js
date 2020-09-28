@@ -50,7 +50,7 @@ console.log(sumArray([1,2,3,4]));
 
 function multiplyArray (numbers2) {
 let total2 = 0;
-for (let i = 0; i < numbers2.length; i++) {
+for (let i = 1; i < numbers2.length; i++) {
   total2 += (total * numbers2[i]);
 }
 return total2;

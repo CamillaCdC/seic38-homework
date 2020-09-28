@@ -42,17 +42,6 @@ areaOfCircle(2);
 
 //Take half of the number and store the result.
 
-const number = 4;
-
-function rule () {
- const newNumber = number / 2;
-  console.log (newNumber);
-  return (newNumber);
-
-};
-
-rule();
-let Halved = rule();
 
 //Square the result of #1 and store that result.
 
