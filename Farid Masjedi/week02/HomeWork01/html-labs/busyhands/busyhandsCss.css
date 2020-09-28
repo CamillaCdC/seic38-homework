@@ -1,0 +1,160 @@
+body{
+  text-align: center;
+  margin: 0 auto;
+  background-color: black;
+  font-family:helvetica;
+}
+
+.wrapper{
+  background-color: white;
+  margin:0 auto;
+  max-width:960px;
+}
+.subwrapper{
+  max-width:800px;
+  margin:0 80px;
+}
+nav{
+  background-color: black;
+  padding:20px;
+  text-align:left;
+}
+nav a{
+  color:white;
+  text-decoration: none;
+  padding:10px;
+  margin-left:20px;
+}
+nav a:hover{
+  background-color: linear-gradient(90deg, rgba(0,0,255,0.1), rgba(0,0,255,0.8));
+  background: -webkit-linear-gradient(90deg, rgba(0,0,255,0.1), rgba(0,0,255,0.8));
+  background: -moz-linear-gradient(90deg, rgba(0,0,255,0.1), rgba(0,0,255,0.8));
+  text-decoration:overline;
+  padding-top:12px;
+}
+.logo,.social{
+  float:left;
+}
+#header-img::after{
+  content: '';
+  clear: both;
+  display: table;
+}
+.social{
+  position:relative;
+  left:300px;
+}
+.social:hover{
+  background:blue;
+  /* Question : How to make each one a button */
+  /* Question : How to crop the image? */
+}
+.logo{
+  position:relative;
+  left:125px;
+  top:25px;
+}
+.banner{
+  max-width:800px;
+  position:relative;
+  -webkit-box-shadow: 0px 18px 13px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 18px 13px -12px rgba(0,0,0,0.75);
+  box-shadow: 0px 18px 13px -12px rgba(0,0,0,0.75);
+}
+#header{
+  background-color:#ddd;
+  height:450px;
+}
+.maincontent, .button{
+  float:left;
+}
+.maincontent{
+  width:70%;
+  text-align:left;
+  padding-left:10px;
+}
+.button{
+  width:25%;
+}
+.button img{
+  width:85%;
+  padding-top:25px;
+}
+.blurbox{
+  margin:75px;
+  border: 1px solid gray;
+  background-color: #ddd;
+
+}
+.blurbox::after{
+
+  content: '';
+  clear: both;
+  display: table;
+
+}
+ul{
+  list-style:none;
+}
+li{
+  display:inline;
+}
+
+.box1, .box2, .box3{
+  float:left;
+  width:33%;
+}
+.box1 img, .box2 img, .box3 img{
+  width:96%;
+}
+h2 {
+  text-align:left;
+  font-size:20px;
+  padding-left:5px;
+}
+.box1 p, .box2 p, .box3 p{
+  font-size:12px;
+  text-align:left;
+  padding-left:5px;
+}
+#homeBoxes::after{
+  content:'';
+  clear:both;
+  display:table;
+}
+
+p a{
+  color:#4fc2d8;
+  text-decoration:none;
+}
+p a:hover{
+  color:#ddd;
+  text-decoration: underline;
+}
+
+.Blogroll, .TextWidget, .metaWidget{
+  float:left;
+  width:30%;
+  padding-left:30px;
+}
+#footer{
+  content:"";
+  clear:both;
+  display:both;
+  background-color:black;
+  width:100%;
+  color:white;
+  max-width:960px;
+  margin:0 auto;
+  text-align:left;
+  font-size: 10px;
+}
+#footer p a, #footer p{
+  color:#aaa;
+}
+#footer p a:hover{
+  color:#fff;
+}
+span{
+  color:#4ff2d9;
+}
