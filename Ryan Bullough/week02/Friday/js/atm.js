@@ -29,8 +29,10 @@ $(document).ready(function () {
   };
   changeBgColor();
   const depositWithdraw = () => {
+    const regex = /^[0-9]*$/gm;
     // grab amount to deposit
-    const amount = +$(event.target).siblings().eq(2).val();
+    let amount = $(event.target).siblings().eq(2).val();
+    regex.test(amount) ? (amount = +amount) : alert("numbers only");
     // grab the balance of the current account we're working with
     const currentBalance = +$(event.target)
       .siblings(".balance")
