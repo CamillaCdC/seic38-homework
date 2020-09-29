@@ -16,10 +16,10 @@ const loadData = function (){
 let $checkingAcc = 0; // total balance in the checking account
 let $checkingDisplay = 0; // display current balance
 
-const $depositChecking = function (a, b) {
-      $checkingAcc += parseInt(a.val()); // parseInt converts str to integer
-      $checkingDisplay += b.text(`$${$checkingAcc}`);
-      $queryAcc($checkingAcc, b);
+const $depositChecking = function (amount, balance) {
+      $checkingAcc += parseInt(amount.val()); // parseInt converts str to integer
+      $checkingDisplay += balance.text(`$${$checkingAcc}`);
+      $queryAcc($checkingAcc, balance);
     }
 
 $("#checking-deposit").on("click", function() {
@@ -29,17 +29,17 @@ $depositChecking($('#checking-amount'), $('#checking-balance'));
 //************************ Withdraw: Checking Account ************************//
 //See README.md before editing function
 
-const $withdrawChecking = function (a, b) {
+const $withdrawChecking = function (amount, balance) {
 
   if ($checkingAcc > 0) {
-      $checkingAcc = $checkingAcc - parseInt(a.val());
-      $checkingDisplay += b.text(`$${$checkingAcc}`);
-      $queryAcc($checkingAcc, b);
+      $checkingAcc = $checkingAcc - parseInt(amount.val());
+      $checkingDisplay += balance.text(`$${$checkingAcc}`);
+      $queryAcc($checkingAcc, balance);
     } else if ($checkingAcc === 0 && $savingsAcc > 0) {
-               $withdrawSavings(a, $('#savings-balance'));
+               $withdrawSavings(amount, $('#savings-balance'));
     } else if ($checkingAcc === 0 && $savingsAcc === 0) {
                alert('Insuficient funds, get a job!')
-               $queryAcc($checkingAcc, b);
+               $queryAcc($checkingAcc, balance);
              }
   }
 
@@ -53,10 +53,10 @@ $withdrawChecking($('#checking-amount'), $('#checking-balance'));
 let $savingsAcc = 0; // total balance in the savings account
 let $savingsDisplay = 0; // display current balance
 
-const $depositSavings = function (a, b) {
-      $savingsAcc += parseInt(a.val()); // parseInt converts str to integer
-      $savingsDisplay += b.text(`$${$savingsAcc}`);
-      $queryAcc($savingsAcc, b);
+const $depositSavings = function (amount, balance) {
+      $savingsAcc += parseInt(amount.val()); // parseInt converts str to integer
+      $savingsDisplay += balance.text(`$${$savingsAcc}`);
+      $queryAcc($savingsAcc, balance);
     }
 
 $("#savings-deposit").on("click", function() {
@@ -66,17 +66,17 @@ $depositSavings($('#savings-amount'), $('#savings-balance'));
 //************************* Withdraw: Savings Account ************************//
 //See README.md before editing function
 
-const $withdrawSavings = function (a, b) {
+const $withdrawSavings = function (amount, balance) {
 
   if ($savingsAcc > 0) {
-      $savingsAcc = $savingsAcc - parseInt(a.val());
-      $savingsDisplay += b.text(`$${$savingsAcc}`);
-      $queryAcc($savingsAcc, b);
+      $savingsAcc = $savingsAcc - parseInt(amount.val());
+      $savingsDisplay += balance.text(`$${$savingsAcc}`);
+      $queryAcc($savingsAcc, balance);
     } else if ($savingsAcc === 0 && $checkingAcc > 0) {
-               $withdrawChecking(a, $('#checking-balance'));
+               $withdrawChecking(amount, $('#checking-balance'));
     } else if ($savingsAcc === 0 && $checkingAcc === 0) {
                alert('Insuficient funds, get a job!');
-               $queryAcc($savingsAcc, b);
+               $queryAcc($savingsAcc, balance);
             }
   }
 
@@ -98,16 +98,16 @@ const $queryAcc = function (account, input) {
 
 //*************************** Validiate Input ********************************//
 
-const checkPattern = function (input, d, w) {
+const checkPattern = function (input, deposit, withdraw) {
 
   const inputVal = $(input).val();
 
   if ($.isNumeric(inputVal) && inputVal > 0) {
-      $(d).prop("disabled", false);
-      $(w).prop("disabled", false);
+      $(deposit).prop("disabled", false);
+      $(withdraw).prop("disabled", false);
     } else {
-      $(d).prop("disabled", true);
-      $(w).prop("disabled", true);
+      $(deposit).prop("disabled", true);
+      $(withdraw).prop("disabled", true);
       console.log('is not a number');
     }
   }
