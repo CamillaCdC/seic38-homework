@@ -11,7 +11,7 @@ $('#hometown').html('Sydney');
 
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 
-$('body ul li').addClass('listitem');
+$('li').addClass('listitem');
 $('.listitem').css({'color': 'red'});
 
 
