@@ -36,3 +36,22 @@
 // ```
 //
 // *Double Bonus*: Make your credit card scheme even more advanced! What are the rules, and what are some numbers that pass or fail? Ideas: check expiration date! Check out the Luhn Algorithm for inspiration.
+
+// const validateCreditCard = function(cardNumber) {
+//     const letters = (/^[A-Za-z]+$/)
+//   if (cardNumber.includes(letters)) {
+//     return false
+//   } else {
+// for (i=0; i < cardNumber.length; i++){
+//   if (i === i){
+//     return
+//   }
+// }
+// }
+const cardNumbers = [9999, 9999, 9999, 9999]
+
+const practice = function(, index, arr){
+return (el === arr[index-1])
+}
+
+console.log(cardNumbers.every(practice))
