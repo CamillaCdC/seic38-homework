@@ -14,11 +14,14 @@ const rectangleA = {
   width: 4
 };
 
+const shape = (rectangleA.length * rectangleA.width)
+
 var isSquare = function (n) {
-    return Math.sqrt(n) % 1 === 0;
+
+  return Math.sqrt(n) % 1 === 0;
 };
 
-console.log(isSquare(25))
+console.log(isSquare(shape))
 
 
 // QUESTION: 2. area - Returns the area of the rectangle
@@ -32,7 +35,7 @@ const area = function(length, width) {
   return total
 }
 
-console.log (area(rectangleA.length,rectangleA.width))
+console.log (area(rectangleA.length, rectangleA.width))
 
 // Part 2, Triangle
 // Given the following a triangle object like the one below, write the following functions which accept a triangle object as an argument:
@@ -48,11 +51,11 @@ const triangleA = {
   sideB: 4,
   sideC: 4
 
-var isEquilateral = function(s1, s2, s3) {
+const isEquilateral = function(s1, s2, s3) {
 	if (s1 === s2 && s1 === s3) {
     return true;
-  }
-  return false;
+  } else {
+    return false;
 };
 
 console.log(isEquilateral(triangleA.sideA,triangleA.sideB,triangleA.sideC))
