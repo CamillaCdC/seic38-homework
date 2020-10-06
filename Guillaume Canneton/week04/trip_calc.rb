@@ -12,9 +12,9 @@ def trip_calculator
 
 
   trip_time_hour = ( distance / speed ).floor
-  trip_time_minute = ( ( ( ( distance % speed ) / speed * 100.0 ).round / 100.0 ) * 60 ).round
+  trip_time_minute = ( ( ( distance % speed ) / speed ) * 60.0 ).round
 
-  trip_cost = ( ( ( distance / gas_consumption ) * gas_price ) * 100.0 ).round / 100.0
+  trip_cost = ( ( distance / gas_consumption ) * gas_price ).round(2)
 
 
   puts " Your trip will cost $#{trip_cost} for a total of #{trip_time_hour}H#{trip_time_minute}"

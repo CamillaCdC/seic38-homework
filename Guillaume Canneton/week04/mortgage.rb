@@ -10,7 +10,7 @@ def mortgage_calculator
   mortgage_rate = mortgage_rate_percent / ( 12 * 100 )
   mortgage_length = mortgage_length_in_years * 12
   # monthly_payment = ( mortgage_rate * mortgage_amount * (( 1 + mortgage_rate) ** mortgage_length)) / ((( 1 + mortgage_rate) ** mortgage_length ) - 1)
-  monthly_payment =  ( ( ( mortgage_rate * mortgage_amount ) / ( 1 - ( ( 1 + mortgage_rate ) ** ( -1 * mortgage_length ) ) ) ) * 100.0 ).round / 100.0
+  monthly_payment = ( ( mortgage_rate * mortgage_amount ) / ( 1 - ( ( 1 + mortgage_rate ) ** ( -1 * mortgage_length ) ) ) ).round(2)
 
 
   puts " your monthly payment is AUD$ #{monthly_payment} per month"
