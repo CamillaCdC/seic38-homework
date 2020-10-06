@@ -49,7 +49,8 @@ $(document).ready(function(){
                 $('#checking-balance').html(`$${$checkingBalance}`);
 
           } else {
-                  if ($savingsBalance - parseInt($input) >= -1){  //subtracts from savings if checking is 0
+                  if ($savingsBalance - parseInt($input) >= 0){  //subtracts from savings if checking is 0
+
                         $savingsBalance -= parseInt($input);
                         $('#savings-balance').html(`$${$savingsBalance}`);
                   }
