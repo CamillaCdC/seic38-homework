@@ -9,7 +9,7 @@ def farid_ruby
   puts "\nStart using my calculator"
   puts "\nYou can do calculations in this ruby"
   puts "\nIf you want to come out of this ruby, enter [q]"
-  print "\n>"
+  print "\n> "
 end
 
 farid_ruby
@@ -55,7 +55,7 @@ while user_operation != 'q'
     result = numbers[0].to_f
     numbers[1..numbers.length].each {|i| result = result - i.to_f}
 
-  # power 
+  # power
   elsif user_operation.include?('**')
     numbers = user_operation.split('**')
     result = numbers[numbers.length-1].to_f
@@ -77,6 +77,6 @@ while user_operation != 'q'
   end
 
   puts "\n#{result}"
-  print "\n>"
+  print "\n> "
   user_operation = gets.chomp.downcase
 end
