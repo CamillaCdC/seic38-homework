@@ -141,11 +141,10 @@ until menu_choice == 'q'
     numbers[1..numbers.length].each {|i| division = division / i}
     puts "\nThe division of #{numbers} is : #{division}"
 
-  # the power one is work from left to right.
-  # exp: [2,3,2] : the result is : (2**3)**2 = 64
+  # the power 
   when 'p'
-    power = numbers[0]
-    numbers[1..numbers.length].each {|i| power = power ** i}
+    power = numbers[numbers.length-1]
+    (numbers.length-2).downto(0) {|i| power =  numbers[i] ** power}
     puts "\nThe power of #{numbers} is #{power}"
   when 'e'
     puts "\nThe exponential of #{numbers} is : #{Math.exp(numbers)}"
