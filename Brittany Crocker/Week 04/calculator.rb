@@ -64,7 +64,7 @@ end
 
 # Square root
 def sq_root (a=0)
-  print "What is the first number? "
+  print "What is the number? "
   a = gets.to_i
   result = Math.sqrt(a)
   puts "Result: #{ result }"
