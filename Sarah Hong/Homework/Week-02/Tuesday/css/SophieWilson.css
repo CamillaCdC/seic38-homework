@@ -1,0 +1,215 @@
+/* * {border: 1px solid green;} */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+html {
+  margin: 0 auto;
+}
+
+body {
+  height: 100%;
+  padding: 16px;
+  font-family: 'Playfair Display', serif;
+  margin: 1em;
+  background-color: #ffe6f2;
+  background-image: radial-gradient(blue 15%, transparent 16%);
+  border: 0.1em solid blue;
+  border-radius: 30px;
+  background-size: 10px 10px;
+  background-position: 0 0, 30px 30px;
+};
+
+.container {
+  z-index: 2;
+  background: #ffe6f2;
+  padding: 32px;
+  border: 0.1em solid blue;
+  border-radius: 30px;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 250px;
+  background-color: blue;
+}
+
+.blue-quote {
+  width: 250px;
+  left: 200px;
+  bottom: 150px;
+  position: relative;
+  transform: rotateX(180deg);
+}
+
+.blue-questionmark {
+  width: 150px;
+  left: 200px;
+  bottom: 113px;
+  position: relative;
+  transform: rotateX(180deg);
+}
+
+p.box-01  {
+  display: inline-block;
+  color: #C44536;
+  text-transform: lowercase;
+  font-size: medium;
+  text-align: justify;
+  width: 390px;
+  margin: 8px auto;
+  margin-left: 0;
+  padding: 1em;
+  border: 1px solid #C44536;
+}
+
+h2.box-01 {
+  display: block;
+  color: #C44536;
+  text-align: justify;
+  width: 390px;
+  border-bottom: 1px solid #C44536;
+  padding-bottom: 0.5em;
+}
+
+p.box-02  {
+  display: inline-block;
+  color: #C44536;
+  text-transform: lowercase;
+  font-size: medium;
+  text-align: justify;
+  width: 390px;
+  padding: 1em;
+  margin-left: 450px;
+  border: 1px solid #C44536;
+}
+
+h2.box-02 {
+  display: block;
+  color: #C44536;
+  text-align: justify;
+  width: 390px;
+  border-bottom: 1px solid #C44536;
+  padding-bottom: 0.5em;
+  margin-left: 450px;
+}
+
+p.box-03  {
+  display: inline-block;
+  color: #C44536;
+  text-transform: lowercase;
+  font-size: medium;
+  text-align: justify;
+  width: 390px;
+  padding: 1em;
+  margin-left: 900px;
+  border: 1px solid #C44536;
+}
+
+h2.box-03 {
+  display: block;
+  color: #C44536;
+  text-align: justify;
+  width: 390px;
+  border-bottom: 1px solid #C44536;
+  margin-left: 900px;
+}
+
+
+nav a {
+  color: #C44536;
+  text-decoration: none;
+}
+
+nav.bio {
+  margin: 0;
+  transform: rotate(90deg);
+  position: absolute;
+  top:540px;
+  left: 20px;
+  font-size: 150%;
+  border-right: 1px solid #C44536;
+  padding-right: 1em;
+}
+
+nav.media {
+  margin: 0;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 665px;
+  left: 55px;
+  font-size: 150%;
+}
+
+nav.title {
+  text-transform: lowercase;
+  text-align: center;
+  color: #C44536;
+  font-size: 250%;
+  font-weight: lighter;
+  margin-top: 0px;
+  border-bottom: 1px solid #C44536;
+  width: 50%;
+  display: table-caption;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+main {
+  display: inline;
+  width: 75%;
+}
+
+.main-img {
+  position: relative;
+  left: 770px;
+  bottom: 500px;
+  opacity: 1;
+  max-width: 35%;
+  max-height: 35%;
+  background-color: #ffe6f2;
+  background-image: radial-gradient(#C44536 15%, transparent 16%);
+  radial-gradient(#ffe6f2 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 30px 30px;
+}
+
+.bio-img {
+  position: relative;
+  left: 820px;
+  bottom: 230px;
+  max-width: 35%;
+  max-height: 35%;
+  border: 1px solid blue;
+}
+
+blockquote {
+  color: blue;
+  display: block;
+  position: relative;
+  width: 40%;
+  left: 180px;
+  bottom: 150px;
+  text-align: end;
+}
+
+header.bio-quote {
+  color: blue;
+  display: block;
+  position: relative;
+  width: 40%;
+  left: 750px;
+  bottom: 250px;
+  text-align: end;
+}
+
+.name {
+  border: 0.5em solid #ffe6f2;
+  position: relative;
+  left: 600px;
+  bottom: 155px;
+  display: table;
+  color: blue;
+}

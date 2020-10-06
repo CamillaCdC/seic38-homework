@@ -1,0 +1,107 @@
+#container {
+/* lines 44 - 83 */
+/* top nagivations */
+/* logo */
+/* social media */
+/* main content */
+/* blurb */
+}
+
+header {
+/* lines 46 - 56 */
+/* top navigations */
+/* background-color: black;
+display: inline-block;
+padding: 20px 0px;
+} */
+
+nav {
+/* lines 47 - 55 */
+/* lines 113 -122 */
+/* top navigations */
+/* background-color: black;
+position: right;
+} */
+
+#main-content {
+/* lines 71 - 75 */
+/* main banner image */
+/* shadow image */
+background-color: black;
+display: inline-block;
+padding: 20px 0px;
+}
+
+
+/* ----- social media ----- */
+
+#socialMedia {
+/* lines 64 - 66 */
+/* social media ID and image */
+display:inline-block;
+width:60px;
+height:60px;
+background:blue;
+text-indent:-9999em;
+background-color: black;
+}
+
+/* ----- social media ----- */
+
+.photobanner {
+/* line 71 */
+/* main photo banner class */
+}
+
+.imageshadow {
+/* line 72 */
+/* shadow image class */
+}
+
+#blurb {
+/* blurb ID with paragraph */
+background-color: black;
+}
+
+.blurbbutton {
+/* lines 75 - 79 */
+margin-left: 800px;
+}
+
+#home-boxes {
+/* lines 84 - 102 */
+/* home box ID - photo columns */
+}
+
+.home-box {
+/* lines 87, 93, 99 */
+/* homebox images 1,2,3 class */
+}
+
+footer {
+/* lines 86 - 147 */
+/* h2 - bigroll, textwidget, metawidget */
+/* bigroll navigations */
+/* textwidget class and paragraph */
+/* metawidget nagivations */
+}
+
+.box-footer {
+  /* lines 108, 126, 133 */
+/* big footer class - bigroll, textwidget, metawidget */
+}
+
+.blogroll, .textwidget, .metawidget {
+  /* lines 111, 128, 135 */
+/* footer classes */
+}
+
+#copyright {
+/* lines 150 */
+/* paragraph ID - 'Theme brought to your by' */
+}
+
+a, #companybottom {
+/* lines 150 */
+/* comapany ID */
+}

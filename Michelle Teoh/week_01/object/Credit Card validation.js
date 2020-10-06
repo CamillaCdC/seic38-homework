@@ -40,7 +40,7 @@
 // 9999-9999-8888-0000
 // 6666-6666-6666-1666
 
-function validateCardNumber(number) {
+const validateCardNumber = function(number) {
     var regex = new RegExp("^[0-9]{16}$");
     if (!regex.test(number))
         return false;
@@ -48,7 +48,7 @@ function validateCardNumber(number) {
     return luhnCheck(number);
 }
 
-function luhnCheck(val) {
+const luhnCheck = function(val) {
     var sum = 0;
     for (var i = 0; i < val.length; i++) {
         var intVal = parseInt(val.substr(i, 1));
