@@ -1,0 +1,25 @@
+body {
+  margin: auto;
+
+}
+.container {
+  margin: auto;
+  border: 5px solid red;
+  
+}
+#socials {
+  left: 400px;
+  position: relative;
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+
+}

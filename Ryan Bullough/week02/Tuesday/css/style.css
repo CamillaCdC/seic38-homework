@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #94a1b2;
+}
+img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 25%/50%;
+  padding-bottom: 2vh;
+}
+body {
+  background-color: #16161a;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+main {
+  height: 100vh;
+}
+article {
+  min-height: 100vh;
+}
+h1 {
+  font-family: "Caveat", cursive;
+  color: #fffffe;
+  font-size: 4rem;
+  letter-spacing: 9px;
+}
+a {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(50% - 9px),
+    rgba(167, 107, 250, 0.35) calc(50% - 9px),
+    rgba(92, 47, 254, 0.35) 100%
+  );
+  background-position: 0px 0px;
+  background-size: 100% 200%;
+  transition: all 120ms ease-in-out 0s;
+}
+a:hover {
+  transform: scale(1.2);
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(50% - 9px),
+    rgb(118, 61, 252) calc(50% - 9px),
+    rgb(130, 41, 255) 100%
+  );
+  background-position: 0px 100%;
+}
+article p,
+aside blockquote {
+  padding: 2em 3em;
+}
+ul {
+  margin: 2em 0;
+  text-align: center;
+}
+ul li {
+  padding: 1em 4em;
+  font-size: 40px;
+  font-weight: bold;
+}
+li:nth-child(2) {
+  color: #2cb67d;
+}
+aside {
+  padding-bottom: 1em;
+}
+@media only screen and (min-width: 1175px) {
+  ul li {
+    padding: 1em 10em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  ul li {
+    padding: 1em;
+  }
+}

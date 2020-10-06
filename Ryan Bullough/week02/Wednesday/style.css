@@ -1,0 +1,16 @@
+body {
+  min-height: 90vh;
+  display: flex;
+}
+#puppy-circle {
+  height: 500px;
+  width: 500px;
+  background-color: #0f1212;
+  background-image: linear-gradient(0deg, #63b6b6 0%, #3abada 100%);
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+img {
+  width: 150px;
+}
