@@ -20,9 +20,9 @@ const percentOf = function(obtain,total) {
 // Write a function called areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
 // Bonus: Round the result so there are only two digits after the decimal.
 
-const areaOfCircle = function(radius) {
-  return area = Math.pi * radius * radius
-  console.log(Math.round(`The area for a circle with radius ${radius} is ${area}`))
+const areaOfCircle = function (radius) {
+  return area = Math.pi * radius * radius;
+  console.log(Math.round(`The area for a circle with radius ${radius} is ${area}`));
 };
 
 // Part 2
@@ -33,24 +33,24 @@ const areaOfCircle = function(radius) {
 // Calculate what percentage that area is of the squared result (#3).
 
 // 1. collect data from halfnumber -> ans -> square out -> ans -> area -> ans -> percentage = solution Part 2
-const calculateInDetail(Number) {
-  const halfNumber = function(num1){
-    return result1 = num1/2
+const calculateInDetail = function (Number) {
+  const halfNumber = function(num1);
+    return result1 = num1/2;
     console.log(`Half of ${num1} is ${halfNumber}.`);
   };
 
-  const squareNumber = function(result1) {
+  const squareNumber = function (result1) {
     return result2 = Math.pow(result1)
     console.log(`The result of squaring the number ${result1} is ${result2}.`);
   };
   const areaOfCircle = function(result2) {
     return result3 = Math.pi * radius * radius
-    console.log(Math.round(`The area for a circle with radius ${result2} is ${result3}`));
+    console.log(Math.round(`The area for a circle with radius ${result2} is ${result3}`))
   };
   const percentOf = function(result4) {
     return result5 = (result4*0.5)
     console.log(`${result5} is 50% of ${result4}.`);
   };
-return percentOf
+return result1
 
 };

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+body{
+  background-color: #ccc;
+}
+
+.container {
+  max-width: 960px;
+  background-color: #aaa;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+header{
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+nav {
+  background-color: #ddd;
+  margin-left:10px;
+  padding:20px;
+  text-align:left;
+}
+a {
+  padding:5px 10px;
+  text-decoration: none;
+  color: rgba(0,0,0,0.5);
+  font-size:1.2em;
+
+}
+.main-content {
+  background-color: #ddd;
+  color: #fff;
+}
+aside {
+  list-style: none;
+  width: 20%;
+  display:inline-block;
+  margin:10px auto;
+  border: 1px solid #aaa;
+}
+
+.tabs{
+  margin-left:36px;
+  margin-top:10px;
+  float:left;
+}
+aside .lists{
+  margin: 0 auto;
+  text-align:center;
+}
+
+.lists li{
+  margin:25px auto;
+  padding:10px;
+  background-color: #aaa;
+  color: white;
+  width: 135px;
+  font-size:1.2em;
+}
+li:hover{
+  background-color: red;
+}
+main {
+  font-size:1.2em;
+  background-color: #aaa;
+  display: inline-block;
+  margin:10px 0 0 20px;
+  width: 70%;
+
+}
+.main-content{
+  padding: 10px 0px;
+  margin:10px 10px;
+  color:rgba(0,0,0,0.5);
+}
+.content {
+  float: right;
+  margin:5px;
+
+}
+
+p {
+  text-align: justify;
+  margin:25px;
+}
+img {
+  float:right;
+  margin-left:15px;
+}
+#floated-p{
+  float:left;
+}
+
+#Turing-Machine ,#Turing-Test {
+display:none;
+}

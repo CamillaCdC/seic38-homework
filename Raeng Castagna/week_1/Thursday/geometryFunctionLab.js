@@ -52,7 +52,9 @@ console.log(isEquilateral(triangleA));
 
 // * isIsosceles - Returns whether the triangle is isosceles or not
 const isIsosceles = function (num) {
-  if (num.sideA === num.sideB && num.sideA !== num.sideC || num.sideA === num.sideC && num.sideA !== num.sideB || num.sideB === num.sideC && num.sideB !== num.sideA) {
+  if (num.sideA === num.sideB && num.sideA !== num.sideC ||
+    num.sideA === num.sideC && num.sideA !== num.sideB ||
+    num.sideB === num.sideC && num.sideB !== num.sideA) {
     return `This is an isosceles`;
   } else {
     return `Not an isosceles triangle`;
@@ -72,7 +74,7 @@ console.log(areaTriangle(triangleA));
 // ******* come back to this, the formula is incorrect.
 const isObtuse = function (num) {
   const area = 0.5 * num.sideA * num.sideB;
-  if (area) { // ***this isnt asking anything, need to clarify. 
+  if (area) { // ***this isnt asking anything, need to clarify.
     return `Obtuse triangle`;
   } else {
     return `Not an obtuse`

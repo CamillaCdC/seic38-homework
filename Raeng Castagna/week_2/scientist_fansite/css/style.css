@@ -19,7 +19,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 1em;
-  background-color: white;
+  background-color: aliceblue;
   font-family: 'EB Garamond', serif;
 }
 .fas {
@@ -37,6 +37,7 @@ nav a {
 main {
   display: inline-block;
   width: 64%;
+  text-align: justify;
 }
 
 h1 {
@@ -46,10 +47,11 @@ h1 {
 }
 
 #landing-page-image {
-  width: 334px;
-  height: 198px;
+  width: 290px;
+  height: 170px;
   box-shadow: 0 0 15px black;
   border-radius: 0.2em;
+  margin: 20px;
 }
 
 #time-magazine-img {
