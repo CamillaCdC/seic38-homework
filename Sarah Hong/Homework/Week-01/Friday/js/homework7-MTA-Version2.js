@@ -65,16 +65,17 @@ const planTrip = function ( line, startStation, stopLine, endStation ) {
     // console.log(stops);
 };
 
-planTrip( 'NLine', '34th', 'NLine', 'Union Square' );
+// planTrip( 'NLine', '34th', 'NLine', 'Union Square' );
 
-planTrip( 'NLine', 'Times Square', 'NLine', '8th' ); // forward - single line
+// planTrip( 'NLine', 'Times Square', 'NLine', '8th' ); // forward - single line
 
-planTrip ( 'NLine', '8th', 'NLine', '28th' ); // backwards - single line
+// planTrip ( 'NLine', '8th', 'NLine', '28th' ); // backwards - single line
 
 planTrip ( 'LLine', '8th', 'SLine', 'Astro Place' ); // transfer forward lline to SLine
-planTrip ( 'LLine', '1st', 'SLine', '33rd' );// transfer backwards.
-//
-planTrip ( 'SLine', 'Grand Central', 'LLine', '8th' );
+
+// planTrip ( 'LLine', '1st', 'SLine', '33rd' );// transfer backwards.
+
+// planTrip ( 'SLine', 'Grand Central', 'LLine', '8th' );
 
 //====SHOWS OUTPUT SIMILAR TO THIS:
 //console.log( `You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square.`)

@@ -38,16 +38,16 @@ var account = function (name, balance){
     newBalance = account.balance - withdrawAmount;
     console.log("Your balance is now " + newBalance);
     if (newBalance <= 0) {
-      console.log("You have insufficient funds!!!");
+     console.log("You have insufficient funds!!!");
     }
   };
 
   account.transfer = function (transferAmount, account) {
     newBalance = account.balance - transferAmount;
     if (account.withdraw(transferAmountamount) && account.deposit(transferAmount)) {
-    console.log(`Transfer: ${transferAmount} has been moved from ${this.name} to ${account.name}`);
-
-  }
+     console.log(`Transfer: ${transferAmount} has been moved from ${this.name} to ${account.name}`); //<------- stuck in this section 
+   }
+ };
 
   console.log("Name: " + name + "; Balance: " + balance);
 }

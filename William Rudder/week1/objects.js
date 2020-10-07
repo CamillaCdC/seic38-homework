@@ -145,11 +145,11 @@ function validateCreditCard(creditCardNumber) {
 // must be digits not working
  for (var i = 0; i < creditCardNumber.length; i++) {
      var currentNumber = creditCardNumber[i];
-    if (creditCardNumber === isNaN(false)) {
+    if (isNaN(currentNumber) === false) {
          console.log("nice all numbers");
        } else {
          console.log("you typed in a letter you donkey")
        }
 }
 }
-      console.log(validateCreditCard('5445345334534532'));
+      console.log(validateCreditCard('544534533 4534532'));
