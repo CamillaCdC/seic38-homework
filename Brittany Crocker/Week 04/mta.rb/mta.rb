@@ -51,34 +51,48 @@ def plan_trip (startLine, startStop, endLine, endStop )
 #get index of startPoint, loop through line from startPoint to endLine and push to new arrays
 journey1 = []
 journey2 = []
-#
+
+# Index fo start / stop on star / end line
 startIndex = startLine.index(startStop)
 endIndex = endLine.index(endStop)
+
 # Creates a new array only containing stops to travel through
 newStartLine = startLine.slice(startIndex, endIndex)
+
+# Index of Union Square on start / end line
 unionSquareStart = startLine.index("Union Square")
 unionSquareEnd = endLine.index("Union Square")
+
+# New array only containing strop to travel through if changing lines
 newStartLineChange = startLine.slice(startIndex, unionSquareStart)
+
+# New Array for travelling in reverse, down the line
 newStartLineChangeReverse = startLine.slice(unionSquareStart, startIndex)
+
+# New array only containing strop to travel through if changing lines
 newEndLineChange = endLine.slice(endIndex, unionSquareEnd)
 puts "NEW END #{newEndLineChange}"
 puts "NEW START #{newStartLineChange}"
 
 ##### If startline and endline is the same line #####
 if startLine == endLine
+
 # if the start stop is smaller than the end stop index, loop through.
-if startIndex <= endIndex
+  if startIndex <= endIndex
 
 
     newStartLine.each do |stop| ## logging all from starLine
-if stop.include?("Union Square")
-  puts "You have arrived at Union Square"
+
+      if stop.include?("Union Square")
+          puts "You have arrived at Union Square"
+      end
+
+      if startLine.index(stop) <= endIndex
+        journey1.push(stop)
+      end
+
+  end
 end
-  if startLine.index(stop) <= endIndex
-    journey1.push(stop)
-  end
-    end
-  end
 
 
 
@@ -155,4 +169,8 @@ end
 # plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "8th")
 # plan_trip(trainLines["lineL"], "6th", trainLines["lineL"], "1st")
 # plan_trip(trainLines["lineL"], "3rd", trainLines["lineL"], "6th")
-plan_trip(trainLines["lineL"], "1st", trainLines["line6"], "33rd")
+# plan_trip(trainLines["lineL"], "1st", trainLines["line6"], "33rd")
+plan_trip(trainLines["lineN"], "Times Square", trainLines["line6"], "33rd")
+
+
+## issue is sometimes showing up in reverse
