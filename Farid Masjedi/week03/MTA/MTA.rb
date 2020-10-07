@@ -187,9 +187,7 @@ print "Which station of #{first_line} line you are: "
 # capitalized. this will split the name by '<space>' and then-
 # it will go through the array and make all the words to be-
 # capitalized. And at the end it will join them by '<space>' again
-first_stop = gets.split(' ').each do |i|
-  i.capitalize!
-end
+first_stop = gets.split(' ').each { |i| i.capitalize! }
 first_stop = first_stop.join(' ')
 
 puts "\n"
@@ -203,9 +201,7 @@ end
 puts "\n"
 # same as first_stop
 print "Which station in #{second_line} you want to go: "
-second_stop = gets.split(' ').each do |i|
-  i.capitalize!
-end
+second_stop = gets.split(' ').each { |i| i.capitalize! }
 second_stop = second_stop.join(' ')
 
 puts "\n"
@@ -222,10 +218,7 @@ if first_line != second_line
   union_station = gets.chomp.downcase
 
   if union_station[0] != 'y'
-    union_station = union_station.split(' ')
-    union_station = union_station.each do |i|
-      i.capitalize!
-    end
+    union_station = union_station.split(' ').each { |i| i.capitalize! }
     union_station = union_station.join(' ')
   else
     union_station = 'Union Square'
