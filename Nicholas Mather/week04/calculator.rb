@@ -120,7 +120,7 @@ def loan()
   print "What is the term of the loan, in years? "
   n = 12 * gets.to_i
   a = p * ( r * ( 1 + r ) ** n ) / ( ( 1 + r ) ** n - 1 )
-  print "The monthly payment required is #{a.round(2)}"
+  puts "The monthly payment required is #{a.round(2)}"
 end
 
 show_menu
