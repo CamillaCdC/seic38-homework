@@ -44,9 +44,7 @@ trainLines = {
   "lineL" => ["8th", "6th", "Union Square", "3rd,", "1st"],
   "line6" =>  ["Grand Central", "33rd,", "28th", "23rd", "Union Square,","Astor Place"]
 }
-a = trainLines.flatten
-p a
-p " a #{a[5][0]}"
+
 def plan_trip (startLine, startStop, endLine, endStop )
 
 
@@ -55,34 +53,26 @@ journey1 = []
 journey2 = []
 #
 startIndex = startLine.index(startStop)
-endIndex = startLine.index(endStop)
-p startIndex
-p endIndex
+endIndex = endLine.index(endStop)
+# Creates a new array only containing stops to travel through
+newStarLine = startLine.slice(startIndex, endIndex)
 
-# if startLine.index(startStop) <= endIndex
-#
-#   startLine.each do |stop|
-#     puts " Stop: #{stop}"
-#     journey1.push(stop)
-#
-# end
-#
-#
-# end
 
+##### If startline and endline is the same line #####
+if startLine == endLine
 # if the start stop is smaller than the end stop index, loop through.
-if startLine.index(startStop) <= endIndex
+if startIndex <= endIndex
 
-    startLine.each do |stop|
 
+    lineToLog.each do |stop| ## logging all from starLine
+if stop.include?("Union Square")
+  puts "You have arrived at Union Square"
+end
   if startLine.index(stop) <= endIndex
-    puts stop
     journey1.push(stop)
   end
-
     end
   end
-
 
 # If the start stop is greater than the end stop index, loop through.
 if startLine.index(startStop) >= endIndex
@@ -98,5 +88,28 @@ end
 puts "You must journey through: #{journey1}"
 puts "Journey2: #{journey2.reverse}"
 end
-plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "23rd")
-plan_trip(trainLines["lineN"], "8th", trainLines["lineN"], "Times Square")
+
+
+##### If startline and endline are not the same line #####
+
+if startLine != endLine
+  ## print everything out until union square then change at union square and print rest of
+
+startLine.each do |stop|
+  until stop == "Union Square"
+# if stop.include?("Union Square")
+# puts "You have arrived at Union Square"
+puts "STOPS #{stop}"
+return
+end
+end
+
+end
+
+
+
+
+end
+plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "8th")
+# plan_trip(trainLines["lineL"], "8th", trainLines["lineN"], "Times Square")
+# plan_trip(trainLines["lineN"], "6th", trainLines["lineN"], "Times Square")
