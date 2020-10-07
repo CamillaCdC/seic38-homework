@@ -100,7 +100,7 @@ const withdraw = function (account) {
 // a function to change the colour of the balance div if it is at $0
 const zeroBal = function (account) {
   //adds a CSS class if balance is $0
-  if ($(`#${account}-balance`).html() === '$0') {
+  if ($(`#${account}-balance`).html() <= '$0') {
     $(`#${account}-balance`).addClass('zero');
   //removes .zero if the balance !== 0
   } else {
