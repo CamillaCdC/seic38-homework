@@ -52,7 +52,7 @@ const planTrip = function ( line, startStation, stopLine, endStation ) {
       stopStage1 = startLine.slice( startIndex, startLineIntersectingIndex + 1)
     } else {
       // transfer stage1 reverse to union.
-      stopStage1 = startLine.slice( startLineIntersectingIndex, startIndex + 1 ).reverse();
+      stopStage1 = startLine.slice( startLineIntersectingIndex , startIndex + 1 ).reverse();
     }
     console.log( `You must travel through the following stops on the ${ line }: ${ stopStage1 }`);
     console.log( `Change at Union Square` );
@@ -60,10 +60,10 @@ const planTrip = function ( line, startStation, stopLine, endStation ) {
     // stage2 same logic as above - forward / backward
     if ( endLineIntersectingIndex < endIndex ) {
       // transfer stage2 forward to union.
-      stopStage2 = endLine.slice( endIndex, endLineIntersectingIndex + 1)
+      stopStage2 = endLine.slice( endLineIntersectingIndex, endIndex + 1 )
     } else {
       // transfer stage2 reverse to union.
-      stopStage2 = endLine.slice( endIndex, endLineIntersectingIndex ).reverse();
+      stopStage2 = endLine.slice( endIndex, endLineIntersectingIndex + 1 ).reverse();
     }
     console.log( `Your journey continues on the following stops through ${ stopLine }: ${ stopStage2 }`);
     stops = stopStage1.concat( stopStage2 ); //combined 1st line route and 2nd line route.
@@ -77,6 +77,7 @@ planTrip( 'NLine', 'Times Square', 'NLine', '23rd' ); // forward - single line
 planTrip ( 'NLine', '8th', 'NLine', '28th' ); // backwards - single line
 
 planTrip ( 'LLine', '8th', 'SLine', 'Astro Place' ); // transfer forward lline to SLine
+
 planTrip ( 'LLine', '1st', 'SLine', '33rd' );// transfer backwards.
 
 planTrip ( 'SLine', 'Grand Central', 'LLine', '8th' );
