@@ -1,16 +1,11 @@
 
-trainLines = {
-  'lineN' => ['Times Square', '34th', '28th', '23rd', 'Union Square', '8th'],
-  'lineL' => ['8th', '6th', 'Union Square', '3rd', '1st'],
-  'line6' => ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place']
-}
 
 # p "TRAINLINE KEYS HERE #{trainLines.keys}"
 # p trainLines.each {
 #   |val| puts val
 # }
 
-# puts "What line are you getting on? "
+# puts "LineN, LineL, Line5 "
 # startLine = gets.chomp
 # puts "BOARDING FROM: #{startLine}"
 #
@@ -18,7 +13,7 @@ trainLines = {
 # start = gets.chomp
 # puts "BOARDING FROM #{startLine} #{start}"
 #
-# puts "What Line will you be exiting from"
+# puts "LineN, LineL, Line5 "
 # exitLine = gets.chomp
 # puts "LINE DESTINATION: #{exitLine}"
 #
@@ -27,38 +22,73 @@ trainLines = {
 # puts "#{startLine} #{start} TRAVELING TO: #{exitLine} #{exit}"
 
 
-def plan_trip (startLine, startStop, endLine, endStop )
+trainLines = {
+  "lineN" => ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+  "lineL" => ["8th", "6th", "Union Square", "3rd,", "1st"],
+  "line6" =>  ["Grand Central", "33rd,", "28th", "23rd", "Union Square,","Astor Place"]
+}
+a = trainLines.flatten
 
+def plan_trip (startLine, startStop, endLine, endStop )
+#get index of startPoint, loop through line from startPoint to endLine and push to new arrays
 journey1 = []
 journey2 = []
 
 startIndex = startLine.index(startStop)
 endIndex = startLine.index(endStop)
+lineToLog = startLine.slice(startIndex, endIndex)
 
-p startIndex
-p endIndex
+# if endLine != endLine
 
-startLine.each do |stop|
+
+##### If startline and endline is the same line #####
+
+if startLine == endLine
+
+# if the start stop is smaller than the end stop index, loop through.
+
+if startIndex < endIndex
+    lineToLog.each do |stop| ## logging all from starLine
+if stop.include?("Union Square")
+  puts "Change at Union Square"
+end
   if startLine.index(stop) <= endIndex
-    puts stop
+
     journey1.push(stop)
-  elsif startLine.index(stop) >= endIndex
-    journey2.push(stop).reverse
+  end
+    end
+  end
+
+# If the start stop is greater than the end stop index, loop through.
+
+if startLine.index(startStop) >= endIndex
+  startLine.each do |stop|
+if startLine.index(stop) >= endIndex
+    journey2.push(stop)
   end
 end
-puts "Journey1: #{journey1}"
-puts "Journey2: #{journey2}"
 end
-plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "23rd")
-plan_trip(trainLines["lineN"], "8th", trainLines["lineN"], "Times Square")
+puts "You must journey through: #{journey1}"
+puts "Journey2: #{journey2.reverse}"
+end
+
+##### If startline and endline are not the same line #####
+
+if startLine != endLine
+
+## print everything out until union square then change at union square and print rest of
+
+# startLine.each do |stop|
+#   until stop == "Union Square"
+
+# if stop.include?("Union Square")
+# puts "You have arrived at Union Square"
 
 
+return
+end
+end
 
-
-# until index == 'Union Square'
-# puts trainLines[:line1]
-# end
-
-# p trainLines[:line1][0]
-# p trainLines[:line2][0]
-# p trainLines[:line3][0]
+plan_trip(trainLines["lineN"], "Times Square", trainLines["lineN"], "8th")
+# plan_trip(trainLines["lineN"], "8th", trainLines["lineN"], "Times Square")
+# plan_trip(trainLines["lineN"], "6th", trainLines["lineN"], "Times Square")
