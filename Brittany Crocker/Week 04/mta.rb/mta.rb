@@ -41,8 +41,8 @@ require "pry"
 
 trainLines = {
   "lineN" => ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-  "lineL" => ["8th", "6th", "Union Square", "3rd,", "1st"],
-  "line6" =>  ["Grand Central", "33rd,", "28th", "23rd", "Union Square,","Astor Place"]
+  "lineL" => ["8th", "6th", "Union Square", "3rd", "1st"],
+  "line6" =>  ["Grand Central", "33rd", "28th", "23rd", "Union Square","Astor Place"]
 }
 
 def plan_trip (startLine, startStop, endLine, endStop )
@@ -55,8 +55,14 @@ journey2 = []
 startIndex = startLine.index(startStop)
 endIndex = endLine.index(endStop)
 # Creates a new array only containing stops to travel through
-newStarLine = startLine.slice(startIndex, endIndex)
-
+newStartLine = startLine.slice(startIndex, endIndex)
+unionSquareStart = startLine.index("Union Square")
+unionSquareEnd = endLine.index("Union Square")
+newStartLineChange = startLine.slice(startIndex, unionSquareStart)
+newStartLineChangeReverse = startLine.slice(unionSquareStart, startIndex)
+newEndLineChange = endLine.slice(endIndex, unionSquareEnd)
+puts "NEW END #{newEndLineChange}"
+puts "NEW START #{newStartLineChange}"
 
 ##### If startline and endline is the same line #####
 if startLine == endLine
@@ -64,7 +70,7 @@ if startLine == endLine
 if startIndex <= endIndex
 
 
-    lineToLog.each do |stop| ## logging all from starLine
+    newStartLine.each do |stop| ## logging all from starLine
 if stop.include?("Union Square")
   puts "You have arrived at Union Square"
 end
@@ -74,11 +80,13 @@ end
     end
   end
 
+
+
 # If the start stop is greater than the end stop index, loop through.
-if startLine.index(startStop) >= endIndex
+if startIndex >= endIndex
 
   startLine.each do |stop|
-
+puts stop
 if startLine.index(stop) >= endIndex
     journey2.push(stop)
   end
@@ -94,22 +102,57 @@ end
 
 if startLine != endLine
   ## print everything out until union square then change at union square and print rest of
-
-startLine.each do |stop|
-  until stop == "Union Square"
+if startIndex > unionSquareStart
+  newStartLineChangeReverse.each do |stop|
+    if !stop.include?'Union Square'
+      journey1.push(stop)
+    elsif stop.include?'Union Square'
+      puts "You must change at Union Square"
+      puts "You must journey through: #{journey1.reverse}"
+  end
+end
+else
+newStartLineChange.each do |stop|
+# until stop == "Union Square"
 # if stop.include?("Union Square")
 # puts "You have arrived at Union Square"
-puts "STOPS #{stop}"
-return
+if !stop.include?'Union Square'
+  journey1.push(stop)
+elsif stop.include?'Union Square'
+  puts "You must journey through: #{journey1}"
+  puts "You must change at Union Square"
+end
+
 end
 end
+puts "You must journey through: #{journey1}"
 
+
+
+# answer = newStartLineChange.concat newEndLineChange.reverse
+
+newEndLineChange.each do |stop|
+  if !stop.include?'Union Square'
+    journey2.push(stop)
+ elsif stop.include? 'Union Square'
+puts "You must change at Union Square"
+end
+# puts "You must journey through: #{journey1}"
+end
+  if endIndex < unionSquareEnd
+   puts "You must journey through: #{journey2.reverse}"
+ else
+      puts "You must journey through: #{journey2}"
+    end
+# startLine.each do |stop|
 end
 
+# if travelling backwards another if statement that doesn reverse journey2.
 
 
 
 end
-plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "8th")
-# plan_trip(trainLines["lineL"], "8th", trainLines["lineN"], "Times Square")
-# plan_trip(trainLines["lineN"], "6th", trainLines["lineN"], "Times Square")
+# plan_trip(trainLines["lineN"], "34th", trainLines["lineN"], "8th")
+# plan_trip(trainLines["lineL"], "6th", trainLines["lineL"], "1st")
+# plan_trip(trainLines["lineL"], "3rd", trainLines["lineL"], "6th")
+plan_trip(trainLines["lineL"], "1st", trainLines["line6"], "33rd")
