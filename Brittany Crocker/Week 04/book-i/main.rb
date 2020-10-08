@@ -14,6 +14,10 @@ get '/thumbnail' do
 
   @info = HTTParty.get @book_url
   @book_title = @info["items"].first["volumeInfo"]["title"]
+  @book_authors = @info["items"].first["volumeInfo"]["authors"].join(" ")
   @img = @info["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
+  @book_blurb = @info["items"].first["volumeInfo"]["description"]
+  @book_category = @info["items"].first["volumeInfo"]["categories"].join(" ")
+
   erb :thumbnail
 end
