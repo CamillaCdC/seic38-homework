@@ -13,8 +13,7 @@ get '/thumbnail' do
   @book_url = "https://www.googleapis.com/books/v1/volumes?q=title:#{@book_name}"
 
   @info = HTTParty.get @book_url
-binding.pry
-  # @book_title = @info
+  @book_title = @info["items"].first["volumeInfo"]["title"]
   @img = @info["items"].first["volumeInfo"]["imageLinks"]["thumbnail"]
   erb :thumbnail
 end
