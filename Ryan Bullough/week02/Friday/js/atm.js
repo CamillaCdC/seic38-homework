@@ -53,10 +53,14 @@ $(document).ready(function () {
           .eq(1)
           .children(".balance");
         const otherAccountBalance = +$otherAccount.html().slice(1);
-        otherAccountBalance >= amount
-          ? $otherAccount.html(`$${otherAccountBalance - amount}`)
-          : alert(String.fromCodePoint(0x1f62d)); // sad boi if broke
-        return;
+        if (otherAccountBalance + currentBalance >= amount) {
+          $otherAccount.html(
+            `$${otherAccountBalance + currentBalance - amount}`
+          );
+          $currentAccount.html(`$0`);
+        } else {
+          return;
+        }
       }
       currentBalance >= amount && amount > 0 // wont accept negative value
         ? $currentAccount.html(`$${currentBalance - amount}`)
