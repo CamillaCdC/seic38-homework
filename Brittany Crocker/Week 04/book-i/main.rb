@@ -21,9 +21,13 @@ begin
   @book_avg_rating = @info["items"].first["volumeInfo"]["averageRating"]
   @book_ratings_count = @info["items"].first["volumeInfo"]["ratingsCount"]
   @books_maturity_rating = @info["items"].first["volumeInfo"]["maturityRating"].capitalize.tr('_', ' ')
+
+  begin
   @books_price = @info["items"].first["saleInfo"]["listPrice"]["amount"]
   @books_price_currency = @info["items"].first["saleInfo"]["listPrice"]["currencyCode"]
-
+rescue
+  @books_price = "No Price"
+end
   @book_blurb = @info["items"].first["volumeInfo"]["description"]
 rescue
   redirect to '/'
