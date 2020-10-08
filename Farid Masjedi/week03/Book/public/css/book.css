@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+
+*{
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-family: 'Peddana', serif;
+  text-align:center;
+  /* border: 1px solid red; */
+  font-size: 30px;
+  color:white;
+}
+body{
+  background-color: rgba(3, 19, 33, 0.9);
+}
+
+#container{
+  max-width:960px;
+  min-height:80vh;
+  margin:0 auto;
+  background-color: rgba(198, 226, 255, 0.05);
+}
+h1{
+  font-size: 60px;
+  background-color: rgba(198, 226, 255, 0.25);
+}
+form{
+  background-color: rgba(198, 226, 255, 0.25);
+  padding:10px;
+}
+input, button{
+  font-size: 23px;
+}
+button, input[placeholder]{
+  color: rgba(3, 19, 33, 1);
+}
+em{
+padding-top:75px;
+font-size:20px;
+}
+
+
+#engine{
+  width:85%;
+  margin:100px auto;
+  text-align: left;
+}
+
+#book-container{
+  background-color: rgba(198, 226, 255, 0.15);
+  padding:25px;
+}
+nav{
+  background-color: rgba(255,0,0,0.35);
+  text-align:left;
+  width:91%;
+  margin:0 auto;
+}
+a{
+  padding: 0 20px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+a:hover{
+  color: rgba(198, 226, 255, 0.5);
+  text-decoration: underline;
+}
+header h1{
+  font-size:45px;
+  width:91%;
+  margin: 10px auto;
+}
+
+#author , #description{
+  display: inline-block;
+  border: 3px solid rgba(198, 226, 255, 0.25);
+  padding:5px;
+  min-height:505px;
+}
+#author{
+  width:30%;
+  vertical-align: top;
+}
+#author p{
+  text-align: left;
+  margin-left:12%;
+}
+img{
+  width:80%;
+}
+
+#description{
+  width: 60%;
+}
+#description p{
+  text-align: justify;
+}
