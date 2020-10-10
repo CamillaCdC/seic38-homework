@@ -1,0 +1,17 @@
+<div class="container">
+  <% unless @doughnut["image"].nil? || @doughnut["image"].empty? %>
+  <img src="<%= @doughnut["image"] %>" alt="<%= @doughnut["name"] %>">
+  <% end %>
+  <div class="important-info">
+    <div class="doughnut-info">
+      <h2>LOOK AT THIS MAGNIFICIENT PASTRY</h2>
+      <h3>NAME   - <%= @doughnut["name"] %></h3>
+      <h3>TYPE   - <%= @doughnut["type"] %></h3>
+      <h3>SHAPE  - <%= @doughnut["shape"] %></h3>
+    </div>
+    <div class="doughnut-controls">
+      <a class="donut-control" href="/doughnuts/<%= @doughnut["id"] %>/edit">edit</a>
+      <a class="donut-control" href="/doughnuts/<%= @doughnut["id"] %>/delete">remove</a>
+    </div>
+  </div>
+</div>

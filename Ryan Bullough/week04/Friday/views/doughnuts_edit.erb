@@ -1,0 +1,33 @@
+<div class="container">
+  <% unless @doughnut["image"].nil? || @doughnut["image"].empty? %>
+  <img src="<%= @doughnut["image"] %>" alt="<%= @doughnut["name"] %>">
+  <% end %>
+  <div class="important-info">
+    <div class="doughnut-info">
+      <h2>EDIT THIS MAGNIFICIENT PASTRY</h2>
+      <form action="/doughnuts/<%= @doughnut["id"] %>" method="post">
+        <label>
+          Name
+          <input type="text" name="name" required value="<%= @doughnut["name"] %>">
+        </label>
+        <label>
+          Type 
+          <input type="text" name="type" value="<%= @doughnut["type"] %>">
+        </label>
+        <label>
+          Shape 
+          <input type="text" name="shape" value="<%= @doughnut["shape"] %>">
+        </label>
+        <label>
+          Image URL
+          <input type="url" name="image" placeholder="http://..." value="<%= @doughnut["image"] %>">
+        </label>
+        <button>EDIT</button>
+      </form>
+    </div>
+    <div class="doughnut-controls">
+      <a class="donut-control" href="/doughnuts/<%= @doughnut["id"] %>/edit">edit</a>
+      <a class="donut-control" href="/doughnuts/<%= @doughnut["id"] %>/delete">remove</a>
+    </div>
+  </div>
+</div>
