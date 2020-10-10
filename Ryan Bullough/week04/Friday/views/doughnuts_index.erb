@@ -1,0 +1,8 @@
+<ul id="doughnut-grid">
+  <li class="add-doughnut"><a href="/doughnuts/new">ADD!</a></li>
+  <% @doughnuts.each do |doughnut| %>
+    <li>
+      <a href="/doughnuts/<%=doughnut["id"]%>"><img src="<%=doughnut["image"]%>" alt="It's a DOUGHNUT!"></a>
+    </li>
+  <% end %>
+</ul>

@@ -4,24 +4,35 @@ $lines = {
   "6": ["Grand Central", "33rd", "23rd", "Union Square", "Astor Place"],
 }
 
+$trip_information = Array.new
+
+def line_trip (start, finish)
+  if start < finish
+    $trip_information.push $starting_line[$start_index..$destination_index]
+  else
+    $trip_information.push $starting_line[$destination_index..$start_index].reverse.
+  end
+
 def plan_trip
+  trip_counter = 0
+end
   print "Enter starting line \nN/L/6: "
-  start_line_input = gets.chomp.upcase.to_sym
-  starting_line = $lines[start_line_input]
+  $start_line_input = gets.chomp.upcase.to_sym
+  $starting_line = $lines[start_line_input]
   union_start = starting_line.index "Union Square"
   
   print "Enter starting station \n#{ starting_line.join(', ') }: "
-  starting_station = gets.chomp.split.map(&:capitalize).join(' ')
-  start_index = starting_line.index starting_station
+  $starting_station = gets.chomp.split.map(&:capitalize).join(' ')
+  $start_index = starting_line.index starting_station
   
   print "Enter destination line \nN/L/6: "
-  destination_line_input = gets.chomp.upcase.to_sym
-  destination_line = $lines[destination_line_input]
+  $destination_line_input = gets.chomp.upcase.to_sym
+  $destination_line = $lines[destination_line_input]
   union_end = destination_line.index "Union Square"
   
   print "Enter destination station \n#{ destination_line.join(', ') }: "
-  destination_station = gets.chomp.split.map(&:capitalize).join(' ')
-  destination_index = destination_line.index destination_station
+  $destination_station = gets.chomp.split.map(&:capitalize).join(' ')
+  $destination_index = destination_line.index destination_station
   
   return_string = """You must travel through the following stops on the #{start_line_input.to_s} line: 
 """
