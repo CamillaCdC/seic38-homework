@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.book {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+}
+
+.book p {
+  text-align: left;
+}
+
+.book img {
+  max-width: 128px;
+  max-height: 164px;
+}
+
+.wrapper {
+  width: 90%
+  margin: 0 auto;
+}
