@@ -1,0 +1,27 @@
+<!-- page for adding a new movie -->
+<header>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+  <h1> Add a Movie </h1>
+</header>
+
+<form action="/" method="post">
+  <div id='labels'>
+    <label>Name of a movie:</label>
+    <label>Year:</label>
+    <label>Director:</label>
+    <label>IMDB:</label>
+    <label>Cover:</label>
+  </div>
+  <div id='input'>
+    <input type="text" placeholder="Underground" name ="name" required>
+    <input type="number" placeholder="1995" name="year" required>
+    <input type="text" placeholder="Emir Kustarica" name="director" required>
+    <input type="url" placeholder="https://..." name="imdb">
+    <input type="url" placeholder="https://..." name="img">
+  </div>
+  <div id= "button">
+    <button>New Movie</button>
+  </div>
+</form>
