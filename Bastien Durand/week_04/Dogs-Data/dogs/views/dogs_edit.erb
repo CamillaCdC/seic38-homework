@@ -1,0 +1,20 @@
+<h2>Edit Doggos</h2>
+
+<form action="/dogs/<%= @dogs['id'] %>" method="post">
+  <label>
+    Name:
+    <input name="name" placeholder="Yellow admiral" required value="<%= @dogs['name'] %>">
+  </label>
+
+  <label>
+    Family:
+    <input name="family" placeholder="Nimphalidae" value="<%= @dogs['family'] %>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" placeholder="http://..." value="<%= @dogs['image'] %>">
+  </label>
+
+  <button>Update Doggo</button>
+</form>
