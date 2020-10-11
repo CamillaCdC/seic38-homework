@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+  color:rgb(212 198 212);
+  font-family: 'Amatic SC', cursive;
+  border-radius: 15px;
+
+}
+
+body{
+  background-color : rgba(50,5,50,0.75);
+}
+
+#container{
+  max-width: 960px;
+  width:75%;
+  margin: 0 auto;
+}
+
+h1,nav{
+  text-align:center;
+}
+
+nav a{
+  padding: 20px;
+  font-size:25px;
+}
+
+#movies{
+  display:inline-block;
+  width:200px;
+  margin-bottom: 10px;
+  font-size:20px;
+
+}
+
+#img img{
+  width:160px;
+  height:250px;
+  box-shadow: 5px 10px 18px 10px rgba(0,0,0,0.3);
+}
+
+#all-movies{
+  max-width:800px;
+  text-align:center;
+  /* border:1px red solid; */
+  background-color: #cccccc26;
+  margin:0 auto;
+  padding:25px;
+}
+header{
+  max-width:800px;
+  margin:0 auto;
+}
+h1{
+  font-size:50px;
+}
+#movie_index{
+  margin:0 auto;
+  max-width:800px;
+  opacity: 50%;
+}
+#cover, #info {
+  display: inline-block;
+}
+#cover{
+  width:75%;
+}
+#info{
+  width:20%;
+  font-size: 2em;
+  vertical-align: top;
+  margin: 20% -10%;
+}
+#cover img{
+  width:80%;
+  height:67%;
+  box-shadow: 5px 10px 18px 10px rgba(0,0,0,0.3);
+}
+#movie_name{
+  padding-right: 40%;
+  margin-bottom: 5px;
+}
+
+form{
+  width:125%;
+  padding-left: 23%;
+}
+#labels , #input{
+  display:inline-block;
+}
+#labels{
+  vertical-align: top;
+  width:35%;
+}
+#input{
+  width:60%;
+}
+#button{
+  width: 53%;
+  text-align: center;
+}
+input{
+  display:block;
+  text-align: center;
+  width:40%;
+}
+button, input{
+  padding:10px;
+  font-size: 25px;
+  margin: 2.5px;
+  color: rgba(50,5,50,0.5);
+}
+label{
+  font-size: 35px;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+::placeholder{
+  color: rgba(50,5,50,0.25);
+}

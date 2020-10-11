@@ -1,0 +1,34 @@
+<!-- home page that shows a menu of all movies -->
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/new">Add a Movie</a>
+  </nav>
+  <h1>Farid's Favourite Movies</h1>
+</header>
+
+<div id='all-movies'>
+  <% @movies_info.shuffle.each do |i| %>
+    <div id="movies">
+      <% unless i["img"].nil? || i["img"].empty?%>
+        <a href="/<%= i["id"]%>">
+        <div id='img'>
+          <img src="<%= i["img"]%>" alt="<%=i["name"]%>">
+        </div>
+        </a>
+      <% else %>
+      <div id='img'>
+        <a href="/<%= i["id"]%>">
+        <img src="https://via.placeholder.com/105x150.png/AAAAAA/000000?text=<%=i["name"]%>" alt='<%=i["name"]%>'>
+        </a>
+      </div>
+      <% end %>
+      <div id='link'>
+        <a href="/<%= i["id"]%>">
+          <%=i["name"]%>
+        </a>
+      </div>
+
+    </div>
+  <% end %>
+</div>
