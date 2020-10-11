@@ -1,0 +1,18 @@
+<h2>Edit Masquerade Masks</h2>
+
+<form action="/masks/<%= @masks["id"] %>" method="post">
+  <label>
+    Type:
+    <input name="type" placeholder="The Bauta" required value="<%= @masks["type"]%>">
+  </label>
+  <label>
+    Colour:
+    <input name="colour" placeholder="blue" value="<%= @masks["colour"] %>">
+  </label>
+  <label>
+    Image:
+    <input type="url" name="image" placeholder="http://..." value="<%= @masks["image"] %>">
+  </label>
+
+  <button>Update Mask</button>
+</form>
