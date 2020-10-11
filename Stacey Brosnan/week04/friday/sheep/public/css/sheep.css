@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&family=Sansita+Swashed:wght@300&display=swap');
+
+
+body {
+  background-color: lightgreen;
+  font-family: 'Commissioner', sans-serif;
+}
+
+h1,h2{
+    font-family: 'Sansita Swashed', cursive;
+    color: white;
+}
+
+h2{
+  margin: auto;
+  font-size: 45px;
+}
+
+h1 {
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+.container{
+  padding-top: 1em;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  width:20em;
+  background-color: rgba(221,160,221, 0.8);
+  padding: 1em;
+  border-top-left-radius: .7em ;
+  border-bottom-right-radius: .7em ;
+  margin-bottom: 1em;
+}
+
+nav a {
+  margin: .6em;
+  color: white;
+}
+
+a:hover{
+  color: #975e94;;
+}
+
+p {
+  text-align: left;
+}
+
+.img {
+  background-image: url(/Images/Sheep.png);
+  height: 170px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+.list {
+  padding: .5em;
+  display: block;
+  text-align: left;
+  color: rgba(200,100,245);
+  font-size: 20px;
+
+}
+
+input {
+  padding: 12px 20px;
+  margin: .5em;
+  box-sizing: border-box;
+  border-radius: .5em;
+}
+
+button {
+  box-sizing: border-box;
+  border-radius: .5em;
+  font-family: 'Commissioner', sans-serif;
+  padding: 12px 20px;
+}
+
+.controls{
+  margin: 1em;
+}
+
+.controls a{
+  margin: 1em;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: .5em;
+  border: 1px solid black;
+  font-family: 'Commissioner', sans-serif;
+  padding: 12px 20px;
+  background-color: #ccc;
+  color: black;
+}
