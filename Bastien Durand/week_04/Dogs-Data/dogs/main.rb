@@ -25,7 +25,7 @@ end
 
 # CREATE
 post '/dogs' do
-  query = "INSERT INTO butterflies (name, family, image) VALUES ('#{params[:name]}', '#{params[:family]}', '#{params[:image]}')"
+  query = "INSERT INTO butterflies (name, family, description, image) VALUES ('#{params[:name]}', '#{params[:family]}',  '#{params[:image]}')"
   # Execute the SQL
   query_db query
   # Show them the new butterfly
