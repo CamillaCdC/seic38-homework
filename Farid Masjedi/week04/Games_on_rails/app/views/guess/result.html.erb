@@ -1,0 +1,7 @@
+<nav>
+  <a href="/">Home</a>
+  <% if "#{@result[0]}" != 'Y' %>
+    <a href="/guess">Another Guess</a>
+  <% end %>
+</nav>
+<h1> <%= "#{@result}" %> </h1>
