@@ -1,7 +1,12 @@
 <nav>
   <a href="/">Home</a>
-  <% if "#{@result[0]}" != 'Y' %>
-    <a href="/guess">Another Guess</a>
-  <% end %>
 </nav>
+<form action="/guess/result">
+  <label>Another Guess:
+    <input type="number" placeholder='2' name='number1' required>
+  </label>
+  <button>Click</button>
+</form>
+
+<hr>
 <h1> <%= "#{@result}" %> </h1>
