@@ -1,0 +1,9 @@
+<h2>all beers are not created equal !!</h2>
+
+<% @beers.each do |beer| %>
+<p>
+  <a href="/beers/<%= beer["id"]%>">
+  <%= beer["name"] %>
+</a>
+</p>
+<% end %>

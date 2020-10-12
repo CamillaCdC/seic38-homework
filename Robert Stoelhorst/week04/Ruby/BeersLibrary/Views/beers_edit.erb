@@ -1,0 +1,20 @@
+<h2>Edit Beer Entry</h2>
+
+<form action="/beers/<%= @beer["id"] %>" method="post">
+<label>
+  Name:
+  <input name="name" placeholder="RobBrew" required value="<%= @beer["name"] %>">
+</label>
+
+<label>
+  Type:
+  <input name="type" placeholder="Ale" value="<%= @beer["type"] %>">
+ </label>
+
+<label>
+  Image:
+  <input type="url" name="image" placeholder="http://..." value="<%= @beer["image"] %>">
+</label>
+
+<button>Add Beer</button>
+</form>

@@ -1,0 +1,30 @@
+<h2>Edit Camera</h2>
+
+<form action="/cameras/<%= @camera["id"] %>" method="post">
+  <label>
+    Manufacturer:
+    <input name="manufacturer" value="<%=@camera['manufacturer']%>" required>
+  </label>
+
+  <label>
+    Model:
+    <input name="model" value="<%=@camera['model']%>" required
+  </label>
+
+  <label>
+    Medium:
+    <input name="medium" value="<%=@camera['medium']%>">
+  </label>
+
+  <label>
+    Focus Type:
+    <input name="focus_type" value="<%=@camera['focus_type']%>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" value="<%=@camera['image']%>">
+  </label>
+
+  <button>Update Camera</button>
+</form>
