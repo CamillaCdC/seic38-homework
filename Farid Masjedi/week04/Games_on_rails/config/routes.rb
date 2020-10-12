@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/magic8/result' => 'magic8#result'
 
   #to the guess number game
-  get 'guess' => 'guess#max'
+  get '/guess' => 'guess#max'
   get '/guess/form' => 'guess#form'
   # to the result of the guess number game
   get '/guess/result' => 'guess#result'

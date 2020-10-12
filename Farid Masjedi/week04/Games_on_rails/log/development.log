@@ -10852,3 +10852,171 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-10-13 08:45:28 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 216ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess" for ::1 at 2020-10-13 08:45:31 +1100
+Processing by GuessController#max as HTML
+  Rendering guess/max.html.erb within layouts/application
+  Rendered guess/max.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/form?max=100" for ::1 at 2020-10-13 08:45:33 +1100
+Processing by GuessController#form as HTML
+  Parameters: {"max"=>"100"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=50" for ::1 at 2020-10-13 08:45:36 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"50"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=25" for ::1 at 2020-10-13 08:45:39 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"25"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=15" for ::1 at 2020-10-13 08:45:42 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"15"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=20" for ::1 at 2020-10-13 08:45:44 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"20"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=22" for ::1 at 2020-10-13 08:45:47 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"22"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=23" for ::1 at 2020-10-13 08:45:50 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"23"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 08:45:51 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 08:47:26 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 219ms (Views: 213.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess" for ::1 at 2020-10-13 08:47:28 +1100
+Processing by GuessController#max as HTML
+  Rendering guess/max.html.erb within layouts/application
+  Rendered guess/max.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/form?max=50" for ::1 at 2020-10-13 08:47:30 +1100
+Processing by GuessController#form as HTML
+  Parameters: {"max"=>"50"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=25" for ::1 at 2020-10-13 08:47:33 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"25"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=25" for ::1 at 2020-10-13 08:47:50 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"25"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess" for ::1 at 2020-10-13 08:47:51 +1100
+Processing by GuessController#max as HTML
+  Rendering guess/max.html.erb within layouts/application
+  Rendered guess/max.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/form?max=500" for ::1 at 2020-10-13 08:47:54 +1100
+Processing by GuessController#form as HTML
+  Parameters: {"max"=>"500"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=250" for ::1 at 2020-10-13 08:47:57 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"250"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess" for ::1 at 2020-10-13 08:47:59 +1100
+Processing by GuessController#max as HTML
+  Rendering guess/max.html.erb within layouts/application
+  Rendered guess/max.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/form?max=100" for ::1 at 2020-10-13 08:48:02 +1100
+Processing by GuessController#form as HTML
+  Parameters: {"max"=>"100"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/result?number1=100" for ::1 at 2020-10-13 08:48:07 +1100
+Processing by GuessController#result as HTML
+  Parameters: {"number1"=>"100"}
+  Rendering guess/result.html.erb within layouts/application
+  Rendered guess/result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 08:48:12 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
