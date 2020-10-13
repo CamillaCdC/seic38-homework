@@ -1,0 +1,17 @@
+<header>
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Add a country' , new_path %>
+  <%= link_to 'What is HDI?' , 'https://en.wikipedia.org/wiki/Human_Development_Index', :target => '_blank' %>
+  <h1>Countries Info</h1>
+</header>
+
+<% @countries.shuffle.each do |country| %>
+  <div id='country'>
+    <% if country.flag.present? %>
+      <%= image_tag country.flag, :alt => country.name, :id =>'flag' %>
+    <% else %>
+      <%= image_tag "https://via.placeholder.com/350?text=#{country.name}" , :id => 'flag' %>
+    <% end %>
+    <p><%= link_to country.name, country_path(country.id) %></p>
+  </div>
+<% end %>
