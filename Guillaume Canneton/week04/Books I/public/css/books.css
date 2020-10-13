@@ -1,0 +1,28 @@
+body {
+  background-image: url("/img/library.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#container {
+  background-color: rgba(20, 20, 20, 0.8);
+  width: 720px;
+  margin: 25px auto;
+  color: white;
+  padding : 15px;
+}
+#title {
+  font-size: 25px;
+}
+nav {
+  background-color: black;
+  width: 720px;
+  margin: 0 auto;
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}

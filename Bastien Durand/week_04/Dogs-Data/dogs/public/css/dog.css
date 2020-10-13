@@ -1,0 +1,22 @@
+* {
+  background-color: orange;
+
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  text-align:right;
+}
+
+nav a {
+  color: white;
+}
+
+.feature {
+  max-width: 100%;
+}
