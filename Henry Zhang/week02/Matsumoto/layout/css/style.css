@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    /* it is new box model */
+    box-sizing: border-box;
+    border: 1px solid green;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    /* just fix the scrol bar , it is normally use */
+    max-width: 960px;
+    background-color: #0090d2;
+    margin: 0 auto;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+nav {
+    text-align: right;
+}
+
+nav a {
+    /*  a is very special , so specif this manaully */
+    text-decoration: none;
+    color: green;
+}
+header h1 {
+    display: inline-block;
+    width: 920px;
+    height: 100px;
+    background-image: url(../img/background.jpg);
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 3px auto;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+main {
+    display: inline-block;
+    width: 75%;
+}
+
+main img {
+    float: left;
+    width: 50%;
+}
+main p {
+    float: right;
+    width: 50%;
+     font-size: 1.3em;
+}
+
+aside {
+    display: inline-block;
+    width: 20%;
+    background-color: #cfc;
+}
+
+
+footer ul {
+    list-style-type: none;
+    margin: 0px;
+}
+ footer ul li {
+    background-color: #ccc;
+
+}
+footer ul li:hover {
+    background-color: #999;
+}
+
+
+footer ul li.facebook {
+    list-style-image: url(../img/social-icon-facebook.png);
+
+}
+footer ul li.pinterest {
+    list-style-image: url(../img/social-icon-pinterest.png);
+}
+footer ul li.twitter {
+    list-style-image: url(../img/social-icon-twitter.png);
+}

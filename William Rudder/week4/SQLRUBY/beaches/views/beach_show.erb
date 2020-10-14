@@ -1,0 +1,11 @@
+<h1>
+  <%= @beach["beach"]%>
+<h3>Country: <%= @beach["country"]%></h3>
+</h1>
+
+<img src="<%=@beach["image"]%>" alt="@beach["beach"]" class="feature" class="feature">
+
+<div class="controls">
+  <a href="/beaches/<%= @beach["id"] %>/edit">Edit</a>
+  <a href="/beaches/<%= @beach["id"] %>/delete">Delete</a>
+</div>

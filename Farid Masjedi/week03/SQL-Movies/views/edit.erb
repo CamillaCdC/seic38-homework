@@ -1,0 +1,29 @@
+<!-- a page for editing any data of a movie -->
+<header>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+  <h1> Add a Movie </h1>
+</header>
+
+<form action="/<%="#{@movie_edit["id"]}"%>" method="post">
+  <div id='labels'>
+    <label>Name of a movie:</label>
+    <label>Year:</label>
+    <label>Director:</label>
+    <label>IMDB:</label>
+    <label>Cover:</label>
+  </div>
+
+  <div id='input'>
+    <input type="text" name ="name" value='<%="#{@movie_edit["name"]}"%>' required>
+    <input type="number" name="year" value='<%="#{@movie_edit["year"]}"%>' required>
+    <input type="text" name="director" value='<%="#{@movie_edit["director"]}"%>' required>
+    <input type="url" name="imdb" value='<%="#{@movie_edit["imdb"]}"%>'>
+    <input type="url" name="img" value='<%="#{@movie_edit["img"]}"%>'>
+  </div>
+  <div id= "button">
+    <button>Edit</button>
+  </div>
+
+</form>

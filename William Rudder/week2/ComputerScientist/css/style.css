@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:ital,wght@0,100;0,200;1,900&display=swap');
+*{
+/*border: 1px solid green; /* pesticide extention autos this code  */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+
+
+
+}
+/* -------------------------------header and nav-----------------------*/
+.curly {
+  margin-right: 0.5em;
+  color: #cc4f4f;
+}
+
+.intro {
+  font-weight: bold;
+  font-size: 200%;
+  margin-left: 12em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+nav {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  padding: 30px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px;
+  height: 50px;
+  font-size: 20px;
+}
+
+nav {
+  height: 30px;
+}
+
+.quotes {
+background-color: #cc4f4f94;
+border-radius: 0.5em;
+}
+/* -------------------------------header and nav fin-----------------------*/
+
+
+.container {
+  max-width: 960px; /* makes it responsive */
+  background-color: white;
+  margin: 0 auto; /* 0 margin top and bottom, auto means itll split left and right and center it */
+  padding: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+p.careerstory{
+  color: white;
+  padding: 0.2em;
+  border-top: 2px solid white;
+}
+
+.container h1 {
+  color: white;
+  margin-left: 1em;
+}
+
+.container h5 {
+  color: white;
+  margin-left: 1em;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+main img {
+  border: 1px solid black;
+  display: block;
+  width: 48%;
+}
+
+.whoislarry {
+  margin-top: -30px;
+}
+
+main {
+  display: inline-block;
+  width: 50%;
+  background-color: black;
+  border-radius: 0.2em;
+  letter-spacing: 1px;
+  padding: 1em;
+}
+
+main p {
+  color: white;
+  padding: 1em;
+}
+/*------------------------------ aside-------------------*/
+aside {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background-color: white;
+  padding: 1em;
+  height: 900px;
+}
+
+.container2 h3 {
+  color: #cc4f4f;
+}
+
+.LarryPage {
+  width: 400px;
+}
+
+.container2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+
+.stories {
+  border-top: 2px solid black;
+}
+
+.buttonwrap {
+  margin-top: 90px;
+}
+div.buttonwrap {
+  height: 200px;;
+}
+.buttonwrap p {
+  display: inline-block;
+  width: 40%;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.buttonwrap button {
+  display: inline-block;
+  color: #cc4f4f;
+  width: 150px;
+  height: 30px;
+  float: right;
+  background-color: white;
+  border-radius: 1em;
+  border: 1px solid #cc4f4f;
+  transform: rotate(-10deg);
+    z-index: +200;
+    position: relative;
+}
+
+.buttonwrap button:hover{
+  background-color: #cc4f4f;
+  border-radius: 1em;
+  border: 1px solid white;
+  color: white;
+
+}
+
+.buttonwrap .fastfactsimg {
+  width: 150px;
+  position: relative;
+  top: -152px;
+  right: -171px;
+  transform: rotate(-20deg);
+  z-index: +1;
+}
+#speed {
+  width: 150px;
+  position: relative;
+  top: -166px;
+  right: -109px;
+}
+footer nav {
+  border-top: 1px solid black;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content:
+}
+
+footer nav a {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  margin: -10px;
+}

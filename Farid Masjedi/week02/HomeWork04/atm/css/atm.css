@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Ruluko);
+
+/* Added font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#content {
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+  background-color:#ccc;
+  padding: 5px;
+  height: 580px;
+  border-radius: 15px;
+}
+.into-next-page {
+  font-size:50px;
+  padding:1px 0 0 0;
+  font-family: 'Anton', sans-serif;
+}
+#page1 {
+  padding: 25px 0;
+  background-color: #6C9A74;
+  border: 1px solid #295A33;
+  width:350px;
+  height:225px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+#page1 h1{
+  padding: 25px 0;
+}
+
+#checking , #savings  {
+  display: none;
+  border-radius: 15px;
+}
+#nav {
+  margin: 45px auto;
+  width: 500px;
+  background-color: white;
+  border-radius: 15px;
+}
+img{
+  margin:5px 0 0 0;
+}
+#title {
+  color: #F52F4F;
+  font-family: 'Oleo Script', cursive;
+  font-size: 50px;
+}
+#report{
+  height:225px;
+  display:none;
+}
+
+#total, #savings-report-all, #checking-report-all{
+  width:27%;
+  height:208px;
+}
+#total, #checking-report-all {
+  float: left;
+}
+#savings-report-all{
+  float: right;
+  margin-right:6px;
+}
+#checking-report-all {
+  margin-left: 25px;
+}
+#total {
+  margin-left:6px;
+}
+#total-balance {
+  height:59px;
+}
+#checking {
+  float: left;
+
+}
+
+#savings {
+  float: right;
+
+}
+#checking-transfer , #savings-transfer{
+  width:56%;
+
+}
+#page2 {
+  padding:10px;
+
+}
+#page2 nav{
+  visibility: hidden;
+  text-align:left;
+  margin: 0 0 15px 0;
+  border-radius: 15px;
+
+}
+#page2 nav li{
+  border-radius: 8px;
+  display:inline;
+  background-color:#6C9A74;
+  padding: 7px;
+  border: 1px solid #295A33;
+
+}
+#page2 nav li:hover{
+
+  background-color:#95cf9f;
+
+}
+
+.account {
+  background-color: #6C9A74;
+  border: 1px solid #295A33;
+  padding: 10px;
+}
+
+.balance {
+  background-color: #E3E3E3;
+  border: 1px solid #676767;
+  font-family: 'Ruluko', sans-serif;
+  font-size: 50px;
+  padding: 25px 0;
+}
+
+
+
+.clear {
+  clear: both;
+  padding:10px;
+  font-size:20px;
+  display: none;
+}
+
+.zero {
+  background-color: #F52F4F;
+  color: #FFF;
+}

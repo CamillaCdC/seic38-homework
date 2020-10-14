@@ -1,0 +1,16 @@
+
+<div class="container">
+<h2><%= @recipe["name"] %> </h2>
+
+<h3>Meal: <%= @recipe["mealtype"]%></h3>
+
+
+ <% unless @recipe["image"].nil? || @recipe["image"].empty? %>
+  <img src="<%= @recipe["image"]%>" alt="<%= @recipe["name"] %>" class="feature">
+  <% end %>
+
+ <div class="controls">
+   <a href="/recipes/<%= @recipe["id"] %>/edit">Edit</a>
+   <a href="/recipes/<%= @recipe["id"] %>/delete">Delete</a>
+ </div>
+</div>

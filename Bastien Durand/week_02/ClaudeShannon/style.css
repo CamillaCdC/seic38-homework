@@ -1,0 +1,64 @@
+/* Awesome debugging trick (* {border: 1px solid green;} ) */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+  max-width: 960px; /* Lazy responsive container */
+  margin: 0 auto; /* Horizontal Centering */
+  padding: 1em; /* Chunky pixel, Size of 'm' */
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  text-decoration: none;
+  color: blue;
+  padding-right: 1em;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #222;
+  color: #ccc;
+  font-size: 200%;
+  padding: 0.5em;
+}
+
+main {
+  display: inline-block;
+  width: 75%;
+}
+
+main img {
+  border: 1px solid black;
+  margin-left: 2.5em;
+  display: inline-block;
+}
+
+aside {
+  display: inline-block;
+  width: 21%;
+  vertical-align: top;
+  padding: 1em;
+  border-top: 10px solid #03a6e3;
+  border-bottom: 10px solid #03a6e3;
+  /* box-shadow: 0 0 15px black; /* Now it pops */
+  /* border-radius: 0.5em; */
+}
+
+aside ul {
+  padding-left: 18px;
+}

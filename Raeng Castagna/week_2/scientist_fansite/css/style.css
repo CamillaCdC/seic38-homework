@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap');
+
+/* * {border: 1px solid green;} */
+
+body {
+  background-color:#556;
+  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+  background-size:80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: aliceblue;
+  font-family: 'EB Garamond', serif;
+}
+.fas {
+  width: 80px;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: #1000ff;
+}
+
+main {
+  display: inline-block;
+  width: 64%;
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+}
+
+#landing-page-image {
+  width: 290px;
+  height: 170px;
+  box-shadow: 0 0 15px black;
+  border-radius: 0.2em;
+  margin: 20px;
+}
+
+#time-magazine-img {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 9px black;
+}
+
+#img-child {
+  width: 611px;
+  height: 306px;
+  box-shadow: 0 0 10px black;
+}
+
+#graffiti-pic {
+  box-shadow: 0 0 8px black;
+}
+
+aside {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+}
+
+footer {
+  text-align: right;
+}
