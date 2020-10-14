@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="band-h1"><%= @band.name %></h1>
+  <% if @band.image.present? %>
+    <%= image_tag @band.image, :class => 'show-image' %>
+  <% end %>
+  <ul>
+    <li class="band band-show"><%= @band.genre  %></li>
+    
+    <% if @band.formed.present? %>
+    <li class="band band-show">Formed in <%= @band.formed.strftime '%Y' %></li>
+    <% end %>
+    
+    <li class="band band-show"><%= pluralize @band.member_count, 'member' %></li>
+  </ul>
+</div>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_band_path(@band), class: 'band-show control' %>
+  <%= link_to 'Remove', band_path(@band), class: 'band-show control', method: 'delete', data: { confirm: "Are you sure?" } %>
+</div>
