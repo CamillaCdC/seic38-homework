@@ -1,0 +1,11 @@
+<h2><%= @masks['type'] %></h2>
+<h3>Colour: <%= @masks['colour'] %></h3>
+
+<% unless @masks["image"].nil? || @masks["image"].empty? %>
+    <img src="<%= @masks["image"] %>" alt="<%= @masks["type"] %>" class="feature">
+<% end %>
+
+<div class="controls">
+  <a href="/masks/<%= @masks["id"] %>/edit">Edit</a>
+  <a href="/masks/<%= @masks["id"] %>/delete">Delete</a>
+</div>

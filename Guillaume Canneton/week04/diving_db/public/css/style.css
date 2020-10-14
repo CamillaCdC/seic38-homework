@@ -1,0 +1,26 @@
+body{
+
+  background-image: -moz-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+  background-image: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+
+}
+.container {
+
+  max-width: 960px;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 15px;
+
+}
+nav {
+  text-align: right;
+
+}
+nav a {
+  margin: 25px 10px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,17 @@
+
+<h2> <%=  @sheep["breed"] %> </h2>
+
+<h3>Origin of <%=  @sheep["breed"] %>: <%=  @sheep["origin"] %> </h3>
+
+
+
+  <% unless @sheep["image"].nil? || @sheep["image"].empty? %>
+  <img class = "feature" src="<%= @sheep["image"] %>" alt=<%= @sheep["name"]%>>
+<% end %>
+
+<div class = "controls">
+  <a href="/sheep/<%= @sheep["id"] %>/update">Update</a>
+
+  <a href="/sheep/<%= @sheep["id"] %>/delete">Delete</a>
+
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Camera Collection</title>
+  <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav_button">
+        <a href="/">Home</a>
+      </div>
+      <div class="nav_button">
+        <a href="/cameras">All Cameras</a>
+      </div>
+      <div class="nav_button">
+        <a href="/cameras/search">Search for a camera</a>
+      </div>
+      <div class="nav_button">
+        <a href="/cameras/new">New Camera</a>
+      </div>
+    </nav>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

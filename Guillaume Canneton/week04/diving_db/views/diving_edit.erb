@@ -1,0 +1,38 @@
+<h2>Edit your favourite diving center</h2>
+
+<form action="/diving/<%= @diving_center["id"] %>" method="post">
+  <ul>
+    <li>
+      <label>
+        Name:
+        <input type="text" name="name" placeholder="My diving center" value="<%= @diving_center["name"] %>">
+      </label>
+    </li>
+    <li>
+      <label>
+        Country:
+        <input type="text" name="country" placeholder="Australia" value="<%= @diving_center["country"] %>">
+      </label>
+    </li>
+    <li>
+      <label>
+        City:
+        <input type="text" name="city" placeholder="Sydney" value="<%= @diving_center["city"] %>">
+      </label>
+    </li>
+    <li>
+      <label>
+        Map:
+        <input type="url" name="map" placeholder="https://www.bing.com/maps/..." value="<%= @diving_center["map"] %>">
+      </label>
+    </li>
+    <li>
+      <label>
+        Website:
+        <input type="url" name="website" placeholder="http://www.website.com" value="<%= @diving_center["website"] %>">
+      </label>
+    </li>
+  </ul>
+  <button>Update infos</button>
+
+</form>
