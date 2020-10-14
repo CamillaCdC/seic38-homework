@@ -1,0 +1,8 @@
+<h1>All Guitars</h1>
+
+  <% @guitars.each do |guitar| %>
+  <h2>
+    <%= link_to guitar.brand, guitar_path(guitar.id) %>:
+    <%= guitar.model %>
+  </h2>
+  <% end %>

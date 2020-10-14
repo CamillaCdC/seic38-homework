@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
+body {
+  background-color: lightgrey;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Kite One', sans-serif;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+nav {
+  text-align: right;
+}

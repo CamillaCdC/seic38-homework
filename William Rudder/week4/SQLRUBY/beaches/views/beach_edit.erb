@@ -1,0 +1,17 @@
+<h1>Edit beach</h1>
+
+<form action="/beaches/<%=@beach["id"] %>" method ="post">
+  <label>
+    Name of Beach:
+    <input name ="beach" placeholder="Bondi" value="<%= @beach["beach"]%> ">
+  </label>
+  <label>
+    Country:
+    <input name ="country" placeholder="Australia" value="<%= @beach["country"]%> ">
+  </label>
+  <label>
+    Image:
+    <input type="url" name ="image" placeholder="https://...">
+    <button>Edit Beach</button>
+  </label>
+</form>
