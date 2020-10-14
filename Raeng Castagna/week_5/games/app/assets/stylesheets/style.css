@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.container {
+  font-family: 'Secular One', sans-serif;
+}
+
+.rock_container {
+  font-family: 'Indie Flower', cursive;
+}
+
+nav {
+  text-align: right
+}

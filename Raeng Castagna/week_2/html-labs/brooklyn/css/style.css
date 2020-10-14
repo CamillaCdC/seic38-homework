@@ -1,0 +1,36 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+body {
+  line-height: 17px;
+  size: 12px;
+  color: #656565;
+  font-family: "Times New Roman", serif;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 950px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+}
+
+.brook-logo {
+  padding: 19px 0;
+}
+
+.hover-color {
+  color: #20222a;
+}

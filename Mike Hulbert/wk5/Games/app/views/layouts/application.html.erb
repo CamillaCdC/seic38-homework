@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a class="logo" href="/">Games on Rails</a>
+          <ul>
+            <li>
+              <a href="/magic8ball">Magic 8 Ball</a>
+            </li>
+            <li>
+              <a href="/secret_number">Secret Number</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="container">
+        <nav>
+          <a href="https://github.com/mhulbert85"></a>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+            <li>
+              <a href="/magic8ball">Magic 8 Ball</a>
+            </li>
+            <li>
+              <a href="/secret_number">Secret Number</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Call us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

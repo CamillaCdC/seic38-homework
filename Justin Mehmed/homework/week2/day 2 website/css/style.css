@@ -1,0 +1,122 @@
+
+
+.index div {
+    max-width: 1000px;
+    margin: 0px;
+    border: 20px solid aqua;
+}
+
+.index nav {
+    background-color: blueviolet;
+}
+
+.index .nav1 {
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color: pink
+}
+
+.index .nav2 {
+    padding-left: 280px;
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color:pink
+}
+
+.index .nav3 {
+    padding-left: 270px;
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color:pink
+}
+
+.jen {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+.index h1 {
+   color: pink;
+  text-align: center;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.bio {
+    font-family: monospace;
+    color: blue;
+  padding-left: 450px;
+}
+.index p {
+    font-family: monospace;
+    max-width: 500px;
+    padding-left: 250px;
+}
+
+.index .accom {
+    font-family: monospace;
+    color: tan;
+    display: inline-block;
+    padding-left: 420px;
+   
+}
+
+.index ul {
+    font-family: monospace;
+    padding-bottom: 20px;
+    padding-left: 380px;
+
+}
+
+
+
+
+.art div {
+    max-width: 1000px;
+    margin: 0px;
+    border: 20px solid blueviolet;
+}
+
+.art nav {
+    background-color: pink;
+}
+
+.art .nav1 {
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color: aqua;
+}
+
+.art .nav2 {
+    padding-left: 250px;
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color:aqua
+}
+
+.art .nav3 {
+    padding-left: 250px;
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+    color:aqua
+}
+
+.art h1 {
+    color: pink;
+   text-align: center;
+   font-size: 40px;
+   font-family: monospace;
+}
+
+.art img {
+        width: 25%;
+        height: auto;
+        display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+      }
+}

@@ -1,0 +1,17 @@
+<h2>Here is the infos about <%= @diving_center["name"] %></h2>
+
+<ul>
+  <li>Country: <%= @diving_center["country"] %></li>
+  <li>City: <%= @diving_center["city"] %></li>
+  <li><a href="<%= @diving_center["website"] %>" target="_blank">Website</a></li>
+</ul>
+<div>
+     <iframe width="500" height="400" frameborder="0" src="<%= @diving_center["map"] %>" scrolling="no">
+     </iframe>
+
+</div>
+  <div id="edit_delete">
+    <a href="/diving/<%= @diving_center["id"] %>/edit">edit</a>
+    <a href="/diving/<%= @diving_center["id"] %>/delete">delete</a>
+
+  </div>

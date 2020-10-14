@@ -1,0 +1,21 @@
+
+$primary-color: #0e6cff;
+$secondary-color: #ff8700;
+$dark-color: #343840;
+$light-color: #f4f4f4;
+$danger-color: #dc3545;
+$succes-color: #28a745;
+
+// Set text color from backgorund lightness
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+// Set background color with mixin
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}

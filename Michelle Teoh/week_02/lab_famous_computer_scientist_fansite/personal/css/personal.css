@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0px 400px 100px 400px;
+  margin-bottom: 500px;
+}
+
+img {
+  float: right;
+  width: 400px;
+  margin-left: 40px;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+}
