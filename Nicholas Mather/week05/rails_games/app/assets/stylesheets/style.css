@@ -1,0 +1,19 @@
+body {
+  background-color: lavender;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: white;
+}
+
+.feature {
+  max-width: 100%
+}
