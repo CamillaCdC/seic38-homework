@@ -1,0 +1,19 @@
+<p>
+<strong><%= @title.upcase %></strong>
+written by <strong><%= @author %></strong>
+</p>
+<p>
+published on <strong><%= @publishedDate %></strong> by <strong><%= @publisher %></strong>
+</p>
+<img src="<%= @thumbnail %>" alt="cover">
+<p>
+<strong>$<%= @price %><%= @currency %></strong>
+</p>
+<p>
+  <nav>
+<a href="<%= @buyLink %>">Buy Now</a>
+</nav>
+</p>
+<p class="description">
+<strong><%= @description %></strong>
+</p>
