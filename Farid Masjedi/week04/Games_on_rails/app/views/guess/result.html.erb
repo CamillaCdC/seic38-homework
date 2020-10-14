@@ -1,0 +1,13 @@
+<nav>
+  <a href="/">Home</a>
+  <a href="/guess">Play again</a>
+</nav>
+<form action="/guess/result">
+  <label>Make a Guess:
+    <input type="number" placeholder='2' name='number1' required>
+  </label>
+  <button>Click</button>
+</form>
+
+<hr>
+<h1> <%= "#{@result}" %> </h1>

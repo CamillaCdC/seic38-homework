@@ -1,0 +1,21 @@
+body {
+  background-color: Mistyrose;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: navy;
+  text-align: center;
+}
+
+.feature {
+  max-width: 100%;
+}

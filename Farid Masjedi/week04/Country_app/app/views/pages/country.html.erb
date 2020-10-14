@@ -1,0 +1,18 @@
+<header>
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Edit', edit_path %>
+  <%= link_to 'Delete', country_path(@country.id), :method => 'delete' %>
+  <h1><%= @country.name.capitalize %></h1>
+</header>
+
+<div id="big_flag">
+  <%= image_tag @country.flag if @country.flag.present? %>
+</div>
+
+<div id="info">
+  <p>Continent: <%= @country.continent.capitalize %></p>
+  <p>Area: <%= number_with_delimiter @country.area %> km&#178</p>
+  <p>Population: <%= number_with_delimiter @country.population %></p>
+  <p>GDP: <%= pluralize(number_to_currency(@country.gdp), 'billion')%></p>
+  <p>HDI: <%= @country.hdi %></p>
+</div>
