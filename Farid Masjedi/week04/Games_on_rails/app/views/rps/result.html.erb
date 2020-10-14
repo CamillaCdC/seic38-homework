@@ -1,0 +1,21 @@
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/rps">Play again</a>
+  </nav>
+</header>
+
+<div id="rps-result">
+
+  <p>Player</p>
+  <div id='player'>
+    <img src="<%= "#{@src}" %>" width="100" alt="<%"#{@playerChoice}"%>">
+  </div>
+
+  <div id='pc'>
+    <img src="<%= "#{@srcc}" %>" width="100" alt="<%"#{@playerChoice}"%>">
+  </div>
+  <p>Server</p>
+
+  <h1><%= "#{@result}" %> </h1>
+</div>

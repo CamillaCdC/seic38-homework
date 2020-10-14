@@ -1,0 +1,26 @@
+<!-- a page for each movie that contain a movie photo and informations -->
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/<%="#{@movie["id"]}"%>/edit">Edit</a>
+    <a href="/<%="#{@movie["id"]}"%>/delete">Delete</a>
+  </nav>
+  <h1 id="movie_name"> <%=@movie["name"]%> </h1>
+</header>
+
+
+<div id='movie_index'>
+  <div id='cover'>
+  <% unless @movie["img"].nil? || @movie["img"].empty?%>
+      <img src="<%= @movie["img"]%>" alt="<%=@movie["name"]%>">
+  <% else %>
+      <img src="https://via.placeholder.com/600x850.png/AAAAAA/000000?text=<%=@movie["name"]%>" alt='<%=@movie["name"]%>'>
+  <% end %>
+</div>
+
+  <div id='info'>
+    <p>Year: <%=@movie["year"]%></p>
+    <p>Director: <%=@movie["director"]%> </p>
+    <p> <a href="<%=@movie["imdb"]%>" target="_blank">IMDB Link</a> </p>
+  </div>
+</div>

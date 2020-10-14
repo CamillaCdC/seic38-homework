@@ -1,0 +1,16 @@
+<p>
+  <h1><%= @book_title %></h1>
+  <img src="<%= @book_image %>" alt="Image">
+  <h3 class="author">By <%= @book_author %></h3>
+  <p class="description"><%= @book_description %></p>
+  <p class="description"><strong>Maturity Rating: </strong><%= @book_maturity_rating %></p>
+  <p class="description"><strong>Price: </strong><%= @book_list_price %> <%= @book_list_price_currency %></p>
+
+</p>
+
+<!--
+[7] pry(main)> @info['items'][0]['volumeInfo']['imageLinks']['thumbnail']
+=> "http://books.google.com/books/content?id=Ajj1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+[8] pry(main)>
+
+ -->

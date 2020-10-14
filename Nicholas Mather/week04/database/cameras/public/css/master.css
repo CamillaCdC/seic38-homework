@@ -1,0 +1,55 @@
+body {
+  background-color: #322F3D;
+}
+.container {
+  color: #7e8f9a;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+a {
+  color: #7e8f9a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4b5d67;
+}
+
+nav {
+  text-align: right;
+}
+
+.nav_button a {
+  color: #322F3D;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  background-color: #59405C;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button:hover {
+  background-color: #87556F;
+  cursor: pointer;
+}
+
+.nav_button {
+  display: inline-block;
+  background-color: #59405C;
+  padding: 10px;
+  border-radius: 6px
+}
+
+.nav_button:hover {
+  background-color: #87556F;
+  cursor: pointer;
+}
+
+.feature {
+  max-width: 100%
+}

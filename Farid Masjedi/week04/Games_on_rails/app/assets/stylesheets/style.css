@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+body{
+  background-color: rgba(255, 255, 0, 0.05);
+  max-width: 960px;
+}
+
+#container{
+  max-width:80%;
+  background-color: #c1b4754f;
+  margin: 20% auto;
+  text-align: center;
+  padding:20px 2px 20px 2px;
+  box-shadow: 0px 2px 30px rgba(255, 255, 0, 0.5);
+}
+
+#magic8 , #guess, #rps{
+  display:inline-block;
+  width: 30%;
+  margin:10px;
+}
+#magic8 img, #guess img, #rps img{
+  border-radius: 40%;
+  border: 8px solid rgba(200, 200, 0, 0.25);
+  max-width: 250px;
+  max-height:200px;
+  width:100%;
+}
+
+header h1{
+  margin: 0 0 -4px 0;
+  font-size:45px;
+}
+nav{
+  text-align:left;
+  padding-left:5%;
+}
+input[placeholder]{
+  text-align:center;
+}
+#labels,#input{
+  display: inline-block;
+}
+#labels{
+  padding:5px;
+  line-height: 43px;
+}
+a{
+  margin:5px;
+}
+form{
+  border:4px solid rgba(200, 200, 0, 0.25);
+  width:75%;
+  margin:0 auto;
+}
+#magic8_result{
+  width:50%;
+  margin:0 35%;
+  text-align: left;
+}
+#magic8_result p{
+  font-size: 35px;
+}
+#r, #s, #p{
+  display:inline-block;
+  border:2px solid gray;
+}
+#player, #pc{
+  display:inline-block;
+  margin:20px;
+  border:2px solid gray;
+}
+#rps-result{
+  margin-top: 28.81px;
+}
+#rps-result p{
+  display:inline-block;
+}
