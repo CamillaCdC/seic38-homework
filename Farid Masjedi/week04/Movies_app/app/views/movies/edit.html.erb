@@ -1,0 +1,9 @@
+<header>
+  <nav>
+    <%= link_to "All Movies", movies_path %>
+    <%= link_to "Back", @movie %>
+  </nav>
+  <h1>Edit <%= @movie.title %> info </h1>
+</header>
+
+<%= render :partial => 'form' %>
