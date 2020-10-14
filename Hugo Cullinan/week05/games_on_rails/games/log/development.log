@@ -1579,3 +1579,46 @@ Processing by SecretController#pick_num as HTML
 Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-10-14 15:29:31 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 258ms (Views: 253.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-14 15:29:34 +1100
+Processing by MagicController#eight_ball as HTML
+  Rendering magic/magic.html.erb within layouts/application
+  Rendered magic/magic.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/results?fortune=I+am+smart%3F" for ::1 at 2020-10-14 15:29:37 +1100
+Processing by MagicController#results as HTML
+  Parameters: {"fortune"=>"I am smart?"}
+  Rendering magic/results.html.erb within layouts/application
+  Rendered magic/results.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret" for ::1 at 2020-10-14 15:29:39 +1100
+Processing by SecretController#pick_num as HTML
+  Rendering secret/pick_num.html.erb within layouts/application
+  Rendered secret/pick_num.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-14 15:29:48 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret" for ::1 at 2020-10-14 15:29:51 +1100
+Processing by SecretController#pick_num as HTML
+  Rendering secret/pick_num.html.erb within layouts/application
+  Rendered secret/pick_num.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
