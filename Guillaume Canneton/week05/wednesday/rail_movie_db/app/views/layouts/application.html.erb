@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailMovieDb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <%= link_to "Movies List", movies_path %>
+        <%= link_to "New Movie", new_movie_path %>
+        <%= link_to "Directors List", directors_path %>
+        <%= link_to "New Director", new_director_path %>
+        <%= link_to "Actors List", actors_path %>
+        <%= link_to "New Actor", new_actor_path %>
+      </nav>
+
+        <%= yield %>
+
+    </div>
+  </body>
+</html>
