@@ -2527,3 +2527,22 @@ Processing by GuitarsController#show as HTML
 Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/guitars" for ::1 at 2020-10-14 09:52:39 +1100
+Processing by GuitarsController#index as HTML
+  Rendering guitars/index.html.erb within layouts/application
+  [1m[36mGuitar Load (0.3ms)[0m  [1m[34mSELECT "guitars".* FROM "guitars"[0m
+  ↳ app/views/guitars/index.html.erb:3
+  Rendered guitars/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guitars/1" for ::1 at 2020-10-14 10:00:33 +1100
+Processing by GuitarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuitar Load (0.2ms)[0m  [1m[34mSELECT  "guitars".* FROM "guitars" WHERE "guitars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/guitars_controller.rb:6
+  Rendering guitars/show.html.erb within layouts/application
+  Rendered guitars/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
