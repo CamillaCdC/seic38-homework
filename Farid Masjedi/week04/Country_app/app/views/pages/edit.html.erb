@@ -1,0 +1,35 @@
+<header>
+  <%= link_to 'Home', root_path %>
+  <%= link_to "Back to #{@country.name} page", country_path %>
+  <h2>Edit information of <%= @country.name %></h2>
+</header>
+
+
+
+<form action="<%= country_path %>" method="post">
+
+  <div id="labels">
+    <p><label>Name:</label></p>
+    <p><label>Flag:</label></p>
+    <p><label>Continent:</label></p>
+    <p><label>Area:</label></p>
+    <p><label>Population:</label></p>
+    <p><label>GDP:</label></p>
+    <p><label>HDI:</label></p>
+  </div>
+
+  <div id="inputs">
+    <p><input name='name' placeholder="Australia" value='<%=@country.name%>' required></p>
+    <p><input type='url' name='flag' placeholder="https://..." value='<%=@country.flag%>'></p>
+    <p><input name='continent' placeholder='Oceania' value='<%=@country.continent%>'></p>
+    <p><input type="number" name='area' placeholder='7692024' step='0.001' value=<%=@country.area%>></p>
+    <p><input type="number" name='population' placeholder='25679600' value=<%=@country.population%>></p>
+    <p><input type="number" name='gdp' placeholder='1423' step='0.001' value=<%=@country.gdp%>></p>
+    <p><input type="number" name='hdi' placeholder='0.938' step='0.001' value=<%=@country.hdi%>></p>
+  </div>
+
+  <div id="button">
+    <button>Edit</button>
+  </div>
+
+</form>
