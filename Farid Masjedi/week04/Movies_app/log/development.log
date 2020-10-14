@@ -8819,3 +8819,157 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2020-10-15 06:54:38 +1100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/imac/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (214.2ms)
+Completed 200 OK in 271ms (Views: 263.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:54:41 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.7ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:54:47 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2020-10-15 06:54:54 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:12
+  Rendered movies/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-10-15 06:55:00 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for ::1 at 2020-10-15 06:55:01 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:12
+  Rendered movies/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:55:02 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/14" for ::1 at 2020-10-15 06:55:04 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:8
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/14/edit" for ::1 at 2020-10-15 06:55:10 +1100
+Processing by DirectorsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:21
+  Rendering directors/edit.html.erb within layouts/application
+  Rendered directors/_form.html.erb (10.9ms)
+  Rendered directors/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/directors/14" for ::1 at 2020-10-15 06:55:56 +1100
+Processing by DirectorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bXoopekVvCiVVl2OGco1YV9nHrllZMNQVR22f1iXq9Jvwy7Lzjjhix5Aru/ckQv0TH4CO4hiQs/QUtIHV5OrTw==", "director"=>{"name"=>"Paul Thomas Anderson", "dob"=>"1970-05-25", "nationality"=>"American", "image"=>"https://m.media-amazon.com/images/M/MV5BMTU4Mjg5NDAyNl5BMl5BanBnXkFtZTgwNDkyNDQ3NDM@._V1_SY1000_CR0,0,688,1000_AL_.jpg"}, "commit"=>"Update Director", "id"=>"14"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/directors_controller.rb:26
+  [1m[36mDirector Update (0.5ms)[0m  [1m[33mUPDATE "directors" SET "dob" = ? WHERE "directors"."id" = ?[0m  [["dob", "1970-05-25"], ["id", 14]]
+  ↳ app/controllers/directors_controller.rb:26
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/directors_controller.rb:26
+Redirected to http://localhost:3000/directors/14
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/directors/14" for ::1 at 2020-10-15 06:55:56 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:8
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:56:00 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/8" for ::1 at 2020-10-15 06:56:01 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:8
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:56:03 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/14" for ::1 at 2020-10-15 06:56:17 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:8
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 06:56:20 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:12
+  Rendered directors/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
