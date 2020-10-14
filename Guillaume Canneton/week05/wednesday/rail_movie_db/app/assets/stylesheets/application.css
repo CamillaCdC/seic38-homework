@@ -30,8 +30,16 @@ body {
 .thumb {
   max-height: 250px;
 }
+h1 {
+  margin: 35px 15px 35px 15px;
+}
+form{
+  margin: 15px;
+}
 .feature {
   max-height: 450px;
+  display: block;
+  margin: 15px auto;
 }
 a {
   color: white;
@@ -48,7 +56,7 @@ a:hover {
 .delete {
   background-color: red;
 }
-.display h3 {
+.display {
   max-width: 30%;
   margin: 15px auto;
   text-align: center;
@@ -62,7 +70,6 @@ ul {
   width: 40%;
   margin: 15px auto;
 }
-.feature {
-  display: block;
-  margin: 15px auto;
+.thumb {
+
 }

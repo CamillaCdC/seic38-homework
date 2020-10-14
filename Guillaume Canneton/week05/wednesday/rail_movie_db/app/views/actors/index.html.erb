@@ -1,8 +1,9 @@
 <h1>Actors List</h1>
 
 <% @actors.each do |actor| %>
-
+  <div class="display">
   <h3><%= actor.name %></h3>
   <%= image_tag actor.image, :class => 'thumb' if actor.image.present? %>
   <%= link_to 'More infos', actor %>
+  </div>
 <% end %>
