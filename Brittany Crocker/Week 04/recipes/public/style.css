@@ -1,0 +1,40 @@
+body {
+  background-color: lightblue;
+  font-family: 'Sansita Swashed', cursive;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  padding: 10px;
+}
+
+a {
+  padding: 2px;
+  color: white;
+}
+
+div.container {
+  background-image: url(img/table-clothe.jpg);
+  padding: 5px;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+img.home{
+  max-width: 100%;
+  border-radius: 5%;
+  /* padding: 5px; */
+}
+
+.table {
+  background-image: url(img/table-clothe.jpg)
+}
+
+img.index {
+  box-sizing: border-box;
+  max-width: 50%;
+}

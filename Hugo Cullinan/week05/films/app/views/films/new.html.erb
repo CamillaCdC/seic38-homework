@@ -1,0 +1,35 @@
+<h1>Add a film:</h1>
+
+<form action="<%= films_path %>" method="post">
+  <label>
+    Name:
+    <input name="name" required>
+  </label>
+
+  <label>
+    Cover:
+    <input type="url" name="image">
+  </label>
+
+  <label>
+    Director:
+    <input name="director">
+  </label>
+
+  <label>
+    Year Released:
+    <input type="number" name="year">
+  </label>
+
+  <label>
+    Production Budget:
+    <input type="number"name="budget">
+  </label>
+
+  <label>
+    Worldwide Gross:
+    <input type="number"name="gross">
+  </label>
+
+  <button>Add Film</button>
+</form>

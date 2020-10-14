@@ -1,0 +1,10 @@
+<h1>Guitar Details</h1>
+
+<h3>Brand: <%= @guitar.brand %></h3>
+<h3>Model: <%= @guitar.model %></h3>
+<p>Year of Creation: <%= @guitar.year %></p>
+<p>Body: <%= @guitar.body %></p>
+<p>Pickups: <%= @guitar.pickups %></p>
+<%= link_to 'edit', edit_guitar_path(@guitar.id) %></br>
+<%= image_tag @guitar.image, :class => 'image' if @guitar.image.present? %>
+<%=  button_to 'Delete Guitar', guitar_path(@guitar.id), :method => 'delete' %>
