@@ -1,0 +1,16 @@
+<h2><%= @musician.name %></h2>
+
+
+<%= image_tag @musician.image, :class => 'feature' if @musician.image.present? %>
+<ul>
+  <li>Name: <%= link_to @musician.name, @musician %></li>
+  <li>Nationality <%= @musician.nationality %> </li>
+  <% if @musician.dob.present? %>
+  <li>Date of Birth: <%= @musician.dob.strftime '%A, %B %e, %Y' %></li>
+  <% end  %>
+  <li>Period: <%= @musician.period %></li>
+</ul>
+<div class="controls">
+  <%= link_to "Edit #{@musician.name}" ,edit_musician_path(@musician) %>
+  <%= link_to "Delete #{@musician.name}" , @musician , :method => 'delete' , :data => { :confirm => 'Areyou sure?'}%>
+</div>
