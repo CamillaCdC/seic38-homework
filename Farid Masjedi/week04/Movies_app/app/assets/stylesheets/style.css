@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
+  border-radius: 15px;
+}
+
+body{
+  background-color: gray;
+  text-align: center;
+}
+
+#container{
+  max-width: 960px;
+  width:75%;
+  background-color: #676767;
+  padding:35px;
+  margin: 40px auto;
+  box-shadow: 0 0 60px 30px black;
+}
+
+#all{
+  max-width:800px;
+  margin:0 auto;
+}
+#movies, #directors{
+  display:inline-block;
+  width:40%;
+}
+#img{
+  max-width:100%;
+  width: 201px;
+  height: 315px;
+  box-shadow: 0 0 25px 0 black;
+}
+#home-page{
+  line-height: 35px;
+  padding-top: 20px;
+}
+h1{
+  font-size:55px;
+  color:#c1acac;
+}
+a{
+  font-size:25px;
+  color:#c1acac;
+  margin:10px;
+}
+
+
+#index{
+  display:inline-block;
+
+}
+#show-img, #show-info{
+  display: inline-block;
+}
+#show-img{
+  width: 60%;
+}
+#show-img img{
+  width:80%;
+  height:67%;
+  box-shadow: 0 0 20px 5px;
+  opacity: 80%;
+}
+#show-info{
+  width:35%;
+  vertical-align: top;
+  margin-top: 135px;
+}
+p{
+  margin-top:0;
+  font-size:30px;
+  color:#c1acac;
+}
+
+#labels, #inputs{
+  display: inline-block;
+  text-align:center;
+  width:45%;
+}
+#labels{
+  vertical-align: top;
+  line-height: 73px;
+}
+input{
+  padding:20px;
+  text-align:center;
+  width:80%;
+  font-size:25px;
+}
