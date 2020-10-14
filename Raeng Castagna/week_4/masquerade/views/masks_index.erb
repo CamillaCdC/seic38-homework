@@ -1,0 +1,9 @@
+<h2>All Masquerade Masks</h2>
+<p>Click on a mask to edit or delete</p>
+
+<% @masks.each do |mask| %>
+  <p>
+    <a href="/masks/<%= mask["id"] %>" class="list_display">
+    <%= mask["type"] %>
+  </p>
+  <% end %>

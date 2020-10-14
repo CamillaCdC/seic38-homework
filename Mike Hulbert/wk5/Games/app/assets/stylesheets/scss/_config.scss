@@ -1,0 +1,24 @@
+$primary-color: #0E6CFF;
+$secondary-color: #FFA10E;
+$dark-color: #343840;
+$medium-color: #39C689;
+$light-color: #f4f4f4;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$text-primary: 'Secular One', sans-serif;
+$text-secondary: 'Oxygen', sans-serif;
+$form-background: #fff;
+
+// Set text color from backgorund lightness
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+// Set background color with mixin
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}

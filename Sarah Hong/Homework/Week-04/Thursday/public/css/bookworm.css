@@ -1,0 +1,64 @@
+body {
+  max-width: 960px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+button {
+  -webkit-appearance: push-button;
+  background: #008fffa6;
+}
+
+:root {
+  --button-hover: #81D4FF;
+  --background-body: #001f44;
+  --focus: #81D4FF;
+}
+
+form {
+  margin: 0 auto;
+  display: inline-grid;
+}
+
+input {
+  text-align: center;
+  background: aliceblue;
+  color: black;
+  font-size: x-large;
+}
+
+label {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+a {
+text-decoration: none;
+color: white;
+border: 1px solid #008fffa6;
+border-radius: 60px;
+padding: 0.5em;
+  background: #008fffa6;
+text-decoration: none;
+}
+
+.description {
+  font-size: smaller;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #81D4FF;
+}

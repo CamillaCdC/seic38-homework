@@ -1,0 +1,38 @@
+header {
+  @include set-background($primary-color);
+  height: auto;
+  font-family: 'Secular One', sans-serif;
+
+  .container {
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 25px;
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+    }
+  }
+}

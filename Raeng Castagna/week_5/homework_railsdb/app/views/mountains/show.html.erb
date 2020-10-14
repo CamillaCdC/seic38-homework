@@ -1,0 +1,16 @@
+<h2><%= @mountain.name %></h2>
+
+<%= image_tag @mountain.image, :class => 'feature' if @mountain.image.present? %>
+
+<ul>
+  <li>Name: <%= @mountain.name %></li>
+  <li>Category: <%= @mountain.category %></li>
+  <li>Elevation: <%= number_with_precision(@mountain.height, :precision => 2, :delimiter => ',')  %> meters</li>
+  <li>Location: <%= @mountain.country %></li>
+  <li>Climate: <%= @mountain.climate %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit Mountain', edit_mountain_path(@mountain.id) %>
+  <%= button_to 'Delete Mountain', mountain_path(@mountain.id), :method => 'delete' %>
+</div>
