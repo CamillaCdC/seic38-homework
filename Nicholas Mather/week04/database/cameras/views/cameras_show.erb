@@ -1,0 +1,20 @@
+<% camera_fullname = "#{@camera['manufacturer']}  #{@camera['model']}" %>
+<h2> <%= camera_fullname %> </h2>
+
+<h3>A <%= "#{@camera['medium']} #{@camera['focus_type']}." %></h3>
+<% unless @camera['image'].nil? || @camera['image'].empty? %>
+  <img
+    src="<%= @camera['image']  %>"
+    alt="<%= camera_fullname %>"
+    class="feature"
+  >
+<% end %>
+
+<div class="controls">
+  <div class="nav_button">
+    <a href="/cameras/<%=@camera['id']%>/delete">Delete</a>
+  </div>
+  <div class="nav_button">
+    <a href="/cameras/<%=@camera['id']%>/edit">Edit</a>
+  </div>
+</div>

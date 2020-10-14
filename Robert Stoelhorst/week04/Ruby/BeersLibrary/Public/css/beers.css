@@ -1,0 +1,27 @@
+body {
+  background-color: lavender;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  text-align: right;
+  }
+
+nav a {
+  color: white;
+  padding: 2px 2px 2px 2px;
+  margin: 0px 20px 0px 20px;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+.controls .buttons a {
+  padding: 2px 2px 2px 2px;
+  margin: 0px 200px 0px 200px;
+}

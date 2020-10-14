@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+  min-height: 80vh;
+  background-color: rgba(153,50,204,0.5)
+}
+
+
+body {
+  background-color: #9370DB;
+}
+
+.pic {
+  min-width: 10vw;
+  min-height: 10vh;
+}

@@ -1,0 +1,20 @@
+<h2>Edit Plant</h2>
+
+<form action="/plants/<%= @plants['id'] %>" method="post">
+<label>
+  Name:
+  <input name="name" placeholder="enter plants" required value="<%= @plants['name'] %>">
+</label>
+
+<label>
+  Family:
+  <input name="family" placeholder="enter family" value="<%= @plants['family'] %>">
+</label>
+
+<label>
+  Image:
+  <input type="url" name="image" placeholder="http://..." value="<%= @plants['image'] %>">
+</label>
+
+<button>Water Plant!</button>
+</form>

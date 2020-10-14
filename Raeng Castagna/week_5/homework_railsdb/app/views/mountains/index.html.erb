@@ -1,0 +1,10 @@
+<h2>MOUNTAINS</h2>
+
+<% @mountains.each do |mountain|  %>
+  <p>
+    <%= link_to mountain.name, mountain_path(mountain.id) %>
+    <%= mountain.name %>
+    is a
+    <%= mountain.category%>
+  </p>
+  <% end %>

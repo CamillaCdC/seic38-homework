@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+body {
+  background-color: #f2f2f2;
+}
+footer {
+  background-color: rgba(36, 36, 36, .4);
+  height: 150px;
+}
+span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.blue-btn {
+  background-color: rgba(41, 142, 225, 1);
+  border: 2px solid rgba(41, 142, 225, 1);
+  border-radius: 5px;
+  color: #f2f2f2;
+  font-family: 'Secular One', sans-serif;
+  font-size: 18px;
+  grid-column: 2;
+  margin-left: 20px;
+  text-transform: uppercase;
+  width: 60%;
+}
+.blue-btn:hover {
+  background-color: rgba(41, 142, 212, 1);
+  border: 3px solid #b1edfd;
+}
+.blue-input {
+  background-color: rgba(255, 255, 225, .1);
+  border: 2px solid rgba(41, 142, 225, .3);
+  border-radius: 5px;
+  color: grey;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  grid-column: 1;
+  height: 45px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  text-transform: capitalize;
+  width: 90%;
+}
+.blue-input:focus {
+  color: grey;
+  background-color: #fdfbed;
+}
+.blue-input:hover {
+  border: 2px solid #b1edfd;
+}
+.card-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container {
+  width: 960px;
+  min-height: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.contact {
+  color: white;
+  text-align: center;
+  font-family: 'Secular One', sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  padding-top: 65px;
+}
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+.contact:hover, a:hover {
+  color: lightblue;
+}
+.fa-github {
+  margin: 5px;
+}

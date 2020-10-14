@@ -1,0 +1,12 @@
+<h2>Video Game Systems</h2>
+
+<% @consoles.each do |consoles |%>
+    <p>
+     <a href="/consoles_index/<%= consoles["id"] %>">
+     <%= consoles["name"]%>
+     </a>
+    </p>
+<% end %>
+<body class="game">
+
+</body>
