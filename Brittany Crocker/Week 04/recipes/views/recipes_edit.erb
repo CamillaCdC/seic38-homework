@@ -1,0 +1,18 @@
+<h2>Edit recipe</h2>
+
+<form action="/recipes" method="post">
+  <label>
+    Recipe Name:
+    <input name="name" type="text" placeholder="Borchst" required value="<%= @recipe["name"]%>">
+  </label>
+  <label>
+    Meal Type:
+    <input name="mealtype" type="text" placeholder="Main / Dessert" required value="<%= @recipe["mealtype"]%>">
+  </label>
+  <label>
+    Image:
+    <input name="image" type="url" placeholder="http://..." value="<%= @recipe["image"]%>">
+  </label>
+
+  <button>Update Recipe</button>
+</form>
