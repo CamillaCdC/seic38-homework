@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+   background-color: white;
+ }
+
+ .container {
+   max-width: 960px;
+   margin: 0 auto;
+ }
+ .navbox {
+   display: inline-block;
+   padding: 10px;
+ }
+
+ .navbox:hover {
+   background-color: #16366d;
+ }
+
+ nav {
+   text-align: right;
+   background-color: #292828;
+ }
+
+ nav a {
+   color: white;
+   text-decoration: none;
+ }
+
+ .feature {
+   max-width: 100%
+ }
+
+.overball {
+  position: relative;
+  margin: 5vmin auto;
+  width: 90vmin;
+}
+
+
+ .ball {
+   position: relative;
+  border-radius: 50%;
+  width: 90vmin;
+  height: 90vmin;
+  overflow: hidden;
+  background: radial-gradient(circle at 30vmin 30vmin, #444, #000);
+ }
+
+ .window {
+  position: absolute;
+  left: 22.5vmin;
+  top: 22.5vmin;
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50%;
+  background: radial-gradient(#002, #001 18vmin, #666 18vmin, #000 18.5vmin, #000 22vmin, #666 22vmin, #000 22.5vmin);
+}
+
+.answers {
+  width: 90vmin;
+  height: 90vmin;
+}
+
+.answer {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  left: 36vmin;
+  top: 32.6vmin;
+  width: 18vmin;
+  height: 20.8vmin;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  font-size: 2.1vmin;
+  line-height: 2.4vmin;
+
+}
+
+.key {
+  box-sizing: border-box;
+  width: 30%;
+  display: inline-block;
+  background-color: #292828;
+  text-align: center;
+  border:  5px solid white;
+  border-radius: 20px
+}
+
+.key:hover {
+  background-color: #16366d;
+}
+
+.key p  {
+  color: white;
+  font-size: 2em
+}
+
+.keypad a {
+  text-decoration: none;
+}
