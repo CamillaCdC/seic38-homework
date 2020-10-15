@@ -2,7 +2,15 @@
 <%= image_tag @work.image, :class => 'feature', :alt =>@work.title %>
 <ul>
   <li>TItle: <%= @work.title %></li>
+
+  <% if @work.musician.present? %>
+  <li>Musician :<%= link_to @work.musician.name, @work.musician %></li>
+  <% end %>
   <li>Year: <%= @work.year %></li>
   <li>Medium: <%= @work.medium %></li>
   <li>Style: <%= @work.style %></li>
 </ul>
+<div class="controls">
+  <%= link_to "Edit work", edit_work_path(@work) %>
+  <%= link_to "Delete work", @work, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

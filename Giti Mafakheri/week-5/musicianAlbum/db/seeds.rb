@@ -16,3 +16,5 @@ Work.create(:title => 'Bride Running Away', :year => '1957', :medium => 'oil and
 Work.create(:title => 'Portrait of Clive James', :year => '1991 - 1992', :medium => 'oil on canvas', :style => 'Modernist', :image => 'https://media.artgallery.nsw.gov.au/thumbnails/collection_images/2/276.1992%23%23S.jpg.505x464_q85.jpg')
 Work.create(:title => 'The Naked Studio', :year => '1981', :medium => '1981', :style => 'Impressionist', :image => 'https://mona.net.au//media/37522/brett-whiteley-the-naked-studio-mona-01.jpg')
 puts "#{ Work.count } works created."
+Musician.first.works << Work.first
+Musician.last.works << Work.last
