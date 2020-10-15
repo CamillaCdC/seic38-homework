@@ -1,0 +1,31 @@
+<h2>New Ocean</h2>
+
+<form action="<%= oceans_path %>" method="post">
+  <label>
+    Name:
+    <input name="name" required>
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image">
+  </label>
+
+  <label>
+    Deepest Point Depth (meters):
+    <input type="number" name="deepest_point">
+  </label>
+
+  <label>
+    Area (km<sup>2</sup>):
+    <input type="number" name="area">
+  </label>
+
+  <label>
+    Borders:
+    <input name="borders" placeholder="Myanmar Maldives...">
+  </label>
+
+  <button>Create an Ocean</button>
+
+  </form>

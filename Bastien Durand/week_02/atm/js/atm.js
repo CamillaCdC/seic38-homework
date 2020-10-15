@@ -62,6 +62,7 @@ $('#checking-deposit').on('click', function () {
 
     //Checking which color to set if value is 0 or > 0
 
+    colorCheckerSavings();
     colorCheckerChecking();
 
 })
@@ -119,6 +120,7 @@ $('#savings-deposit').on('click', function () {
     //checking which color to set if value is 0 or > 0
 
     colorCheckerSavings();
+    colorCheckerChecking();
 
 })
 

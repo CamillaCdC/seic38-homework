@@ -1,0 +1,15 @@
+<%= form_for @movie do |f| %>
+  <%= f.label :title, :required => true, :autofocus => true %></br>
+  <%= f.text_field :title %></br>
+  <%= f.label :director %></br>
+  <%= f.text_field :director %></br>
+  <%= f.label :release %></br>
+  <%= f.text_field :release %></br>
+  <%= f.label :awards %></br>
+  <%= f.text_field :awards %></br>
+  <%= f.label :length %></br>
+  <%= f.number_field :length %></br>
+  <%= f.label :image %></br>
+  <%= f.text_field :image %></br>
+  <%= f.submit %>
+<% end %>
