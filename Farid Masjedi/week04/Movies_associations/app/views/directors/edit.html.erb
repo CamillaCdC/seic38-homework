@@ -1,0 +1,9 @@
+<header>
+  <nav>
+    <%= link_to 'All Directors', directors_path %>
+    <%= link_to 'Back', @director %>
+  </nav>
+  <h1>Edit <%= @director.name %> info</h1>
+</header>
+
+<%= render :partial => 'form' %>
