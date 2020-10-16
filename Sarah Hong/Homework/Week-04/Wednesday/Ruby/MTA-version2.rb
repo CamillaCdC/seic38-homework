@@ -112,11 +112,11 @@ end_station
   end_index = end_station
 
 def stop_generator stops
-    stops = ''
-if start_index < end_index # forward
-  stops = line[1..4]
-else # backwards
-    stops = [4..1].reverse
+  stops = ''
+  if start_index < end_index # forward
+    stops = line[1..4]
+  else # backwards
+      stops = [4..1].reverse
   end
   return stops
 end
