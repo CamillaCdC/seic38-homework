@@ -1,0 +1,10 @@
+<h2>All Musicians</h2>
+<% @musicians.each do |musician| %>
+<%= image_tag musician.image, :class => 'thumb' if musician.image.present? %>
+<ul>
+  <li>Name: <%= link_to musician.name, musician %></li>
+  <li>Nationality <%= musician.nationality %> </li>
+  <li>Date of Birth: <%= musician.dob.strftime '%A, %B %e, %Y' if musician.dob.present? %></li>
+  <li>Period: <%= musician.period %></li>
+</ul>
+<% end %>
