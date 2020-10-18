@@ -51,11 +51,10 @@ def tripSolving ( trip_start_line, begin, destination )
     startIndex =0
     endIndex = 0   
     new_trip = []
-
-    
+  
     trip.each_with_index do |station, index|
-        if  station == #{begin}
-            
+        if  #{station} == #{begin}
+            startIndex = #{index}
             until #{station} == #{destination}
                 new_trip.push #{station}
             end
