@@ -45,8 +45,8 @@ let bookName = document.getElementById('book_name').value
 
     const p = document.createElement('p')
       const blurb = data["items"][0]["volumeInfo"]["description"]
-      p.innerHTML = blurb
-      document.body.appendChild(p)
+      p.innerHTML = blurb;
+      document.body.appendChild(p);
 
 
 
@@ -54,4 +54,4 @@ let bookName = document.getElementById('book_name').value
   };
 };
 
-document.getElementById('fetch').addEventListener('click', fetchBook)
+document.getElementById('fetch').addEventListener('click', fetchBook);
