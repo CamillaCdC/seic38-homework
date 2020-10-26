@@ -1,0 +1,14 @@
+<h2><%= @mountain[:name] %></h2>
+
+<%= image_tag @mountain[:image], :class => 'feature' if @mountain.image.present? %>
+
+<ul>
+  <li>Name: <%= @mountain[:name] %></li>
+  <li>Countries: <%= @mountain[:countries] %></li>
+  <li>Height: <%= @mountain[:height] %></li>
+</ul>
+
+<div class ="controls">
+  <%= link_to 'Edit planet', edit_mountain_path(@mountain.id) %>
+  <%= button_to 'Delete mountain', mountain_path(@mountain.id), :method => 'delete' %>
+</div>
