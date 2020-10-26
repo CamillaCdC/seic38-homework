@@ -1,0 +1,23 @@
+<h2><%= @album.title %></h2>
+
+<%= image_tag @album.cover, :class => 'feature', :alt => @album.title %>
+
+<p>
+  <%= @album.title %> was released on
+  <% if @album.release.present? %>
+    <%= @album.release.strftime "%A, %B %e, %Y" %>
+  <% end %>
+</p>
+<p>
+  It contains <%= @album.tracklist.size %> tracks:
+</p>
+<ol>
+  <% @album.tracklist.each do |track| %>
+    <li><%= track %></li>
+  <% end %>
+</ol>
+
+<div class="controls">
+  <%= link_to "Edit #{@album.title}", edit_album_path(@album) %>
+  <%= link_to "Delete #{@album.title}", @artist, :method => 'delete', :data => { :confirm => "Are you sure?"} %>
+</div>

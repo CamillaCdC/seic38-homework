@@ -1,0 +1,37 @@
+footer {
+  @include set-background($dark-color);
+  height: auto;
+  font-family: $text-primary;
+
+  .container {
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 25px;
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+}

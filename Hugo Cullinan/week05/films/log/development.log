@@ -3721,3 +3721,175 @@ Processing by FilmsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2020-10-14 15:28:13 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/camillachampiondecrespigny/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/camillachampiondecrespigny/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/films" for ::1 at 2020-10-14 15:28:16 +1100
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (1.8ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:3
+  Rendered films/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 313ms (Views: 260.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/films/1" for ::1 at 2020-10-14 15:28:18 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/films/1/edit" for ::1 at 2020-10-14 15:28:20 +1100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:20
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/films/1" for ::1 at 2020-10-14 15:28:25 +1100
+Processing by FilmsController#update as HTML
+  Parameters: {"name"=>"Spectre JB", "image"=>"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQcjheOnBb_WFU5yuYLnUYWjfr33KzdFx1PCNGVhgM4-89otmi9", "director"=>"Sam", "year"=>"2015", "budget"=>"300000000.0", "gross"=>"879500760.0", "id"=>"1"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:30
+  [1m[36mFilm Update (0.7ms)[0m  [1m[33mUPDATE "films" SET "name" = ?, "director" = ? WHERE "films"."id" = ?[0m  [["name", "Spectre JB"], ["director", "Sam"], ["id", 1]]
+  ↳ app/controllers/films_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:30
+Redirected to http://localhost:1111/films/1
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/films/1" for ::1 at 2020-10-14 15:28:25 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/films/1" for ::1 at 2020-10-14 15:28:27 +1100
+Processing by FilmsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9JJmFsF+SeaozVNPfBWr6x7ZvWxIBLB4W8lbpjy0jg1sh71n4bZcKBsLd6Wo4tnqtOq64mK8YVxFjAkz8LYuew==", "id"=>"1"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:36
+  [1m[36mFilm Destroy (0.3ms)[0m  [1m[31mDELETE FROM "films" WHERE "films"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/films_controller.rb:36
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:36
+Redirected to http://localhost:1111/films
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/films" for ::1 at 2020-10-14 15:28:27 +1100
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:3
+  Rendered films/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/films/7" for ::1 at 2020-10-14 15:28:28 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/films/new" for ::1 at 2020-10-14 15:28:29 +1100
+Processing by FilmsController#new as HTML
+  Rendering films/new.html.erb within layouts/application
+  Rendered films/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/films" for ::1 at 2020-10-14 15:28:32 +1100
+Processing by FilmsController#create as HTML
+  Parameters: {"name"=>"Test", "image"=>"", "director"=>"", "year"=>"", "budget"=>"", "gross"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:15
+  [1m[36mFilm Create (0.7ms)[0m  [1m[32mINSERT INTO "films" ("name", "image", "director") VALUES (?, ?, ?)[0m  [["name", "Test"], ["image", ""], ["director", ""]]
+  ↳ app/controllers/films_controller.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:15
+Redirected to http://localhost:1111/films/10
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/films/10" for ::1 at 2020-10-14 15:28:32 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/films" for ::1 at 2020-10-14 15:28:35 +1100
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:3
+  Rendered films/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/films/9" for ::1 at 2020-10-14 15:28:36 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/films" for ::1 at 2020-10-14 15:28:39 +1100
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:3
+  Rendered films/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/films/10" for ::1 at 2020-10-14 15:28:41 +1100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:8
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/films" for ::1 at 2020-10-14 15:28:42 +1100
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:3
+  Rendered films/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => 'films#index'
   get '/films' => 'films#index'
   get '/films/new' => 'films#new', :as => 'new_film'
   post '/films' => 'films#create'
