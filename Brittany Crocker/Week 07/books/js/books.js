@@ -29,16 +29,16 @@ let bookName = document.getElementById('book_name').value
       h5.innerHTML = `By ${author}`;
       document.body.appendChild(h5);
 
-      try {
-    const bookPrice_el = document.createElement('h6');
-      const bookPrice = data["items"][0]["saleInfo"]["listPrice"]["amount"];
-      bookPrice_el.innerHTML = bookPrice;
-      document.body.appendChild(bookPrice_el);
-    const currency = document.createElement('h6');
-      const bookPrice_currency = data["items"][0]["saleInfo"]["listPrice"]["currencyCode"];
-      currency.innerHTML = bookPrice_currency;
-      document.body.appendChild(currency);
-    }
+    try {
+      const bookPrice_el = document.createElement('h6');
+        const bookPrice = data["items"][0]["saleInfo"]["listPrice"]["amount"];
+        bookPrice_el.innerHTML = bookPrice;
+        document.body.appendChild(bookPrice_el);
+      const currency = document.createElement('h6');
+        const bookPrice_currency = data["items"][0]["saleInfo"]["listPrice"]["currencyCode"];
+        currency.innerHTML = bookPrice_currency;
+        document.body.appendChild(currency);
+      }
     catch(err) {
       let bookPrice = "No price"
     }
