@@ -1,8 +1,8 @@
 const fetchBook = function () {
-let bookName = document.getElementById('book_name').value
+let bookName = document.getElementById('book_name').value;
 
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${bookName}`)
+  xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${bookName}`);
 
   xhr.send();
 
@@ -38,13 +38,13 @@ let bookName = document.getElementById('book_name').value
         const bookPrice_currency = data["items"][0]["saleInfo"]["listPrice"]["currencyCode"];
         currency.innerHTML = bookPrice_currency;
         document.body.appendChild(currency);
-      }
+      };
     catch(err) {
       let bookPrice = "No price"
-    }
+    };
 
-    const p = document.createElement('p')
-      const blurb = data["items"][0]["volumeInfo"]["description"]
+    const p = document.createElement('p');
+      const blurb = data["items"][0]["volumeInfo"]["description"];
       p.innerHTML = blurb;
       document.body.appendChild(p);
 
