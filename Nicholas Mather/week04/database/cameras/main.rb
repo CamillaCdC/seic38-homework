@@ -21,7 +21,7 @@ get '/cameras/search' do
 end
 
 #RESULTS: Display cameras matching search terms
-post '/cameras/search' do
+get '/cameras/results' do
   #generate search terms
   @search = []
   query = ''

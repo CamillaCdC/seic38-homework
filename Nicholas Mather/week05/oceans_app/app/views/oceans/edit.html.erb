@@ -1,0 +1,31 @@
+<h2>Edit Ocean</h2>
+
+<form action="<%= ocean_path(@ocean.id) %>" method="post">
+  <label>
+    Name:
+    <input value="<%= @ocean.name %>" name="name" required>
+  </label>
+
+  <label>
+    Image:
+    <input value="<%= @ocean.image %>" type="url" name="image">
+  </label>
+
+  <label>
+    Deepest Point Depth (meters):
+    <input value="<%= @ocean.deepest_point %>" type="number" name="deepest_point">
+  </label>
+
+  <label>
+    Area (km<sup>2</sup>):
+    <input value="<%= @ocean.area %>" type="number" name="area">
+  </label>
+
+  <label>
+    Borders:
+    <input value="<%= @ocean.borders %>" name="borders" placeholder="Myanmar Maldives...">
+  </label>
+
+  <button>Edit Ocean</button>
+
+  </form>

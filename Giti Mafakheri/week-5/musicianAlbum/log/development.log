@@ -1,0 +1,2142 @@
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateMusicians (20201014082749)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "musicians" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "period" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014082749_create_musicians.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014082749"]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-14 08:42:31.799579"], ["updated_at", "2020-10-14 08:42:31.799579"]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mMusician Create (0.3ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin Cameron"], ["nationality", "Australian"], ["dob", "1879-02-22"], ["period", "20th century"], ["image", "https://kevcam.com/uploads/3/5/0/5/35055861/8744896_orig.jpg"], ["created_at", "2020-10-14 09:25:57.318093"], ["updated_at", "2020-10-14 09:25:57.318093"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mMusician Create (0.3ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jose Carbo"], ["nationality", "Australian"], ["dob", "1912-02-07"], ["period", "20th century"], ["image", "http://4.bp.blogspot.com/-OZYmgLKtE68/T8vsO7SCMpI/AAAAAAAALYM/BAns8Q1e70I/s1600/Jose+Carbo.jpg"], ["created_at", "2020-10-14 09:25:57.320942"], ["updated_at", "2020-10-14 09:25:57.320942"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mMusician Create (0.3ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jann Castor"], ["nationality", "Australian"], ["dob", "1915-11-21"], ["period", "20th century"], ["image", "https://i.ytimg.com/vi/D0fO5IgTHdQ/hqdefault.jpg"], ["created_at", "2020-10-14 09:25:57.323241"], ["updated_at", "2020-10-14 09:25:57.323241"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians"[0m
+Started GET "/" for ::1 at 2020-10-14 20:55:20 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2020-10-14 21:02:36 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 21:03:05 +1100
+  
+LoadError (Unable to autoload constant MusiciansController, expected /Users/giti/Projects/seic38-homework/Giti Mafakheri/week-5/musicianAlbum/app/controllers/musicians_controller.rb to define it):
+  
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 21:07:30 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  Rendered musicians/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 261ms (Views: 260.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:30:11 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  Rendered musicians/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:30:16 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  Rendered musicians/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:30:45 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:32:09 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:32:27 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:40:08 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (119.3ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x00007fd741fe0fe0>:0x00007fd74176de08>):
+    1: <h2>All Musicians</h2>
+    2: <% @musicians.each do |musician| %>
+    3: <%= image_tag musician.image, :class => 'thumb' if artist.image.present? %>
+    4: <ul>
+    5:   <li>Name: <%= musician.name %></li>
+    6:   <li>Nationality <%= musician.nationality %> </li>
+  
+app/views/musicians/index.html.erb:3:in `block in _app_views_musicians_index_html_erb___1064303124080715753_21800'
+app/views/musicians/index.html.erb:2:in `_app_views_musicians_index_html_erb___1064303124080715753_21800'
+Started GET "/musicians" for ::1 at 2020-10-14 21:40:41 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (169.6ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x00007fd741fe0fe0>:0x00007fd741edab50>):
+    4: <ul>
+    5:   <li>Name: <%= musician.name %></li>
+    6:   <li>Nationality <%= musician.nationality %> </li>
+    7:   <li>Date of Birth: <%= artist.dob %></li>
+    8:   <li>Period: <%= artist.period %></li>
+    9: </ul>
+   10: <% end %>
+  
+app/views/musicians/index.html.erb:7:in `block in _app_views_musicians_index_html_erb___1064303124080715753_22420'
+app/views/musicians/index.html.erb:2:in `_app_views_musicians_index_html_erb___1064303124080715753_22420'
+Started GET "/musicians" for ::1 at 2020-10-14 21:41:08 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:47:20 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:48:06 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/musicians" for ::1 at 2020-10-14 21:56:59 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:57:01 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:57:02 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 21:57:08 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 22:01:09 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:02:45 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 22:02:51 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/ddd" for ::1 at 2020-10-14 22:03:06 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 22:03:12 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:04:13 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 22:04:17 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 22:05:03 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:05:30 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-14 22:05:33 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-10-14 22:12:53 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-14 22:13:09 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/giti/.rvm/gems/ruby-2.7.1/gems/actionpack-5.2.4.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [13 times] (2.9ms)
+  Rendered /Users/giti/.rvm/gems/ruby-2.7.1/gems/actionpack-5.2.4.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/giti/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:16:59 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:21:02 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MusiciansController::Artist):
+  
+app/controllers/musicians_controller.rb:8:in `show'
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:21:32 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:23:05 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h2><%= @artist.name %></h2>
+  
+app/views/musicians/show.html.erb:1:in `_app_views_musicians_show_html_erb___2917853488090406971_33200'
+Started GET "/musicians/1" for ::1 at 2020-10-14 22:23:26 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 23:09:23 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 23:12:13 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-14 23:12:35 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 23:12:42 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians/2" for ::1 at 2020-10-14 23:12:45 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-14 23:19:59 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-14 23:30:05 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 32ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-14 23:36:28 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-14 23:37:14 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/musicians" for ::1 at 2020-10-14 23:39:34 +1100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/__web_console/repl_sessions/002d6be908f55cd1df90ba458a334b6f" for ::1 at 2020-10-14 23:39:49 +1100
+Started PUT "/__web_console/repl_sessions/002d6be908f55cd1df90ba458a334b6f" for ::1 at 2020-10-14 23:39:50 +1100
+Started PUT "/__web_console/repl_sessions/002d6be908f55cd1df90ba458a334b6f" for ::1 at 2020-10-14 23:39:53 +1100
+Started GET "/musicians" for ::1 at 2020-10-14 23:56:12 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-14 23:56:28 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-15 00:30:36 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/musicians" for ::1 at 2020-10-15 00:32:59 +1100
+Processing by MusiciansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LcO6v+ChXbKDfAlVIMD0PJEC6tCoaSBStxT1nr4HYoAu7yUS1xNK1973TKfTyyVX9UMx57FdSl/bOoR09+dIZg==", "musician"=>{"name"=>"test", "nationality"=>"", "dob"=>"1950-01-01", "period"=>"", "image"=>"http://www.prestigeflowers.co.uk/flower_press/wp-content/uploads/2015/06/pink_dahlia.jpg"}, "commit"=>"Create Musician"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/musicians_controller.rb:17
+  [1m[36mMusician Create (0.4ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "test"], ["nationality", ""], ["dob", "1950-01-01"], ["period", ""], ["image", "http://www.prestigeflowers.co.uk/flower_press/wp-content/uploads/2015/06/pink_dahlia.jpg"], ["created_at", "2020-10-14 13:32:59.954231"], ["updated_at", "2020-10-14 13:32:59.954231"]]
+  ↳ app/controllers/musicians_controller.rb:17
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/musicians_controller.rb:17
+Redirected to http://localhost:3000/musicians/4
+Completed 302 Found in 33ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 00:32:59 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 00:34:54 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 00:53:41 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 00:54:06 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-15 00:54:11 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 00:54:12 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-15 06:46:45 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.7ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 76ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/musicians/show" for ::1 at 2020-10-15 06:46:55 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Musician with 'id'=show):
+  
+app/controllers/musicians_controller.rb:8:in `show'
+Started GET "/musicians" for ::1 at 2020-10-15 06:47:01 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-15 06:47:31 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-15 06:52:47 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    11:   <li>Period: <%= @musician.period %></li>
+    12: </ul>
+    13: <div class="controls">
+    14:   <%= button_to "Delete #{@artist.name}" , @artist ,method => 'delete' %>
+    15: </div>
+  
+app/views/musicians/show.html.erb:14:in `_app_views_musicians_show_html_erb___2917853488090406971_42980'
+Started GET "/musicians/1" for ::1 at 2020-10-15 06:54:01 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    11:   <li>Period: <%= @musician.period %></li>
+    12: </ul>
+    13: <div class="controls">
+    14:   <%= button_to "Delete #{@musician.name}" , @musician ,method => 'delete' %>
+    15: </div>
+  
+app/views/musicians/show.html.erb:14:in `method'
+app/views/musicians/show.html.erb:14:in `_app_views_musicians_show_html_erb___2917853488090406971_43500'
+Started GET "/musicians/1" for ::1 at 2020-10-15 06:55:14 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 06:55:19 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 06:55:23 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 06:55:25 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:05:13 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:06:30 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/__web_console/repl_sessions/0e8e69301abd8f2dabc110e540addbdd" for ::1 at 2020-10-15 07:06:37 +1100
+Started PUT "/__web_console/repl_sessions/0e8e69301abd8f2dabc110e540addbdd" for ::1 at 2020-10-15 07:06:39 +1100
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:08:40 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-15 07:08:43 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.3ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 07:08:46 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:08:49 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:12:00 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:12:24 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:15:31 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians" for ::1 at 2020-10-15 07:15:47 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:15:50 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:15:53 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 07:15:55 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    11:   <li>Period: <%= @musician.period %></li>
+    12: </ul>
+    13: <div class="controls">
+    14:   <%= link_to "Edit #{@artist.name}" %>
+    15:   <%= button_to "Delete #{@musician.name}" , @musician , :method => 'delete' , :data => { :confirm => 'Areyou sure?'}%>
+    16: </div>
+  
+app/views/musicians/show.html.erb:14:in `_app_views_musicians_show_html_erb___2917853488090406971_54500'
+Started GET "/musicians" for ::1 at 2020-10-15 07:16:07 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:16:11 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    11:   <li>Period: <%= @musician.period %></li>
+    12: </ul>
+    13: <div class="controls">
+    14:   <%= link_to "Edit #{@artist.name}" %>
+    15:   <%= button_to "Delete #{@musician.name}" , @musician , :method => 'delete' , :data => { :confirm => 'Areyou sure?'}%>
+    16: </div>
+  
+app/views/musicians/show.html.erb:14:in `_app_views_musicians_show_html_erb___2917853488090406971_55100'
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:19:08 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/3/edit" for ::1 at 2020-10-15 07:19:13 +1100
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:28:10 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/musicians/3/edit" for ::1 at 2020-10-15 07:28:18 +1100
+Processing by MusiciansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:22
+  Rendering musicians/edit.html.erb within layouts/application
+  Rendered musicians/_form.html.erb (2.7ms)
+  Rendered musicians/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:28:28 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 07:28:31 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/4/edit" for ::1 at 2020-10-15 07:28:37 +1100
+Processing by MusiciansController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:22
+  Rendering musicians/edit.html.erb within layouts/application
+  Rendered musicians/_form.html.erb (2.1ms)
+  Rendered musicians/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/musicians/4" for ::1 at 2020-10-15 07:28:44 +1100
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for MusiciansController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/musicians/4" for ::1 at 2020-10-15 07:28:48 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:28:50 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/4" for ::1 at 2020-10-15 07:32:44 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/musicians/4" for ::1 at 2020-10-15 07:32:49 +1100
+Processing by MusiciansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AN7904hgiLhZFE4g/kmg/gikAZPr7iarPNK1QtHmh+ZpesRs3fASVLAdPrn7uGEFP2YRCc50H/fo8gUUhX3stg==", "id"=>"4"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/musicians_controller.rb:28
+  [1m[36mMusician Destroy (0.3ms)[0m  [1m[31mDELETE FROM "musicians" WHERE "musicians"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/musicians_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/musicians_controller.rb:28
+Redirected to http://localhost:3000/musicians
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:32:49 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:35:32 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/musicians/3/edit" for ::1 at 2020-10-15 07:35:34 +1100
+Processing by MusiciansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:22
+  Rendering musicians/edit.html.erb within layouts/application
+  Rendered musicians/_form.html.erb (2.3ms)
+  Rendered musicians/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/musicians/3" for ::1 at 2020-10-15 07:35:40 +1100
+Processing by MusiciansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyedGG21r+panoGNnJBV46cqa5z6JUCrjJE496R6NLNxy3fCZmyq790TUK/s9hEZ5j0nGaWFE2liUdJwqu38/w==", "musician"=>{"name"=>"Jann Castor", "nationality"=>"Australian", "dob"=>"1915-11-22", "period"=>"20th century", "image"=>"https://i.ytimg.com/vi/D0fO5IgTHdQ/hqdefault.jpg"}, "commit"=>"Update Musician", "id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/musicians_controller.rb:34
+  [1m[36mMusician Update (0.3ms)[0m  [1m[33mUPDATE "musicians" SET "dob" = ?, "updated_at" = ? WHERE "musicians"."id" = ?[0m  [["dob", "1915-11-22"], ["updated_at", "2020-10-14 20:35:40.988287"], ["id", 3]]
+  ↳ app/controllers/musicians_controller.rb:34
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/musicians_controller.rb:34
+Redirected to http://localhost:3000/musicians/3
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:35:40 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/3/edit" for ::1 at 2020-10-15 07:35:44 +1100
+Processing by MusiciansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:22
+  Rendering musicians/edit.html.erb within layouts/application
+  Rendered musicians/_form.html.erb (2.2ms)
+  Rendered musicians/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:35:47 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/1" for ::1 at 2020-10-15 07:37:38 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/2" for ::1 at 2020-10-15 07:37:44 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/3" for ::1 at 2020-10-15 07:37:48 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/new" for ::1 at 2020-10-15 07:39:23 +1100
+Processing by MusiciansController#new as HTML
+  Rendering musicians/new.html.erb within layouts/application
+  Rendered musicians/_form.html.erb (2.1ms)
+  Rendered musicians/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/musicians" for ::1 at 2020-10-15 07:40:30 +1100
+Processing by MusiciansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T3gIEMlsB6CdaSCdjdhm4RaPtG630o4iTF1NXw/MP9qw3K2RzRYJIgRTHnGaWgVGYcbnLvCAJFHCkj/7q3MCWQ==", "musician"=>{"name"=>"giti", "nationality"=>"AUS", "dob"=>"1960-01-01", "period"=>"20s", "image"=>"http://files.campus.edublogs.org/blogs.baylor.edu/dist/4/2521/files/2012/07/IMG_4096-166fjy1.jpg"}, "commit"=>"Create Musician"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/musicians_controller.rb:17
+  [1m[36mMusician Create (0.4ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "giti"], ["nationality", "AUS"], ["dob", "1960-01-01"], ["period", "20s"], ["image", "http://files.campus.edublogs.org/blogs.baylor.edu/dist/4/2521/files/2012/07/IMG_4096-166fjy1.jpg"], ["created_at", "2020-10-14 20:40:30.680202"], ["updated_at", "2020-10-14 20:40:30.680202"]]
+  ↳ app/controllers/musicians_controller.rb:17
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/musicians_controller.rb:17
+Redirected to http://localhost:3000/musicians/5
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/musicians/5" for ::1 at 2020-10-15 07:40:30 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians" for ::1 at 2020-10-15 07:40:34 +1100
+Processing by MusiciansController#index as HTML
+  Rendering musicians/index.html.erb within layouts/application
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ app/views/musicians/index.html.erb:2
+  Rendered musicians/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/musicians/5" for ::1 at 2020-10-15 07:42:24 +1100
+Processing by MusiciansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" WHERE "musicians"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/musicians_controller.rb:8
+  Rendering musicians/show.html.erb within layouts/application
+  Rendered musicians/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateWorks (20201014205517)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201014205517_create_works.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "year" text, "mediuum" text, "style" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014205517_create_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014205517"]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateWorks (20201014205517)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "works"[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201014205517"]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateWorks (20201014205517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201014205517_create_works.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "works" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "year" text, "medium" text, "style" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014205517_create_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014205517"]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mMusician Load (0.1ms)[0m  [1m[34mSELECT "musicians".* FROM "musicians"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMusician Destroy (0.3ms)[0m  [1m[31mDELETE FROM "musicians" WHERE "musicians"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMusician Destroy (0.2ms)[0m  [1m[31mDELETE FROM "musicians" WHERE "musicians"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMusician Destroy (0.3ms)[0m  [1m[31mDELETE FROM "musicians" WHERE "musicians"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMusician Destroy (0.2ms)[0m  [1m[31mDELETE FROM "musicians" WHERE "musicians"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mMusician Create (0.3ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin Cameron"], ["nationality", "Australian"], ["dob", "1879-02-22"], ["period", "20th century"], ["image", "https://kevcam.com/uploads/3/5/0/5/35055861/8744896_orig.jpg"], ["created_at", "2020-10-14 21:11:17.838801"], ["updated_at", "2020-10-14 21:11:17.838801"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mMusician Create (0.2ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jose Carbo"], ["nationality", "Australian"], ["dob", "1912-02-07"], ["period", "20th century"], ["image", "http://4.bp.blogspot.com/-OZYmgLKtE68/T8vsO7SCMpI/AAAAAAAALYM/BAns8Q1e70I/s1600/Jose+Carbo.jpg"], ["created_at", "2020-10-14 21:11:17.840771"], ["updated_at", "2020-10-14 21:11:17.840771"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mMusician Create (0.3ms)[0m  [1m[32mINSERT INTO "musicians" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jann Castor"], ["nationality", "Australian"], ["dob", "1915-11-21"], ["period", "20th century"], ["image", "https://i.ytimg.com/vi/D0fO5IgTHdQ/hqdefault.jpg"], ["created_at", "2020-10-14 21:11:17.842538"], ["updated_at", "2020-10-14 21:11:17.842538"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWork Create (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Thieves Kitchen"], ["year", "1929"], ["medium", "etching"], ["style", "Romantic"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=29145"], ["created_at", "2020-10-14 21:11:17.853049"], ["updated_at", "2020-10-14 21:11:17.853049"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWork Create (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Rabbiters"], ["year", "1947"], ["medium", "oil on canvas"], ["style", "Sun-burnt dinge"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=5520"], ["created_at", "2020-10-14 21:11:17.855553"], ["updated_at", "2020-10-14 21:11:17.855553"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mWork Create (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Darkening Stage"], ["year", "1991"], ["medium", "oil on canvas"], ["style", "Surrealist"], ["image", "https://content.ngv.vic.gov.au/col-images/api/EPUB001055/1280"], ["created_at", "2020-10-14 21:11:17.858173"], ["updated_at", "2020-10-14 21:11:17.858173"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mWork Create (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Carcass"], ["year", "1953"], ["medium", "oil and enamel paint on composition board"], ["style", "Sun-burnt splendour"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=57510"], ["created_at", "2020-10-14 21:11:17.860420"], ["updated_at", "2020-10-14 21:11:17.860420"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mWork Create (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Bride Running Away"], ["year", "1957"], ["medium", "oil and tempera on composition board"], ["style", "Sun-burnt primitivism"], ["image", "http://www.abc.net.au/news/image/4197918-3x2-940x627.jpg"], ["created_at", "2020-10-14 21:11:17.867536"], ["updated_at", "2020-10-14 21:11:17.867536"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWork Create (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Portrait of Clive James"], ["year", "1991 - 1992"], ["medium", "oil on canvas"], ["style", "Modernist"], ["image", "https://media.artgallery.nsw.gov.au/thumbnails/collection_images/2/276.1992%23%23S.jpg.505x464_q85.jpg"], ["created_at", "2020-10-14 21:11:17.870013"], ["updated_at", "2020-10-14 21:11:17.870013"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWork Create (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Naked Studio"], ["year", "1981"], ["medium", "1981"], ["style", "Impressionist"], ["image", "https://mona.net.au//media/37522/brett-whiteley-the-naked-studio-mona-01.jpg"], ["created_at", "2020-10-14 21:11:17.872286"], ["updated_at", "2020-10-14 21:11:17.872286"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "works"[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" ORDER BY "works"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/works" for ::1 at 2020-10-15 08:47:49 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/giti/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (160.6ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `alt' for #<#<Class:0x00007fea1c28cd60>:0x00007fea1c26cd30>):
+    2: 
+    3: <% @works.each do |work| %>
+    4: 
+    5:   <%= link_to image_tag(work.image, :class=>'thumb' , alt => work.title) , work %>
+    6: 
+    7: <% end %>
+  
+app/views/works/index.html.erb:5:in `block in _app_views_works_index_html_erb___2583848453323412700_14640'
+app/views/works/index.html.erb:3:in `_app_views_works_index_html_erb___2583848453323412700_14640'
+Started GET "/works" for ::1 at 2020-10-15 08:49:36 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 183ms (Views: 181.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/2" for ::1 at 2020-10-15 08:49:39 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for WorksController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/works" for ::1 at 2020-10-15 08:55:17 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/works/1" for ::1 at 2020-10-15 08:55:18 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:8
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
