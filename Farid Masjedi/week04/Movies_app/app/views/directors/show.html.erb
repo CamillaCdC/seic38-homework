@@ -1,0 +1,22 @@
+<header>
+  <nav>
+    <%= link_to 'All Directors', directors_path %>
+    <%= link_to "Edit", edit_director_path %>
+    <%= link_to 'Delete', @director, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  </nav>
+  <h1><%= @director.name %></h1>
+</header>
+
+<div id="show">
+  <div id="show-img">
+    <% if @director.image.present? %>
+      <%= image_tag @director.image if @director.image.present? %>
+    <% else %>
+      <%= image_tag "https://via.placeholder.com/500?text=#{@director.name}" %>
+    <% end %>
+  </div>
+  <div id='show-info'>
+    <p>Date of Birth:<%= " #{@director.dob}"%> </p>
+    <p>Nationality:<%= " #{@director.nationality}" %></p>
+  </div>
+</div>

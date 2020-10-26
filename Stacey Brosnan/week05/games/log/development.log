@@ -1,0 +1,575 @@
+Started GET "/" for ::1 at 2020-10-12 17:18:01 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 204ms (Views: 200.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-12 20:30:14 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic_8_ball" for ::1 at 2020-10-12 20:30:17 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/magic_8_ball"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-12 20:30:18 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-12 20:30:19 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-12 20:30:22 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic_8_ball" for ::1 at 2020-10-12 20:32:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/magic_8_ball"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-12 20:32:33 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-12 20:32:34 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic_8_ball" for ::1 at 2020-10-12 20:32:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/magic_8_ball"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/magic" for ::1 at 2020-10-12 20:36:01 +1100
+  
+SyntaxError (/Users/staceybrosnan/Projects/seic38-homework/Stacey Brosnan/week05/games/app/controllers/magic_controller.rb:6: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/magic_controller.rb:6: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/magic" for ::1 at 2020-10-12 20:36:40 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-12 20:36:44 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-12 20:36:45 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-12 20:36:46 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result" for ::1 at 2020-10-12 20:53:15 +1100
+Processing by MagicController#result as HTML
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result" for ::1 at 2020-10-12 20:53:27 +1100
+Processing by MagicController#result as HTML
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-12 21:06:57 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=kljl" for ::1 at 2020-10-12 21:07:02 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kljl"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MagicController::HTTParty):
+  
+app/controllers/magic_controller.rb:7:in `result'
+Started GET "/magic/result?question=kljl" for ::1 at 2020-10-12 21:07:29 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kljl"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant MagicController::HTTParty):
+  
+app/controllers/magic_controller.rb:7:in `result'
+Started GET "/" for ::1 at 2020-10-12 21:09:03 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-12 21:09:07 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=kjl" for ::1 at 2020-10-12 21:09:10 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kjl"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/magic_controller.rb:7:in `result'
+Started GET "/magic/result?question=kjl" for ::1 at 2020-10-12 21:10:17 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kjl"}
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `question' for #<MagicController:0x00007ffcd68ca0e8>
+Did you mean?  @question):
+  
+app/controllers/magic_controller.rb:7:in `result'
+Started GET "/magic/result?question=kjl" for ::1 at 2020-10-13 07:14:16 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kjl"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (private method `rand' called for ["It is certain", "Don't count on it"]:Array):
+  
+app/controllers/magic_controller.rb:7:in `result'
+Started GET "/" for ::1 at 2020-10-13 07:16:35 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 07:16:37 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=sjhskf" for ::1 at 2020-10-13 07:16:41 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"sjhskf"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (150.2ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `answer' for #<#<Class:0x00007ffcdeaab170>:0x00007ffcd5093470>
+Did you mean?  @answer):
+    1: <h2>result</h2>
+    2: 
+    3: 
+    4: <p><%= answer %></p>
+  
+app/views/magic/result.html.erb:4:in `_app_views_magic_result_html_erb__2876928671097236141_64960'
+Started GET "/magic" for ::1 at 2020-10-13 07:17:20 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=odskj" for ::1 at 2020-10-13 07:17:24 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"odskj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (106.5ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `answer' for #<#<Class:0x00007ffcde8f6fc8>:0x00007ffcd6eb57a0>
+Did you mean?  @answer):
+    1: <h2>result</h2>
+    2: 
+    3: 
+    4: <p><%= answer %></p>
+  
+app/views/magic/result.html.erb:4:in `_app_views_magic_result_html_erb__2876928671097236141_66960'
+Started GET "/magic/result?question=odskj" for ::1 at 2020-10-13 07:17:47 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"odskj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 07:20:10 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=skj" for ::1 at 2020-10-13 07:20:13 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"skj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic/result?question=kj" for ::1 at 2020-10-13 07:21:30 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (138.3ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x00007ffcd59097f8>:0x00007ffcde9ca7b0>):
+    1: <h2>result</h2>
+    2: 
+    3: 
+    4: <h3><%= question %></h3>
+    5: <p><%= @answer %></p>
+  
+app/views/magic/result.html.erb:4:in `_app_views_magic_result_html_erb__2876928671097236141_70560'
+Started GET "/magic/result?question=kj" for ::1 at 2020-10-13 07:21:51 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (101.2ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x00007ffcd59097f8>:0x00007ffcc2254628>):
+    1: <h2>result</h2>
+    2: 
+    3: 
+    4: <h3><%= params[question] %></h3>
+    5: <p><%= @answer %></p>
+  
+app/views/magic/result.html.erb:4:in `_app_views_magic_result_html_erb__2876928671097236141_71100'
+Started GET "/magic/result?question=kj" for ::1 at 2020-10-13 07:22:47 +1100
+Processing by MagicController#result as HTML
+  Parameters: {"question"=>"kj"}
+  Rendering magic/result.html.erb within layouts/application
+  Rendered magic/result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 07:29:14 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 07:34:43 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:34:45 +1100
+  
+SyntaxError (/Users/staceybrosnan/Projects/seic38-homework/Stacey Brosnan/week05/games/app/controllers/secret_number_controller.rb:3: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/secret_number_controller.rb:3: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-10-13 07:35:17 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:35:18 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 07:47:21 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 07:47:22 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:47:23 +1100
+Processing by SecretNumberController#guess as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_array' for nil:NilClass
+Did you mean?  to_param):
+  
+app/controllers/secret_number_controller.rb:3:in `guess'
+Started GET "/magic" for ::1 at 2020-10-13 07:47:51 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:47:53 +1100
+Processing by SecretNumberController#guess as HTML
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `numbers' for #<SecretNumberController:0x00007ffcd5a3c800>):
+  
+app/controllers/secret_number_controller.rb:3:in `guess'
+Started GET "/secret_number" for ::1 at 2020-10-13 07:48:24 +1100
+Processing by SecretNumberController#guess as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_array' for nil:NilClass
+Did you mean?  to_param):
+  
+app/controllers/secret_number_controller.rb:3:in `guess'
+Started GET "/" for ::1 at 2020-10-13 07:50:22 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:50:24 +1100
+Processing by SecretNumberController#guess as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `to_array' for nil:NilClass
+Did you mean?  to_param):
+  
+app/controllers/secret_number_controller.rb:3:in `guess'
+Started GET "/" for ::1 at 2020-10-13 07:50:59 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 07:51:00 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-13 08:09:52 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 08:09:53 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:09:53 +1100
+  
+SyntaxError (/Users/staceybrosnan/Projects/seic38-homework/Stacey Brosnan/week05/games/app/controllers/secret_number_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/secret_number_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/magic" for ::1 at 2020-10-13 08:10:20 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:10:22 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:23:59 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 08:26:11 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:26:12 +1100
+  
+SyntaxError (/Users/staceybrosnan/Projects/seic38-homework/Stacey Brosnan/week05/games/app/controllers/secret_number_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/secret_number_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/magic" for ::1 at 2020-10-13 08:26:23 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:26:24 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/magic" for ::1 at 2020-10-13 08:37:51 +1100
+Processing by MagicController#question as HTML
+  Rendering magic/question.html.erb within layouts/application
+  Rendered magic/question.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/secret_number" for ::1 at 2020-10-13 08:37:52 +1100
+Processing by SecretNumberController#guess as HTML
+  Rendering secret_number/guess.html.erb within layouts/application
+  Rendered secret_number/guess.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+

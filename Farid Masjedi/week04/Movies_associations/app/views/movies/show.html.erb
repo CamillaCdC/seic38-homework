@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <%= link_to 'All Movies', movies_path %>
+    <%= link_to "Edit", edit_movie_path(@movie) %>
+    <%= link_to "Delete", @movie, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  </nav>
+  <h1><%= @movie.title %></h1>
+</header>
+
+<div id="show">
+  <div id="show-img">
+    <% if @movie.image.present? %>
+      <%= image_tag @movie.image %>
+    <% else %>
+      <%= image_tag "https://via.placeholder.com/500?text=#{@movie.title}" %>
+    <% end %>
+  </div>
+  <div id='show-info'>
+    <p>Year:<%= " #{@movie.year}" %></p>
+    <% if @movie.director.present? %>
+      <p>Director:<%=link_to @movie.director.name, @movie.director  %><p>
+    <% end %>
+    <p><%= link_to "IMDB", @movie.imdb, :target => '_blank' %><p>
+  </div>
+</div>

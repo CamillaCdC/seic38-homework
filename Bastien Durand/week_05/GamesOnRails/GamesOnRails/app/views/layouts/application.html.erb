@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games On Rails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/magic">Magic 8 Ball</a>
+      <a href="/secretnumber">Secret Number</a>
+
+    </nav>
+    <%= yield %>
+  </body>
+
+  <script type="text/javascript">
+  window.onload = function() {
+    document.getElementById("win").onclick = function () {
+        location.href = "/secretnumber_win";
+    };
+
+    document.getElementById("lose").onclick = function () {
+        location.href = "/secretnumber_lose";
+    };
+  }
+  </script>
+
+</html>

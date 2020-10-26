@@ -1,0 +1,12 @@
+<h1><%= @actor.name %></h1>
+<%= image_tag @actor.image, :class => 'feature' %>
+<ul>
+  <li>Filmography: <%= @actor.filmo %></li>
+  <li>Date of birth: <%= @actor.dob %></li>
+  <li>Awards: <%= @actor.awards %></li>
+  <li>Nationality: <%= @actor.nationality %> mins</li>
+</ul>
+<div class="controls">
+  <%= link_to 'Edit Actor', edit_actor_path(@actor) %>
+  <%= link_to 'Delete Actor', actor_path(@actor), :class => 'delete', :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

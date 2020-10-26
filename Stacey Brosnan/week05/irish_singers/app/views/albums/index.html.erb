@@ -1,0 +1,14 @@
+<h1>All Albums</h1>
+
+
+<% @albums.each do |album| %>
+
+<%= image_tag album.image, :class => 'thumb' if album.image.present? %>
+
+  <ul>
+    <li>Name: <%= link_to album.name, album %></li>
+    <li>Year: <%= album.year %></li>
+    <li>Genre: <%= album.genre %></li>
+  </ul>
+
+<% end %>

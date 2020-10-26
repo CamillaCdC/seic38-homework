@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookfun</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+         <%= link_to 'All Authors', authors_path %>
+         <%= link_to 'Add', new_author_path %>
+         |
+          <%= link_to 'Books', books_path %>
+          <%= link_to 'Add Book', new_book_path %>
+      </nav>
+    <%= yield %>
+    </div>
+  </body>
+</html>

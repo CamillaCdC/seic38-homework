@@ -1,0 +1,14 @@
+<h2> <%= @author.name %> </h2>
+
+
+<%= image_tag @author.image, :class => 'feature' if @author.image.present? %>
+  <ul>
+    <li>Nationality: <%= @author.nationality %></li>
+    <li>Date of birth: <%= @author.dob %></li>
+    <li>Genre: <%= @author.genre %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_author_path(@author) %>
+  <%= button_to 'Delete', @author, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
