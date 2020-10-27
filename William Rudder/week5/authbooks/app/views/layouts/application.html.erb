@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authbooks</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="/css/author.css">
+  </head>
+
+  <body>
+    <nav><%= link_to 'All Authors', authors_path %></nav>
+    <nav><%= link_to 'New Authors', new_author_path %></nav>
+    <nav><%= link_to 'All Books', books_path %></nav>
+    <nav><%= link_to 'New Book', new_book_path %></nav>  
+    <%= yield %>
+  </body>
+</html>

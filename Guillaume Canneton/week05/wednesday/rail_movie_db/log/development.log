@@ -2986,3 +2986,82 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/movies" for ::1 at 2020-10-15 09:52:51 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for ::1 at 2020-10-15 09:54:20 +1100
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ app/views/directors/index.html.erb:3
+  Rendered directors/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/actors" for ::1 at 2020-10-15 09:54:21 +1100
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/actors/index.html.erb:3
+  Rendered actors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2020-10-15 09:54:36 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/7" for ::1 at 2020-10-15 09:54:42 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:26
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/7" for ::1 at 2020-10-15 09:54:44 +1100
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VEMKnUljXbmxQTuG75cHzJ8V1I/V5Eh3no9zwqbgsq9AlyN5J+twa1T5ujmcc1aAJWXZV5MZaNqWXTPqD1t5vQ==", "id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:31
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/movies_controller.rb:31
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:31
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 3ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/movies" for ::1 at 2020-10-15 09:54:44 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/actors" for ::1 at 2020-10-15 09:55:20 +1100
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.erb within layouts/application
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/actors/index.html.erb:3
+  Rendered actors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+

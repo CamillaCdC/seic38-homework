@@ -1,0 +1,14 @@
+<h1>Great Mountains Of The World</h1>
+
+<div class="mountain-grid">
+  <ul>
+  <% @mountains.each do |mountain| %>
+    <li>
+      <%= link_to mountain_path(mountain.id) do %>
+      <p><%= mountain.name %></p>
+      <%= image_tag mountain.image %>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
