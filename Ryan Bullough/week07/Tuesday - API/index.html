@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon!</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/books.js"></script>
+    <link rel="stylesheet" href="css/bulma.css" />
+  </head>
+  <body>
+    <section class="hero is-medium is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">PokéSearch</h1>
+          <h2 class="subtitle">Powered by the PokeAPI</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input
+              id="search-input"
+              class="input is-large"
+              type="text"
+              placeholder="Pokemon name"
+            />
+          </div>
+          <div class="control">
+            <a id="search-button" class="button is-primary is-large">
+              Search
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="media">
+          <figure class="media-left">
+            <div class="image is-96x96" id="image-holder"></div>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p class="pokemon-name title is-4">
+                <br />
+              </p>
+              <p class="pokemon-type subtitle is-5"></p>
+              <p class="pokemon-description"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
