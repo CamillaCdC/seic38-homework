@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Rick and Morty db</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/rickandmorty.js"></script>
+  <style>
+    .img {
+      max-width: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Rick and Morty Episodes db</h1>
+  <form id="search-form">
+    <label for="season">Choose a season:</label>
+      <select name="seasons" id="season">
+        <option value="1">S01</option>
+        <option value="2">S02</option>
+        <option value="3">S03</option>
+        <option value="4">S04</option>
+      </select>
+    </br>
+      <label for="episode">Choose an episode:</label>
+        <select name="episodes" id="episode">
+          <option value="1">E01</option>
+          <option value="2">E02</option>
+          <option value="3">E03</option>
+          <option value="4">E04</option>
+          <option value="5">E05</option>
+          <option value="6">E06</option>
+          <option value="7">E07</option>
+          <option value="8">E08</option>
+          <option value="9">E09</option>
+          <option value="10">E10</option>
+          <option value="11">E11</option>
+        </select>
+      </br>
+    <button id="fetch">Search</button>
+  </form>
+  <div id="data"></div>
+</body>
+
+</html>
