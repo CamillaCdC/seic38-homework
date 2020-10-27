@@ -9,10 +9,6 @@ const fetchBook = function (key) {
   xhr.send();
   console.log('the ready state changed', xhr.responseText);
 
-  // const result = xhr.responsiveText["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-  // const result = xhr.responseText["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
-  // console.log(result)
-
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     console.log('something', xhr.responsiveText)
@@ -37,7 +33,7 @@ const fetchBook = function (key) {
   };
 };
 
-// event listener, onclick of button fetch book data from search input.
+// Event listener, onclick of button fetch book data from search input.
 // Send to fetchBook function
 document.getElementById('button').onclick = function () {
   const bookTitle = document.getElementById('search').value;

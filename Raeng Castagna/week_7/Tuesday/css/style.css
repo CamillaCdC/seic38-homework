@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Syne+Tactile&display=swap');
+
+/* * {border: 1px solid green;} */
+body {
+  /* background-color: #e5f5e5; */
+  background-image: url('https://i1.wp.com/www.techtrends.co.zm/wp-content/uploads/2016/01/API-Word-Cloud1-620x410.png?fit=620410&ssl=1');
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+  padding: 1em;
+}
+
+.weather-row {
+  background-color: #f8f6f6;
+  width: 25%;
+  font-family: 'Syne Tactile', cursive;
+}
+
+.nasa-row {
+  max-width: 500px;
+  background-color: #b3b3b3;
+  width: 45%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bad-row {
+  width: 25%;
+  background-color: #f8f6f6;
+  font-family: 'Syne Tactile', cursive;
+}
+
+#nasa-image {
+  width: 100%;
+  padding-top: 1em;
+}
