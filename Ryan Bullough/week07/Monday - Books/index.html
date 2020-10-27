@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books!</title>
+    <script src="js/books.js"></script>
+    <link rel="stylesheet" href="css/bulma.css" />
+  </head>
+  <body>
+    <section class="hero is-medium is-info">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Book Searcher</h1>
+          <h2 class="subtitle">Powered by the Google Books API</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input
+              id="search-input"
+              class="input is-large"
+              type="text"
+              placeholder="Enter a book title"
+            />
+          </div>
+          <div class="control">
+            <a id="search-button" class="button is-info is-large"> Search </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="media">
+          <figure class="media-left">
+            <p class="image is-128x128" id="image-holder"></p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p class="book-title">
+                <br />
+              </p>
+              <p class="book-description"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<%= form_for @director do |f|%>
+
+  <div id="labels">
+    <p><%= f.label :name  %></p>
+    <p><%= f.label :dob,'Date of Birth' %></p>
+    <p><%= f.label :nationality %></p>
+    <p><%= f.label :image %></p>
+  </div>
+  <div id="inputs">
+    <p><%= f.text_field :name, :placeholder =>'David Lynch', :required => true %></p>
+    <p><%= f.text_field :dob, :placeholder =>'YYYY-MM-DD' %></p>
+    <p><%= f.text_field :nationality, :placeholder =>'Australian' %></p>
+    <p><%= f.url_field :image, :placeholder =>'https://...' %></p>
+  </div>
+  <div id="button">
+    <%= f.submit %>
+  </div>
+<% end %>

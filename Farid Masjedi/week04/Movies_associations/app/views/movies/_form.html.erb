@@ -1,0 +1,20 @@
+<%= form_for @movie do |f| %>
+
+  <div id="labels">
+    <p><%= f.label :title %></p>
+    <p><%= f.label :year %></p>
+    <p><%= f.label :director_id, "Director" %></p>
+    <p><%= f.label :imdb %></p>
+    <p><%= f.label :image %></p>
+  </div>
+  <div id="inputs">
+    <p><%= f.text_field :title, :placeholder =>'Europe', :required => true %></p>
+    <p><%= f.text_field :year, :placeholder =>'1991' %></p>
+    <p><%= f.select :director_id, Director.pluck(:name, :id),:include_blank => true ,:placeholder =>'Lars Von Trier' %></p>
+    <p><%= f.text_field :imdb, :placeholder =>'https://...' %></p>
+    <p><%= f.url_field :image, :placeholder =>'https://...' %></p>
+  </div>
+  <div id="button">
+    <%= f.submit %>
+  </div>
+<% end %>

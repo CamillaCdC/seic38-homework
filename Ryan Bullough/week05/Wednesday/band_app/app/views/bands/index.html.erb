@@ -1,0 +1,7 @@
+
+<ul>
+<% @bands.each do |band| %>
+  <li class="band"><%= link_to image_tag(band.image, :class => 'index-image'), band_path(band) %> <p class="band-title"><%= band.name %></p></li>
+<% end %>
+</ul>
+<%= link_to 'Create',  new_band_path, class: 'new' %>

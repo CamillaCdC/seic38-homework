@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BandApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <nav class="nav-bar">
+    <ul class="nav-links">
+      <%= link_to "Home", root_path %>
+      <%= link_to 'Bands', bands_path %>
+      <%= link_to 'Albums', albums_path %>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

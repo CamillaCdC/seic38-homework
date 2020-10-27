@@ -1,0 +1,14 @@
+<h2><%= @book.title %></h2>
+
+<%= image_tag @book.image, :class => 'feature', :alt => @book.title %>
+
+<ul>
+  <li>Title: <%= link_to @book.title, @book %></li>
+  <li>Author: <%= @book.author %></li>
+  <li>Release date: <%= @book.releasedate %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit #{@book.title}", edit_book_path(@book) %>
+<%= link_to "Delete #{@book.title}", @book, :method =>'delete', :data => {:confirm => 'Are you Sure?'} %>
+</div>

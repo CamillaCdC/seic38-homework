@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Marvel", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgb(75, 75, 75);
+  background: linear-gradient(
+    200deg,
+    rgba(75, 75, 75, 1) 0%,
+    rgba(4, 19, 22, 1) 100%
+  );
+  overflow-x: hidden;
+}
+.nav-links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.nav-links > a {
+  color: rgb(255, 112, 148);
+  text-decoration: none;
+  font-size: 50px;
+  transform: rotate(90deg);
+}
+
+h1,
+.band-h1 {
+  font-size: 50px;
+  padding-bottom: 55px;
+}
+.band-h1 {
+  text-align: center;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.index-image {
+  width: 660px;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+}
+.index-album-image {
+  width: 660px;
+  display: block;
+  margin: 0 auto;
+}
+.show-image {
+  max-width: 100%;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+.band,
+.album {
+  list-style: none;
+  position: relative;
+}
+.band-show,
+.album-show {
+  font-size: 3em;
+  text-align: right;
+}
+.band-title {
+  position: absolute;
+  bottom: 0;
+  left: 155px;
+  color: whitesmoke;
+  font-size: 3em;
+}
+.control {
+  text-decoration: none;
+  color: lightcoral;
+  display: block;
+  font-size: 2.2em;
+}
+.new_band,
+.edit_band,
+.new_album,
+.edit_album {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+}
+input {
+  height: 60px;
+  font-size: 30px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid lightblue;
+  box-shadow: 0 0 2px #719ece;
+}
+.new {
+  text-decoration: none;
+  color: lightsteelblue;
+  font-size: 4em;
+  text-align: center;
+  display: block;
+}

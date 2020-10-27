@@ -1,0 +1,16 @@
+<h2><%= @author.name %><h2>
+
+<%= image_tag @author.image, :class => 'feature' if @author.image.present? %>
+<ul>
+  <li>Name: <%= link_to @author.name, @author %></li>
+  <li>Country: <%= @author.country %></li>
+  <% if @author.dob.present? %>
+    <li>Date of Birth" <%=  @author.dob.strftime '%A, %B %e, %Y' %></li>
+  <% end %>
+  <li>Style: <%= @author.style %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit #{ @author.name}", edit_author_path(@author) %>
+  <%= link_to "Delete #{ @author.name}", @author, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>
