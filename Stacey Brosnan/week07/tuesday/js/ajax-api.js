@@ -4,7 +4,7 @@ const fetchWeather = function(event) {
     const $city = $('#city').val();
     console.log($city);
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?q={${$city}}&appid={535c7b3145849033512a4dfaab159c53}`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${$city}&appid=535c7b3145849033512a4dfaab159c53`;
 
     console.log(url);
 
