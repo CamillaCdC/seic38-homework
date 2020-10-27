@@ -1,0 +1,1883 @@
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAuthors (20201014082915)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (772.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014082915_create_authors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014082915"]]
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-14 08:52:50.659166"], ["updated_at", "2020-10-14 08:52:50.659166"]]
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mAuthor Create (1.1ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark Manson"], ["nationality", "American"], ["dob", "1984-03-09"], ["image", "https://pbs.twimg.com/profile_images/1204727725836996608/ByShSrLR.jpg"], ["created_at", "2020-10-14 08:56:11.968782"], ["updated_at", "2020-10-14 08:56:11.968782"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mAuthor Create (2.5ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "J. K. Rowling"], ["nationality", "United Kingdom"], ["dob", "1965-07-31"], ["image", "https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"], ["created_at", "2020-10-14 08:56:11.995760"], ["updated_at", "2020-10-14 08:56:11.995760"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (509.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-10-14 20:03:31 +1100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/CarlaRudder/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/CarlaRudder/.rvm/gems/ruby-2.7.1/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (315.3ms)
+Completed 200 OK in 649ms (Views: 358.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-14 20:04:16 +1100
+  
+SyntaxError (/Users/CarlaRudder/Desktop/projects1/seic38-homework/William Rudder/week5/authbooks/app/controllers/authors_controller.rb:4: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:4: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-10-14 20:05:05 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 4961ms (Views: 4933.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-14 20:06:39 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (25.9ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/CarlaRudder/Desktop/projects1/seic38-homework/William Rudder/week5/authbooks/app/views/authors/index.html.erb:14: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/views/authors/index.html.erb:14: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2020-10-14 20:06:53 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  Rendered authors/index.html.erb within layouts/application (425.1ms)
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Authors</h1>
+    2: 
+    3: <% @artists.each do |artist| %>
+    4: 
+    5: <ul>
+    6: <li>Name: <%= link_to artist.name, author %></li>
+  
+app/views/authors/index.html.erb:3:in `_app_views_authors_index_html_erb__3828114063227800389_16340'
+Started GET "/" for ::1 at 2020-10-14 20:07:38 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (612.5ms)
+Completed 200 OK in 1158ms (Views: 1126.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-14 20:08:28 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (5.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (150.0ms)
+Completed 200 OK in 721ms (Views: 677.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/new" for ::1 at 2020-10-14 20:24:24 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2020-10-14 20:25:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2020-10-14 20:26:29 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2020-10-14 20:27:17 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/author/new" for ::1 at 2020-10-14 20:27:55 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/author/new"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors/new" for ::1 at 2020-10-14 20:28:00 +1100
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (367.5ms)
+  Rendered authors/new.html.erb within layouts/application (371.6ms)
+Completed 200 OK in 746ms (Views: 691.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/authors/new" for ::1 at 2020-10-14 20:37:44 +1100
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (429.4ms)
+  Rendered authors/new.html.erb within layouts/application (436.1ms)
+Completed 200 OK in 1643ms (Views: 512.9ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/authors" for ::1 at 2020-10-14 20:39:59 +1100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for AuthorsController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors" for ::1 at 2020-10-14 20:42:19 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (229.6ms)
+Completed 200 OK in 1021ms (Views: 768.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/authors/new" for ::1 at 2020-10-14 20:42:29 +1100
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (58.7ms)
+  Rendered authors/new.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 1231ms (Views: 1047.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/authors" for ::1 at 2020-10-14 20:42:50 +1100
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJcYfmKCpwNX37BBoDmB24Rslh4107jUa7uWTWIr2NgfQlD94R/pik9Vg7USn2zBQhd48X/JvNY/HN/5xvIKig==", "author"=>{"name"=>"James Brendan Patterson", "nationality"=>"American", "dob"=>"1947-03-12", "image"=>"data:image/jpeg;base64,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"}, "commit"=>"Create Author"}
+  [1m[35m (9.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:15
+  [1m[36mAuthor Create (197.8ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "James Brendan Patterson"], ["nationality", "American"], ["dob", "1947-03-12"], ["image", "data:image/jpeg;base64,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"], ["created_at", "2020-10-14 09:42:50.751432"], ["updated_at", "2020-10-14 09:42:50.751432"]]
+  ↳ app/controllers/authors_controller.rb:15
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:15
+Redirected to http://localhost:3000/authors/3
+Completed 302 Found in 1162ms (ActiveRecord: 209.3ms)
+
+
+Started GET "/authors/3" for ::1 at 2020-10-14 20:42:51 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (64.2ms)
+Completed 500 Internal Server Error in 614ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Author:0x00007fc2b20e0ac0>):
+    1: <h2><%= @author.title %></h2>
+    2: 
+    3: <%= image_tag @author.image, :class => 'feature', :alt => @author.title %>
+  
+app/views/authors/show.html.erb:1:in `_app_views_authors_show_html_erb___3768717039297740373_29320'
+Started GET "/authors/3" for ::1 at 2020-10-14 20:43:42 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (282.7ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Author:0x00007fc2b2337d00>):
+    1: <h2><%= @author.name %></h2>
+    2: 
+    3: <%= image_tag @author.image, :class => 'feature', :alt => @author.title %>
+  
+app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb___3768717039297740373_29840'
+Started GET "/authors/3" for ::1 at 2020-10-14 20:44:02 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (2.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 749ms (Views: 722.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/authors/3" for ::1 at 2020-10-14 20:51:38 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (183.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (170.2ms)
+Completed 200 OK in 964ms (Views: 693.1ms | ActiveRecord: 183.3ms)
+
+
+Started GET "/authors/3" for ::1 at 2020-10-14 20:52:17 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (6.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 665ms (Views: 614.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/author" for ::1 at 2020-10-14 20:52:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/author"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/author" for ::1 at 2020-10-14 20:52:32 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/author"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors/new" for ::1 at 2020-10-14 20:52:37 +1100
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (28.8ms)
+  Rendered authors/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 694ms (Views: 684.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 20:52:41 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 448ms (Views: 440.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 20:56:18 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (4.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (342.2ms)
+Completed 200 OK in 1248ms (Views: 1198.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/authors/3" for ::1 at 2020-10-14 20:56:23 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAuthor Load (3.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 210ms (Views: 138.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/authors/edit" for ::1 at 2020-10-14 21:00:16 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mAuthor Load (3.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+Completed 404 Not Found in 42ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=edit):
+  
+app/controllers/authors_controller.rb:7:in `show'
+Started GET "/authors/1/edit" for ::1 at 2020-10-14 21:00:24 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 590ms (Views: 586.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/1/edit" for ::1 at 2020-10-14 21:01:04 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (38.7ms)
+  Rendered authors/edit.html.erb within layouts/application (59.3ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @author do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/authors/_form.html.erb:1:in `_app_views_authors__form_html_erb__873796695489295038_32600'
+app/views/authors/edit.html.erb:3:in `_app_views_authors_edit_html_erb__2630465688663921840_32580'
+Started GET "/authors" for ::1 at 2020-10-14 21:01:26 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 79ms (Views: 72.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/authors/2" for ::1 at 2020-10-14 21:01:29 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/edit" for ::1 at 2020-10-14 21:01:32 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (7.0ms)
+  Rendered authors/edit.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @author do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/authors/_form.html.erb:1:in `_app_views_authors__form_html_erb__873796695489295038_33300'
+app/views/authors/edit.html.erb:3:in `_app_views_authors_edit_html_erb__2630465688663921840_33280'
+Started GET "/authors/2/edit" for ::1 at 2020-10-14 21:03:15 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:21
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (497.6ms)
+  Rendered authors/edit.html.erb within layouts/application (503.7ms)
+Completed 200 OK in 1626ms (Views: 1124.4ms | ActiveRecord: 6.8ms)
+
+
+Started PATCH "/authors/2" for ::1 at 2020-10-14 21:03:26 +1100
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for AuthorsController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors/2" for ::1 at 2020-10-14 21:04:45 +1100
+  
+SyntaxError (/Users/CarlaRudder/Desktop/projects1/seic38-homework/William Rudder/week5/authbooks/app/controllers/authors_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/authors_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/authors/2" for ::1 at 2020-10-14 21:04:57 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (14.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 2378ms (Views: 920.0ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/authors/2/edit" for ::1 at 2020-10-14 21:05:06 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (3.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:21
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (446.4ms)
+  Rendered authors/edit.html.erb within layouts/application (453.6ms)
+Completed 200 OK in 982ms (Views: 938.7ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/authors/2" for ::1 at 2020-10-14 21:05:10 +1100
+Processing by AuthorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8jQC4woVe1oie0ONmQG7gkAQcK0rPP1WzKFXwqyBraWMo9XjMT8Za6oPeX0EZ+PBZ+Tk7YQNXINEg/4Nqh8xlw==", "author"=>{"name"=>"J. K. Rowling 2", "nationality"=>"United Kingdom", "dob"=>"1965-07-31", "image"=>"https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"}, "commit"=>"Update Author", "id"=>"2"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/authors_controller.rb:25:in `update'
+Started GET "/authors/2" for ::1 at 2020-10-14 21:05:29 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 1616ms (Views: 831.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/authors/2/edit" for ::1 at 2020-10-14 21:05:37 +1100
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:21
+  Rendering authors/edit.html.erb within layouts/application
+  Rendered authors/_form.html.erb (10.8ms)
+  Rendered authors/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 69ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/authors/2" for ::1 at 2020-10-14 21:05:40 +1100
+Processing by AuthorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoFuLtLaQjUM7BDBMw/pBRO00ULxTSiUuh7SrIgCbdXEFrku6fAgBISYKjGuabFGNEBFAl58iUEyPHtjjpzx5w==", "author"=>{"name"=>"J. K. Rowling 2", "nationality"=>"United Kingdom", "dob"=>"1965-07-31", "image"=>"https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"}, "commit"=>"Update Author", "id"=>"2"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:25
+  [1m[35m (3.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:26
+  [1m[36mAuthor Update (394.0ms)[0m  [1m[33mUPDATE "authors" SET "name" = ?, "updated_at" = ? WHERE "authors"."id" = ?[0m  [["name", "J. K. Rowling 2"], ["updated_at", "2020-10-14 10:05:40.765937"], ["id", 2]]
+  ↳ app/controllers/authors_controller.rb:26
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:26
+Redirected to http://localhost:3000/authors/2
+Completed 302 Found in 1008ms (ActiveRecord: 401.4ms)
+
+
+Started GET "/authors/2" for ::1 at 2020-10-14 21:05:41 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 1002ms (Views: 582.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/2" for ::1 at 2020-10-14 21:10:14 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 766ms (Views: 717.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 21:10:19 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (4.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (439.2ms)
+Completed 200 OK in 1380ms (Views: 1349.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 21:10:33 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (237.6ms)
+Completed 200 OK in 2177ms (Views: 1846.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/authors/new" for ::1 at 2020-10-14 21:18:50 +1100
+Processing by AuthorsController#new as HTML
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (34.5ms)
+  Rendered authors/new.html.erb within layouts/application (349.7ms)
+Completed 200 OK in 1181ms (Views: 682.9ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/authors" for ::1 at 2020-10-14 21:19:05 +1100
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cw9UfHqVwO9AyowZEpDhI5UXe5HG5RKmQGzx3qlg58n0/naXzVsUwgrhqO1P47NOvhU/BQUcp1xSiZbONDI/Rw==", "author"=>{"name"=>"jigglo", "nationality"=>"zimbabwai", "dob"=>"1947-03-12", "image"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhMWFRUWFxcVGBUYGBYXFRUXFRUXFxUXFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy8lHx8rLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0rLS0rLS0tLS0tLS0tKystLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xABGEAABAwIDBAcEBwUHAwUAAAABAAIRAwQSITEFQVFhBhMicYGRoTKxwdEHFEJSguHwI2JykqIVM1NUssLxF0NjFnOTw9P/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEEAQQABAcAAAAAAAAAAQIRAxIhMUETBCJRYTJCcfEUgZGhsdHw/9oADAMBAAIRAxEAPwDyllwwZSr9Og5wBDSQd8Ku7a9rutv9KvM6a4QGtogACIyXNJz/ACxO+HjX4pr+SYbtbeuLU0yMNN/a0Eu4SdVRsthPfVbSLmsLhMkjIRKpXXTqrUABaIGmeiHVOkbnHFgEneSSVnHHl3vs0nkw7U+P1Ll/aYajmg4g0kYhoYMSFPYPdTM6Sg526/7oTTtmpwC10SapmOvHezDe0b50b1XF87D9pCXbUqHh5Jv16oU1jpUQ5xbsIUrt2euq5Uu3c1RFzUSNzUVaSNSJalZzpmVRp0XYgYT33z1Ebt3FUkQ2goH693wVBlEzm0kKe0JKskHigvncr7KY5lYOgtA3ojt6r1r2ubJI1KrBx4pzXc0d2CSOU6JU4tSVGHniU7rDxKVM0VBHZVDq3hztESr3FMunCD3oFSpudoCfH3qZ1nHtOWUsabts1U0lSQV+tsGjGrnSW7p3TWAdktQttvTiSSmU6TTOp7v+FCxRTUvgHltVXJJZPFLKZV1m1c8nIXWtN7DIPLMcj"}, "commit"=>"Create Author"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:16
+  [1m[36mAuthor Create (3.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "jigglo"], ["nationality", "zimbabwai"], ["dob", "1947-03-12"], ["image", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhMWFRUWFxcVGBUYGBYXFRUXFRUXFxUXFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy8lHx8rLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0rLS0rLS0tLS0tLS0tKystLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xABGEAABAwIDBAcEBwUHAwUAAAABAAIRAwQSITEFQVFhBhMicYGRoTKxwdEHFEJSguHwI2JykqIVM1NUssLxF0NjFnOTw9P/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEEAQQABAcAAAAAAAAAAQIRAxIhMUETBCJRYTJCcfEUgZGhsdHw/9oADAMBAAIRAxEAPwDyllwwZSr9Og5wBDSQd8Ku7a9rutv9KvM6a4QGtogACIyXNJz/ACxO+HjX4pr+SYbtbeuLU0yMNN/a0Eu4SdVRsthPfVbSLmsLhMkjIRKpXXTqrUABaIGmeiHVOkbnHFgEneSSVnHHl3vs0nkw7U+P1Ll/aYajmg4g0kYhoYMSFPYPdTM6Sg526/7oTTtmpwC10SapmOvHezDe0b50b1XF87D9pCXbUqHh5Jv16oU1jpUQ5xbsIUrt2euq5Uu3c1RFzUSNzUVaSNSJalZzpmVRp0XYgYT33z1Ebt3FUkQ2goH693wVBlEzm0kKe0JKskHigvncr7KY5lYOgtA3ojt6r1r2ubJI1KrBx4pzXc0d2CSOU6JU4tSVGHniU7rDxKVM0VBHZVDq3hztESr3FMunCD3oFSpudoCfH3qZ1nHtOWUsabts1U0lSQV+tsGjGrnSW7p3TWAdktQttvTiSSmU6TTOp7v+FCxRTUvgHltVXJJZPFLKZV1m1c8nIXWtN7DIPLMcj"], ["created_at", "2020-10-14 10:19:19.220696"], ["updated_at", "2020-10-14 10:19:19.220696"]]
+  ↳ app/controllers/authors_controller.rb:16
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:16
+Redirected to http://localhost:3000/authors/4
+Completed 302 Found in 6664ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/authors/4" for ::1 at 2020-10-14 21:19:26 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 522ms (Views: 489.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4" for ::1 at 2020-10-14 21:21:41 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 806ms (Views: 774.8ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/authors/4" for ::1 at 2020-10-14 21:21:48 +1100
+Processing by AuthorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QRn/q15EOJHIIVc8NIlJeJGbKqLP4zDnMwW36mQMbvYSzLco3dl2GNCrZMiGL6RiV+DETYX5NOVnov5ewNW8pA==", "id"=>"4"}
+  [1m[36mAuthor Load (2.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:31
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:32
+  [1m[36mAuthor Destroy (8.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/authors_controller.rb:32
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:32
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 11414ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 21:22:00 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (204.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (232.7ms)
+Completed 200 OK in 676ms (Views: 462.4ms | ActiveRecord: 204.6ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateBooks (20201014102540)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201014102540_create_books.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "author" text, "releasedate" text, "image" text)[0m
+  ↳ db/migrate/20201014102540_create_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014102540"]]
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (1.1ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (0.9ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mAuthor Create (1.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark Manson"], ["nationality", "American"], ["dob", "1984-03-09"], ["image", "https://pbs.twimg.com/profile_images/1204727725836996608/ByShSrLR.jpg"], ["created_at", "2020-10-14 10:39:51.393276"], ["updated_at", "2020-10-14 10:39:51.393276"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mAuthor Create (0.8ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "J. K. Rowling"], ["nationality", "United Kingdom"], ["dob", "1965-07-31"], ["image", "https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"], ["created_at", "2020-10-14 10:39:51.808336"], ["updated_at", "2020-10-14 10:39:51.808336"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "releasedate", "image") VALUES (?, ?, ?, ?)[0m  [["title", "The Subtle Art of not giving a Fuck"], ["author", "Mark Manson"], ["releasedate", "13 September 2016"], ["image", "data:image/jpeg;base64,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"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (1.0ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mAuthor Create (2.5ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark Manson"], ["nationality", "American"], ["dob", "1984-03-09"], ["image", "https://pbs.twimg.com/profile_images/1204727725836996608/ByShSrLR.jpg"], ["created_at", "2020-10-14 10:40:29.174119"], ["updated_at", "2020-10-14 10:40:29.174119"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mAuthor Create (1.2ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "J. K. Rowling"], ["nationality", "United Kingdom"], ["dob", "1965-07-31"], ["image", "https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"], ["created_at", "2020-10-14 10:40:29.188159"], ["updated_at", "2020-10-14 10:40:29.188159"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mBook Destroy (1.1ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (1.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "releasedate", "image") VALUES (?, ?, ?, ?)[0m  [["title", "The Subtle Art of not giving a Fuck"], ["author", "Mark Manson"], ["releasedate", "13 September 2016"], ["image", "data:image/jpeg;base64,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"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (0.8ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mAuthor Destroy (1.6ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mAuthor Create (1.2ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark Manson"], ["nationality", "American"], ["dob", "1984-03-09"], ["image", "https://pbs.twimg.com/profile_images/1204727725836996608/ByShSrLR.jpg"], ["created_at", "2020-10-14 10:40:59.442506"], ["updated_at", "2020-10-14 10:40:59.442506"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mAuthor Create (6.2ms)[0m  [1m[32mINSERT INTO "authors" ("name", "nationality", "dob", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "J. K. Rowling"], ["nationality", "United Kingdom"], ["dob", "1965-07-31"], ["image", "https://cms.qz.com/wp-content/uploads/2017/04/jk-rowling.jpg?quality=75&strip=all&w=1600&h=900&crop=1"], ["created_at", "2020-10-14 10:40:59.958798"], ["updated_at", "2020-10-14 10:40:59.958798"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mBook Destroy (0.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "releasedate", "image") VALUES (?, ?, ?, ?)[0m  [["title", "The Subtle Art of not giving a Fuck"], ["author", "Mark Manson"], ["releasedate", "13 September 2016"], ["image", "data:image/jpeg;base64,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"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/books" for ::1 at 2020-10-14 21:48:43 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/CarlaRudder/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 21:49:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 21:49:47 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (303.8ms)
+Completed 200 OK in 597ms (Views: 574.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 21:57:42 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (330.0ms)
+Completed 200 OK in 1066ms (Views: 984.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 21:58:36 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (3348.3ms)
+Completed 500 Internal Server Error in 3381ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00007fc2b1288248>:0x00007fc2b21c8c08>):
+    1: <h1>Authors</h1>
+    2: 
+    3: <% @authors.each do |author| %>
+    4: <%= img_tag book.image %>
+    5: <ul>
+    6: <li>Name: <%= link_to author.name, author %></li>
+    7: <li>Nationality: <%= author.nationality %></li>
+  
+app/views/authors/index.html.erb:4:in `block in _app_views_authors_index_html_erb__3828114063227800389_50780'
+app/views/authors/index.html.erb:3:in `_app_views_authors_index_html_erb__3828114063227800389_50780'
+Started GET "/authors" for ::1 at 2020-10-14 21:58:42 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (1804.1ms)
+Completed 500 Internal Server Error in 1813ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_tag' for #<#<Class:0x00007fc2b1288248>:0x00007fc2b20408b8>
+Did you mean?  time_tag
+               image_tag):
+    1: <h1>Authors</h1>
+    2: 
+    3: <% @authors.each do |author| %>
+    4: <%= img_tag author.image %>
+    5: <ul>
+    6: <li>Name: <%= link_to author.name, author %></li>
+    7: <li>Nationality: <%= author.nationality %></li>
+  
+app/views/authors/index.html.erb:4:in `block in _app_views_authors_index_html_erb__3828114063227800389_51220'
+app/views/authors/index.html.erb:3:in `_app_views_authors_index_html_erb__3828114063227800389_51220'
+Started GET "/authors" for ::1 at 2020-10-14 21:59:08 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (16.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (819.8ms)
+Completed 500 Internal Server Error in 877ms (ActiveRecord: 16.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_tag' for #<#<Class:0x00007fc2b1288248>:0x00007fc2ae5cefb8>
+Did you mean?  time_tag
+               image_tag):
+    1: <h1>Authors</h1>
+    2: 
+    3: <% @authors.each do |author| %>
+    4: <%= img_tag author.image %>
+    5: <ul>
+    6: <li>Name: <%= link_to author.name, author %></li>
+    7: <li>Nationality: <%= author.nationality %></li>
+  
+app/views/authors/index.html.erb:4:in `block in _app_views_authors_index_html_erb__3828114063227800389_51960'
+app/views/authors/index.html.erb:3:in `_app_views_authors_index_html_erb__3828114063227800389_51960'
+Started GET "/authors" for ::1 at 2020-10-14 21:59:43 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 697ms (Views: 418.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 22:01:19 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 1543ms (Views: 1521.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:01:21 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors" for ::1 at 2020-10-14 22:02:03 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 847ms (Views: 832.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 22:02:42 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (293.8ms)
+Completed 200 OK in 1503ms (Views: 1153.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:02:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authors" for ::1 at 2020-10-14 22:02:52 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (4.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (416.4ms)
+Started GET "/books" for ::1 at 2020-10-14 22:02:54 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>hello</h1>
+    2: 
+    3: <% @books.each do |book| %>
+    4: 
+    5: <ul>
+    6: <li>Title: <%= link_to book.title, book %></li>
+  
+app/views/books/index.html.erb:3:in `_app_views_books_index_html_erb___2691298473463381577_53880'
+Completed 200 OK in 3963ms (Views: 3928.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:03:53 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 681ms (Views: 648.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:03:55 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 22:08:06 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 811ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/CarlaRudder/Desktop/projects1/seic38-homework/William Rudder/week5/authbooks/app/views/books/index.html.erb:5: syntax error, unexpected =>
+... image_tag book.image, class => 'pics' );@output_buffer.safe...
+...                             ^~
+):
+  
+app/views/books/index.html.erb:5: syntax error, unexpected =>
+Started GET "/books" for ::1 at 2020-10-14 22:08:40 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (3.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 1398ms (Views: 1385.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:08:42 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 22:08:56 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (8.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (498.1ms)
+Completed 200 OK in 1636ms (Views: 1574.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/authors/new" for ::1 at 2020-10-14 22:09:02 +1100
+Processing by AuthorsController#new as HTML
+Started GET "/authors" for ::1 at 2020-10-14 22:09:03 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (606.4ms)
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (608.0ms)
+  Rendered authors/new.html.erb within layouts/application (653.9ms)
+Completed 200 OK in 1950ms (Views: 1634.5ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 2386ms (Views: 1396.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:09:16 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (17.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (249.5ms)
+Completed 200 OK in 1726ms (Views: 1679.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:14:39 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (18.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (977.3ms)
+Completed 200 OK in 1243ms (Views: 1203.9ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:14:42 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books/new" for ::1 at 2020-10-14 22:15:15 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 687ms (Views: 677.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2020-10-14 22:15:36 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (248.7ms)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial books/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/CarlaRudder/Desktop/projects1/seic38-homework/William Rudder/week5/authbooks/app/views"
+):
+    1: <h1>New Book: </h1>
+    2:   <%= render :partial => 'form' %>
+  
+app/views/books/new.html.erb:2:in `_app_views_books_new_html_erb___315433547074840872_62560'
+Started GET "/books/new" for ::1 at 2020-10-14 22:18:23 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (12.5ms)
+  Rendered books/new.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @book do |f| %>
+    2: 
+    3: <%= f.label :title %>
+    4: <%= f.text_field :title %>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__418931322946972466_65840'
+app/views/books/new.html.erb:2:in `_app_views_books_new_html_erb___315433547074840872_65820'
+Started GET "/books/new" for ::1 at 2020-10-14 22:20:24 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.4ms)
+  Rendered books/new.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @book do |f| %>
+    2: 
+    3: <%= f.label :title %>
+    4: <%= f.text_field :title %>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__418931322946972466_69120'
+app/views/books/new.html.erb:2:in `_app_views_books_new_html_erb___315433547074840872_69100'
+Started GET "/books" for ::1 at 2020-10-14 22:21:14 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (6.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 1150ms (Views: 1112.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:21:16 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books/new" for ::1 at 2020-10-14 22:21:23 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (335.3ms)
+  Rendered books/new.html.erb within layouts/application (340.2ms)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @book do |f| %>
+    2: 
+    3: <%= f.label :title %>
+    4: <%= f.text_field :title %>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__418931322946972466_70240'
+app/views/books/new.html.erb:2:in `_app_views_books_new_html_erb___315433547074840872_70220'
+Started GET "/books/new" for ::1 at 2020-10-14 22:23:16 +1100
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (25.6ms)
+  Rendered books/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 980ms (Views: 731.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:23:19 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/books" for ::1 at 2020-10-14 22:25:00 +1100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sf3MFY2bUxzTYM0LfJ3yuM9kzsJpPyvoWvYWFBsISfLiKISWDgYdlcvq/v/OOx+iCR8gLSMlL+oOUV+gv9GboA==", "book"=>{"title"=>"jaws ", "author"=>"Peter Benchley", "releasedate"=>"February 1974", "image"=>"data:image/jpeg;base64,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"}, "commit"=>"Create Book"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:16
+  [1m[36mBook Create (9.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "releasedate", "image") VALUES (?, ?, ?, ?)[0m  [["title", "jaws "], ["author", "Peter Benchley"], ["releasedate", "February 1974"], ["image", "data:image/jpeg;base64,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"]]
+  ↳ app/controllers/books_controller.rb:16
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:16
+Redirected to http://localhost:3000/books/4
+Completed 302 Found in 9683ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/books/4" for ::1 at 2020-10-14 22:25:17 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (8.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1053ms (Views: 994.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:25:19 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 22:28:22 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (11.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 521ms (Views: 480.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/books/4" for ::1 at 2020-10-14 22:28:39 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (6.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (283.9ms)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 6.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Book:0x00007fc2b1a91f98>):
+    1: <h2><%= @book.name %></h2>
+    2: 
+    3: <%= image_tag @book.image, :class => 'feature', :alt => @book.name %>
+    4: 
+  
+app/views/books/show.html.erb:1:in `_app_views_books_show_html_erb__4041451603408038790_74780'
+Started GET "/books/4" for ::1 at 2020-10-14 22:30:08 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (5.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 823ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Book:0x00007fc2b230fc10>):
+    1: <h2><%= @book.name %></h2>
+    2: 
+    3: <%= image_tag @book.image, :class => 'feature', :alt => @book.name %>
+    4: 
+  
+app/views/books/show.html.erb:1:in `_app_views_books_show_html_erb__4041451603408038790_78040'
+Started GET "/books/4" for ::1 at 2020-10-14 22:31:02 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (6.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (201.0ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `dob' for #<Book:0x00007fc2b20916f0>):
+    4: 
+    5: <ul>
+    6:   <li>Title: <%= link_to @book.title, @book %></li>
+    7:   <li>Author: <%= @book.dob %></li>
+    8:   <li>Release date: <%= @book.releasedate %></li>
+    9: </ul>
+   10: 
+  
+app/views/books/show.html.erb:7:in `_app_views_books_show_html_erb__4041451603408038790_78560'
+Started GET "/books/4" for ::1 at 2020-10-14 22:31:21 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (3.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 537ms (Views: 510.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:31:22 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-10-14 22:31:30 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (11.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (173.1ms)
+Completed 200 OK in 756ms (Views: 731.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/authors" for ::1 at 2020-10-14 22:31:37 +1100
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:3
+  Rendered authors/index.html.erb within layouts/application (298.7ms)
+Completed 200 OK in 892ms (Views: 852.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/authors/9" for ::1 at 2020-10-14 22:32:00 +1100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAuthor Load (3.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:7
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 199ms (Views: 126.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:32:08 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (7.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 364ms (Views: 353.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:32:29 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 911ms (Views: 748.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/css/author.css" for ::1 at 2020-10-14 22:32:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/css/author.css"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/books/3" for ::1 at 2020-10-14 22:32:38 +1100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (43.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:12
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 818ms (Views: 754.7ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/books" for ::1 at 2020-10-14 22:35:40 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (13.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (135.1ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 13.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5: <%= image_tag book.image, :class => 'pics' %>
+     6: <ul>
+     7: <li>Title: <%= link_to book.title, book %></li>
+     8: <li>Author: <%= link_to author.name, authors %></li>
+     9: 
+    10: <% end %>
+  
+app/views/books/index.html.erb:8:in `block in _app_views_books_index_html_erb___2691298473463381577_80660'
+app/views/books/index.html.erb:3:in `_app_views_books_index_html_erb___2691298473463381577_80660'
+Started GET "/books" for ::1 at 2020-10-14 22:36:17 +1100
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (7.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:3
+  Rendered books/index.html.erb within layouts/application (163.1ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5: <%= image_tag book.image, :class => 'pics' %>
+     6: <ul>
+     7: <li>Title: <%= link_to book.title, book %></li>
+     8: <li>Author: <%= link_to author.name, author %></li>
+     9: 
+    10: <% end %>
+  
+app/views/books/index.html.erb:8:in `block in _app_views_books_index_html_erb___2691298473463381577_81180'
+app/views/books/index.html.erb:3:in `_app_views_books_index_html_erb___2691298473463381577_81180'
