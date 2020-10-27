@@ -1,0 +1,15 @@
+<%= form_for @album do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :require => true, :autofocus => true %>
+
+  <%= f.label :release_date, "Release Date" %>
+  <%= f.text_field :release_date, placeholder: 'YYYY-MM-DD' %>
+
+  <%= f.label :meta_rating, "MetaCritic Rating" %>
+  <%= f.number_field :meta_rating %>
+
+  <%= f.label :cover_image %>
+  <%= f.url_field :cover_image, :require => true %>
+  
+  <%= f.submit %>
+<% end %>
