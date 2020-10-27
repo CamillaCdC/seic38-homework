@@ -71,8 +71,8 @@ const currentWeather = function(e){
         day_index = (today_day+i)%7;
         $next_day = $(`<p>${week_days[day_index]}</p>`)
         $next_img = $('<img>').attr('src','http://openweathermap.org/img/wn/'+data.daily[i].weather[0].icon+'.png');
-        $next_temp_max_c = $(`<p>Max: ${(data.daily[i].temp.max-273.15).toFixed(2)} &#8451</p>`);
-        $next_temp_min_c = $(`<p>Min: ${(data.daily[i].temp.min-273.15).toFixed(2)} &#8451</p>`);
+        $next_temp_max_c = $(`<p> ${(data.daily[i].temp.max-273.15).toFixed(2)} &#8451</p>`);
+        $next_temp_min_c = $(`<p> ${(data.daily[i].temp.min-273.15).toFixed(2)} &#8451</p>`);
 
         // making different ids for the divs as we can then give them `display:inline-block` -
         // - css.
@@ -80,6 +80,7 @@ const currentWeather = function(e){
         $container_T.append($next_img);
         $container_T.append($next_day);
         $container_T.append($next_temp_max_c);
+        $container_T.append($('<hr>'));
         $container_T.append($next_temp_min_c);
         $container_table.append($container_T);
 
@@ -87,7 +88,7 @@ const currentWeather = function(e){
         $('#city').val(null);
       };
 
-      $('#container').append($('<hr>'));
+      $('#container').append($('<hr>').attr('style','border-color:rgba(35,15,35,0.75)'));
 
     });
   });
