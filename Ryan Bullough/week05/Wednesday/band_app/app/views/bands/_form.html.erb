@@ -1,0 +1,18 @@
+<%= form_for @band do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :require => true, :autofocus => true %>
+
+  <%= f.label :formed, "YYYY-MM-DD" %>
+  <%= f.text_field :formed %>
+
+  <%= f.label :member_count, "Members" %>
+  <%= f.number_field :member_count %>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image, :require => true %>
+  
+  <%= f.submit %>
+<% end %>

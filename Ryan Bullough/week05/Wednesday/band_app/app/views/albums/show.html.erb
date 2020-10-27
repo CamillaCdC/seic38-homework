@@ -1,0 +1,17 @@
+<div class="container">
+  <% if @album.cover_image.present? %>
+    <%= image_tag @album.cover_image, :class => 'show-image' %>
+  <% end %>
+  <ul>    
+    <% if @album.release_date.present? %>
+    <li class="album album-show">Released <%= @album.release_date.strftime '%B %e, %Y' %></li>
+    <% end %>
+    
+    <li class="album album-show">MetaCritic Rating: <%= @album.meta_rating %></li>
+  </ul>
+</div>
+
+<div class="controls">
+  <%= link_to 'Edit', edit_album_path(@album), class: 'album-show control' %>
+  <%= link_to 'Remove', album_path(@album), class: 'album-show control', method: 'delete', data: { confirm: "Are you sure?" } %>
+</div>

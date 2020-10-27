@@ -1,0 +1,6 @@
+<ul>
+<% @albums.each do |album| %>
+  <li class="album"><%= link_to image_tag(album.cover_image, :class => 'index-album-image'), album_path(album) %></li>
+<% end %>
+</ul>
+<%= link_to 'Create',  new_album_path, class: 'new' %>
