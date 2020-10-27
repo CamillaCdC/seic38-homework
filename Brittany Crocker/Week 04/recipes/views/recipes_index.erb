@@ -1,0 +1,9 @@
+<h2>All recipes</h2>
+<img class="index" src="/img/recipes-1.jpg" alt=" open book, off-white blank paper, book placed on wooden beechwood bench next, white and thin blue tartan tea towel draped over left top corner, wooden spoon and fork covering right bottom corner>
+<% @recipes.each do |recipe| %>
+<p>
+  <a href="recipes/<%=recipe["id"] %>">
+  <%= recipe["name"] %>
+  </a>
+</p>
+<% end %>

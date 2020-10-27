@@ -1,0 +1,29 @@
+.thumb {
+  max-width: 40vw;
+  max-height: 40vh;
+  box-shadow: 5px 5px;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  background-color: rgba(200,173,127,0.7);
+  border: 2px solid #C8AD7F;
+  border-radius: 1.5em;
+  box-shadow: 5px 5px;
+}
+
+.feature {
+  max-width: 75vw;
+  max-height: 75vh;
+  box-shadow: 5px 5px;
+}
+
+body {
+  background-color: #E5C899
+}
+
+.books {
+  max-width: 40vw;
+  max-height: 40vh;
+}

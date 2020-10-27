@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <%= link_to "Home", root_path %><br><br>
+    <%= link_to "All Movies", movies_path %>
+    <%= link_to "Add a Director", new_director_path %>
+  </nav>
+
+  <h1>Farid's Favourite Directors</h1>
+</header>
+
+<div id="all">
+  <% @directors.shuffle.each do |director| %>
+    <div id='index'>
+      <% if director.image.present? %>
+        <%= link_to image_tag(director.image, :id=>'img'), director %>
+      <% else %>
+        <%= image_tag "https://via.placeholder.com/500?text=#{director.name}" , :id=>'img'%>
+      <% end %>
+      <p><%= link_to director.name, director %><p>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+<h1>All the World's Oceans</h1>
+
+<% @oceans.each do |ocean| %>
+  <p> The
+    <%= link_to ocean[:name], ocean_path(ocean.id) %> Ocean
+    covers
+    <%= number_to_human( ocean.area) %> Km<sup>2</sup>
+  </p>
+<% end %>

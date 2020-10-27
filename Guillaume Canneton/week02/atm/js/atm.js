@@ -1,16 +1,15 @@
-let checkBalance = 0;
-let savBalance = 0;
+
+$( document ).ready(function() {
+  let checkBalance = 0;
+  let savBalance = 0;
 // Checking account part
 //first button - deposit on checking account
-$( document ).ready(function() {
-
-
 $('#checking-deposit').on('click', function(){
   let $checkAmount = $( '#checking-amount' ).val();
-  if ( isNaN(parseInt( $checkAmount )) ){
+  if ( isNaN( +$checkAmount ) ){
     window.alert("Please enter a number");//this statement to avoid a bug with NaN value
   } else {
-  checkBalance += parseInt( $checkAmount );
+  checkBalance += +$checkAmount;
   $( '#checking-balance' ).text( '$' + checkBalance );
   alertBalance();
   }
@@ -18,11 +17,11 @@ $('#checking-deposit').on('click', function(){
 //second button - withdraw on checking account
 $( '#checking-withdraw' ).on( 'click', function(){
   let $checkAmount = $( '#checking-amount' ).val();
-  if ( isNaN(parseInt( $checkAmount )) ){
+  if ( isNaN( +$checkAmount ) ){
     window.alert("Please enter a number");//this statement to avoid a bug with NaN value
   } else {
     if ( $checkAmount <= checkBalance ) {
-      checkBalance -= parseInt( $checkAmount );
+      checkBalance -= +$checkAmount;
       $( '#checking-balance' ).text( '$' + checkBalance );
       alertBalance();
     } else if ( $checkAmount <= ( checkBalance + savBalance ) ){
@@ -40,10 +39,10 @@ $( '#checking-withdraw' ).on( 'click', function(){
 //first button - deposit on savings account
 $( '#savings-deposit' ).on( 'click', function(){
   let $savAmount = $( '#savings-amount' ).val();
-  if ( isNaN(parseInt( $savAmount )) ){
+  if ( isNaN( +$savAmount ) ){
     window.alert("Please enter a number");//this statement to avoid a bug with NaN value
   } else {
-  savBalance += parseInt( $savAmount );
+  savBalance += +$savAmount;
   $( '#savings-balance' ).text( '$' + savBalance );
   alertBalance();
   }
@@ -52,11 +51,11 @@ $( '#savings-deposit' ).on( 'click', function(){
 //second button - withdraw on savings account
 $( '#savings-withdraw' ).on( 'click', function(){
   let $savAmount = $( '#savings-amount' ).val();
-  if ( isNaN(parseInt( $savAmount )) ){
+  if ( isNaN( +$savAmount ) ){
     window.alert("Please enter a number");//this statement to avoid a bug with NaN value
   } else {
     if ( $savAmount <= savBalance ) {
-      savBalance -= parseInt( $savAmount );
+      savBalance -= +$savAmount;
       $( '#savings-balance' ).text( '$' + savBalance );
       alertBalance();
     } else if ( $savAmount <= ( checkBalance + savBalance )){
@@ -72,15 +71,12 @@ $( '#savings-withdraw' ).on( 'click', function(){
 });
 //This function set the background color of balance for checking and savings
 const alertBalance = function(){
+  $('.zero').removeClass( 'zero' );
   if ( checkBalance <= 0 ){
     $( '#checking-balance' ).addClass( 'zero' )
-  } else {
-    $( '#checking-balance' ).removeClass( 'zero' )
   };
   if ( savBalance <= 0 ){
     $( '#savings-balance' ).addClass( 'zero' )
-  } else {
-    $( '#savings-balance' ).removeClass( 'zero' )
   };
   if ( checkBalance > 0 || savBalance > 0 ){
     $( '#alert').css( 'visibility', 'hidden')

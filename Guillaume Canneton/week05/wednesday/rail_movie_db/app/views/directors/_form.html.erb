@@ -1,0 +1,15 @@
+<%= form_for @director do |f| %>
+  <%= f.label :name, :required => true, :autofocus => true %></br>
+  <%= f.text_field :name %></br>
+  <%= f.label :filmo %></br>
+  <%= f.text_field :filmo %></br>
+  <%= f.label :dob %></br>
+  <%= f.text_field :dob %></br>
+  <%= f.label :awards %></br>
+  <%= f.text_field :awards %></br>
+  <%= f.label :nationality %></br>
+  <%= f.text_field :nationality %></br>
+  <%= f.label :image %></br>
+  <%= f.text_field :image %></br>
+  <%= f.submit %>
+<% end %>

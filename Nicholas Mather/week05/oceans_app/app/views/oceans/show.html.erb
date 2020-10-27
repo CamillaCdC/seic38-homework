@@ -1,0 +1,24 @@
+<h2>The <%= @ocean.name %> Ocean</h2>
+
+<%= image_tag @ocean.image, :class => 'feature' if @ocean.image.present? %>
+
+<p>
+  The
+  <%= @ocean.name %>
+  Ocean covers
+  <%= number_to_human( @ocean.area ) %> Km<sup>2</sup>.
+  It's deepest point is
+  <%= number_to_human( @ocean.deepest_point ) %>
+  meters below the surface. It borders the following countries:
+</p>
+
+<ul>
+  <% @ocean.countries.each do |country| %>
+    <li><%= country %></li>
+  <% end %>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit Ocean', edit_ocean_path(@ocean.id) %>
+  <%= button_to 'Delete Ocean', ocean_path(@ocean.id), :method => 'delete' %>
+</div>

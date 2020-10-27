@@ -1,0 +1,1749 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateArtists (20201014054145)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "genre" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014054145_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054145"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "release" date, "tracks" integer, "cover" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-14 05:46:52.319303"], ["updated_at", "2020-10-14 05:46:52.319303"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateArtists (20201014054145)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "members" text, "genre" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014054145_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054145"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "release" date, "tracks" integer, "cover" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-14 05:50:27.724243"], ["updated_at", "2020-10-14 05:50:27.724243"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mArtist Create (5.1ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Mountain Goats"], ["nationality", "American"], ["members", "John Darnielle, Peter Hughes, Jon Wurster, Matt Douglas"], ["genre", "folk rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Mountain_Goats5.jpg"], ["created_at", "2020-10-14 20:23:13.080604"], ["updated_at", "2020-10-14 20:23:13.080604"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Violent Soho"], ["nationality", "Australian"], ["members", "Luke Boerdam, Luke Henery, Michael Richards, James Tidswell"], ["genre", "alt rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/64/Violent_Soho_2009.jpg"], ["created_at", "2020-10-14 20:23:13.088259"], ["updated_at", "2020-10-14 20:23:13.088259"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic Monkeys"], ["nationality", "English"], ["members", "Alex Turner, Jamie Cook, Nick O'Malley, Matt Helders"], ["genre", "garage rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/300px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"], ["created_at", "2020-10-14 20:23:13.090923"], ["updated_at", "2020-10-14 20:23:13.090923"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Mountain Goats"], ["nationality", "American"], ["members", "John Darnielle, Peter Hughes, Jon Wurster, Matt Douglas"], ["genre", "folk rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Mountain_Goats5.jpg"], ["created_at", "2020-10-14 20:24:01.115912"], ["updated_at", "2020-10-14 20:24:01.115912"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Violent Soho"], ["nationality", "Australian"], ["members", "Luke Boerdam, Luke Henery, Michael Richards, James Tidswell"], ["genre", "alt rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/64/Violent_Soho_2009.jpg"], ["created_at", "2020-10-14 20:24:01.118595"], ["updated_at", "2020-10-14 20:24:01.118595"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic Monkeys"], ["nationality", "English"], ["members", "Alex Turner, Jamie Cook, Nick O'Malley, Matt Helders"], ["genre", "garage rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/300px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"], ["created_at", "2020-10-14 20:24:01.121180"], ["updated_at", "2020-10-14 20:24:01.121180"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"], ["created_at", "2020-10-14 20:24:01.130486"], ["updated_at", "2020-10-14 20:24:01.130486"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"], ["created_at", "2020-10-14 20:24:01.132953"], ["updated_at", "2020-10-14 20:24:01.132953"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All Hail West Texas"], ["release", "2002-02-19"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/f/f1/Wtexas.jpg"], ["created_at", "2020-10-14 20:24:01.135255"], ["updated_at", "2020-10-14 20:24:01.135255"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Hungry Ghost"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1d/Hungry_Ghost_%28Violent_Soho%29_Album_Cover.jpg"], ["created_at", "2020-10-14 20:24:01.137306"], ["updated_at", "2020-10-14 20:24:01.137306"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Waco"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1c/WACO_%28Violent_Soho%29_Album_Cover.jpg"], ["created_at", "2020-10-14 20:24:01.139496"], ["updated_at", "2020-10-14 20:24:01.139496"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mAlbum Create (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Whatever People Say I am, That's What I'm Not"], ["release", "2006-01-23"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/5/5f/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not.jpg"], ["created_at", "2020-10-14 20:24:01.142429"], ["updated_at", "2020-10-14 20:24:01.142429"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "AM"], ["release", "2013-09-09"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png"], ["created_at", "2020-10-14 20:24:01.146043"], ["updated_at", "2020-10-14 20:24:01.146043"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Mountain Goats"], ["nationality", "American"], ["members", "John Darnielle, Peter Hughes, Jon Wurster, Matt Douglas"], ["genre", "folk rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Mountain_Goats5.jpg"], ["created_at", "2020-10-14 20:24:27.976108"], ["updated_at", "2020-10-14 20:24:27.976108"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Violent Soho"], ["nationality", "Australian"], ["members", "Luke Boerdam, Luke Henery, Michael Richards, James Tidswell"], ["genre", "alt rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/64/Violent_Soho_2009.jpg"], ["created_at", "2020-10-14 20:24:27.978705"], ["updated_at", "2020-10-14 20:24:27.978705"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic Monkeys"], ["nationality", "English"], ["members", "Alex Turner, Jamie Cook, Nick O'Malley, Matt Helders"], ["genre", "garage rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/300px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"], ["created_at", "2020-10-14 20:24:27.981332"], ["updated_at", "2020-10-14 20:24:27.981332"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.2ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.3ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.4ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.2ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.2ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.4ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAlbum Destroy (0.3ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mAlbum Create (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"], ["created_at", "2020-10-14 20:24:28.006499"], ["updated_at", "2020-10-14 20:24:28.006499"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"], ["created_at", "2020-10-14 20:24:28.009865"], ["updated_at", "2020-10-14 20:24:28.009865"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All Hail West Texas"], ["release", "2002-02-19"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/f/f1/Wtexas.jpg"], ["created_at", "2020-10-14 20:24:28.013660"], ["updated_at", "2020-10-14 20:24:28.013660"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Hungry Ghost"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1d/Hungry_Ghost_%28Violent_Soho%29_Album_Cover.jpg"], ["created_at", "2020-10-14 20:24:28.018163"], ["updated_at", "2020-10-14 20:24:28.018163"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Waco"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1c/WACO_%28Violent_Soho%29_Album_Cover.jpg"], ["created_at", "2020-10-14 20:24:28.022493"], ["updated_at", "2020-10-14 20:24:28.022493"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Whatever People Say I am, That's What I'm Not"], ["release", "2006-01-23"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/5/5f/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not.jpg"], ["created_at", "2020-10-14 20:24:28.027015"], ["updated_at", "2020-10-14 20:24:28.027015"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "AM"], ["release", "2013-09-09"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png"], ["created_at", "2020-10-14 20:24:28.031312"], ["updated_at", "2020-10-14 20:24:28.031312"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "albums"[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "release" date, "tracks" integer, "cover" text)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Mountain Goats"], ["nationality", "American"], ["members", "John Darnielle, Peter Hughes, Jon Wurster, Matt Douglas"], ["genre", "folk rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Mountain_Goats5.jpg"], ["created_at", "2020-10-14 20:26:25.749832"], ["updated_at", "2020-10-14 20:26:25.749832"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Violent Soho"], ["nationality", "Australian"], ["members", "Luke Boerdam, Luke Henery, Michael Richards, James Tidswell"], ["genre", "alt rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/64/Violent_Soho_2009.jpg"], ["created_at", "2020-10-14 20:26:25.752299"], ["updated_at", "2020-10-14 20:26:25.752299"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic Monkeys"], ["nationality", "English"], ["members", "Alex Turner, Jamie Cook, Nick O'Malley, Matt Helders"], ["genre", "garage rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/300px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"], ["created_at", "2020-10-14 20:26:25.754602"], ["updated_at", "2020-10-14 20:26:25.754602"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAlbum Create (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "All Hail West Texas"], ["release", "2002-02-19"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/f/f1/Wtexas.jpg"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Hungry Ghost"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1d/Hungry_Ghost_%28Violent_Soho%29_Album_Cover.jpg"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAlbum Create (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Waco"], ["release", "2016-03-18"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1c/WACO_%28Violent_Soho%29_Album_Cover.jpg"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Whatever People Say I am, That's What I'm Not"], ["release", "2006-01-23"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/5/5f/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not.jpg"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mAlbum Create (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "AM"], ["release", "2013-09-09"], ["tracks", 0], ["cover", "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "albums"[0m
+  ↳ db/seeds.rb:25
+Started GET "/" for ::1 at 2020-10-15 07:44:09 +1100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 1201ms (Views: 1192.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 07:44:17 +1100
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/controllers/albums_controller.rb:8: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/albums_controller.rb:8: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/albums" for ::1 at 2020-10-15 07:44:41 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Album:0x00007fcfcc71e1b8>):
+    1: <h1>All Albums</h1>
+    2: 
+    3: <% @albums.each do |album| %>
+    4:   <% link_to image_tag(album.image, :class => 'thumb', alt => album.title), album %>
+    5: <% end %>
+  
+app/views/albums/index.html.erb:4:in `block in _app_views_albums_index_html_erb__4548046220228204319_16240'
+app/views/albums/index.html.erb:3:in `_app_views_albums_index_html_erb__4548046220228204319_16240'
+Started GET "/albums" for ::1 at 2020-10-15 07:45:57 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (86.8ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `alt' for #<#<Class:0x00007fcfcfede350>:0x00007fcfcff81730>):
+    1: <h1>All Albums</h1>
+    2: 
+    3: <% @albums.each do |album| %>
+    4:   <%= link_to image_tag(album.cover, :class => 'thumb', alt => album.title), album %>
+    5: <% end %>
+  
+app/views/albums/index.html.erb:4:in `block in _app_views_albums_index_html_erb__4548046220228204319_16800'
+app/views/albums/index.html.erb:3:in `_app_views_albums_index_html_erb__4548046220228204319_16800'
+Started GET "/albums" for ::1 at 2020-10-15 07:46:09 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/1" for ::1 at 2020-10-15 07:46:34 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+Completed 406 Not Acceptable in 29ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (AlbumsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/albums" for ::1 at 2020-10-15 07:46:42 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/10" for ::1 at 2020-10-15 07:46:44 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ArtistsController::Artists):
+  
+app/controllers/artists_controller.rb:13:in `show'
+Started GET "/artists/10" for ::1 at 2020-10-15 07:47:00 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/10" for ::1 at 2020-10-15 07:52:44 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/views/artists/show.html.erb:16: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+  
+app/views/artists/show.html.erb:16: syntax error, unexpected `ensure', expecting end-of-input
+Started GET "/artists/10" for ::1 at 2020-10-15 07:52:55 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-10-15 07:53:08 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/11" for ::1 at 2020-10-15 07:53:10 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists/12" for ::1 at 2020-10-15 07:53:17 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:13
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-10-15 07:55:35 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `works_path' for #<#<Class:0x00007fcfd700fc40>:0x00007fcfd8056388>):
+    14:       <nav>
+    15:         <%= link_to 'All Artists', artists_path %>
+    16:         <%= link_to 'New Artist', new_artist_path %>
+    17:         <%= link_to 'All Albums', works_path %>
+    18:         <%= link_to 'New Album', new_Album_path %>
+    19:       </nav>
+    20:       <%= yield %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__3368815528992214160_22520'
+Started GET "/" for ::1 at 2020-10-15 07:55:47 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_Album_path' for #<#<Class:0x00007fcfd700fc40>:0x00007fcfcfc67d38>
+Did you mean?  new_album_url
+               edit_album_path):
+    15:         <%= link_to 'All Artists', artists_path %>
+    16:         <%= link_to 'New Artist', new_artist_path %>
+    17:         <%= link_to 'All Albums', albums_path %>
+    18:         <%= link_to 'New Album', new_Album_path %>
+    19:       </nav>
+    20:       <%= yield %>
+    21:     </div>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__3368815528992214160_23100'
+Started GET "/" for ::1 at 2020-10-15 07:55:55 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 07:55:57 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 07:55:59 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 07:56:00 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2020-10-15 07:56:01 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2020-10-15 08:00:45 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/views/artists/new.html.erb:3: syntax error, unexpected string literal, expecting ')'
+...ffer.append=( render :partial 'form' );
+...                              ^
+):
+  
+app/views/artists/new.html.erb:3: syntax error, unexpected string literal, expecting ')'
+Started GET "/artists/new" for ::1 at 2020-10-15 08:00:59 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (1.5ms)
+  Rendered artists/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <% form_for @artist do |f| %>
+    2:   <%= f.label :name %>
+    3:   <%= f.text_field :name %>
+    4: 
+  
+app/views/artists/_form.html.erb:1:in `_app_views_artists__form_html_erb___1814329547435233500_24600'
+app/views/artists/new.html.erb:3:in `_app_views_artists_new_html_erb__1142900323340803511_24580'
+Started GET "/artists/new" for ::1 at 2020-10-15 08:01:11 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (22.9ms)
+  Rendered artists/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 42ms (Views: 34.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/new" for ::1 at 2020-10-15 08:01:55 +1100
+Processing by ArtistsController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+TypeError (exception class/object expected):
+  
+app/controllers/artists_controller.rb:8:in `raise'
+app/controllers/artists_controller.rb:8:in `new'
+Started PUT "/__web_console/repl_sessions/5eea9fb24899343041edd6a35c7dbb46" for ::1 at 2020-10-15 08:02:03 +1100
+Started PUT "/__web_console/repl_sessions/5eea9fb24899343041edd6a35c7dbb46" for ::1 at 2020-10-15 08:02:11 +1100
+Started GET "/artists/new" for ::1 at 2020-10-15 08:03:34 +1100
+Processing by ArtistsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (exception class/object expected):
+  
+app/controllers/artists_controller.rb:8:in `raise'
+app/controllers/artists_controller.rb:8:in `new'
+Started GET "/artists/new" for ::1 at 2020-10-15 08:03:52 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (3.0ms)
+  Rendered artists/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 20.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/new" for ::1 at 2020-10-15 08:03:54 +1100
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for AlbumsController):
+  
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/artists/new" for ::1 at 2020-10-15 08:03:55 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (2.7ms)
+  Rendered artists/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 08:03:56 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/new" for ::1 at 2020-10-15 08:03:57 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (2.7ms)
+  Rendered artists/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2020-10-15 08:04:24 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (2.3ms)
+  Rendered artists/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists" for ::1 at 2020-10-15 08:05:46 +1100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oIfLND1CFA6C8FJUDz7iCVKgrGj8Hr17SnxCRZmUANJQnp3F4DXqvgLCQTcHg1yFF01jaQUDVNLVEkg/YFkrw==", "artist"=>{"name"=>"beans", "nationality"=>"", "members"=>"", "genre"=>"", "image"=>""}, "commit"=>"Create Artist"}
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<ArtistsController:0x00007fcfd16d75d8>
+Did you mean?  artist_path):
+  
+app/controllers/artists_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/04b98188eaabfb2744de74bae43f0ca7" for ::1 at 2020-10-15 08:06:21 +1100
+Started PUT "/__web_console/repl_sessions/04b98188eaabfb2744de74bae43f0ca7" for ::1 at 2020-10-15 08:06:23 +1100
+Started PUT "/__web_console/repl_sessions/04b98188eaabfb2744de74bae43f0ca7" for ::1 at 2020-10-15 08:06:33 +1100
+Started PUT "/__web_console/repl_sessions/04b98188eaabfb2744de74bae43f0ca7" for ::1 at 2020-10-15 08:07:44 +1100
+Started POST "/artists" for ::1 at 2020-10-15 08:08:04 +1100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oIfLND1CFA6C8FJUDz7iCVKgrGj8Hr17SnxCRZmUANJQnp3F4DXqvgLCQTcHg1yFF01jaQUDVNLVEkg/YFkrw==", "artist"=>{"name"=>"beans", "nationality"=>"", "members"=>"", "genre"=>"", "image"=>""}, "commit"=>"Create Artist"}
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<ArtistsController:0x00007fcfd607a208>
+Did you mean?  artist_path):
+  
+app/controllers/artists_controller.rb:15:in `create'
+Started POST "/artists" for ::1 at 2020-10-15 08:08:20 +1100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oIfLND1CFA6C8FJUDz7iCVKgrGj8Hr17SnxCRZmUANJQnp3F4DXqvgLCQTcHg1yFF01jaQUDVNLVEkg/YFkrw==", "artist"=>{"name"=>"beans", "nationality"=>"", "members"=>"", "genre"=>"", "image"=>""}, "commit"=>"Create Artist"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/artists_controller.rb:15:in `create'
+Started POST "/artists" for ::1 at 2020-10-15 08:09:50 +1100
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/controllers/artists_controller.rb:24: syntax error, unexpected ';', expecting ')'
+...ationality, :members, :genre, ;image)
+...                              ^
+):
+  
+app/controllers/artists_controller.rb:24: syntax error, unexpected ';', expecting ')'
+Started POST "/artists" for ::1 at 2020-10-15 08:10:08 +1100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oIfLND1CFA6C8FJUDz7iCVKgrGj8Hr17SnxCRZmUANJQnp3F4DXqvgLCQTcHg1yFF01jaQUDVNLVEkg/YFkrw==", "artist"=>{"name"=>"beans", "nationality"=>"", "members"=>"", "genre"=>"", "image"=>""}, "commit"=>"Create Artist"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/artists_controller.rb:15
+  [1m[36mArtist Create (1.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "beans"], ["nationality", ""], ["members", ""], ["genre", ""], ["image", ""], ["created_at", "2020-10-14 21:10:08.790842"], ["updated_at", "2020-10-14 21:10:08.790842"]]
+  ↳ app/controllers/artists_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/artists_controller.rb:15
+Redirected to http://localhost:3000/artists/13
+Completed 302 Found in 14ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/13" for ::1 at 2020-10-15 08:10:08 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:7
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/13" for ::1 at 2020-10-15 08:12:32 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:7
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/13/edit" for ::1 at 2020-10-15 08:12:34 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:20
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists/13/edit" for ::1 at 2020-10-15 08:13:07 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:20
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (3.0ms)
+  Rendered artists/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/artists/13" for ::1 at 2020-10-15 08:14:03 +1100
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/controllers/artists_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/artists_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+Started PATCH "/artists/13" for ::1 at 2020-10-15 08:14:13 +1100
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6WiTxS75PPtRHopj6h/ml3i7XXJFU6sTzWwnNNeYE5oZccU0847CS9EsmQDiolgbPVaSc7xOQrpSAi1OLlU4g==", "artist"=>{"name"=>"beans", "nationality"=>"yep", "members"=>"", "genre"=>"", "image"=>""}, "commit"=>"Update Artist", "id"=>"13"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/artists_controller.rb:25
+  [1m[36mArtist Update (0.3ms)[0m  [1m[33mUPDATE "artists" SET "nationality" = ?, "updated_at" = ? WHERE "artists"."id" = ?[0m  [["nationality", "yep"], ["updated_at", "2020-10-14 21:14:13.768596"], ["id", 13]]
+  ↳ app/controllers/artists_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/artists_controller.rb:25
+Redirected to http://localhost:3000/artists/13
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/artists/13" for ::1 at 2020-10-15 08:14:13 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:7
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/artists/13" for ::1 at 2020-10-15 08:14:56 +1100
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/controllers/artists_controller.rb:38: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/artists_controller.rb:38: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/artists/13" for ::1 at 2020-10-15 08:15:05 +1100
+Processing by ArtistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wp9gwqh9ijYDB+jvl/wWHjsQKID2ZExPMa4IPkUyPrfJXwWZbwhVzMEHIKIb3uDkCgefvPGAO+mX07AXrtUKGw==", "id"=>"13"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/artists_controller.rb:31
+  [1m[36mArtist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/artists_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/artists_controller.rb:31
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 08:15:05 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:21:45 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/albums/1" for ::1 at 2020-10-15 08:21:47 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <h2><%= @album.title %></h2>
+    2: 
+    3: <%= image_tag @work.image, :class => 'feature', :alt => @work.title %>
+    4: 
+    5: <p>
+    6:   <%= @album.title %> was released on
+  
+app/views/albums/show.html.erb:3:in `_app_views_albums_show_html_erb___583495793482038327_66440'
+Started GET "/albums/1" for ::1 at 2020-10-15 08:22:12 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h2><%= @album.title %></h2>
+    2: 
+    3: <%= image_tag @album.cover, :class => 'feature', :alt => @work.title %>
+    4: 
+    5: <p>
+    6:   <%= @album.title %> was released on
+  
+app/views/albums/show.html.erb:3:in `_app_views_albums_show_html_erb___583495793482038327_66960'
+Started GET "/albums/1" for ::1 at 2020-10-15 08:22:23 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `split' for 0:Integer):
+    12:   It contains the following tracks:
+    13: </p>
+    14: <ul>
+    15:   <% @album.tracklist.each do |track| %>
+    16:     <li><%= track %></li>
+    17:   <% end %>
+    18: </ul>
+  
+app/models/album.rb:4:in `tracklist'
+app/views/albums/show.html.erb:15:in `_app_views_albums_show_html_erb___583495793482038327_67480'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateAlbums (20201014054155)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "release" date, "tracks" text, "cover" text)[0m
+  ↳ db/migrate/20201014054155_create_albums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201014054155"]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 11]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mArtist Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 12]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Mountain Goats"], ["nationality", "American"], ["members", "John Darnielle, Peter Hughes, Jon Wurster, Matt Douglas"], ["genre", "folk rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/1/19/The_Mountain_Goats5.jpg"], ["created_at", "2020-10-14 21:24:33.728997"], ["updated_at", "2020-10-14 21:24:33.728997"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Violent Soho"], ["nationality", "Australian"], ["members", "Luke Boerdam, Luke Henery, Michael Richards, James Tidswell"], ["genre", "alt rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/64/Violent_Soho_2009.jpg"], ["created_at", "2020-10-14 21:24:33.731088"], ["updated_at", "2020-10-14 21:24:33.731088"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "members", "genre", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic Monkeys"], ["nationality", "English"], ["members", "Alex Turner, Jamie Cook, Nick O'Malley, Matt Helders"], ["genre", "garage rock"], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/300px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"], ["created_at", "2020-10-14 21:24:33.733178"], ["updated_at", "2020-10-14 21:24:33.733178"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mAlbum Create (0.2ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Beat the Champ"], ["release", "2015-04-07"], ["tracks", "Southwestern Territory, The Legend of Chavo Guerrero, Foregin Object, Animal Mask, Choked Out, Heel Turn 2, Fire Editorial, Stabbed to Death Outside San Juan, Werewolf Gimmick, Luna, Unmasked!, The Ballad of Bull Ramos, Hair Match"], ["cover", "https://upload.wikimedia.org/wikipedia/en/a/a6/The_mountain_goats_-_beat_the_champ.jpg"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "All Hail West Texas"], ["release", "2002-02-19"], ["tracks", "The Best Ever Death Metal Band Out of Denton, Fall of the Star High School Running Back, Color in your Cheeks, Jenny, Fault Lines, Balance, Pink and Blue, Riches and Wonders, The Mess Inside, Jeff Davis County Blues, Distant Stations, Blues in Dallas, Source Decay, Absolute Lithops Effect"], ["cover", "https://upload.wikimedia.org/wikipedia/en/f/f1/Wtexas.jpg"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Hungry Ghost"], ["release", "2016-03-18"], ["tracks", "Dope Calypso, Lowbrow, Covered in Chrome, Saramona Said, In the Aisle, OK Cathedral, Fur Eyes, Gold Coast, Liars, Eightfold, Hungry Ghost"], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1d/Hungry_Ghost_%28Violent_Soho%29_Album_Cover.jpg"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Waco"], ["release", "2016-03-18"], ["tracks", "How to Taste, Blanket, Viceroy, So Sentimental, Like Soda, No Shade, Slow Wave, Evergreen, Holy Cave, Waco, Low"], ["cover", "https://upload.wikimedia.org/wikipedia/en/1/1c/WACO_%28Violent_Soho%29_Album_Cover.jpg"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "Whatever People Say I am, That's What I'm Not"], ["release", "2006-01-23"], ["tracks", "The View froom the Afternoon, I Bet You Look Good on the Dancefloor, Fake Tales of San Francisco, Dancing Shoes, You Probably Couldn't See for the Lights but You Were Staring Straight At Me, Still Take You Home, Riot Van, Red Light indicates doors are secure, Mardy Bum, Perhaps Vampires Is a Bit Strong But..., When The Sun Goes Down, From the Ritz to the Rubble, A Certain Romance "], ["cover", "https://upload.wikimedia.org/wikipedia/en/5/5f/Whatever_People_Say_I_Am%2C_That%27s_What_I%27m_Not.jpg"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "release", "tracks", "cover") VALUES (?, ?, ?, ?)[0m  [["title", "AM"], ["release", "2013-09-09"], ["tracks", "Do I Wanna Know?, R U Mine?, One for the Road, Arabella, I Want It All, No. 1 Party Anthem, Mad Sounds, Fireside, Why'd You Only Call Me When You're High?, Snap Out Of It, Knee Socks, I Wanna Be Yours"], ["cover", "https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "albums"[0m
+  ↳ db/seeds.rb:25
+Started GET "/albums/1" for ::1 at 2020-10-15 08:24:57 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nicholasmather/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 138ms (Views: 126.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/1" for ::1 at 2020-10-15 08:25:12 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/1" for ::1 at 2020-10-15 08:25:50 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:25:56 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/2" for ::1 at 2020-10-15 08:25:57 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:25:59 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/3" for ::1 at 2020-10-15 08:26:00 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:26:01 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/4" for ::1 at 2020-10-15 08:26:02 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:26:04 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/6" for ::1 at 2020-10-15 08:26:07 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:26:09 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/new" for ::1 at 2020-10-15 08:29:29 +1100
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 43ms (Views: 34.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/albums/new" for ::1 at 2020-10-15 08:33:47 +1100
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_form.html.erb (1.6ms)
+  Rendered albums/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/nicholasmather/projects/seic38-homework/Nicholas Mather/week05/music_app/app/views/albums/_form.html.erb:15: syntax error, unexpected ':', expecting ')'
+...r.append=( f.url_field :image :required => true );@output_bu...
+...                              ^
+):
+  
+app/views/albums/_form.html.erb:15: syntax error, unexpected ':', expecting ')'
+app/views/albums/new.html.erb:3:in `_app_views_albums_new_html_erb___3771555672541857750_16940'
+Started GET "/albums/new" for ::1 at 2020-10-15 08:34:03 +1100
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_form.html.erb (21.1ms)
+  Rendered albums/new.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Album:0x00007fa0066ac888>):
+    12:   <%= f.text_field :cover %>
+    13: 
+    14:   <%= f.label :image %>
+    15:   <%= f.url_field :image, :required => true %>
+    16: 
+    17:   <%= f.submit %>
+    18: 
+  
+app/views/albums/_form.html.erb:15:in `block in _app_views_albums__form_html_erb___3847616538585845573_17500'
+app/views/albums/_form.html.erb:1:in `_app_views_albums__form_html_erb___3847616538585845573_17500'
+app/views/albums/new.html.erb:3:in `_app_views_albums_new_html_erb___3771555672541857750_17480'
+Started GET "/albums/new" for ::1 at 2020-10-15 08:34:20 +1100
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_form.html.erb (2.9ms)
+  Rendered albums/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums/new" for ::1 at 2020-10-15 08:34:53 +1100
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_form.html.erb (3.7ms)
+  Rendered albums/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for ::1 at 2020-10-15 08:35:01 +1100
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b5Y0Pj7dhBBfVASZvB6S9AjBU3+n1mAQ9Iv7ZEHz7IL8VlFl+ahb6p1UzNQwPGQOOdbkQ6AyF7ZS9kNNqhTYLg==", "album"=>{"title"=>"lol", "release"=>"", "tracks"=>"", "cover"=>"https://i.pinimg.com/originals/b4/75/00/b4750046d94fed05d00dd849aa5f0ab7.jpg"}, "commit"=>"Create Album"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/albums_controller.rb:15
+  [1m[36mAlbum Create (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "tracks", "cover") VALUES (?, ?, ?)[0m  [["title", "lol"], ["tracks", ""], ["cover", "https://i.pinimg.com/originals/b4/75/00/b4750046d94fed05d00dd849aa5f0ab7.jpg"]]
+  ↳ app/controllers/albums_controller.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/albums_controller.rb:15
+Redirected to http://localhost:3000/albums/7
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:35:01 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:35:51 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists/7/edit" for ::1 at 2020-10-15 08:35:54 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:20
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=7):
+  
+app/controllers/artists_controller.rb:20:in `edit'
+Started GET "/albums/7" for ::1 at 2020-10-15 08:36:00 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 08:36:04 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:36:05 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:36:12 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/7/edit" for ::1 at 2020-10-15 08:36:14 +1100
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:38:00 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:38:03 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/albums/7/edit" for ::1 at 2020-10-15 08:38:05 +1100
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:20
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:38:40 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:38:40 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/7/edit" for ::1 at 2020-10-15 08:38:42 +1100
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:20
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/_form.html.erb (2.3ms)
+  Rendered albums/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/albums/7" for ::1 at 2020-10-15 08:39:14 +1100
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AwbGnLxzRxcJHAZHuU3xfkwD5b+RuV7RcNipCBYbjrpm6HZ+BPscfQg3NJr9Bu5UNHchCbb/s898TMA8S05KFg==", "album"=>{"title"=>"lol", "release"=>"2121-04-19", "tracks"=>"", "cover"=>"https://i.pinimg.com/originals/b4/75/00/b4750046d94fed05d00dd849aa5f0ab7.jpg"}, "commit"=>"Update Album", "id"=>"7"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/albums_controller.rb:25
+  [1m[36mAlbum Update (0.7ms)[0m  [1m[33mUPDATE "albums" SET "release" = ? WHERE "albums"."id" = ?[0m  [["release", "2121-04-19"], ["id", 7]]
+  ↳ app/controllers/albums_controller.rb:25
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/albums_controller.rb:25
+Redirected to http://localhost:3000/albums/7
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/albums/7" for ::1 at 2020-10-15 08:39:14 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/albums/7" for ::1 at 2020-10-15 08:40:14 +1100
+Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vc8KdNWYrJgLq7w7VrNKK+PMMeB41wJSPd2JM/Q4rGYuD28vEu1zYsmrdHbakbzR0tuG3H8zdfSboDEaH9+Yyg==", "id"=>"7"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/albums_controller.rb:31
+  [1m[36mAlbum Destroy (0.3ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/albums_controller.rb:31
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/albums_controller.rb:31
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:40:14 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/2" for ::1 at 2020-10-15 08:50:46 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/albums/2/edit" for ::1 at 2020-10-15 08:50:47 +1100
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:20
+  Rendering albums/edit.html.erb within layouts/application
+  Rendered albums/_form.html.erb (2.5ms)
+  Rendered albums/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/albums/2" for ::1 at 2020-10-15 08:50:56 +1100
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OLTYxhTUVI0TPHvMGlCDcKj8NeOESCR86G+tOss0XGh20R/uZaH0gYIQpL1v9fSjpZtAuCGVmP3oNRtLkOue+w==", "album"=>{"title"=>"All Hail West Texas", "release"=>"2002-02-19", "tracks"=>"The Best Ever Death Metal Band Out of Denton, Fall of the Star High School Running Back, Color in your Cheeks, Jenny, Fault Lines, Balance, Pink and Blue, Riches and Wonders, The Mess Inside, Jeff Davis County Blues, Distant Stations, Blues in Dallas, Source Decay, Absolute Lithops Effect", "cover"=>"https://f4.bcbits.com/img/a2603313414_10.jpg"}, "commit"=>"Update Album", "id"=>"2"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/albums_controller.rb:25
+  [1m[36mAlbum Update (0.6ms)[0m  [1m[33mUPDATE "albums" SET "cover" = ? WHERE "albums"."id" = ?[0m  [["cover", "https://f4.bcbits.com/img/a2603313414_10.jpg"], ["id", 2]]
+  ↳ app/controllers/albums_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/albums_controller.rb:25
+Redirected to http://localhost:3000/albums/2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/albums/2" for ::1 at 2020-10-15 08:50:56 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:51:00 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 08:51:55 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 106ms (Views: 99.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/artists" for ::1 at 2020-10-15 08:51:55 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:51:56 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/2" for ::1 at 2020-10-15 08:51:58 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:7
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 08:52:00 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:3
+  Rendered albums/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
