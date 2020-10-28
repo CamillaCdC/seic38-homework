@@ -5165,3 +5165,87 @@ Processing by AlbumsController#new as HTML
 Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2020-10-15 18:23:43 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/staceybrosnan/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:4
+  Rendered albums/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 121ms (Views: 109.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/singers" for ::1 at 2020-10-15 18:23:54 +1100
+Processing by SingersController#index as HTML
+  Rendering singers/index.html.erb within layouts/application
+  [1m[36mSinger Load (0.2ms)[0m  [1m[34mSELECT "singers".* FROM "singers"[0m
+  ↳ app/views/singers/index.html.erb:3
+  Rendered singers/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/singers" for ::1 at 2020-10-15 18:24:04 +1100
+Processing by SingersController#index as HTML
+  Rendering singers/index.html.erb within layouts/application
+  [1m[36mSinger Load (0.1ms)[0m  [1m[34mSELECT "singers".* FROM "singers"[0m
+  ↳ app/views/singers/index.html.erb:3
+  Rendered singers/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 18:24:05 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:4
+  Rendered albums/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/singers" for ::1 at 2020-10-15 18:24:06 +1100
+Processing by SingersController#index as HTML
+  Rendering singers/index.html.erb within layouts/application
+  [1m[36mSinger Load (0.1ms)[0m  [1m[34mSELECT "singers".* FROM "singers"[0m
+  ↳ app/views/singers/index.html.erb:3
+  Rendered singers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 18:24:07 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:4
+  Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/singers" for ::1 at 2020-10-15 18:24:09 +1100
+Processing by SingersController#index as HTML
+  Rendering singers/index.html.erb within layouts/application
+  [1m[36mSinger Load (0.1ms)[0m  [1m[34mSELECT "singers".* FROM "singers"[0m
+  ↳ app/views/singers/index.html.erb:3
+  Rendered singers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums" for ::1 at 2020-10-15 18:24:13 +1100
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/views/albums/index.html.erb:4
+  Rendered albums/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/1" for ::1 at 2020-10-15 18:24:40 +1100
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/albums_controller.rb:8
+  Rendering albums/show.html.erb within layouts/application
+  Rendered albums/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
