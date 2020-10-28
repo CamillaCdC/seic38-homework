@@ -19,7 +19,7 @@ const fetchEpisode = function (event) {
     $('#data').append('<h3>List of Characters in this episode:</h3>');
     $('#data').append('<ul>');
     const chars = episode.characters;
-    for ( i = 0; i < 4; i++) {
+    for ( i = 0; i < chars.length; i++) {
       $.ajax(chars[i]).done(function(character) {
       $('#data').append(`<li>${character.name}</li><img src=${character.image}>`)
       })
