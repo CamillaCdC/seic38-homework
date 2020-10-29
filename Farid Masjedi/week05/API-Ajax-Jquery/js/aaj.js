@@ -1,4 +1,4 @@
-let week_days = ['Sunday','Monday','Tuesday','Wensday','Thursday','Friday','Saturday'];
+let week_days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 // the function to use ajax every time the button clicked
 const currentWeather = function(e){
@@ -29,9 +29,9 @@ const currentWeather = function(e){
 
       // making a div for putting the name of the city and the day
       $container_city = $('<div id=container-city></div>');
-      $container_city.append(`<h2>${$city.charAt(0).toUpperCase()+$city.slice(1)}</h1>`);
+      $container_city.append(`<h2>${$city.charAt(0).toUpperCase()+$city.slice(1)}</h2>`);
       $container_city.append(`<h3>${week_days[today_day]}</h3>`);
-      $('#container').append($container_city);
+      // $('#container').append($container_city);
 
       // creating a new div for putting the weather icon and the temperature with -
       // kelvin degree and celsius degree
@@ -48,7 +48,7 @@ const currentWeather = function(e){
       $container_current_temp.append(`<p>${data.current.temp} \u00B0&#8490</p>
                                       <p>${(data.current.temp-273.15).toFixed(2)} &#8451</p>`);
       $container_day.append($container_current_temp);
-      $('#container').append($container_day);
+      // $('#container').append($container_day);
 
       // creating a new div for putting more information of today temperature and wind speed
       $container_temp_info = $('<div id =container-Tinfo></div>');
@@ -59,11 +59,11 @@ const currentWeather = function(e){
                                    <p>Wind speed: ${data.daily[0].wind_speed} (m/s)</p>`);
 
       // appending all to the div#container
-      $('#container').append($container_temp_info);
+      // $('#container').append($container_temp_info);
 
       // creating new div for forecasting the next 7 days
       $container_table = $('<div id=table></div>');
-      $('#container').append($container_table);
+      // $('#container').append($container_table);
 
       // this will iterate into one of the result of the api (daily) and will give us -
       // different results.
@@ -88,7 +88,12 @@ const currentWeather = function(e){
         $('#city').val(null);
       };
 
-      $('#container').append($('<hr>').attr('style','border-color:rgba(35,15,35,0.75)'));
+      // $('#container').append($('<hr>').attr('style','border-color:rgba(35,15,35,0.75)'));
+      $('#head').after($('<hr>').attr('style','border-color:rgba(35,15,35,0.75)'));
+      $('#head').after($container_table);
+      $('#head').after($container_temp_info);
+      $('#head').after($container_day);
+      $('#head').after($container_city);
 
     });
   });
