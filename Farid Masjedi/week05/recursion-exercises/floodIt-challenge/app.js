@@ -55,10 +55,32 @@ function renderSquare(x, y){
     const $gameSquare = $(`div[x="${x}"][y="${y}"]`)
     $gameSquare.attr('num', gameBoard[y][x])
 }
-//fill in this function, and be sure to call the renderSquare function to update the UI!
-//use the gameBoard object defined above, make changes in the gameBoard, then renderSquare.
-//renderSquare takes in the x and y coordinates of the square that should be updated on the board.
-function recursiveFlood(x, y, targetValue, newValue){
-   // YOUR CODE GOES HERE
-}
 
+function recursiveFlood(x, y, targetValue, newValue){
+
+  if (targetValue === newValue) {return;};
+
+  gameBoard[y][x] = newValue;
+  renderBoard(x,y);
+
+  if (x>=1 && (targetValue === gameBoard[y][x-1])){
+      targetValue = gameBoard[y][x-1];
+      recursiveFlood(x-1,y,targetValue,newValue)
+  }
+  if (x<=8 && (targetValue === gameBoard[y][x+1])){
+      targetValue = gameBoard[y][x+1];
+      recursiveFlood(x+1,y,targetValue,newValue)
+  }
+
+  if (y<=8 && (targetValue === gameBoard[y+1][x])){
+    targetValue = gameBoard[y+1][x];
+     recursiveFlood(x,y+1,targetValue,newValue)
+  }
+
+  if (y>=1 && (targetValue === gameBoard[y-1][x])){
+    targetValue = gameBoard[y-1][x];
+     recursiveFlood(x,y-1,targetValue,newValue)
+  }
+
+  return;
+}
