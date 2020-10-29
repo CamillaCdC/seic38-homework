@@ -49,28 +49,20 @@ function coinFlips(n,index=1, result = ['T','H']){
 // For example, letterCombinations(["a","b","c"]) would return the following:
 // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
 
-function letterCombinations(arr, result = arr, res = [], index = 0){
-  if (arr.length === index) {
-    for (i of arr.valueOf()){
-      result.unshift(i);
-    }
-    return result.sort( function(a, b) {
-      return a.length - b.length || a.localeCompare(b)
-    });
-  }
+function letterCombinations(arr, result = [...arr], res = arr, index = 1){
+  if (arr.length === index) {return result;};
 
   for (i of arr.valueOf()){
-    for(j of result.valueOf()){
+    for(j of res.valueOf()){
       if (!j.includes(i)){
-        const s = j+i;
-        if (!res.includes(s)){
-          res.push(s);
+        if (!j.includes(i) && !result.includes(j+i)){
+          result.push(j+i);
         }
       }
     }
   }
 
-  result = res;
+  res = result;
   index += 1;
   return letterCombinations(arr, result, res, index)
 }
