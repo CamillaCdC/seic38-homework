@@ -63,7 +63,9 @@ function letterCombinations(arr, result = arr, res = [], index = 0){
     for(j of result.valueOf()){
       if (!j.includes(i)){
         const s = j+i;
-        res.push(s);
+        if (!res.includes(s)){
+          res.push(s);
+        }
       }
     }
   }
