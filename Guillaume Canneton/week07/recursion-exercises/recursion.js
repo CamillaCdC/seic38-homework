@@ -4,34 +4,29 @@
 
 function findMax(arr){
     if (arr.length === 1){
-      console.log(arr[0]) //really do't understand why console.log works fine but the function return 'undefined'
       return arr[0]
     } else if (arr[0] <= arr[arr.length - 1]){
       arr.shift()
     } else {
       arr.pop()
     };
-    findMax(arr)
+    return findMax(arr)
 };
 
 function factorial(n){
-    let f
     if (n >= 1){
-      f = n * factorial(n-1)
+      return n * factorial(n-1)
     } else {
-      f = 1
+      return 1
     }
-    return f
 }
 
 function fibonacci(n){
-    let f
     if (n > 1){
-      f = fibonacci(n-1) + fibonacci(n-2)
+      return fibonacci(n-1) + fibonacci(n-2)
     } else {
-      f = n
+      return n
     }
-    return f
 }
 
 function coinFlips(n, array = ['H', 'T']){
@@ -43,10 +38,9 @@ function coinFlips(n, array = ['H', 'T']){
     }
     array = newArray
   } else {
-    console.log(array)//really do't understand why console.log works fine but the function return 'undefined'
     return array;
   }
-  coinFlips(n-1, array)
+  return coinFlips(n-1, array)
 };
 
 function letterCombinations(){
