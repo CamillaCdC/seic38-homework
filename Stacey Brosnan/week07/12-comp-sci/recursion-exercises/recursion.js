@@ -5,7 +5,7 @@ let index = 0;
 let max = 0;
 
 
-function findMax(array, index = 0, max = 0){
+function findMax(array, index = 0, max = -Infinity){
   // This function returns the largest number in a given array.
    if ( index === array.length) {
      return max;
@@ -27,32 +27,37 @@ function factorial(num, index = 1, result = 1){
 
 factorial(5);
 
-function fibonacci(n, index = 0, s){
+function fibonacci(n){
     // This function returns the Nth number in the fibonacci sequence.
+
   if (n === 1 || n === 2){
       return 1;
-  }
-  else if (index === n) {
-        return s;
-  } else {
-      let s = [];
-      s.push((n - 1) + (n - 2));
+  }else {
+
+      n = fibonacci(n - 1) + fibonacci(n - 2);
+      console.log(n);
+      return n;
       console.log(s);
-      return s;
-      console.log(s);
-      index = index + 1;
-      fibonacci(n, index);
     }
 }
 
 
-function coinFlips(){
-    // This function returns an array of all possible outcomes from flipping a coin N times.
-    // Input type: Integer
-    // For example, coinFlips(2) would return the following:
-    // ["HH", "HT", "TH", "TT"]
-    // H stands for Heads and T stands for tails
-    // Represent the two outcomes of each flip as "H" or "T"
+function coinFlips(tosses){
+
+  const combinations = [];
+
+  //Helper;
+  const flip = function (soFar="") {
+    if (soFar.length === tosses) {
+      combinations.push ( soFar );
+    } else {
+      flip(soFar + "H");
+      flip(soFar + "T");
+    }
+  }
+
+  flip();
+  return combinations;
 }
 
 function letterCombinations(){
