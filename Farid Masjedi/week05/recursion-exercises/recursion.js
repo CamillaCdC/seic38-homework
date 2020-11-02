@@ -13,17 +13,19 @@ function findMax(arr, max=arr[0], index=1){
 }
 
 // This function returns the factorial of a given number.
-function factorial(n){
-  if (n === 0) {return 1};
-  return n*factorial(n-1);
+function factorial(n, memo){
+  memo ||= {1:1};
+  if (memo[n]) {return memo[n];};
+  return memo[n] = n*factorial(n-1, memo);
 }
 
 // This function returns the Nth number in the fibonacci sequence.
 // https://en.wikipedia.org/wiki/Fibonacci_number
 // For this function, the first two fibonacci numbers are 1 and 1
-function fibonacci(n){
-  if (n <= 2) {return 1};
-  return fibonacci(n-1)+fibonacci(n-2);
+function fibonacci(n, memory){
+  memory ||= {1:1, 2:1};
+  if (memory[n]) {return memory[n];};
+  return memory[n] = fibonacci(n-1, memory)+fibonacci(n-2, memory);
 }
 
 // This function returns an array of all possible outcomes from flipping a coin N times.
