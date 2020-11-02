@@ -6,6 +6,8 @@ function insertionSort (array) {
         s = array[j-1];
         array[j-1] = array[j];
         array[j] = s;
+      }else{
+        break;
       }
     }
   }
