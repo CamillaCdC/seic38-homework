@@ -10,6 +10,7 @@ class SearchForm extends Component {
   _handleSubmit= (e) => {
     e.preventDefault();
     this.props.onSubmit( this.state.title );
+    this.setState ( { title: '' } )
   }
   //this will take the input and assigns it to the state.
   _handleInput= (e) => {
@@ -31,6 +32,7 @@ class SearchForm extends Component {
                  className='book-name'
                  placeholder='Das Kapital'
                  onInput={this._handleInput}
+                 value={this.state.title}
                  required
           />
           <button className='btn-bookFinder'> Search </button>
