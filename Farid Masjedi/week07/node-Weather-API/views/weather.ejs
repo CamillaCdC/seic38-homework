@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <div id ='container'>
+      <div id="head">
+        <header>
+          <h1>Weather App</h1>
+        </header>
+      </div>
+      
+      <div id="container-city">
+        <h2> <%= cityName.charAt(0).toUpperCase()+cityName.slice(1) %> </h1>
+        <h3> <%= day %> </h2>
+      </div>
+
+      <div id="container-day">
+        <div id="container-icon">
+          <img src="<%=src%>">
+          <p><%= main %> </p>
+        </div>
+        <div id="container-Ctemp">
+          <p><%=temp%> &#8451</p>
+        </div>
+      </div>
+
+      <div id="container-Tinfo">
+        <p>Day: <%=day_temp%> &#8451</p>
+        <p>Night: <%=night_temp%> &#8451</p>
+        <p>Max: <%=max%> &#8451</p>
+        <p>Min: <%=min%> &#8451</p>
+        <p>Wind speed: <%=wind%> (km/h)</p>
+      </div>
+
+      <div id="table">
+        <% for (i=0; i<next_days.length; i++){ %>
+          <div id="container_nextdays">
+            <img src="<%=next_days_icon[i]%>">
+            <p><%= next_days[i]%><p>
+            <p>Max: <%= next_days_max[i] %> &#8451 </p>
+            <p>Min: <%= next_days_min[i] %> &#8451 </p>
+          </div>
+        <% } %>
+      </div>
+
+    </div>
+  </body>
+</html>
