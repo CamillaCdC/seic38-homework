@@ -1,0 +1,13 @@
+body {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+.button {
+  margin-top: 1em;
+}
+
+.jokeContainer {
+  font-size: 150%;
+}

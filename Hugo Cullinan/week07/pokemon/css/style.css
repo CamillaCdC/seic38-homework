@@ -1,0 +1,8 @@
+body {
+  background-color: pink;
+}
+
+
+img, h3, p {
+  width: 20vw;
+}

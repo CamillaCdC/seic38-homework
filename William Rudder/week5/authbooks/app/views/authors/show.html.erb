@@ -1,0 +1,13 @@
+<h2><%= @author.name %></h2>
+
+<%= image_tag @author.image, :class => 'feature', :alt => @author.name %>
+
+<ul>
+  <li>Natinality: <%= link_to @author.name, @author %></li>
+  <li>DOB: <%= @author.dob %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit #{@author.name}", edit_author_path(@author) %>
+<%= link_to "Delete #{@author.name}", @author, :method =>'delete', :data => {:confirm => 'Are you Sure?'} %>
+</div>
