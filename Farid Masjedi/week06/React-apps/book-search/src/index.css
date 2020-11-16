@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+body{
+  background: rgba(25,37,63,1);
+  margin:10px;
+}
+main p, span{
+  text-align: left;
+}
+.container{
+  max-width: 600px;
+  margin:10px auto;
+  min-height:500px;
+}
+.book-container{
+  padding: 10px 0;
+  margin-top: 20px;
+  height:100%;
+  border:5px #ccc solid;
+}
+aside, main{
+  display: inline-block;
+  background: #ccc;
+}
+
+aside{
+  margin:0 10px 0 0;
+  padding-top:10px;
+  width:30%;
+  vertical-align: top;
+}
+
+main{
+  width:60%;
+  padding: 0 5px;
+}
+.book-finder{
+  background: #9e929e80;
+  padding: 1px 0 20px 0;
+  color: #ccc;
+}
+.book-name[placeholder]{
+  padding:10px;
+}
+.btn-bookFinder{
+  padding:10px;
+  margin-left:10px;
+}
+label h2{
+  display:inline-block;
+  margin-right:10px;
+}
+a{
+  font-size:12px;
+}
+p{
+  font-size:12px;
+}
+img{
+  width:80%;
+}

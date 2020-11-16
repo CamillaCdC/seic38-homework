@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 15px;
+  text-align:center;
+  color:#ccc;
+}
+
+body{
+  background: rgba(25,10,32,0.5);
+}
+.container{
+  max-width:960px;
+  margin: 20px 80px;
+  background: rgba(35,15,35,0.25);
+  min-height:650px;
+  box-shadow: 0 0 20px rgba(35,15,35,1);
+  padding-bottom:30px;
+}
+.head{
+  background: rgba(35,15,35,0.75);
+  padding: 0px 0 20px 0;
+  box-shadow: 0 0 20px rgba(35,15,35,1);
+}
+h1{
+  font-size:45px;
+}
+h2{
+  font-size:35px;
+}
+h3{
+  font-size:30px;
+}
+
+label, input, button{
+  font-size:18px;
+}
+button, input{
+  color:rgba(35,15,35,1);
+}
+.container-city,
+.container-day,
+.container-Tinfo{
+  display: inline-block;
+  margin:30px 0;
+  border:4px #ccc solid;
+  min-height: 250px;
+  box-shadow: 0 0 10px rgba(35,15,35,1);
+}
+
+.container-Tinfo, #container-city{
+  vertical-align: top;
+}
+.container-city{
+  width:25%;
+  vertical-align: top;
+}
+.container-day{
+  width:45%;
+  margin-right:10px;
+  margin-left: 10px;
+}
+.container-Tinfo{
+  width:25%;
+  padding-top:14px;
+}
+
+
+.container-icon img{
+  width:100px;
+}
+
+.forecast{
+  display: inline-block;
+  width:13%;
+  margin:3px;
+  border:2px #ccc solid;
+  background:rgba(35,15,35,0.25);
+  box-shadow: 0 0 10px rgba(35,15,35,1);
+}
+.all-info{
+  padding: 0 10px;
+}
