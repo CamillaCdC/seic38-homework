@@ -1,0 +1,10 @@
+<h1>Best Treks in the World</h1>
+
+<% @courses.each do |course| %>
+
+<p class="course_list">
+  <%= link_to course[:name], course_path(course.id) %>,
+
+  <strong> <%= course[:location] %> </strong>
+</p>
+<% end %>

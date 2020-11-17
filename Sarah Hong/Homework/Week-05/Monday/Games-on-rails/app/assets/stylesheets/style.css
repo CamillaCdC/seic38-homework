@@ -1,0 +1,55 @@
+body {
+  background-color: dodgerblue;
+  margin-top: 250px;
+  margin-bottom: 250px;
+  max-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  padding: 2em;
+}
+
+.homepage, .gamepage {
+  text-align: center;
+}
+
+.gamenav {
+  display: grid;
+  text-align: center;
+  grid-row-gap: 1em;
+  font-size: xx-large;
+}
+
+.homenav {
+  display: grid;
+  text-align: center;
+  grid-row-gap: 1em;
+  width: 150px;
+  font-size: xx-large;
+  margin: 0 auto;
+}
+
+.secondaryhomenav {
+  display: grid;
+  text-align: center;
+  grid-row-gap: 15px;
+  margin-top: 65px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 100px;
+}
+
+a:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  background: fuchsia;
+  padding: 0.5em;
+  border-radius: 50px;
+}

@@ -1,0 +1,35 @@
+<h1>New Trekking Course</h1>
+
+<form action="<%= courses_path %>" method="post">
+  <label>
+    Name:
+    <input name="name">
+  </label>
+
+  <label>
+    Location:
+    <input name="location">
+  </label>
+
+  <label>
+    Distance:
+    <input name="distance">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image">
+  </label>
+
+  <label>
+    Difficulty:
+    <input name="difficulty">
+  </label>
+
+  <label> 
+    Duration of Days:
+    <input type="number" name="days">
+  </label>
+
+  <button>Add Trek</button>
+</form>
