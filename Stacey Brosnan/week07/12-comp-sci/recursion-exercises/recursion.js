@@ -15,6 +15,8 @@ function findMax(array, index = 0, max = -Infinity){
     return findMax(array, index, max);
 }
 
+console.log(findMax([2,5,3,8,1]))
+
 function factorial(num, index = 1, result = 1){
   // This function returns the factorial of a given number.
   if (index === (num + 1)) {
