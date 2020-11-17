@@ -1,0 +1,35 @@
+<h1>Edit Trekking Course</h1>
+
+<form action="<%= course_path(@course.id) %>" method="post">
+  <label>
+    Name:
+    <input name="name" value="<%= @course[:name] %>">
+  </label>
+
+  <label>
+    Location:
+    <input name="location" value="<%= @course[:location] %>">
+  </label>
+
+  <label>
+    Distance:
+    <input name="distance" value="<%= @course[:distance] %>">
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image" value="<%= @course[:image] %>">
+  </label>
+
+  <label>
+    Difficulty:
+    <input name="difficulty" value="<%= @course[:difficulty] %>">
+  </label>
+
+  <label>
+    Duration of Days:
+    <input type="number" name="days" value="<%= @course[:days] %>">
+  </label>
+
+  <button>Update</button>
+</form>

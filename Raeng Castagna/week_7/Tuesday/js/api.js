@@ -12,7 +12,7 @@ const findWeather = function () {
     const selectedCity = info.name
     const currentCity = info.main.temp
     const clouds = info.weather[0].description
-    // console.log('currentCity', currentCity)
+    console.log('currentCity', currentCity)
     $('#temperature').after(`<p>The temperature in ${selectedCity} is ${currentCity}°F, with ${clouds}</p>`)
   })
 }
@@ -26,9 +26,9 @@ const findNasa = function () {
   $.ajax(url).done(function (info) {
     console.log('data', info)
     const factExplanation = info.explanation
-    console.log(factExplanation)
+    // console.log(factExplanation)
     const imageUrl = info.url
-    console.log(imageUrl)
+    // console.log(imageUrl)
     $('#nasa-display').after(`<p>${factExplanation}</p>`)
     $('#nasa-image').attr('src', imageUrl)
   })
@@ -41,11 +41,11 @@ const findQuote = function () {
 
   const url = `https://breaking-bad-quotes.herokuapp.com/v1/quotes`
   $.ajax(url).done(function (info) {
-    console.log('data', info)
+    console.log('data', info);
     const author = info[0].author;
-    console.log(author);
+    // console.log(author);
     const quote = info[0].quote;
-    console.log(quote);
+    // console.log(quote);
     $('#quote-display').after(`<p>${quote} - ${author}</p>`)
   })
 };
