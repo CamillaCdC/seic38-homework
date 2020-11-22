@@ -24,12 +24,15 @@ function binarySearch( arr, target,  targetIndex=0, indexMid = -1 ) {
 
   while ( arr.length >= 1 ) {
 
-    if ( arr.length % 2 === 0 ) {
-      indexMid = Math.floor( arr.length/2 ) - 1;
-    } else {
-      indexMid = Math.floor( arr.length/2 );
-    }
+    // if ( arr.length % 2 === 0 ) {
+    //   indexMid = Math.floor( arr.length/2 ) - 1;
+    // } else {
+    //   indexMid = Math.floor( arr.length/2 );
+    // }
 
+    indexMid = (arr.length%2 === 0) ? Math.floor(arr.length/2)-1 : Math.floor(arr.length/2);
+
+    // (arr[indexMid]>target) ? (arr = arr.slice(0, indexMid)) : ((arr[indexMid]<target) ? (arr = arr.slice(indexMid+1, arr.length)) : (return targetIndex + indexMid)
     if ( arr[indexMid] === target ) {
       return targetIndex + indexMid;
 
@@ -48,24 +51,8 @@ function binarySearch( arr, target,  targetIndex=0, indexMid = -1 ) {
 function recursiveBinarySearch(arr, target,  targetIndex=0){
   arr = quickSort(arr);
 
-  if ( arr.length <= 1 ) {
-
-    if ( arr[0] === target ) {
-      return targetIndex;
-
-    } else {
-      return -1;
-    }
-  }
-
-  if ( arr.length%2 === 0 ) {
-    indexMid = Math.floor( arr.length/2 ) - 1;
-
-  } else {
-    indexMid = Math.floor( arr.length/2 );
-
-  }
-
+  if (arr.length<=1) {return (arr[0]===target) ? targetIndex : -1;}
+  indexMid = (arr.length%2 === 0) ? Math.floor(arr.length/2)-1 : Math.floor(arr.length/2);
 
   if ( arr[indexMid] === target ) {
     return targetIndex + indexMid;

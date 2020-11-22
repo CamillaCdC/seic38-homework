@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='index.js'></script>
+    <script src='rgb-hex.js'></script>
+    <title>Hex Convertor</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left">
+        <form id="rgb_to_hex">
+          <label>
+            <span>RGB</span><br /><br />
+
+            <label>
+
+              <input id="r" type="number" min="0" max="255" value="0">
+              r</br>
+            </label>
+            <label>
+
+              <input id="g" type="number" min="0" max="255" value="0">
+              g</br>
+            </label>
+            <label>
+
+              <input id="b" type="number" min="0" max="255" value="0">
+              b</br>
+            </label>
+          </label>
+          <button>To hex</button>
+          <p id='rgb-value'>rgb( 0, 0, 0 )</p>
+        </form>
+      </div>
+
+      <div id='right'>
+        <form id="hex_to_rgb">
+          <label>
+            <span>Hex</span><br /><br />
+            <label>
+
+              <input id="r_h" value="00">
+              r</br>
+            </label>
+            <label>
+
+              <input id="g_h" value="00">
+              g</br>
+            </label>
+            <label>
+
+              <input id="b_h" value="00">
+              b</br>
+            </label>
+          </label>
+          <button>To rgb</button>
+          <p id='hex-value'>#000000</p>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
