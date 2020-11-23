@@ -16,6 +16,7 @@ class FinalSpace extends Component{
     axios('https://finalspaceapi.com/api/v0/character/'+picNum).then((result=>{
       let url = result.data.img_url;
        let name = result.data.name;
+       debugger;
     this.setState({url:url , name:name});
 
 
