@@ -1,22 +1,33 @@
+const state = {
+  lastPageReached: false,
+  pageNumber: 1,
+  requestInProgress: false
+};
+
 const searchFlickr = function (keywords) {
-  console.log('searching for', keywords)
+  if (state.lastPageReached) {
+    return;
+  }
+
+  state.requestInProgress = true;
 
   const flickURL = 'https://api.flickr.com/services/rest?jsoncallback=?' // JSONP
   $.getJSON(flickURL, {
     method: 'flickr.photos.search',
     api_key: '2f5ac274ecfac5a455f38745704ad084',
     text: keywords,
-    format: 'json'
+    format: 'json',
+    page: state.pageNumber ++
   }).done(showImages).done(function (info) {
-    console.log( info )
-  }).done()
+    if (info.photos.page >= info.photos.pages) {
+      state.lastPageReached = true
+    }
+  });
+
 };
 
-let pageNumber = 1;
-
 const showImages = function (results) {
-results.photos.page = pageNumber
-  console.log("page", results.photos.page)
+
   _(results.photos.photo).each(function (photo) {
   const thumbnailURL = generateURL(photo);
   const $img = $(`<img>`, {src: thumbnailURL})
@@ -40,22 +51,25 @@ const generateURL = function (p) {
 
 $(document).ready(function () {
 
+
   $('#search').on('submit', function (event) {
     event.preventDefault();
+
+
+
     const searchTerms = $('#query').val();
-    console.log('searching ...');
-    searchFlickr(searchTerms);
+      $('h2').text(searchTerms)
+      searchFlickr(searchTerms);
   });
 
-  $(window).on('scroll', _.debounce(function(e) {
+  const chilleSearchFlickr = _.debounce( searchFlickr, 250, true)
+
+  $(window).on('scroll', function () {
     const scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
       if (scrollBottom <= 400) {
         const searchTerms = $('#query').val();
-        (searchFlickr(searchTerms), 300);
-        pageNumber ++
+        chilleSearchFlickr(searchTerms)
+        $('body').append
     };
-  }, 250));
+  });
 });
-
-
-// once
