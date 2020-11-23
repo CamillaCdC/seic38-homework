@@ -1,0 +1,9 @@
+<h1>Search through the films here!</h1>
+
+<% @films.each do |film| %>
+ <p>
+   <a href="/films/<%= film["id"] %>">
+   <%= film["title"] %>
+   </a>
+ </p>
+<% end %>
