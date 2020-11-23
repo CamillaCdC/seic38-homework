@@ -1,0 +1,20 @@
+{
+  "name": "node-giffy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "iex-api": "0.0.3",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}

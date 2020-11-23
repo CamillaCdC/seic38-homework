@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency Comparison</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/currency.js"></script>
+  <script src="js/chart.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css'>
+</head>
+<body>
+  
+  <div class="container">
+  
+  <h1>Currency Charts</h1>
+  
+  <form id="search">
+    
+    <label>
+      <input type="date" id="start" required autofocus placeholder="Start Date: DD:MM:YYYY">
+      <input type="date" id="end" required  placeholder="End Date: DD:MM:YYYY">
+    </label>
+    <select id="currency">
+      <option value="">Currency</option>
+</select>
+<select id="currency-to">
+  <option value="">Base Currency</option>
+</select>
+    
+    <button>Search</button>
+  </form>
+  
+  <div id="chart">
+    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+  
+</body>
+</html>

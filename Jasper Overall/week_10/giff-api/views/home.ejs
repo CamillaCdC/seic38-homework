@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include partials/head.ejs %>
+<body>
+  <h1>GIFFY Search</h1>
+  <form action="/gif">
+      <input type="text" name="giffy" placeholder="Cats..">
+      <input type="submit" value="GIFFY">
+  </form>
+
+  <% if ( gif ) { %>
+      <div class="container">
+        <% gif.forEach( obj => { %>
+        <a href=<%= obj.embed_url %>>
+          <img src=<%= obj.images.original.url %> alt="">
+        </a>
+        <% })  %>
+      </div>
+    <% } %>
+
+</body>
+</html>
