@@ -5,9 +5,7 @@ function mergeSort(arr) {
   const arr1 = arr.slice(0, Math.floor(arr.length / 2));
   const arr2 = arr.slice(Math.floor(arr.length / 2));
 
-  return merge(
-    mergeSort(arr1), mergeSort(arr2)
-  );
+  return merge( mergeSort(arr1), mergeSort(arr2) );
 }
 
 
