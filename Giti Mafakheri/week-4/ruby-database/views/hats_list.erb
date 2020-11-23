@@ -1,0 +1,10 @@
+
+<h2>list of hats</h2>
+
+<% @hats.each do |hat| %>
+<p>
+  <a href="/hats/<%= hat["id"]%>">
+    <%= hat["name"]%>
+  </a>
+</p>
+<% end%>
