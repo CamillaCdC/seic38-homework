@@ -1,0 +1,20 @@
+
+.showcase-content {
+  @include set-background($light-color);
+  font-family: 'Oxygen', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7% auto;
+  max-width: 1100px;
+  min-height: 70vh;
+
+  img {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+}

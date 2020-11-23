@@ -1,0 +1,30 @@
+<h1>Add a Guitar</h1>
+
+<form action="<%= guitars_path %>" method="post">
+  <label>
+    Brand:
+    <input name="brand" type="text" required placeholder="Gibson">
+  </label>
+  <label>
+    Model:
+    <input name="model" type="text" placeholder="SG">
+  </label>
+  <label>
+    Year of creation:
+    <input name="year" type="number" placeholder="1984">
+  </label>
+  <label>
+    Image:
+    <input name="image" type="text" placeholder="http://...">
+  </label>
+  <label>
+    Body:
+    <input name="body" type="text" placeholder="Mahogany">
+  </label>
+  <label>
+    Pickups:
+    <input name="pickups" type="text" placeholder="Humbucker">
+  </label>
+
+  <button>Add a Guitar</button>
+</form>

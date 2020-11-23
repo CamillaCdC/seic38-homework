@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+  font-family: 'Oswald', sans-serif;    
+}
+body{
+  background-color: aliceblue
+}
+.container{
+  max-width:900px;
+  width:100%;
+  margin: 5px auto;
+  background-color: #ccc;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 0 25px #ccc;
+}
+
+.circle,.circle-trip-line1,.circle-trip-line2{
+  border:1px black solid;
+  border-radius: 50%;
+  width:25px;
+  height:25px;
+  margin:0 auto;
+}
+.circle-trip-line1{
+
+  background-color:blue;
+}
+.circle-trip-line2{
+
+  background-color:red;
+}
+.stops{
+  display: inline-block;
+  width:120px;
+  margin:10px;
+  text-align: center;
+}
+.lines{
+  margin:10px;
+}
+.trip{
+  display: inline-block;
+  border:1px solid #000;
+  width:48%;
+  margin:5px;
+  border-radius:15px;
+  box-shadow: 0 0 5px #000;
+}
+.hide{
+  display:none;
+}
+
+form{
+  width:99%;
+  margin:10px auto;
+  border: 3px solid #000;
+  padding-bottom:10px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.85);
+}
+h1{
+  text-align:center;
+}
+.form-labels,.form-inputs{
+  display:inline-block;
+  margin:5px;
+}
+.button{
+  text-align:center;
+  max-width:720px;
+  width:80%;
+  margin:0 auto;
+}
+.labels_inputs{
+  text-align: center;
+}
+.visible{
+  padding: 0px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.95);
+  border-radius: 15px;
+  width:95%;
+  margin: 0 auto;
+}
+.result{
+  color: blue;
+  margin:40px;
+}
+.route{
+  margin:10px auto;
+  width:100%;
+  max-width:900px;
+  text-align: center;
+}

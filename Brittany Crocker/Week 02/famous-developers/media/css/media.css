@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+  background-color: #05baffa6;
+  font-family: 'Lora', serif;
+}
+
+.container{
+  max-width: 960px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+nav {
+  text-align: right;
+}
+
+
+
+li {
+  display: inline;
+}
+
+a {
+  color: #05baffa6;
+  font-weight: bold;
+}
+
+.hidden-content {
+  color: fuchsia;
+}
+.hidden-content span {
+  visibility: hidden;
+}
+
+.hidden-content:hover {
+  visibility: visible;
+  color: fuchsia;
+}
+
+.hidden-content:hover span{
+    visibility: visible;
+    color: black;
+}
+
+span {
+  color: fuchsia;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+  color: black;
+}
+
+.Jen-title {
+  color: black;
+  font-size: 1.2em;
+}
+
+.money-dollars h6{
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+
+main {
+  text-align: center;
+}
+
+iframe {
+    padding: 1.5em;
+}

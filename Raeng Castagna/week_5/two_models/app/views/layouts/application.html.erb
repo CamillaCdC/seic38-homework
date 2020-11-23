@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwoModels</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <%= link_to 'All Authors', authors_path %>
+        <%= link_to 'Add Authors', new_author_path %>
+
+        <%= link_to 'All Books', books_path %>
+        <%= link_to 'Add Book', new_book_path %>
+      </nav>
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

@@ -19,7 +19,7 @@ if (!currentLine) {
 
 const indexA = currentLine.indexOf(stopA);
 const indexB = currentLine.indexOf(stopB);
-
+// if the user types in the wrong thing then itll be -1 meaning nudrfined
 if (indexA === -1 || indexB === -1) {
   throw `stop ${stopA} or ${stopB} are invalid`;
 }
@@ -27,7 +27,7 @@ if (indexA === -1 || indexB === -1) {
 //if indexA is smaller then indexB  then we want to increase our index as we iterate the array
 // ese if indexA is larger then indexB then we want to decrease our index as we iterate array
 const direction = indexA <= indexB ? 1: -1;
-
+//empty array for those stops to be punched into
 let stops =[];
 
 const start = indexA + direction;

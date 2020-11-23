@@ -1,0 +1,9 @@
+<h1 class="list_heading">All Sheep</h1>
+
+<% @sheep.each do |sheep| %>
+
+
+    <a class="list" href="/sheep/<%= sheep["id"] %>"><%= sheep[ "breed" ]%></a>
+
+
+<% end %>

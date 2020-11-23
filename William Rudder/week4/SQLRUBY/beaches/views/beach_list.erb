@@ -1,0 +1,8 @@
+<h1>Beach List</h1>
+<%  @beaches.each do |beach| %>
+<p class ="beachlist">
+  <a href="/beaches/<%=beach["id"]%>">
+  <%= beach["beach"]%>
+  </a>
+</p>
+<% end %>

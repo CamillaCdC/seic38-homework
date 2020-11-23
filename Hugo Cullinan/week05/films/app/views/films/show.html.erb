@@ -1,0 +1,13 @@
+<ul class=view_info>
+  <li>Title: <%= @film.name %></li>
+  <li>Director: <%= @film.director %></li>
+  <li>Year Released: <%= @film.year %></li>
+  <li>Production Budget: $<%= number_to_human @film.budget %></li>
+  <li>Worldwide Gross: $<%= number_to_human @film.gross %></li>
+</ul>
+<%= image_tag @film.image if @film.image.present? %>
+
+<div class="controls">
+  <%= link_to 'Edit Film', edit_film_path(@film.id) %>
+  <%= link_to 'Delete Film', film_path(@film.id), :method => 'delete' %>
+</div>

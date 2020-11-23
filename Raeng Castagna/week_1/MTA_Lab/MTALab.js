@@ -1,4 +1,5 @@
 // ## TO DO
+// Put oringal arrays into an object, this way you can pull out the keys to display on console
 
 // ## DOING
 // Create Console Log to display answers - stuck on this part! ***
@@ -174,7 +175,6 @@ const six = sixLine;
 //   };
 //  return stops;
 // };
-
 
 // ## Make it DRY
 const junction = 'Union Square';

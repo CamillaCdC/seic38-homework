@@ -1,0 +1,28 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import 'utilities';
+@import 'header';
+@import 'section';
+@import 'footer';
+@import 'buttons';
+@import 'inputs';
+@import 'fonts';
+@import 'mobile';

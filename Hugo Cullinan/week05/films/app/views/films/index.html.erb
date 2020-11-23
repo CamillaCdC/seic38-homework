@@ -1,0 +1,8 @@
+<h1>Films:</h1>
+
+<% @films.each do |film| %>
+ <p>
+   <%= link_to film[:name], film_path(film.id)  %>
+
+ </p>
+<% end  %>

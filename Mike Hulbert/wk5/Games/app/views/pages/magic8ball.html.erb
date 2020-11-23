@@ -1,0 +1,13 @@
+<section class="section">
+  <div>
+    <form action="/magic8ball" method="get" class="form">
+      <div class="form-group">
+      <label>Go on, ask it a question</label>
+      <%= image_tag("eightball.svg", width: '100px', height: '100px') %>
+      <input type='text' name='question'/>
+      <button class="btn-primary">Submit</button>
+      <%= @final_answer %>
+      </div>
+    </form>
+  </div>
+</section>

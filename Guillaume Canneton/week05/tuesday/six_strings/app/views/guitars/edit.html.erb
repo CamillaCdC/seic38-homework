@@ -1,0 +1,30 @@
+<h1>Update a Guitar</h1>
+
+<form action="<%= guitar_path(@guitar.id) %>" method="post">
+  <label>
+    Brand:
+    <input name="brand" type="text" required value="<%= @guitar.brand %>">
+  </label>
+  <label>
+    Model:
+    <input name="model" type="text" value="<%= @guitar.model %>">
+  </label>
+  <label>
+    Year of creation:
+    <input name="year" type="number" value="<%= @guitar.year %>">
+  </label>
+  <label>
+    Image:
+    <input name="image" type="text" value="<%= @guitar.image %>">
+  </label>
+  <label>
+    Body:
+    <input name="body" type="text" value="<%= @guitar.body %>">
+  </label>
+  <label>
+    Pickups:
+    <input name="pickups" type="text" value="<%= @guitar.pickups %>">
+  </label>
+
+  <button>Update the Guitar</button>
+</form>

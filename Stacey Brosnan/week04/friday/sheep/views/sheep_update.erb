@@ -1,0 +1,20 @@
+<h1>Update Sheep</h1>
+
+<form action="/sheep/<%= @sheep["id"] %>" method="post">
+
+  <label>
+    <input name="breed" placeholder="Devon and Cornwall Longwool" required value="<%= @sheep["breed"] %>">
+  </label>
+
+  <label>
+    <input name="origin" placeholder="Northern Devon in England" value="<%= @sheep["origin"] %>">
+  </label>
+
+  <label>
+    <input type="url" name="image" placeholder="http://.." value="<%= @sheep["image"] %>">
+  </label>
+
+  <button>Update Sheep</button>
+
+
+</form>

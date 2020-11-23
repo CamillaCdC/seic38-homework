@@ -1,0 +1,21 @@
+<h2><%= @singer.name %></h2>
+
+  <%= image_tag @singer.image, :class => 'feature' if @singer.image.present? %>
+
+  <ul>
+    <li>Name: <%= link_to @singer.name, @singer %></li>
+    <li>Nationality: <%=  @singer.nationality %></li>
+    <li>Gender: <%= @singer.gender%></li>
+    <% if @singer.dob.present? %>
+    <li>Date of Birth: <%= @singer.dob.strftime "%e %b %Y"%></li>
+    <% end %>
+  </ul>
+
+  <% @singer.albums.each do |album| %>
+    <%= link_to image_tag(album.image, :class => 'thumb'), album %>
+  <% end %>
+
+  <div class="controls">
+  <%= link_to "Edit #{@singer.name}", edit_singer_path(@singer)%>
+  <%= link_to "Delete #{@singer.name}", @singer, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+  </div>

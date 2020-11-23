@@ -1,0 +1,18 @@
+<h2><%= @artist.name %></h2>
+
+<%= image_tag @artist.image, :class => 'feature', :alt => @artist.name %>
+
+
+<p>
+  <%= @artist.name %> are an <%= @artist.nationality %> <%= @artist.genre %> act. The members of <%= @artist.name %> are:
+</p>
+<ul>
+  <% @artist.member_list.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit #{@artist.name}", edit_artist_path(@artist) %>
+  <%= link_to "Delete #{@artist.name}", @artist, :method => 'delete', :data => { :confirm => "Are you sure?"} %>
+</div>

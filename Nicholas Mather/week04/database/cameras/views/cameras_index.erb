@@ -1,0 +1,9 @@
+<h2>All My Cameras</h2>
+
+<% @cameras.each do |camera| %>
+  <p>
+    <a href="/cameras/<%= camera['id'] %>">
+      <%= "#{camera['manufacturer']} #{camera['model']}" %>
+    </a>
+  </p>
+<% end %>

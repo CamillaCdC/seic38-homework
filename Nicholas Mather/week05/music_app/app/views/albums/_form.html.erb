@@ -1,0 +1,16 @@
+<%= form_for @album do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :required => true %>
+
+  <%= f.label :release, 'Release Date' %>
+  <%= f.text_field :release, :placeholder => 'YYYY-MM-DD' %>
+
+  <%= f.label :tracks %>
+  <%= f.text_field :tracks, :placeholder => 'T1, T2, T3...' %>
+
+  <%= f.label :cover %>
+  <%= f.url_field :cover, :required => true %>
+
+  <%= f.submit %>
+
+<% end %>

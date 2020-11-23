@@ -1,0 +1,35 @@
+<h1>Edit film:</h1>
+
+<form action="<%= film_path(@film.id) %>" method="post">
+  <label>
+    Name:
+    <input name="name" required value=<%= @film.name %>>
+  </label>
+
+  <label>
+    Cover:
+    <input type="url" name="image" value=<%= @film.image %>>
+  </label>
+
+  <label>
+    Director:
+    <input name="director" value=<%= @film.director %>>
+  </label>
+
+  <label>
+    Year Released:
+    <input type="number" name="year" value=<%= @film.year %>>
+  </label>
+
+  <label>
+    Production Budget:
+    <input type="number"name="budget" value=<%= @film.budget %>>
+  </label>
+
+  <label>
+    Worldwide Gross:
+    <input type="number"name="gross" value=<%= @film.gross %>>
+  </label>
+
+  <button>Update</button>
+</form>
