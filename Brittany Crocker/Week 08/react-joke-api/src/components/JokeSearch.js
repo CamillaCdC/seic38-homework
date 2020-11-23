@@ -14,14 +14,14 @@ class JokeSearch extends Component {
     this.retrieveJoke = this.retrieveJoke.bind(this)
   }
 
-  retrieveJoke() {
-    const jokesURL = 'https://sv443.net/jokeapi/v2/joke/Any?type=single'
+  retrieveJoke(jokeType) {
+    const jokesURL = `https://sv443.net/jokeapi/v2/joke/${jokeType}?type=single`
     axios(jokesURL).then( (results) => {
       const joke = results.data.joke
       this.setState({joke: joke})
+      console.log(jokeType, 'jokeType')
     })
   }
-
   render(){
   return(
     <div>
