@@ -8,7 +8,7 @@ function insertionSort (items) {
   //     }
   //   }
   // }
-  for (var i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
   let temp = items[i]
   for (var j = i - 1; j > -1 && items[j] > temp; j--) {
     items[j + 1] = items[j]

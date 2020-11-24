@@ -43,13 +43,28 @@ function coinFlips(n, array = ['H', 'T']){
   return coinFlips(n-1, array)
 };
 
-function letterCombinations(){
-    // This function returns an array of all combinations of the given letters
-    // Input type: Array of single characters
-    // For example, letterCombinations(["a","b","c"]) would return the following:
-    // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
+function letterCombinations(array, n = array.length){
+  let newArray = [];
+  if (n < 1){
+    return newArray
+  } else {
+    for (i=0; i<newArray.length; i++) {
+      for (j=0; j<array.length; j++){
+        if (newArray[i].includes(array[j] === false)) {
+          newArray.push(newArray[i]+array[j])
+          console.log(newArray);
+        }
+        console.log(newArray);
+      }
+    }
+    newArray.concat(letterCombinations(newArray, n-1))
+  }
+  return newArray
 }
-
+// This function returns an array of all combinations of the given letters
+// Input type: Array of single characters
+// For example, letterCombinations(["a","b","c"]) would return the following:
+// ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
 module.exports = {
     findMax,
     factorial,

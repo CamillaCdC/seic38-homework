@@ -1,16 +1,16 @@
 function bubbleSort(array) {
   let swapHappened = true;
-  let temp;
+  let end = array.length-1;
   while (swapHappened){
     swapHappened = false
-    for (i=0; i < array.length; i++){
+    for (i=0; i < end; i++){
       temp = array[i];
       if ( array[i] > array[i+1]){
-        array[i] = array[i+1];
-        array[i+1] = temp;
+        [array[i], array[i+1]] = [array[i+1], array[i]];
         swapHappened = true;
       }
     }
+    end--
   }
     return array;
 }
