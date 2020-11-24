@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include partials/head.ejs %>
+<body>
+  <div class="container">
+  <% gif.forEach( obj => { %>
+    <a href=<%= obj.embed_url %> >
+      <img src=<%= obj.images.original.url %> alt="">
+    </a>
+    <% })  %>
+  </div>
+</body>
