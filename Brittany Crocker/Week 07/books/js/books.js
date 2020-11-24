@@ -1,5 +1,5 @@
 const fetchBook = function () {
-let bookName = document.getElementById('book_name').value;
+  let bookName = document.getElementById('book_name').value;
 
   const xhr = new XMLHttpRequest();
   xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${bookName}`);
@@ -9,7 +9,6 @@ let bookName = document.getElementById('book_name').value;
   xhr.onreadystatechange =  function () {
     // Data is ready and retrieved when at readyState 4
     if (xhr.readyState !== 4) return;
-
 
     const data = JSON.parse(xhr.responseText);
 

@@ -1,0 +1,36 @@
+body {
+font-family: 'Merriweather', serif;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+img {
+  padding: 3px;
+}
+img:hover{
+transform: scale(1.5);
+}
+h2 {
+  text-align: center;
+}
+#search {
+  padding: 1px;
+}
+#query{
+    position: relative;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: .5;
+    border-radius: .3rem;
+}
+button {
+    padding: .80rem 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: .5;
+    border-radius: .3rem;
+    background-color: #007bff;
+    border-color: #007bff;;
+}
