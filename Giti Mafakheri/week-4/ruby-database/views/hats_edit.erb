@@ -1,0 +1,15 @@
+<h2>edit hat</h2>
+<form  action="/hats/<%=@hat["id"]%>" method="post" >
+    Name:
+  <input name="name" placeholder="Test" required value="<%= @hat["name"]%>">
+  </label>
+  <label>
+    From:
+    <input type="text" name="country" value = "<%= @hat["country"]%>">
+  </label>
+  <label>
+    For Woman:
+    <input type="text" name="isWoman" "<%=@hat["isWoman"]%>">
+  </label>
+  <button>Update a hat..</button>
+</form>
