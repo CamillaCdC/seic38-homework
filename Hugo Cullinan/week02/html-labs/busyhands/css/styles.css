@@ -2,10 +2,13 @@ body {
   margin: auto;
 
 }
+.container body {
+
+}
 .container {
   margin: auto;
   border: 5px solid red;
-  
+
 }
 #socials {
   left: 400px;

@@ -9,7 +9,7 @@ var books = [
   }];
 
 for (i = 0; i < books.length; i++) {
-  const p = $("<li>").html(`${ books[i].title } by ${ books[i].author }`);
-  const $list = $('<ul>').append( p );
+  const $item = $("<li>").html(`${ books[i].title } by ${ books[i].author }`);
+  const $list = $('<ul>').append( $item );
   $('body').append($list);
 };

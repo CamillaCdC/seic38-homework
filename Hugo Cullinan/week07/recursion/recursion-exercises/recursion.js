@@ -21,6 +21,22 @@ function findMax(arr){
   return high();
 }
 
+function findMax (array, largest=-Infinity) {
+  if (array.length === 0) {
+    return largest;
+  }
+
+  if (array[0] > largest) {
+    largest = array[0]
+  }
+
+  const rest = array.slice(1);
+
+  return findMax(rest, largest);
+}
+
+
+
 function factorial(num) {
   if(num === 0 || num === 1) {
     return 1;
@@ -56,10 +72,10 @@ function coinFlips(n) {
 
 
 
-//           H      or        T          n === 1
-//     then add and H and a T to both sides
+//        H         or        T          n === 1
+//      /   \             /      \
 //  H  H or H  T       T  H or  T  T      n === 2
-//             same again on all 4
+//   / \     / \       /  \     /  \
 // HHH|HHT HTH|HTT   THH|THT   TTH|TTT   n === 3
 
 
