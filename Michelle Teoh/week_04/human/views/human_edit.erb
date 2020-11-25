@@ -1,0 +1,20 @@
+<h2>Edit Parts</h2>
+
+<form action="/human/<%= @parts["id"] %>" method="post">
+  <label>
+    Name:
+    <input name="name" placeholder="Pedal" required value="<%= @parts["name"]%>">
+  </label>
+
+  <label>
+    Parts:
+    <input name="parts" placeholder="Foot" value="<%= @human["parts"]%>">
+  </label>
+
+  <label>
+    Parts:
+    <input type="url" name="image" placeholder="http//.." value="<%= @human["image"]%>">
+  </label>
+
+  <button>Update Parts</button>
+</form>
