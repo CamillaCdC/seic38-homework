@@ -1,0 +1,9 @@
+<h1>All Body Parts</h1>
+
+<% @human.each do |parts|
+  <p>
+    <a href="/human/<%= parts["id"] %>">
+      <%= parts["name"] %>
+    </a>
+  </p>
+<% end %>
