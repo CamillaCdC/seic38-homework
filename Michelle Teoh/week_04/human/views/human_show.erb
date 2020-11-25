@@ -1,0 +1,11 @@
+<h2><%= @parts["name"] %></h2>
+<h3>Parts: <%= @parts["parts"] %></h3>
+
+<% unless @parts["image"].nil || @parts["image"].empty? %>
+ <img src="<%= @parts["image"] %>" alt="<%= @parts["name"] %>" >
+<% end %>
+
+<div class="controls">
+  <a href="/human/<%=parts["id"] %>/edit">Edit</a>
+  <a href="/human/<%=parts["id"] %>/delete">Delete</a>
+</div>

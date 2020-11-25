@@ -45,7 +45,7 @@ var account = function (name, balance){
   account.transfer = function (transferAmount, account) {
     newBalance = account.balance - transferAmount;
     if (account.withdraw(transferAmountamount) && account.deposit(transferAmount)) {
-     console.log(`Transfer: ${transferAmount} has been moved from ${this.name} to ${account.name}`); //<------- stuck in this section 
+     console.log(`Transfer: ${transferAmount} has been moved from ${this.name} to ${account.name}`); //<------- stuck in this section
    }
  };
 
